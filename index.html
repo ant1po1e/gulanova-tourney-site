@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cek Khodam</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OSU Tournament Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For social media icons -->
 </head>
-<body>
-    <div class="container">
-        <h1>Cek Khodam Anda</h1>
-        <div class="slot-machine">
-            <img id="khodam-image" src="1.png" alt="Khodam Image" />
-        </div>
-        <div class="loader" id="loader"></div>
-        <button id="cek-khodam-btn">Cek Khodam</button>
-    </div>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70">
 
-    <script src="script.js"></script>
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">OSU Tournament</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#schedule">Schedule</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="d-flex align-items-center justify-content-center vh-100 bg-hero text-white text-center">
+    <div>
+      <h1 class="animate__animated animate__fadeInDown">Welcome to the OSU Tournament</h1>
+      <p class="lead animate__animated animate__fadeInUp">The ultimate test of skill and precision.</p>
+      <a href="#about" class="btn btn-outline-light animate__animated animate__fadeInUp">Learn More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-5">
+    <div class="container text-center">
+      <h2>About the Tournament</h2>
+      <p>This is an OSU tournament where players from around the world will showcase their incredible skill and compete for top rankings!</p>
+      <img src="https://via.placeholder.com/600x300" class="img-fluid rounded" alt="About the Tournament">
+    </div>
+  </section>
+
+  <!-- Schedule Section -->
+  <section id="schedule" class="bg-light py-5">
+    <div class="container text-center">
+      <h2>Schedule</h2>
+      <p>Check out the tournament schedule below.</p>
+      <ul class="list-group">
+        <li class="list-group-item">Qualifier Rounds: 15th October</li>
+        <li class="list-group-item">Quarterfinals: 22nd October</li>
+        <li class="list-group-item">Semifinals: 29th October</li>
+        <li class="list-group-item">Finals: 5th November</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 text-center">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Follow us on social media or contact us directly for more information about the tournament!</p>
+      <div class="social-links">
+        <a href="https://twitter.com" class="btn btn-outline-dark"><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://facebook.com" class="btn btn-outline-dark"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://instagram.com" class="btn btn-outline-dark"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="mailto:contact@osutournament.com" class="btn btn-outline-dark"><i class="fas fa-envelope"></i> Email</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+/* Smooth Scroll for all anchors */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Hero Section Background */
+  .bg-hero {
+    background-image: url('/panjangcrop.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  
+  /* Idle Animations */
+  @keyframes idle-float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  #home h1, #home p, #home a {
+    animation: idle-float 3s infinite ease-in-out;
+  }
+  
+  section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+  }
+  
+  /* Button Hover Animation */
+  .btn-outline-dark {
+    transition: all 0.3s ease;
+  }
+  
+  .btn-outline-dark:hover {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+  }
+  
+  /* Hero Section Text Animation */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+  
