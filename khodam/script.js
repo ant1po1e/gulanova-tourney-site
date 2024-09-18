@@ -5,6 +5,9 @@ const images = [
     "../img/4.png",
     "../img/5.png",
     "../img/6.jpg",
+    "../img/7.png",
+    "../img/8.png",
+    "../img/9.png",
 ]
 
 const slotMachine = document.getElementById('slotMachine');
