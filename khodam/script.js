@@ -44,3 +44,7 @@ function spinKhodam() {
 }
 
 createSlotItems();
+
+if (window.location.pathname.substr(-1) !== '/') {
+    window.location.pathname += '/';
+}
