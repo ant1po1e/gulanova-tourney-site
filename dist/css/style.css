@@ -175,19 +175,16 @@
     transform: scaleX(1);
 }
 
-.navbar-brand
-{
+.navbar-brand {
     opacity: 0.;
     transition: opacity .15s ease-in-out;
 }
 
-.navbar-brand:hover
-{
+.navbar-brand:hover {
     opacity: 0.6;
 }
 
-.btn-discord
-{
+.btn-discord {
     padding: 1rem;
     padding-right: 2rem;
     padding-left: 2rem;
@@ -196,8 +193,7 @@
     transition: color .15f ease-in-out;
 }
 
-.btn-discord:hover
-{
+.btn-discord:hover {
     background-color: rgb(0, 112, 112);
     color: rgb(235, 235, 235);
 }
@@ -248,6 +244,18 @@
     color: #fff;
 }
 
+.social-icon
+{
+    opacity: 0.8;
+}
+
+.social-icon:hover
+{
+    opacity: 1;
+    transform: scale(1.08);
+    transition: all 0.1s ease 0s;
+}
+
 .footer {
     padding: 5rem 0;
-  }
+}
