@@ -1,53 +1,154 @@
-.jumbotron {
-    padding-top: 6rem;
-    background: url(../img/10.jpg) no-repeat;
-    background-size: cover;
+.masthead {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 35rem;
+    padding: 15rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/bg-masthead.png");
     background-position: center;
-    color: rgba(255, 255, 255, 0.9);
-    min-height: 95vh;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
 }
 
-
-.display-6,
-.display-4 {
-    text-shadow: 5px 2px 5px#000;
+.masthead h1,
+.masthead .h1 {
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.8rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
-
-#about {
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.9);
+.masthead h2,
+.masthead .h2 {
+    max-width: 20rem;
+    font-size: 1rem;
 }
 
+@media (min-width: 768px) {
 
-#member {
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.9);
+    .masthead h1,
+    .masthead .h1 {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
 }
 
+@media (min-width: 992px) {
+    .masthead {
+        height: 100vh;
+        padding: 0;
+    }
 
-#single {
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.9);
+    .masthead h1,
+    .masthead .h1 {
+        font-size: 6.5rem;
+        line-height: 6.5rem;
+        letter-spacing: 0.8rem;
+    }
+
+    .masthead h2,
+    .masthead .h2 {
+        max-width: 30rem;
+        font-size: 1.25rem;
+    }
 }
 
-
-#album {
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.9);
+#mainNav {
+    min-height: 3.5rem;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
-
-#contact {
-    background-color: #000;
-    color: rgba(255, 255, 255, 0.9);
+#mainNav .navbar-toggler {
+    font-size: 80%;
+    padding: 0.75rem;
+    color: #fff;
+    border: 1px solid #fff;
 }
 
-
-section {
-    padding-top: 6rem;
+#mainNav .navbar-toggler:focus {
+    outline: none;
 }
 
+#mainNav .navbar-brand {
+    color: #fff;
+    font-weight: 700;
+    padding: 0.9rem 0;
+}
+
+#mainNav .navbar-nav .nav-item:hover {
+    color: fade(#fff, 80%);
+    outline: none;
+    background-color: transparent;
+}
+
+#mainNav .navbar-nav .nav-item:active,
+#mainNav .navbar-nav .nav-item:focus {
+    outline: none;
+    background-color: transparent;
+}
+
+@media (min-width: 992px) {
+    #mainNav {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    #mainNav .navbar-brand {
+        padding: 0.5rem 0;
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    #mainNav .nav-link {
+        transition: none;
+        padding: 2rem 1.5rem;
+        color: rgba(255, 255, 255, 0.5);
+        transition: color .15s ease-in-out;
+    }
+
+    #mainNav .nav-link:hover {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #mainNav .nav-link:active {
+        color: #fff;
+    }
+
+    #mainNav.navbar-shrink {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    #mainNav.navbar-shrink .navbar-brand {
+        color: #fff;
+    }
+
+    #mainNav.navbar-shrink .nav-link {
+        color: #fff;
+        padding: 1.5rem 1.5rem 1.25rem;
+        border-bottom: 0.25rem solid transparent;
+    }
+
+    #mainNav.navbar-shrink .nav-link:hover {
+        color: #64a19d;
+    }
+
+    #mainNav.navbar-shrink .nav-link:active {
+        color: #467370;
+    }
+
+    #mainNav.navbar-shrink .nav-link.active {
+        color: #64a19d;
+        outline: none;
+        border-bottom: 0.25rem solid #64a19d;
+    }
+}
 
 .nav-link {
     position: relative;
@@ -57,12 +158,11 @@ section {
     margin-left: 8px;
 }
 
-
 .nav-link:after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: 20px;
     width: 100%;
     height: 3px;
     background: white;
@@ -71,80 +171,83 @@ section {
     transition: transform .5s;
 }
 
-
 .nav-link:hover::after {
     transform: scaleX(1);
 }
 
-
-#submit:hover {
-    transform: scale(1.1);
-    transition: all 0.1s ease 0s;
+.navbar-brand
+{
+    opacity: 0.;
+    transition: opacity .15s ease-in-out;
 }
 
-
-.btn:hover {
-    transform: scale(1.08);
-    transition: all 0.1s ease 0s;
-    background-color: #d3b186;
+.navbar-brand:hover
+{
+    opacity: 0.6;
 }
 
-
-.btn-try {
-    background-color: #d3ad7f;
+.btn-discord
+{
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    background-color: darkcyan;
+    color: white;
+    transition: color .15f ease-in-out;
 }
 
-
-.btn-send {
-    background-color: #d3ad7f;
+.btn-discord:hover
+{
+    background-color: rgb(0, 112, 112);
+    color: rgb(235, 235, 235);
 }
 
-
-.acolor {
-    color: #d3ad7f;
+.contact-section {
+    padding-top: 1px;
 }
 
-
-.bg-content {
-    background-color: #181821;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+.contact-section .card {
+    border: 0;
+    border-bottom: 0.25rem solid #64a19d;
 }
 
+.contact-section .card h4,
+.contact-section .card .h4 {
+    font-size: 0.8rem;
+    font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
 
-.card {
-    background-color: #000;
+.contact-section .card hr {
+    opacity: 1;
+    border-color: #64a19d;
+    border-width: 0.25rem;
+    width: 3rem;
+}
+
+.contact-section .social {
+    margin-top: 5rem;
+}
+
+.contact-section .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    line-height: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-section .social a:hover {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-section .social a:active {
     color: #fff;
 }
 
-
-#abt-img {
-    width: 100%;
-}
-
-
-#abt-logo {
-    width: 8vh;
-}
-
-
-#ftr:hover {
-    transform: scale(1.08);
-    transition: all 0.1s ease 0s;
-}
-
-
-.share {
-    font-size: x-large;
-    padding-bottom: 1rem;
-}
-
-
-footer {
-    background-color: #000;
-}
-
-
-#brand {
-    font-weight: 500;
-}
+.footer {
+    padding: 5rem 0;
+  }
