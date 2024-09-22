@@ -48,4 +48,7 @@ $ git push origin commitMessage/featureName
 Technologies used in the project:
 - [Bootstrap v5.3](https://getbootstrap.com)
 - [AOS](https://michalsnik.github.io/aos/)
+- [jQuery](https://jquery.com)
+- [Popper.js](https://popper.js.org/)
+- [Axios](https://axios-http.com/)
 ---
