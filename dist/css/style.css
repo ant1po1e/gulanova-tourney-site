@@ -259,3 +259,7 @@
 .footer {
     padding: 5rem 0;
 }
+
+#avatar{
+    max-width: 50px;
+}
