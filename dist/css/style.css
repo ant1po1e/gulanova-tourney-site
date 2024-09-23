@@ -263,3 +263,26 @@
 #avatar{
     max-width: 50px;
 }
+
+.bg-content
+{
+    background-color: #00b5e254;
+}
+
+.profile-card
+{
+    background-color: transparent;
+    text-decoration: none;
+    color: white;
+    transition: color .15f ease-in-out;
+}
+
+.profile-card:hover
+{
+    background-color: #009ae254;
+}
+
+.profile
+{
+    max-width: 100px;
+}

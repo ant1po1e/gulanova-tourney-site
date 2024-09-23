@@ -36,10 +36,6 @@ window.onload = async function() {
     }
 };
 
-
-
-
-
 function testistwo(){
     console.log(callOsuApi('/me/osu'))
     
@@ -51,3 +47,10 @@ function deb(){
     part = string.match(/code=(.*$)/)[1];
     console.log(part)
 }
+
+const staffsBtn = document.querySelector("#staffs-btn");
+const staffs = document.querySelector("#staffs");
+
+staffsBtn.addEventListener('click', function () {
+    staffs.classList.toggle('visually-hidden');
+});
