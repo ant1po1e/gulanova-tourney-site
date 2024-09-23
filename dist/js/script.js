@@ -48,9 +48,24 @@ function deb(){
     console.log(part)
 }
 
-const staffsBtn = document.querySelector("#staffs-btn");
-const staffs = document.querySelector("#staffs");
-
-staffsBtn.addEventListener('click', function () {
-    staffs.classList.toggle('visually-hidden');
+$("#staff-btn").click(function () {
+    $(".section").addClass("visually-hidden");  // Hide all sections
+    $("#staffs").removeClass("visually-hidden"); // Show the staffs section
 });
+
+$("#player-btn").click(function () {
+    $(".section").addClass("visually-hidden");  // Hide all sections
+    $("#players").removeClass("visually-hidden"); // Show the players section
+});
+
+$("#mappool-btn").click(function () {
+    $(".section").addClass("visually-hidden");  // Hide all sections
+    $("#mappools").removeClass("visually-hidden"); // Show the mappools section
+});
+
+$("#match-btn").click(function () {
+    $(".section").addClass("visually-hidden");  // Hide all sections
+    $("#matches").removeClass("visually-hidden"); // Show the matches section
+});
+
+
