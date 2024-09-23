@@ -286,3 +286,10 @@
 {
     max-width: 100px;
 }
+
+.dropdown .dropdown-menu {
+    left: 50%;
+    transform: translateX(-50%);
+    /* Optional: add margin to adjust vertical distance from avatar */
+    margin-top: 10px; 
+}

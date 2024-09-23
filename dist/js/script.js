@@ -17,6 +17,7 @@ window.onload = async function() {
     } else if (accessToken) {
         // If there is an access token and no OAuth code, proceed with fetching user data
         const avatar = document.getElementById('avatar');
+
         const cachedAvatarUrl = localStorage.getItem('avatar_url');
         avatar.parentElement.href = "/"
         try {
@@ -25,11 +26,24 @@ window.onload = async function() {
             } else {
                 const userData = await callOsuApi('/me/osu'); // Await the API call
                 avatar.src = userData.avatar_url; // Set the avatar src
-                localStorage.setItem('avatar_url', userData.avatar_url); // Cache the avatar URL
+                localStorage.setItem('avatar_url', userData.avatar_url); // Cache the avatar URL and everything else
+                localStorage.setItem("username", userData.username)
             }
         } catch (err) {
             console.error('Error fetching user data:', err);
         }
+
+        // disable enable login button
+        const login = document.getElementById('login');
+        const logout = document.getElementById('logout');
+        login.classList.add("d-none");
+        logout.classList.remove("d-none");
+
+        // change username
+        const username = document.getElementById('username');
+        username.innerHTML = localStorage.getItem("username")
+
+        
     } else {
         // If neither an access token nor code is present, handle login initiation here
         console.error('No access token or OAuth code found');
