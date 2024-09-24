@@ -1,4 +1,4 @@
-window.onload = async function() {
+window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code'); // Extract the 'code' parameter from URL
     const accessToken = localStorage.getItem('access_token');
@@ -43,43 +43,60 @@ window.onload = async function() {
         const username = document.getElementById('username');
         username.innerHTML = localStorage.getItem("username")
 
-        
+
     } else {
         // If neither an access token nor code is present, handle login initiation here
         console.error('No access token or OAuth code found');
     }
 };
 
-function testistwo(){
+function testistwo() {
     console.log(callOsuApi('/me/osu'))
-    
-    }     
-        
 
-function deb(){
+}
+
+
+function deb() {
     var string = window.location.href
     part = string.match(/code=(.*$)/)[1];
     console.log(part)
 }
 
 $("#staff-btn").click(function () {
-    $(".section").addClass("visually-hidden");  // Hide all sections
-    $("#staffs").removeClass("visually-hidden"); // Show the staffs section
+    $(".section").addClass("visually-hidden");
+    $("#staffs").removeClass("visually-hidden"); 
 });
 
 $("#player-btn").click(function () {
-    $(".section").addClass("visually-hidden");  // Hide all sections
-    $("#players").removeClass("visually-hidden"); // Show the players section
+    $(".section").addClass("visually-hidden"); 
+    $("#players").removeClass("visually-hidden"); 
 });
 
 $("#mappool-btn").click(function () {
-    $(".section").addClass("visually-hidden");  // Hide all sections
-    $("#mappools").removeClass("visually-hidden"); // Show the mappools section
+    $(".section").addClass("visually-hidden"); 
+    $("#mappools").removeClass("visually-hidden"); 
 });
 
 $("#match-btn").click(function () {
-    $(".section").addClass("visually-hidden");  // Hide all sections
-    $("#matches").removeClass("visually-hidden"); // Show the matches section
+    $(".section").addClass("visually-hidden");
+    $("#matches").removeClass("visually-hidden"); 
 });
 
+function createProfileCard(username, userId, displayName, countryFlag, countryName) {
+    var profileCard = `
+        <a href="https://osu.ppy.sh/users/${username}" target="_blank"
+            class="col-lg-2 col-md-2 col-sm-2 profile-card rounded">
+            <img src="https://a.ppy.sh/${userId}" alt="${displayName}" class="profile rounded">
+            <h5>${displayName}</h5>
+            <small>
+                <img class="flag-icon" src="https://flagcdn.com/32x24/${countryFlag}.png" alt="${countryName}">
+            </small>
+        </a>
+    `;
+    return profileCard;
+}
 
+$("#profile-host").append(createProfileCard("revv-", "12424909", "Revv-", "id", "Indonesia"));
+$("#profile-host").append(createProfileCard("danar", "11184912", "danar", "id", "Indonesia"));
+$("#profile-sponsor").append(createProfileCard("revv-", "12424909", "Revv-", "id", "Indonesia"));
+$("#profile-sponsor").append(createProfileCard("danar", "11184912", "danar", "id", "Indonesia"));
