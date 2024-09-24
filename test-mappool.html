@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mappool Carousel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card {
+            margin: 15px;
+        }
+        .carousel-control-prev, .carousel-control-next {
+            width: 5%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-4">
+    <h2 class="text-center">Mappool</h2>
+
+    <!-- Stage Dropdown -->
+    <div class="form-group text-center">
+        <select id="stage-select" class="form-control w-50 mx-auto">
+            <!-- Stages will be dynamically added here -->
+        </select>
+    </div>
+
+    <!-- Carousel -->
+    <div id="mappool-carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" id="carousel-inner">
+            <!-- Cards will be dynamically added here -->
+        </div>
+
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#mappool-carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#mappool-carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        // Placeholder for stages API
+        const stages = [
+            { id: 'qualifiers', name: 'Qualifiers' },
+            { id: 'group_stage', name: 'Group Stage' },
+            { id: 'knockout_stage', name: 'Knockout Stage' }
+        ];
+
+        // Sample data for mappools, replace with API call
+        const mappools = {
+            qualifiers: [
+                { stage: 'Stage 6', song: 'DropZ-Line', artist: 'Getty vs. DJ DiA', mapper: 'Toaph Daddy', image: 'https://assets.ppy.sh/beatmaps/2114040/covers/cover.jpg?1726034442' },
+                { stage: 'Stage 7', song: 'Inga WooHoo!!!', artist: 'MYUKKE.', mapper: 'TheFunk', image: 'https://assets.ppy.sh/beatmaps/2114040/covers/cover.jpg?1726034442' },
+                { stage: 'Stage 8', song: 'Abrasion', artist: 'Zekk', mapper: 'Japeynius', image: 'https://assets.ppy.sh/beatmaps/2114040/covers/cover.jpg?1726034442' }
+            ],
+
+            group_stage: [
+                { stage: 'Stage 6', song: 'DropZ-Line', artist: 'Getty vs. DJ DiA', mapper: 'Toaph Daddy', image: 'https://assets.ppy.sh/beatmaps/2114040/covers/cover.jpg?1726034442' },
+                { stage: 'Stage 7', song: 'Inga WooHoo!!!', artist: 'MYUKKE.', mapper: 'TheFunk', image: 'https://assets.ppy.sh/beatmaps/2114040/covers/cover.jpg?1726034442' },
+                { stage: 'Stage 8', song: 'Abrasion', artist: 'Zekk', mapper: 'Japeynius', image: 'https://assets.ppy.sh/beatmaps/2114040/covers/cover.jpg?1726034442' }
+            ]
+        };
+
+        // Load stages into the dropdown
+        stages.forEach(stage => {
+            $('#stage-select').append(new Option(stage.name, stage.id));
+        });
+
+        // Function to load mappools based on stage
+        function loadMappools(stageId) {
+            const pool = mappools[stageId];
+            const carouselInner = $('#carousel-inner');
+            carouselInner.empty(); // Clear the existing carousel items
+
+            if (pool) {
+                pool.forEach((map, index) => {
+                    const activeClass = index === 0 ? 'active' : ''; // Make the first item active
+                    const card = `
+                        <div class="carousel-item ${activeClass}">
+                            <div class="card text-center">
+                                <img src="${map.image}" class="card-img-top" alt="${map.song}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${map.stage}</h5>
+                                    <p class="card-text">
+                                        <strong>Song:</strong> ${map.song} <br>
+                                        <strong>Artist:</strong> ${map.artist} <br>
+                                        <strong>Mapper:</strong> ${map.mapper}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    carouselInner.append(card);
+                });
+            }
+        }
+
+        // Load default mappool on page load
+        loadMappools('qualifiers');
+
+        // Change mappools when stage is selected
+        $('#stage-select').change(function () {
+            const stageId = $(this).val();
+            loadMappools(stageId);
+        });
+    });
+</script>
+</body>
+</html>
