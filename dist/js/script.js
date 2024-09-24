@@ -100,3 +100,72 @@ $("#profile-host").append(createProfileCard("12424909", "Revv-", "id", "Indonesi
 $("#profile-host").append(createProfileCard("11184912", "danar", "id", "Indonesia"));
 $("#profile-sponsor").append(createProfileCard("12424909", "Revv-", "id", "Indonesia"));
 $("#profile-sponsor").append(createProfileCard("11184912", "danar", "id", "Indonesia"));
+
+
+$(document).ready(function () {
+    // Placeholder for stages API
+    const stages = [
+        { id: 'qualifiers', name: 'Qualifiers' },
+        { id: 'ro64', name: 'Round of 64' },
+        { id: 'ro32', name: 'Round of 32' },
+        { id: 'ro16', name: 'Round of 16' },
+        { id: 'quarterfinals', name: 'Quarterfinals' },
+        { id: 'semifinals', name: 'Semifinals' },
+        { id: 'finals', name: 'finals' },
+        { id: 'grandfinals', name: 'Grandfinals' },
+    ];
+
+    // Function to load stages in dropdown
+    function loadStages() {
+        stages.forEach(stage => {
+            $('#stage-select').append(new Option(stage.name, stage.id));
+        });
+    }
+
+    // Function to load schedule for selected stage (API example)
+    function loadSchedule(stageId) {
+        // Sample data, replace with actual API call
+        const schedules = {
+            qualifiers: [
+                { date: '12 July 2024', time: '12:00', referee: 'ElinLYPK', player: "jakads", mpLink: '#' },
+                { date: '13 July 2024', time: '10:00', referee: 'Reihynn', player: 'dressurf', mpLink: '#' }
+                // More rows...
+            ],
+            ro64: [
+                { date: '20 July 2024', time: '14:00', referee: 'IDK', player: 'mrekk', mpLink: '#' }
+                // More rows...
+            ]
+        };
+
+        // Clear existing table rows
+        $('#schedule-body').empty();
+
+        // Add new rows
+        if (schedules[stageId]) {
+            schedules[stageId].forEach(schedule => {
+                const row = `
+                    <tr>
+                        <td>${schedule.date}</td>
+                        <td>${schedule.time}</td>
+                        <td>${schedule.referee}</td>
+                        <td>${schedule.player}</td>
+                        <td><a href="${schedule.mpLink}" target="_blank"><img src="https://osu.ppy.sh/images/layout/logo.png" alt="osu!" class="osu-icon"></a></td>
+                    </tr>
+                `;
+                $('#schedule-body').append(row);
+            });
+        }
+    }
+
+    // Load stages into the dropdown
+    loadStages();
+
+    // Load schedule when a stage is selected
+    $('#stage-select').change(function () {
+        const stageId = $(this).val();
+        loadSchedule(stageId);
+    });
+
+    // Load the default stage (e.g., Qualifiers) on page load
+    loadSchedule('qualifiers');
+});
