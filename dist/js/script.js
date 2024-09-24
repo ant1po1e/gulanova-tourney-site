@@ -82,9 +82,9 @@ $("#match-btn").click(function () {
     $("#matches").removeClass("visually-hidden"); 
 });
 
-function createProfileCard(username, userId, displayName, countryFlag, countryName) {
+function createProfileCard(userId, displayName, countryFlag, countryName) {
     var profileCard = `
-        <a href="https://osu.ppy.sh/users/${username}" target="_blank"
+        <a href="https://osu.ppy.sh/users/${userId}" target="_blank"
             class="col-lg-2 col-md-2 col-sm-2 profile-card rounded">
             <img src="https://a.ppy.sh/${userId}" alt="${displayName}" class="profile rounded">
             <h5>${displayName}</h5>
@@ -96,7 +96,7 @@ function createProfileCard(username, userId, displayName, countryFlag, countryNa
     return profileCard;
 }
 
-$("#profile-host").append(createProfileCard("revv-", "12424909", "Revv-", "id", "Indonesia"));
-$("#profile-host").append(createProfileCard("danar", "11184912", "danar", "id", "Indonesia"));
-$("#profile-sponsor").append(createProfileCard("revv-", "12424909", "Revv-", "id", "Indonesia"));
-$("#profile-sponsor").append(createProfileCard("danar", "11184912", "danar", "id", "Indonesia"));
+$("#profile-host").append(createProfileCard("12424909", "Revv-", "id", "Indonesia"));
+$("#profile-host").append(createProfileCard("11184912", "danar", "id", "Indonesia"));
+$("#profile-sponsor").append(createProfileCard("12424909", "Revv-", "id", "Indonesia"));
+$("#profile-sponsor").append(createProfileCard("11184912", "danar", "id", "Indonesia"));
