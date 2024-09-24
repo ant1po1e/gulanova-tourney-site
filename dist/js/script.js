@@ -82,6 +82,12 @@ $("#match-btn").click(function () {
     $("#matches").removeClass("visually-hidden"); 
 });
 
+$("#challonge-btn").click(function () {
+    $(".section").addClass("visually-hidden");
+    $("#challonge").removeClass("visually-hidden"); 
+});
+
+
 function createProfileCard(userId, displayName, countryFlag, countryName) {
     var profileCard = `
         <a href="https://osu.ppy.sh/users/${userId}" target="_blank"

@@ -47,6 +47,7 @@
                     <a class="btn btn-discord" id="player-btn">Players</a>
                     <a class="btn btn-discord" id="mappool-btn">Mappools</a>
                     <a class="btn btn-discord" id="match-btn">Matches</a>
+                    <a class="btn btn-discord" id="challonge-btn">Challonge</a>
                 </div>
             </div>
         </div>
@@ -60,7 +61,7 @@
                 </div>
             </div>
             <div id="profile-host" class="row justify-content-center bg-content rounded py-4 text-white">
-                
+
             </div>
         </div>
 
@@ -71,7 +72,7 @@
                 </div>
             </div>
             <div id="profile-sponsor" class="row justify-content-center bg-content rounded py-4 text-white">
-                
+
             </div>
         </div>
     </section>
@@ -108,18 +109,14 @@
                 </div>
             </div>
             <div class="row justify-content-center bg-content rounded py-4 text-white">
-                <a href="https://osu.ppy.sh/users/revv-" target="_blank"
-                    class="col-lg-2 col-md-2 col-sm-2 profile-card rounded">
-                    <img src="https://a.ppy.sh/12424909" alt="Host 1" class="profile rounded">
-                    <h5>Revv-</h5>
-                    <small><img class="flag-icon" src="https://flagcdn.com/32x24/id.png" alt="Indonesia"></small>
-                </a>
-                <a href="https://osu.ppy.sh/users/danar" target="_blank"
-                    class="col-lg-2 col-md-2 col-sm-2 profile-card rounded">
-                    <img src="https://a.ppy.sh/11184912" alt="Host 2" class="profile rounded">
-                    <h5>danar</h5>
-                    <small><img class="flag-icon" src="https://flagcdn.com/32x24/id.png" alt="Indonesia"></small>
-                </a>
+                <!-- <div class="form-group width mb-2">
+                    <label for="stage-select">Select Stage</label>
+                    <select id="stage-select" class="form-control"> -->
+                        <!-- Stages will be dynamically added here -->
+                    <!-- </select>
+                </div> -->
+
+
             </div>
         </div>
     </section>
@@ -132,8 +129,8 @@
                 </div>
             </div>
             <div class="row justify-content-center bg-content rounded py-4 text-white">
-                <div class="form-group width mb-2">
-                    <label for="stage-select">Select Stage</label>
+                <div class="form-group width mb-3">
+                    <label for="stage-select" class="mb-2">Select Stage</label>
                     <select id="stage-select" class="form-control">
                         <!-- Stages will be dynamically added here -->
                     </select>
@@ -155,6 +152,19 @@
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="challonge" class="pb-5 bg-black section visually-hidden">
+        <div class="container border-2 pt-2 text-center" style="max-width: 50rem;">
+            <div class="row mb-2">
+                <div class="col">
+                    <h2 class="text-white">Challonge</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center bg-content rounded py-4 text-white">
+                <iframe src="https://challonge.com/gulanocup4/module" width="100%" height="500" frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
             </div>
         </div>
     </section>
