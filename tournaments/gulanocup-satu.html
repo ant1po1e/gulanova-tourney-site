@@ -132,18 +132,29 @@
                 </div>
             </div>
             <div class="row justify-content-center bg-content rounded py-4 text-white">
-                <a href="https://osu.ppy.sh/users/revv-" target="_blank"
-                    class="col-lg-2 col-md-2 col-sm-2 profile-card rounded">
-                    <img src="https://a.ppy.sh/12424909" alt="Host 1" class="profile rounded">
-                    <h5>Revv-</h5>
-                    <small><img class="flag-icon" src="https://flagcdn.com/32x24/id.png" alt="Indonesia"></small>
-                </a>
-                <a href="https://osu.ppy.sh/users/danar" target="_blank"
-                    class="col-lg-2 col-md-2 col-sm-2 profile-card rounded">
-                    <img src="https://a.ppy.sh/11184912" alt="Host 2" class="profile rounded">
-                    <h5>danar</h5>
-                    <small><img class="flag-icon" src="https://flagcdn.com/32x24/id.png" alt="Indonesia"></small>
-                </a>
+                <div class="form-group width mb-2">
+                    <label for="stage-select">Select Stage</label>
+                    <select id="stage-select" class="form-control">
+                        <!-- Stages will be dynamically added here -->
+                    </select>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date (WIB)</th>
+                                <th>Time (WIB)</th>
+                                <th>Referee</th>
+                                <th>Player</th>
+                                <th>MP Link</th>
+                            </tr>
+                        </thead>
+                        <tbody id="schedule-body">
+                            <!-- Rows will be dynamically added here -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
