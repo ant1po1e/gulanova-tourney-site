@@ -117,7 +117,7 @@ $(document).ready(function () {
         { id: 'ro16', name: 'Round of 16' },
         { id: 'quarterfinals', name: 'Quarterfinals' },
         { id: 'semifinals', name: 'Semifinals' },
-        { id: 'finals', name: 'finals' },
+        { id: 'finals', name: 'Finals' },
         { id: 'grandfinals', name: 'Grandfinals' },
     ];
 
@@ -174,4 +174,66 @@ $(document).ready(function () {
 
     // Load the default stage (e.g., Qualifiers) on page load
     loadSchedule('qualifiers');
+});
+
+
+$(document).ready(function () {
+    // Placeholder for stages API
+    const stages = [
+        { id: 'qualifiers', name: 'Qualifiers' },
+        { id: 'group_stage', name: 'Group Stage' },
+        { id: 'knockout_stage', name: 'Knockout Stage' }
+    ];
+
+    // Sample data for mappools, replace with API call
+    const mappools = {
+        qualifiers: [
+            { stage: 'Stage 6', link: 'https://osu.ppy.sh/beatmapsets/2248638#mania/4781986', song: 'DropZ-Line', artist: 'Getty vs. DJ DiA', mapper: 'Toaph Daddy', image: 'https://assets.ppy.sh/beatmaps/2233543/covers/cover.jpg?1726890892' },
+            { stage: 'Stage 7', link: 'https://osu.ppy.sh/beatmapsets/2248638#mania/4781986', song: 'Inga WooHoo!!!', artist: 'MYUKKE.', mapper: 'TheFunk', image: 'https://assets.ppy.sh/beatmaps/2233543/covers/cover.jpg?1726890892' },
+            { stage: 'Stage 8', link: 'https://osu.ppy.sh/beatmapsets/2248638#mania/4781986', song: 'Abrasion', artist: 'Zekk', mapper: 'Japeynius', image: 'https://assets.ppy.sh/beatmaps/2233543/covers/cover.jpg?1726890892' }
+        ]
+    };
+
+    // Load stages into the dropdown
+    stages.forEach(stage => {
+        $('#stage-map-select').append(new Option(stage.name, stage.id));
+    });
+
+    // Function to load mappools based on stage
+    function loadMappools(stageId) {
+        const pool = mappools[stageId];
+        const carouselInner = $('#carousel-inner');
+        carouselInner.empty(); // Clear the existing carousel items
+
+        if (pool) {
+            pool.forEach((map, index) => {
+                const activeClass = index === 0 ? 'active' : ''; // Make the first item active
+                const card = `
+                    <div class="carousel-item ${activeClass}">
+                        <div class="card text-center">
+                            <a href="${map.link}"><img src="${map.image}" class="card-img-top" alt="${map.song}"></a>
+                            <div class="card-body">
+                                <h5 class="card-title">${map.stage}</h5>
+                                <p class="card-text">
+                                    <strong>Song:</strong> ${map.song} <br>
+                                    <strong>Artist:</strong> ${map.artist} <br>
+                                    <strong>Mapper:</strong> ${map.mapper}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                carouselInner.append(card);
+            });
+        }
+    }
+
+    // Load default mappool on page load
+    loadMappools('qualifiers');
+
+    // Change mappools when stage is selected
+    $('#stage-map-select').change(function () {
+        const stageId = $(this).val();
+        loadMappools(stageId);
+    });
 });

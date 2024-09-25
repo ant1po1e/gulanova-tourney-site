@@ -293,3 +293,7 @@
     /* Optional: add margin to adjust vertical distance from avatar */
     margin-top: 10px; 
 }
+
+.card {
+    margin: 15px;
+}
