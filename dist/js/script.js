@@ -17,9 +17,10 @@ window.onload = async function () {
     } else if (accessToken) {
         // If there is an access token and no OAuth code, proceed with fetching user data
         const avatar = document.getElementById('avatar');
-
+        
+        
         const cachedAvatarUrl = localStorage.getItem('avatar_url');
-        avatar.parentElement.href = "/"
+        // avatar.parentElement.href = "/"
         try {
             if (cachedAvatarUrl) {
                 avatar.src = cachedAvatarUrl; // Use cached avatar
