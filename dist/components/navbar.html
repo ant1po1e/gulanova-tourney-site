@@ -1,4 +1,5 @@
-<nav class="border-gray-200 bg-black bg-opacity-100 md:bg-opacity-75 fixed w-full z-20 top-0 start-0">
+<nav
+    class="border-gray-200 bg-black bg-opacity-100 md:bg-opacity-75 fixed w-full z-20 top-0 start-0 navbar-scrolled transition duration-300">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/dist/img/gulanova.png" class="h-8" alt="Gulanova Logo" />
@@ -8,23 +9,26 @@
             <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0" id="user-menu-button"
                 aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                 <span class="sr-only">Open user menu</span>
-                <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/17258072" alt="user photo">
+                <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/guest" id="avatar" alt="user photo">
             </button>
             <!-- Dropdown menu -->
             <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gulanovaDark divide-gulanova"
                 id="user-dropdown">
                 <div class="px-4 py-3">
-                    <span class="block text-sm text-white">Antipole</span>
+                    <span class="block text-sm text-white" id="username">Guest</span>
                 </div>
                 <li>
                     <div class="block px-4 py-2 text-sm text-gray-200">You are:
-                        Staff</div>
+                        Visitor</div>
                 </li>
                 <ul class="py-2" aria-labelledby="user-menu-button">
                     <li>
-                        <a href="#"
-                            class="block px-4 py-2 text-sm hover:bg-gulanova text-gray-200 hover:text-white transition duration-300">Log
-                            out</a>
+                        <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                            class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 hover:text-white transition duration-300 hidden">Log
+                            out</button>
+                        <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                            class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 hover:text-white transition duration-300">Log
+                            in</button>
                     </li>
                 </ul>
             </div>

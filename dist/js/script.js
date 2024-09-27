@@ -96,21 +96,33 @@ $("#challonge-btn").click(function () {
     $("#challonge").removeClass("hidden"); 
 });
 
-function createProfileCard(userId, displayName) {
+fetch('https://script.google.com/macros/s/AKfycbxr9sg0wHsZvfrI37RavRkAJlg1wcpFaU6ZZww9cE/exec')
+    .then(response => response.json())
+    .then(data => {
+    data.forEach(user => {
+      // Make sure the role exists and the ID matches the role
+        if (user.role && $(`#profile-${user.role}`).length) {
+        // Append the profile card to the appropriate section
+        $(`#profile-${user.role}`).append(createProfileCard(user.userId, user.username));
+        } else {
+        console.warn(`No element found for role: ${user.role}`);
+        }
+    });
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+// Function to create a profile card
+function createProfileCard(userId, username) {
     var profileCard = `
-        <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 font-bold bg-gulanova p-2 rounded-md hover:scale-110 transition duration-300">
-            <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="Large avatar">
-            ${displayName}
-        </a>
+    <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 font-bold bg-gulanova p-2 rounded-md hover:scale-110 transition duration-300">
+        <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="Large avatar">
+        ${username}
+    </a>
     `;
     return profileCard;
 }
 
-//placeholders
-$("#profile-host").append(createProfileCard("12424909", "Revv-"));
-$("#profile-host").append(createProfileCard("11184912", "danar"));
-$("#profile-sponsor").append(createProfileCard("12424909", "Revv-"));
-$("#profile-sponsor").append(createProfileCard("11184912", "danar"));
+
 
 $("#profile-player").append(createProfileCard("11184912", "danar"));
 $("#profile-player").append(createProfileCard("11184912", "danar"));
