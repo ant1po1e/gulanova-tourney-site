@@ -1,216 +1,344 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Gulanova Tournament" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://gulanova.top" />
-    <meta property="og:image"
-        content="https://imgdb.net/storage/uploads/74576d5e097b84bdebf46954bb7a691598bfb07b3816d391db8ef79f6fb5bc67.png" />
-    <meta property="og:description" content="Ini web gulanova kayaknya" />
-    <title>Gulanova | Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet" />
-    <link rel="icon" type="image/x-icon" href="/dist/img/favicon.ico">
+    <meta name="google-adsense-account" content="ca-pub-4499218414555492">
+    <link rel="stylesheet" href="/dist/css/output.css">
     <link rel="stylesheet" href="/dist/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/dist/img/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/dist/flowbite/dist/flowbite.min.js"></script>
+    <title>Gulanova | Home</title>
 </head>
 
-<body id="page-top">
-    <!--Navigation bar-->
-    <div id="navbar-component">
-        <script>
-            $(function () {
-                $("#navbar-component").load("/components/navbar.html");
-            });
-        </script>
-    </div>
+<body class="bg-black">
+    <!-- Navbar -->
+    <nav
+        class="border-gray-200 bg-black bg-opacity-100 md:bg-opacity-75 fixed w-full z-20 top-0 start-0 navbar-scrolled transition duration-300">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="/dist/img/gulanova.png" class="h-8" alt="Gulanova Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Gulanova</span>
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0" id="user-menu-button"
+                    aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/guest" alt="user photo">
+                </button>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gulanovaDark divide-gulanova"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-white">Guest</span>
+                    </div>
+                    <li>
+                        <div class="block px-4 py-2 text-sm text-gray-200">You are:
+                            Visitor</div>
+                    </li>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+                        <li>
+                            <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                                class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 hover:text-white transition duration-300 hidden">Log
+                                out</button>
+                            <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                                class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 hover:text-white transition duration-300">Log
+                                in</button>
+                        </li>
+                    </ul>
+                </div>
+                <button data-collapse-toggle="navbar-user" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-gray-400 hover:bg-gray-700"
+                    aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                <ul
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent md:bg-transparent border-gray-700">
+                    <li>
+                        <a href="/"
+                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about/"
+                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">About</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                            class="flex items-center justify-between w-full py-2 px-3 rounded md:border-0 md:p-0 md:w-auto text-white md:hover:text-gulanova border-gray-700 hover:bg-gray-700 md:hover:bg-transparent transition duration-300">Tournaments
+                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 1 4 4 4-4" />
+                            </svg></button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar"
+                            class="z-10 hidden font-normal divide-y rounded-lg shadow w-44 bg-gulanovaDark divide-gray-600">
+                            <ul class="py-2 text-sm text-white" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#"
+                                        class="block px-4 py-2 bg-gulanova hover:text-white transition duration-300"
+                                        aria-current="page">Gulanocup
+                                        1</a>
+                                </li>
+                                <li>
+                                    <a href="/tournaments/gulanocup-dua.html"
+                                        class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                        2</a>
+                                </li>
+                                <li>
+                                    <a href="/tournaments/gulanocup-tiga.html"
+                                        class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                        3</a>
+                                </li>
+                                <li>
+                                    <a href="/tournaments/gulanocup-empat.html"
+                                        class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                        4</a>
+                                </li>
+                                <li>
+                                    <a href="/tournaments/gulanocup-lima.html"
+                                        class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                        5</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/khodam/"
+                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">Khodam</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar-END -->
+
 
     <!-- Jumbotron -->
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-            <div class="d-flex justify-content-center">
-                <div class="text-center">
-                    <h1 class="mx-auto my-0 text-uppercase">Gulanocup 1</h1>
-                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Similique est commodi iste corrupti dolore cum reiciendis, debitis temporibus impedit
-                        exercitationem, ex veritatis sed? Facere, aliquam?</h2>
-                    <a class="btn btn-discord" id="staff-btn">Staffs</a>
-                    <a class="btn btn-discord" id="player-btn">Players</a>
-                    <a class="btn btn-discord" id="mappool-btn">Mappools</a>
-                    <a class="btn btn-discord" id="match-btn">Matches</a>
-                    <a class="btn btn-discord" id="challonge-btn">Challonge</a>
-                </div>
+    <section class="masthead">
+        <div class="px-4 mx-auto max-w-screen-xl text-center py-20 md:py-52">
+            <h1 class="mb-5">
+                Gulanocup 1</h1>
+            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Iste eligendi dicta asperiores placeat ipsa praesentium ad. Odit nihil nam
+                quia.</p>
+            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
+                <button id="staff-btn"
+                    class="inline-flex justify-center items-center py-3 px-5 mx-2 text-base font-medium text-center text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300">
+                    Staff
+                </button>
+                <button id="player-btn"
+                    class="inline-flex justify-center items-center py-3 px-5 mx-2 text-base font-medium text-center text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300">
+                    Player
+                </button>
+                <button id="mappool-btn"
+                    class="inline-flex justify-center items-center py-3 px-5 mx-2 text-base font-medium text-center text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300">
+                    Mappools
+                </button>
+                <button id="match-btn"
+                    class="inline-flex justify-center items-center py-3 px-5 mx-2 text-base font-medium text-center text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300">
+                    Matches
+                </button>
+                <button id="challonge-btn"
+                    class="inline-flex justify-center items-center py-3 px-5 mx-2 text-base font-medium text-center text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300">
+                    Challonge
+                </button>
             </div>
         </div>
-    </header>
+    </section>
+    <!-- Jumbotron-END -->
 
-    <section id="staffs" class="pb-5 bg-black section">
-        <div class="container border-2 pt-2 text-center" style="max-width: 50rem;">
-            <div class="row mb-2">
-                <div class="col">
-                    <h2 class="text-white">Host</h2>
-                </div>
-            </div>
-            <div id="profile-host" class="row justify-content-center bg-content rounded py-4 text-white">
+
+    <!-- Staff Section -->
+    <section id="staff" class="mx-auto text-center section">
+        <h1 class="mb-5 text-2xl font-bold text-white">
+            Staff
+        </h1>
+        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg bg-cyan-950">
+            <h2 class="mb-5 text-xl font-mono text-white">
+                Hosts
+            </h2>
+            <div id="profile-host" class="flex flex-wrap justify-center">
 
             </div>
-        </div>
 
-        <div class="container border-2 pt-4 text-center" style="max-width: 50rem;">
-            <div class="row mb-2">
-                <div class="col">
-                    <h2 class="text-white">Sponsors</h2>
-                </div>
-            </div>
-            <div id="profile-sponsor" class="row justify-content-center bg-content rounded py-4 text-white">
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <h2 class="mb-5 text-xl font-mono text-white">
+                Sponsors
+            </h2>
+            <div id="profile-sponsor" class="flex flex-wrap justify-center">
 
             </div>
         </div>
     </section>
+    <!-- Staff Section-END -->
 
-    <section id="players" class="pb-5 bg-black section visually-hidden">
-        <div class="container border-2 pt-2 text-center" style="max-width: 50rem;">
-            <div class="row mb-2">
-                <div class="col">
-                    <h2 class="text-white">Players</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center bg-content rounded py-4 text-white">
-                <a href="https://osu.ppy.sh/users/revv-" target="_blank"
-                    class="col-lg-2 col-md-2 col-sm-2 profile-card rounded">
-                    <img src="https://a.ppy.sh/12424909" alt="Host 1" class="profile rounded">
-                    <h5>Revv-</h5>
-                    <small><img class="flag-icon" src="https://flagcdn.com/32x24/id.png" alt="Indonesia"></small>
-                </a>
-                <a href="https://osu.ppy.sh/users/danar" target="_blank"
-                    class="col-lg-2 col-md-2 col-sm-2 profile-card rounded">
-                    <img src="https://a.ppy.sh/11184912" alt="Host 2" class="profile rounded">
-                    <h5>danar</h5>
-                    <small><img class="flag-icon" src="https://flagcdn.com/32x24/id.png" alt="Indonesia"></small>
-                </a>
+
+    <!-- Player Section -->
+    <section id="player" class="mx-auto text-center section hidden">
+        <h1 class="mb-5 text-2xl font-bold text-white">
+            Player
+        </h1>
+        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg bg-cyan-950">
+            <div id="profile-player" class="flex flex-wrap justify-center">
+
             </div>
         </div>
     </section>
+    <!-- Player Section-END -->
 
-    <section id="mappools" class="pb-5 bg-black section visually-hidden">
-        <div class="container border-2 pt-2 text-center" style="max-width: 50rem;">
-            <div class="row mb-2">
-                <div class="col">
-                    <h2 class="text-white">Mappools</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center bg-content rounded py-4 text-white">
-                <div class="form-group width mb-3">
-                    <label for="stage-map-select" class="mb-2">Select Stage</label>
-                    <select id="stage-map-select" class="form-control">
+
+    <!-- Mappool Section -->
+    <section id="mappool" class="mx-auto text-center section hidden">
+        <h1 class="mb-5 text-2xl font-bold text-white">
+            Mappool
+        </h1>
+        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg bg-cyan-950">
+            <div class="flex flex-wrap justify-center">
+                <div class="mb-4">
+                    <label for="stage-map-select" class="mb-4 text-white">Select Stage</label>
+                    <select id="stage-map-select" class="w-full bg-gulanova rounded-lg text-white">
                         <!-- Stages will be dynamically added here -->
                     </select>
                 </div>
-                <div id="carouselExampleCaptions" class="carousel slide">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner" id="carousel-inner">
+                <div id="animation-carousel" class="relative w-full" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div id="carousel-inner" class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                        <!-- Item 1 -->
 
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
+                    <button type="button"
+                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
                     </button>
                 </div>
-
 
             </div>
         </div>
     </section>
+    <!-- Mappool Section-END -->
 
-    <section id="matches" class="pb-5 bg-black section visually-hidden">
-        <div class="container border-2 pt-2 text-center" style="max-width: 50rem;">
-            <div class="row mb-2">
-                <div class="col">
-                    <h2 class="text-white">Matches</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center bg-content rounded py-4 text-white">
-                <div class="form-group width mb-3">
-                    <label for="stage-select" class="mb-2">Select Stage</label>
-                    <select id="stage-select" class="form-control">
+
+    <!-- Mappool Section -->
+    <section id="match" class="mx-auto text-center section hidden">
+        <h1 class="mb-5 text-2xl font-bold text-white">
+            Mappool
+        </h1>
+        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg bg-cyan-950">
+            <div class="flex flex-wrap justify-center">
+                <div class="mb-4">
+                    <label for="stage-select" class="mb-4 text-white">Select Stage</label>
+                    <select id="stage-select" class="w-full bg-gulanova rounded-lg text-white">
                         <!-- Stages will be dynamically added here -->
                     </select>
                 </div>
 
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead class="thead-light">
+                <div class="relative w-full">
+                    <table class="w-full text-sm text-left rtl:text-right text-gray-400">
+                        <thead class="text-xs uppercase bg-gray-700 text-gray-400">
                             <tr>
-                                <th>Date (WIB)</th>
-                                <th>Time (WIB)</th>
-                                <th>Referee</th>
-                                <th>Player</th>
-                                <th>MP Link</th>
+                                <th scope="col" class="px-6 py-3">
+                                    Date (WIB)
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Time (WIB)
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Referee
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    Player
+                                </th>
+                                <th scope="col" class="px-6 py-3">
+                                    MP Link
+                                </th>
                             </tr>
                         </thead>
-                        <tbody id="schedule-body">
-                            <!-- Rows will be dynamically added here -->
+                        <tbody id="schedule-body"></tbody>
+                        <!-- Rows will be dynamically added here -->
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Mappool Section-END -->
 
-    <section id="challonge" class="pb-5 bg-black section visually-hidden">
-        <div class="container border-2 pt-2 text-center" style="max-width: 50rem;">
-            <div class="row mb-2">
-                <div class="col">
-                    <h2 class="text-white">Challonge</h2>
-                </div>
-            </div>
-            <div class="row justify-content-center bg-content rounded py-4 text-white">
-                <iframe src="https://challonge.com/gulanocup4/module" width="100%" height="500" frameborder="0"
-                    scrolling="auto" allowtransparency="true"></iframe>
-            </div>
+
+    <!-- Challonge Section -->
+    <section id="challonge" class="mx-auto text-center section hidden">
+        <h1 class="mb-5 text-2xl font-bold text-white">
+            Challonge
+        </h1>
+        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg bg-cyan-950">
+            <iframe src="https://challonge.com/gulanocup4/module" width="100%" height="500" frameborder="0"
+                scrolling="auto" allowtransparency="true"></iframe>
         </div>
     </section>
-
-    <!--Footer -->
-    <div id="footer-component">
-        <script>
-            $(function () {
-                $("#footer-component").load("/components/footer.html");
-            });
-        </script>
-    </div>
+    <!-- Challonge Section-END -->
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer class="bg-black m-4">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <div class="flex social items-center justify-center">
+                <a class="mx-2 hover:scale-125 hover:text-gulanova transition duration-300" href="/twitch"><i
+                        class="bi bi-twitch"></i></a>
+                <a class="mx-2 hover:scale-125 hover:text-gulanova transition duration-300" href="/youtube"><i
+                        class="bi bi-youtube"></i></a>
+                <a class="mx-2 hover:scale-125 hover:text-gulanova transition duration-300" href="/instagram"><i
+                        class="bi bi-instagram"></i></a>
+            </div>
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <span class="block text-sm sm:text-center text-gray-200">© Gulanova 2024, developed by <a
+                    class="text-gulanova" href="http://github.com/ant1po1e" target="_blank"
+                    rel="noopener noreferrer">Antipole</a> and <a class="text-gulanova" href="https://github.com/ZuTuu"
+                    target="_blank" rel="noopener noreferrer">danar</a>.</span>
+        </div>
+    </footer>
+    <!-- Footer-END -->
+
     <script src="/dist/js/script.js"></script>
-    <script src="/dist/js/gulanovaApi.js"></script>
+    <script src="/dist/js/gulanovaAPI.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
