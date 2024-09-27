@@ -1,0 +1,105 @@
+<nav
+    class="border-gray-200 bg-black bg-opacity-100 md:bg-opacity-75 fixed w-full z-20 top-0 start-0 navbar-scrolled transition duration-300">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="/dist/img/gulanova.png" class="h-8" alt="Gulanova Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Gulanova</span>
+        </a>
+        <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0" id="user-menu-button"
+                aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                <span class="sr-only">Open user menu</span>
+                <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/guest" id="avatar" alt="user photo">
+            </button>
+            <!-- Dropdown menu -->
+            <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gulanovaDark divide-gulanova"
+                id="user-dropdown">
+                <div class="px-4 py-3">
+                    <span class="block text-sm text-white" id="username">Guest</span>
+                </div>
+                <li>
+                    <div class="block px-4 py-2 text-sm text-gray-200">You are:
+                        Visitor</div>
+                </li>
+                <ul class="py-2" aria-labelledby="user-menu-button">
+                    <li>
+                        <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                            class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 hover:text-white transition duration-300 hidden">Log
+                            out</button>
+                        <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                            class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 hover:text-white transition duration-300">Log
+                            in</button>
+                    </li>
+                </ul>
+            </div>
+            <button data-collapse-toggle="navbar-user" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-gray-400 hover:bg-gray-700"
+                aria-controls="navbar-user" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+        </div>
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+            <ul
+                class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent md:bg-transparent border-gray-700">
+                <li>
+                    <a href="#"
+                        class="block py-2 px-3 text-white bg-gulanovaDark rounded md:bg-transparent md:p-0 md:text-gulanova"
+                        aria-current="page">Home</a>
+                </li>
+                <li>
+                    <a href="/about/"
+                        class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">About</a>
+                </li>
+                <li>
+                    <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
+                        class="flex items-center justify-between w-full py-2 px-3 rounded md:border-0 md:p-0 md:w-auto text-white md:hover:text-gulanova border-gray-700 hover:bg-gray-700 md:hover:bg-transparent transition duration-300">Tournaments
+                        <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 4 4 4-4" />
+                        </svg></button>
+                    <!-- Dropdown menu -->
+                    <div id="dropdownNavbar"
+                        class="z-10 hidden font-normal divide-y rounded-lg shadow w-44 bg-gulanovaDark divide-gray-600">
+                        <ul class="py-2 text-sm text-white" aria-labelledby="dropdownLargeButton">
+                            <li>
+                                <a href="/tournaments/gulanocup-satu.html"
+                                    class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                    1</a>
+                            </li>
+                            <li>
+                                <a href="/tournaments/gulanocup-dua.html"
+                                    class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                    2</a>
+                            </li>
+                            <li>
+                                <a href="/tournaments/gulanocup-tiga.html"
+                                    class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                    3</a>
+                            </li>
+                            <li>
+                                <a href="/tournaments/gulanocup-empat.html"
+                                    class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                    4</a>
+                            </li>
+                            <li>
+                                <a href="/tournaments/gulanocup-lima.html"
+                                    class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                    5</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/khodam/"
+                        class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">Khodam</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

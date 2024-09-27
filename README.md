@@ -46,9 +46,9 @@ $ git push origin commitMessage/featureName
 
 ## Built With
 Technologies used in the project:
-- [Bootstrap v5.3](https://getbootstrap.com)
+- [Tailwind CSS v3.4.13](https://tailwindcss.com)
+- [Flowbite](https://flowbite.com)
 - [AOS](https://michalsnik.github.io/aos/)
 - [jQuery](https://jquery.com)
-- [Popper.js](https://popper.js.org/)
 - [Axios](https://axios-http.com/)
 ---
