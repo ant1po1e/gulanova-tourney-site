@@ -3,7 +3,7 @@ module.exports = {
   plugins: [
     require('flowbite/plugin')
   ],
-  content: ['index.html', './about/index.html', './tournaments/*.html', './dist/components/*.html', './dist/flowbite/**/*.js'],
+  content: ['index.html', './about/index.html', './tournaments/*.html', './dist/components/*.html', './dist/js/script.js  ', './dist/flowbite/**/*.js'],
   theme: {
     extend: {
       colors: {
