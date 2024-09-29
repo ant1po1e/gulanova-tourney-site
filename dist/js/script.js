@@ -96,34 +96,34 @@ $("#challonge-btn").click(function () {
     $("#challonge").removeClass("hidden"); 
 });
 
-function createProfileCard(userId, displayName) {
-    var profileCard = `
-        <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 font-bold bg-gulanova p-2 rounded-md hover:scale-110 transition duration-300">
-            <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="Large avatar">
-            ${displayName}
-        </a>
-    `;
-    return profileCard;
-}
+// function createProfileCard(userId, displayName) {
+//     var profileCard = `
+//         <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 font-bold bg-gulanova p-2 rounded-md hover:scale-110 transition duration-300">
+//             <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="Large avatar">
+//             ${displayName}
+//         </a>
+//     `;
+//     return profileCard;
+// }
 
-//placeholders
-$("#profile-host").append(createProfileCard("12424909", "Revv-"));
-$("#profile-host").append(createProfileCard("11184912", "danar"));
-$("#profile-sponsor").append(createProfileCard("12424909", "Revv-"));
-$("#profile-sponsor").append(createProfileCard("11184912", "danar"));
+// //placeholders
+// $("#profile-host").append(createProfileCard("12424909", "Revv-"));
+// $("#profile-host").append(createProfileCard("11184912", "danar"));
+// $("#profile-sponsor").append(createProfileCard("12424909", "Revv-"));
+// $("#profile-sponsor").append(createProfileCard("11184912", "danar"));
 
 
 
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
-$("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
+// $("#profile-player").append(createProfileCard("11184912", "danar"));
 
 $(document).ready(function () {
     // Placeholder for stages API
