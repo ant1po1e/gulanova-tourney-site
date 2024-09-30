@@ -129,58 +129,71 @@ $(document).ready(function () {
     // Placeholder for stages API
     const stages = [
         { id: 'qualifiers', name: 'Qualifiers' },
-        { id: 'group_stage', name: 'Group Stage' },
-        { id: 'knockout_stage', name: 'Knockout Stage' }
+        { id: 'ro64', name: 'Round of 64' },
+        { id: 'ro32', name: 'Round of 32' },
+        { id: 'ro16', name: 'Round of 16' },
+        { id: 'quarterfinals', name: 'Quarterfinals' },
+        { id: 'semifinals', name: 'Semifinals' },
+        { id: 'finals', name: 'Finals' },
+        { id: 'grandfinals', name: 'Grandfinals' },
     ];
 
-    // Sample data for mappools, replace with API call
-    const mappools = {
-        qualifiers: [
-            { stage: 'Stage 6', link: 'https://osu.ppy.sh/beatmapsets/2248638#mania/4781986', mapTitle: 'Getty vs. DJ DiA - DropZ-Line', mapper: 'Toaph Daddy', image: 'https://assets.ppy.sh/beatmaps/2233543/covers/cover.jpg?1726890892' },
-            { stage: 'Stage 7', link: 'https://osu.ppy.sh/beatmapsets/2248638#mania/4781986', mapTitle: 'MYUKKE. - Inga WooHoo!!!', mapper: 'TheFunk', image: 'https://assets.ppy.sh/beatmaps/2233543/covers/cover.jpg?1726890892' },
-            { stage: 'Stage 8', link: 'https://osu.ppy.sh/beatmapsets/2248638#mania/4781986', mapTitle: 'Zekk - Abrasion', mapper: 'Japeynius', image: 'https://assets.ppy.sh/beatmaps/2233543/covers/cover.jpg?1726890892' }
-        ]
-    };
+    // Function to load stages in dropdown
+    function loadStages() {
+        stages.forEach(stage => {
+            $('#stage-map-select').append(new Option(stage.name, stage.id));
+        });
+    }
 
-    // Load stages into the dropdown
-    stages.forEach(stage => {
-        $('#stage-map-select').append(new Option(stage.name, stage.id));
-    });
+    // Function to load schedule for selected stage (API example)
+    function loadMappool(stageId) {
+        // Sample data, replace with actual API call
+        const mappool = {
+            qualifiers: [
+                { mapTitle: 'Tagatame [Lining up what was taken]', artist:'TK from Ling tosite sigure', mapper:'Antipole', mod:'HB1', link:'https://osu.ppy.sh/beatmapsets/2203071#mania/4663017'},
+                { mapTitle: 'Tagatame [Lining up what was taken]', artist:'TK from Ling tosite sigure', mapper:'Antipole', mod:'HB1', link:'https://osu.ppy.sh/beatmapsets/2203071#mania/4663017'},
+                { mapTitle: 'Tagatame [Lining up what was taken]', artist:'TK from Ling tosite sigure', mapper:'Antipole', mod:'HB1', link:'https://osu.ppy.sh/beatmapsets/2203071#mania/4663017'},
+                { mapTitle: 'Tagatame [Lining up what was taken]', artist:'TK from Ling tosite sigure', mapper:'Antipole', mod:'HB1', link:'https://osu.ppy.sh/beatmapsets/2203071#mania/4663017'},
+            ],
+            ro64: [
+                { mapTitle: 'Triumph & Regret [Regret]', artist:'typeMars', mapper:'[ A v a l o n ]', mod:'RC1', link:'https://osu.ppy.sh/beatmapsets/347650#mania/767046'},
+                { mapTitle: 'Triumph & Regret [Regret]', artist:'typeMars', mapper:'[ A v a l o n ]', mod:'RC1', link:'https://osu.ppy.sh/beatmapsets/347650#mania/767046'},
+                { mapTitle: 'Triumph & Regret [Regret]', artist:'typeMars', mapper:'[ A v a l o n ]', mod:'RC1', link:'https://osu.ppy.sh/beatmapsets/347650#mania/767046'},
+                { mapTitle: 'Triumph & Regret [Regret]', artist:'typeMars', mapper:'[ A v a l o n ]', mod:'RC1', link:'https://osu.ppy.sh/beatmapsets/347650#mania/767046'},
+            ]
+        };
 
-    // Function to load mappools based on stage
-    function loadMappools(stageId) {
-        const pool = mappools[stageId];
-        const carouselInner = $('#carousel-inner');
-        carouselInner.empty(); // Clear the existing carousel items
+        // Clear existing table rows
+        $('#mappool-body').empty();
 
-        if (pool) {
-            pool.forEach((map, index) => {
-                const activeClass = index === 0 ? 'active' : ''; // Make the first item active
-                const card = `
-                    <a href=""${map.link} class="duration-200 ease-linear  ${activeClass}" data-carousel-item>
-                        <img src="${map.image}"
-                            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-                            alt="">
-                        <div class="relative top-500 top-1/2 px-4 py-2 opacity-100 ">
-                            <h2 class="text-2xl text-white font-bold text-center ">${map.stage}</h3>
-                            <h2 class="text-xl text-white font-bold text-center ">${map.mapTitle}</h3>
-                            <h2 class="text-xl text-white font-bold text-center ">Mapper: ${map.Mapper}</h3>
-                        </div>
-                    </a>
+        // Add new rows
+        if (mappool[stageId]) {
+            mappool[stageId].forEach(mappool => {
+                const row = `
+                    <tr class="border-b bg-gray-800 border-gray-700">
+                        <td class="px-3 py-2 md:px-6 md:py-4">${mappool.mapTitle}</td>
+                        <td class="px-3 py-2 md:px-6 md:py-4">${mappool.artist}</td>
+                        <td class="px-3 py-2 md:px-6 md:py-4">${mappool.mapper}</td>
+                        <td class="px-3 py-2 md:px-6 md:py-4">${mappool.mod}</td>
+                        <td class="px-3 py-2 md:px-6 md:py-4 text-blue-600"><a href="${mappool.link}" target="_blank">click</a></td>
+                    </tr>
                 `;
-                carouselInner.append(card);
+                $('#mappool-body').append(row);
             });
         }
     }
 
-    // Load default mappool on page load
-    loadMappools('qualifiers');
+    // Load stages into the dropdown
+    loadStages();
 
-    // Change mappools when stage is selected
+    // Load schedule when a stage is selected
     $('#stage-map-select').change(function () {
         const stageId = $(this).val();
-        loadMappools(stageId);
+        loadMappool(stageId);
     });
+
+    // Load the default stage (e.g., Qualifiers) on page load
+    loadMappool('qualifiers');
 });
 
 
@@ -231,7 +244,7 @@ $(document).ready(function () {
                         <td class="px-3 py-2 md:px-6 md:py-4">${schedule.time}</td>
                         <td class="px-3 py-2 md:px-6 md:py-4">${schedule.referee}</td>
                         <td class="px-3 py-2 md:px-6 md:py-4">${schedule.player}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4"><a class="underline" href="${schedule.mpLink}" target="_blank">click</a></td>
+                        <td class="px-3 py-2 md:px-6 md:py-4 text-blue-600"><a class="underline" href="${schedule.mpLink}" target="_blank">click</a></td>
                     </tr>
                 `;
                 $('#schedule-body').append(row);

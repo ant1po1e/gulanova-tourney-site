@@ -26,8 +26,10 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Gulanova</span>
             </a>
             <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-[3px] ring-gulanova transition duration-300" id="user-menu-button"
-                    aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                <button type="button"
+                    class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-[3px] ring-gulanova transition duration-300"
+                    id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                    data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/guest" id="avatar" alt="user photo">
                 </button>
@@ -213,48 +215,40 @@
                         <!-- Stages will be dynamically added here -->
                     </select>
                 </div>
-                <div id="animation-carousel" class="relative w-full" data-carousel="static">
-                    <!-- Carousel wrapper -->
-                    <div id="carousel-inner" class="relative h-56 overflow-hidden rounded-lg md:h-96">
-                        <!-- Item 1 -->
 
-                    </div>
-                    <!-- Slider controls -->
-                    <button type="button"
-                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-prev>
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="M5 1 1 5l4 4" />
-                            </svg>
-                            <span class="sr-only">Previous</span>
-                        </span>
-                    </button>
-                    <button type="button"
-                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-                        data-carousel-next>
-                        <span
-                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 9 4-4-4-4" />
-                            </svg>
-                            <span class="sr-only">Next</span>
-                        </span>
-                    </button>
+                <div class="relative w-full">
+                    <table class="w-full text-[11px] md:text-sm text-left rtl:text-right text-gray-400">
+                        <thead class="text-xs uppercase bg-gray-700 text-gray-400">
+                            <tr>
+                                <th scope="col" class="px-3 py-2 md:px-6 md:py-3">
+                                    Map
+                                </th>
+                                <th scope="col" class="px-3 py-2 md:px-6 md:py-3">
+                                    Artist
+                                </th>
+                                <th scope="col" class="px-3 py-2 md:px-6 md:py-3">
+                                    Mapper
+                                </th>
+                                <th scope="col" class="px-3 py-2 md:px-6 md:py-3">
+                                    Mod
+                                </th>
+                                <th scope="col" class="px-3 py-2 md:px-6 md:py-3">
+                                    Link
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="mappool-body"></tbody>
+                        <!-- Rows will be dynamically added here -->
+                        </tbody>
+                    </table>
                 </div>
-
             </div>
         </div>
     </section>
     <!-- Mappool Section-END -->
 
 
-    <!-- Mappool Section -->
+    <!-- Match Section -->
     <section id="match" class="mx-auto text-center section hidden">
         <h1 class="mb-5 text-2xl font-bold text-white">
             Mappool
@@ -297,7 +291,7 @@
             </div>
         </div>
     </section>
-    <!-- Mappool Section-END -->
+    <!-- Match Section-END -->
 
 
     <!-- Challonge Section -->
@@ -332,6 +326,7 @@
         </div>
     </footer>
     <!-- Footer-END -->
+
 
     <script src="/dist/js/script.js"></script>
     <script src="/dist/js/gulanovaAPI.js"></script>
