@@ -1,0 +1,9 @@
+[
+    { "id": "qualifiers", "name": "Qualifiers" },
+    { "id": "ro32", "name": "Round of 32" },
+    { "id": "ro16", "name": "Round of 16" },
+    { "id": "quarterfinals", "name": "Quarterfinals" },
+    { "id": "semifinals", "name": "Semifinals" },
+    { "id": "finals", "name": "Finals" },
+    { "id": "grandfinals", "name": "Grandfinals" }
+]

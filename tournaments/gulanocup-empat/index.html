@@ -26,10 +26,8 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Gulanova</span>
             </a>
             <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button"
-                    class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-[3px] ring-gulanova transition duration-300"
-                    id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
-                    data-dropdown-placement="bottom">
+                <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0" id="user-menu-button"
+                    aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
                     <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/guest" id="avatar" alt="user photo">
                 </button>
@@ -89,9 +87,8 @@
                             class="z-10 hidden font-normal divide-y rounded-lg shadow w-44 bg-gulanovaDark divide-gray-600">
                             <ul class="py-2 text-sm text-white" aria-labelledby="dropdownLargeButton">
                                 <li>
-                                    <a href="#"
-                                        class="block px-4 py-2 bg-gulanova hover:text-white transition duration-300"
-                                        aria-current="page">Gulanocup
+                                    <a href="/tournaments/gulanocup-satu.html"
+                                        class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
                                         1</a>
                                 </li>
                                 <li>
@@ -105,8 +102,9 @@
                                         3</a>
                                 </li>
                                 <li>
-                                    <a href="/tournaments/gulanocup-empat.html"
-                                        class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
+                                    <a href="#"
+                                        class="block px-4 py-2 bg-gulanova hover:text-white transition duration-300"
+                                        aria-current="page">Gulanocup
                                         4</a>
                                 </li>
                                 <li>
@@ -178,9 +176,65 @@
 
             <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
             <h2 class="mb-5 text-xl font-mono text-white">
-                Sponsors
+                GFX
             </h2>
-            <div id="profile-sponsor" class="flex flex-wrap justify-center">
+            <div id="profile-gfx" class="flex flex-wrap justify-center">
+
+            </div>
+
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <h2 class="mb-5 text-xl font-mono text-white">
+                Sheeters
+            </h2>
+            <div id="profile-sheeter" class="flex flex-wrap justify-center">
+
+            </div>
+
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <h2 class="mb-5 text-xl font-mono text-white">
+                Mappooler
+            </h2>
+            <div id="profile-mappooler" class="flex flex-wrap justify-center">
+
+            </div>
+
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <h2 class="mb-5 text-xl font-mono text-white">
+                Mappers
+            </h2>
+            <div id="profile-mapper" class="flex flex-wrap justify-center">
+
+            </div>
+
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <h2 class="mb-5 text-xl font-mono text-white">
+                PLaytesters
+            </h2>
+            <div id="profile-playtester" class="flex flex-wrap justify-center">
+
+            </div>
+
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <h2 class="mb-5 text-xl font-mono text-white">
+                Referees
+            </h2>
+            <div id="profile-referee" class="flex flex-wrap justify-center">
+
+            </div>
+
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <h2 class="mb-5 text-xl font-mono text-white">
+                Streamers
+            </h2>
+            <div id="profile-streamer" class="flex flex-wrap justify-center">
+
+            </div>
+
+            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+            <h2 class="mb-5 text-xl font-mono text-white">
+                Commentator
+            </h2>
+            <div id="profile-commentator" class="flex flex-wrap justify-center">
 
             </div>
         </div>
@@ -248,7 +302,7 @@
     <!-- Mappool Section-END -->
 
 
-    <!-- Match Section -->
+    <!-- Mappool Section -->
     <section id="match" class="mx-auto text-center section hidden">
         <h1 class="mb-5 text-2xl font-bold text-white">
             Mappool
@@ -291,7 +345,7 @@
             </div>
         </div>
     </section>
-    <!-- Match Section-END -->
+    <!-- Mappool Section-END -->
 
 
     <!-- Challonge Section -->
@@ -327,13 +381,17 @@
     </footer>
     <!-- Footer-END -->
 
-
     <script src="/dist/js/script.js"></script>
+    <script src="data.js"></script>
     <script src="/dist/js/gulanovaAPI.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+    <script>
+
+    </script>
+
 </body>
 
 </html>

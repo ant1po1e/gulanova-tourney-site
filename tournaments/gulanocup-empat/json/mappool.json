@@ -1,0 +1,49 @@
+{
+    "qualifiers": [{
+            "map": "Ka [Stage 3: Chaos Carnival]",
+            "artist": "LeaF",
+            "mapper": "Antipole",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4459942"
+        },
+        {
+            "map": "Nouri no Machina [Stage 2: Swaying]\r\n",
+            "artist": "Folicca feat. KAFU",
+            "mapper": "Reihynn",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4459312"
+        },
+        {
+            "map": "<3 [Stage 4: Lovely]",
+            "artist": "Moe Shop",
+            "mapper": "Ainer",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4459879"
+        },
+        {
+            "map": "Chat perdu [Stage 5: Meong Ngicalang]",
+            "artist": "Feryquitous",
+            "mapper": "Syrion-",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4459860"
+        },
+        {
+            "map": "Blue Bird feat. k*chan [ dj-Jo Remix ] (Cut ver.) [Stage 6: Freed]",
+            "artist": "Ikimonogakari",
+            "mapper": "FelixSpade",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4459862"
+        },
+        {
+            "map": "Up to 21C [Stage 1: Usagi Flap]",
+            "artist": "Nor",
+            "mapper": "Revv-",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4459871"
+        }
+    ],
+
+    "ro32": [
+
+    ]
+}
