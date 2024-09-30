@@ -639,8 +639,9 @@
     }
   ],
 
-  "sf": [{
-      "date": "Fri, 02/23",
+  "sf": [
+    {
+      "date": "2/23/2024",
       "time": "20:00 WIB",
       "referee": "AZKiFanboy",
       "player_one": "ilham113",
@@ -648,7 +649,7 @@
       "link": "https://osu.ppy.sh/community/matches/112789842"
     },
     {
-      "date": "Sat, 02/24",
+      "date": "2/24/2024",
       "time": "18:00 WIB",
       "referee": "ElinLYPK",
       "player_one": "Hookseye",
@@ -656,7 +657,7 @@
       "link": "https://osu.ppy.sh/mp/112804912"
     },
     {
-      "date": "Sat, 02/24",
+      "date": "2/24/2024",
       "time": "20:00 WIB",
       "referee": "AZKiFanboy",
       "player_one": "[ Heez ]",
@@ -664,7 +665,7 @@
       "link": "https://osu.ppy.sh/community/matches/112806294"
     },
     {
-      "date": "Sun, 02/25",
+      "date": "2/25/2024",
       "time": "10:00 WIB",
       "referee": "Kurami_San",
       "player_one": "Fyl",
@@ -672,7 +673,7 @@
       "link": "https://osu.ppy.sh/community/matches/112818168"
     },
     {
-      "date": "Sun, 02/25",
+      "date": "2/25/2024",
       "time": "17:00 WIB",
       "referee": "Revv-",
       "player_one": "Aimaina",
@@ -680,7 +681,7 @@
       "link": "https://osu.ppy.sh/community/matches/112821585"
     },
     {
-      "date": "Mon, 02/26",
+      "date": "2/26/2024",
       "time": "19:30 WIB",
       "referee": "Revv-",
       "player_one": "[ Heez ]",
@@ -688,7 +689,7 @@
       "link": "https://osu.ppy.sh/community/matches/112837091"
     },
     {
-      "date": "Sat, 02/24",
+      "date": "2/24/2024",
       "time": "17:00 WIB",
       "referee": "danar mw",
       "player_one": "NotImposible",
@@ -696,7 +697,7 @@
       "link": "https://osu.ppy.sh/mp/112804209"
     },
     {
-      "date": "Sun, 02/25",
+      "date": "2/25/2024",
       "time": "17:00 WIB",
       "referee": "ElinLYPK",
       "player_one": "ULHQ",
@@ -705,8 +706,9 @@
     }
   ],
 
-  "f": [{
-      "date": "Sat, 03/02",
+  "f": [
+    {
+      "date": "3/2/2024",
       "time": "18:00 WIB",
       "referee": "ElinLYPK",
       "player_one": "Darrel27",
@@ -714,7 +716,7 @@
       "link": "https://osu.ppy.sh/mp/112900808"
     },
     {
-      "date": "Sat, 03/02",
+      "date": "3/2/2024",
       "time": "20:00 WIB",
       "referee": "Revv-",
       "player_one": "ULHQ",
@@ -722,7 +724,7 @@
       "link": "https://osu.ppy.sh/community/matches/112919804"
     },
     {
-      "date": "Sun, 03/03",
+      "date": "3/3/2024",
       "time": "20:00 WIB",
       "referee": "AZKiFanboy",
       "player_one": "Darrel27",
@@ -730,7 +732,7 @@
       "link": "https://osu.ppy.sh/community/matches/112969290"
     },
     {
-      "date": "Mon, 03/04",
+      "date": "3/4/2024",
       "time": "19:00 WIB",
       "referee": "Reihynn",
       "player_one": "NotImposible",
@@ -739,8 +741,9 @@
     }
   ],
 
-  "gf": [{
-      "date": "Sat, 03/16",
+  "gf": [
+    {
+      "date": "3/16/2024",
       "time": "22:00 WIB",
       "referee": "Revv-",
       "player_one": "Heriza-",
@@ -748,7 +751,7 @@
       "link": "https://osu.ppy.sh/community/matches/113099960"
     },
     {
-      "date": "Sun, 03/17",
+      "date": "3/17/2024",
       "time": "22:00 WIB",
       "referee": "Revv-",
       "player_one": "NotImposible",
@@ -756,7 +759,7 @@
       "link": "https://osu.ppy.sh/community/matches/113116791"
     },
     {
-      "date": "Mon, 03/18",
+      "date": "3/18/2024",
       "time": "22:00 WIB",
       "referee": "AZKiFanboy",
       "player_one": "NotImposible",
