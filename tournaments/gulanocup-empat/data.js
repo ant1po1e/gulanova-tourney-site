@@ -1,5 +1,13 @@
 function createProfileCard(userId, displayName) {
-    var profileCard = `
+    var profileCard = displayName == localStorage.getItem("username") ? 
+    `
+<a href="https://osu.ppy.sh/users/${userId}" class="ring-2 ring-gulanova ring-offset-2 ring-offset-cyan-950 text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:scale-110 transition duration-300" target="_blank">
+    <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
+    ${displayName}
+</a>
+`
+:
+`
 <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:scale-110 transition duration-300" target="_blank">
     <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
     ${displayName}
@@ -65,7 +73,6 @@ fetch('json/users-data.json')
 
 
 $(document).ready(function () {
-    // Function to load stages in dropdown
     function loadStages() {
         fetch('json/stages.json')
             .then(response => response.json())
@@ -77,15 +84,12 @@ $(document).ready(function () {
             .catch(error => console.error('Error fetching stages:', error));
     }
 
-    // Function to load mappool for selected stage (using JSON)
     function loadMappool(stageId) {
         fetch('json/mappool.json')
             .then(response => response.json())
             .then(mappool => {
-                // Clear existing table rows
                 $('#mappool-body').empty();
 
-                // Add new rows if mappool exists for the selected stage
                 if (mappool[stageId]) {
                     mappool[stageId].forEach(mappoolEntry => {
                         const row = `
@@ -106,15 +110,61 @@ $(document).ready(function () {
             .catch(error => console.error('Error fetching mappool:', error));
     }
 
-    // Load stages into the dropdown
     loadStages();
 
-    // Load mappool when a stage is selected
     $('#stage-map-select').change(function () {
         const stageId = $(this).val();
         loadMappool(stageId);
     });
 
-    // Load the default stage (e.g., Qualifiers) on page load
     loadMappool('qualifiers');
+
+});
+
+$(document).ready(function () {
+    function loadStages() {
+        fetch('json/stages.json')
+            .then(response => response.json())
+            .then(stages => {
+                stages.forEach(stage => {
+                    $('#stage-match-select').append(new Option(stage.name, stage.id));
+                });
+            })
+            .catch(error => console.error('Error fetching stages:', error));
+    }
+
+    function loadSchedule(stageId) {
+        fetch('json/match.json')
+            .then(response => response.json())
+            .then(schedule => {
+                $('#schedule-body').empty();
+
+                if (schedule[stageId]) {
+                    schedule[stageId].forEach(scheduleEntry => {
+                        const row = `
+                    <tr class="border-b bg-gray-800 border-gray-700">
+                        <td class="px-3 py-2 md:px-6 md:py-4">${scheduleEntry.date}</td>
+                        <td class="px-3 py-2 md:px-6 md:py-4">${scheduleEntry.time}</td>
+                        <td class="px-3 py-2 md:px-6 md:py-4">${scheduleEntry.referee}</td>
+                        <td class="px-3 py-2 md:px-6 md:py-4">${scheduleEntry.player_one} vs ${scheduleEntry.player_two}</td>
+                        <td class="px-3 py-2 md:px-6 md:py-4 text-blue-600">
+                            <a href="${scheduleEntry.link}" target="_blank">click</a>
+                        </td>
+                    </tr>
+                `;
+                        $('#schedule-body').append(row);
+                    });
+                }
+            })
+            .catch(error => console.error('Error fetching match:', error));
+    }
+
+    loadStages();
+
+    $('#stage-match-select').change(function () {
+        const stageId = $(this).val();
+        loadSchedule(stageId);
+    });
+
+    loadSchedule('qualifiers');
 });
