@@ -18,32 +18,43 @@ window.onload = async function () {
         // If there is an access token and no OAuth code, proceed with fetching user data
         const avatar = document.getElementById('avatar');
         
-        
         const cachedAvatarUrl = localStorage.getItem('avatar_url');
-        // avatar.parentElement.href = "/"
         try {
+            let userData;
             if (cachedAvatarUrl) {
                 avatar.src = cachedAvatarUrl; // Use cached avatar
+                userData = {
+                    username: localStorage.getItem("username"),
+                    userId: localStorage.getItem("user_id")
+                };
             } else {
-                const userData = await callOsuApi('/me/osu'); // Await the API call
+                userData = await callOsuApi('/me/osu'); // Await the API call
                 avatar.src = userData.avatar_url; // Set the avatar src
-                localStorage.setItem('avatar_url', userData.avatar_url); // Cache the avatar URL and everything else
-                localStorage.setItem("username", userData.username)
+                localStorage.setItem('avatar_url', userData.avatar_url); // Cache the avatar URL
+                localStorage.setItem("username", userData.username);
+                localStorage.setItem("user_id", userData.id);
             }
+
+            // Determine user role from users-data.json
+            const userRole = await determineUserRole(userData.username);
+            
+            // Display user role in the HTML
+            const roleElement = document.getElementById('role');
+            roleElement.innerHTML = `You are: ${userRole}`;
+
+            // Update UI for logged-in user
+            const usernameElement = document.getElementById('username');
+            usernameElement.innerHTML = userData.username;
+
+            // Show/hide login/logout buttons
+            const login = document.getElementById('login');
+            const logout = document.getElementById('logout');
+            login.classList.add("hidden");
+            logout.classList.remove("hidden");
+
         } catch (err) {
             console.error('Error fetching user data:', err);
         }
-
-        // disable enable login button
-        const login = document.getElementById('login');
-        const logout = document.getElementById('logout');
-        login.classList.add("hidden");
-        logout.classList.remove("hidden");
-
-        // change username
-        const username = document.getElementById('username');
-        username.innerHTML = localStorage.getItem("username")
-
 
     } else {
         // If neither an access token nor code is present, handle login initiation here
@@ -51,17 +62,32 @@ window.onload = async function () {
     }
 };
 
-function testistwo() {
-    console.log(callOsuApi('/me/osu'))
+// Function to determine user role based on JSON data
+async function determineUserRole(username) {
+    try {
+        const response = await fetch('/path/to/users-data.json'); // Path to your users-data.json
+        const usersData = await response.json();
 
+        // Find the user in the JSON data
+        const user = usersData.find(user => user.username === username);
+
+        if (user) {
+            // If user exists in JSON and has a role
+            if (user.role.includes('player')) {
+                return "Player";
+            } else {
+                return "Staff"; // If user has a role but is not just "player"
+            }
+        } else {
+            // If user is not found in JSON
+            return "Visitor";
+        }
+    } catch (error) {
+        console.error('Error fetching users-data.json:', error);
+        return "Visitor"; // Default to "Visitor" on error
+    }
 }
 
-
-function deb() {
-    var string = window.location.href
-    part = string.match(/code=(.*$)/)[1];
-    console.log(part)
-}
 
 
 $(function () {
