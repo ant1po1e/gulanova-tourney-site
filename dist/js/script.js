@@ -65,7 +65,7 @@ window.onload = async function () {
 // Function to determine user role based on JSON data
 async function determineUserRole(username) {
     try {
-        const response = await fetch('/path/to/users-data.json'); // Path to your users-data.json
+        const response = await fetch('/tournamets/**/users-data.json'); // Path to your users-data.json
         const usersData = await response.json();
 
         // Find the user in the JSON data
