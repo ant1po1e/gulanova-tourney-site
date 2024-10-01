@@ -1,0 +1,766 @@
+{
+    "qualifiers": [{
+            "map": "Ka [Stage 3: Chaos Carnival]",
+            "artist": "LeaF",
+            "mapper": "Antipole",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4459942"
+        },
+        {
+            "map": "Nouri no Machina [Stage 2: Swaying]\r\n",
+            "artist": "Folicca feat. KAFU",
+            "mapper": "Reihynn",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4459312"
+        },
+        {
+            "map": "<3 [Stage 4: Lovely]",
+            "artist": "Moe Shop",
+            "mapper": "Ainer",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4459879"
+        },
+        {
+            "map": "Chat perdu [Stage 5: Meong Ngicalang]",
+            "artist": "Feryquitous",
+            "mapper": "Syrion-",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4459860"
+        },
+        {
+            "map": "Blue Bird feat. k*chan [ dj-Jo Remix ] (Cut ver.) [Stage 6: Freed]",
+            "artist": "Ikimonogakari",
+            "mapper": "FelixSpade",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4459862"
+        },
+        {
+            "map": "Up to 21C [Stage 1: Usagi Flap]",
+            "artist": "Nor",
+            "mapper": "Revv-",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4459871"
+        }
+    ],
+
+    "ro48d1": [{
+            "map": "Rolling Beat [Hard]",
+            "artist": "Mitsukiyo",
+            "mapper": "Revv-",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4444484"
+        },
+        {
+            "map": "Blossoms of Summer Night [Burgeoning Flames]",
+            "artist": "HOYO-MiX",
+            "mapper": "Reihynn",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4402744"
+        },
+        {
+            "map": "Insecure Pt.II feat. Ajixxx [4K // sadar diri (edit)]",
+            "artist": "Lil $ilit",
+            "mapper": "Ainer",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4289794"
+        },
+        {
+            "map": "Cari Jodoh (Cut Ver.) [Revv Nyari Jodoh]",
+            "artist": "Wali",
+            "mapper": "danar",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4450061"
+        },
+        {
+            "map": "Take The Long Way Home [Omahku Adoh Cuk]",
+            "artist": "RiraN feat. core mc",
+            "mapper": "Fawcro",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4451819"
+        },
+        {
+            "map": "The Next Arcady [Mabar w/ AquaTC]",
+            "artist": "Sephid",
+            "mapper": "Syrion-",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4463301"
+        },
+        {
+            "map": "Bliss [Cloud 9]",
+            "artist": "litmus*",
+            "mapper": "PiNkCeLiA",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/3988872"
+        },
+        {
+            "map": "Soul Army (Cut Ver.) [Pasukan Rumput]",
+            "artist": "Sound Souler",
+            "mapper": "Fawcro",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4448704"
+        },
+        {
+            "map": "Ident Tv one [Revv's ChordJackowi]",
+            "artist": "TV ONE",
+            "mapper": "zutu",
+            "mod": "MM1",
+            "link": "https://osu.ppy.sh/b/3291250"
+        },
+        {
+            "map": "Asu no Yozora Shoukaihan [zutu's catastrope]",
+            "artist": "Orangestar feat.IA",
+            "mapper": "danar",
+            "mod": "MM2",
+            "link": "https://osu.ppy.sh/b/4445964"
+        },
+        {
+            "map": "Systima [Cyberspace]",
+            "artist": "Street",
+            "mapper": "FelixSpade",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4465542"
+        }
+    ],
+
+    "ro48d2": [{
+            "map": "Rolling Beat [Hard]",
+            "artist": "Mitsukiyo",
+            "mapper": "Revv-",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4444484"
+        },
+        {
+            "map": "Sesungguhnya (Cut Ver.) [Ketulusan]",
+            "artist": "Ungu",
+            "mapper": "Antipole",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4437981"
+        },
+        {
+            "map": "Ancient Ruins [Archaic Structures]",
+            "artist": "Unknown Artist",
+            "mapper": "Revv-",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4440099"
+        },
+        {
+            "map": "I'm For You (Cut Ver.) [Hyper (edit)]",
+            "artist": "Magnetude",
+            "mapper": "Syrion-",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4462552"
+        },
+        {
+            "map": "Cari Jodoh (Cut Ver.) [Revv Nyari Jodoh]",
+            "artist": "Wali",
+            "mapper": "danar",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4450061"
+        },
+        {
+            "map": "Lovely Picnic [Affection (Edit)]",
+            "artist": "Mitsukiyo",
+            "mapper": "Syrion-",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4466349"
+        },
+        {
+            "map": "The Next Arcady [Mabar w/ AquaTC]",
+            "artist": "Sephid",
+            "mapper": "Syrion-",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4463301"
+        },
+        {
+            "map": "Mantra Hujan [Bersinar]",
+            "artist": "Kobo Kanaeru",
+            "mapper": "Revv-",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4431966"
+        },
+        {
+            "map": "Soul Army (Cut Ver.) [Pasukan Rumput]",
+            "artist": "Sound Souler",
+            "mapper": "Fawcro",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4448704"
+        },
+        {
+            "map": "Unicorn Zombie Apocalypse (Xavi Fabregas Remix) (Cut Ver.) [Invites Sent]",
+            "artist": "Borgore & Sikdope",
+            "mapper": "Ainer",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4462867"
+        },
+        {
+            "map": "The Amazing World of Gumball [EXTRA DAN gumball Delta]",
+            "artist": "Ben Locket",
+            "mapper": "zutu",
+            "mod": "MM1",
+            "link": "https://osu.ppy.sh/b/3371567"
+        },
+        {
+            "map": "i wanted to eat a croissant [Revv's Molen]",
+            "artist": "kessoku band",
+            "mapper": "zutu",
+            "mod": "MM2",
+            "link": "https://osu.ppy.sh/b/3981226"
+        },
+        {
+            "map": "Native Death [Safek]",
+            "artist": "Vizunave",
+            "mapper": "danar",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4465560"
+        }
+    ],
+
+    "ro16": [{
+            "map": "Fleur de Lapin - Chaotic*Dream*Festival [Nasi Pakai Gula]",
+            "artist": "Rabbit House",
+            "mapper": "Fawcro",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4466813"
+        },
+        {
+            "map": "Ray Tuning [Revv's Bakyun!]",
+            "artist": "NayutalieN",
+            "mapper": "danar",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4446769"
+        },
+        {
+            "map": "Photon Melodies (TAKU INOUE Remix) [Luminous (edit)]",
+            "artist": "Photon Maiden",
+            "mapper": "Ainer",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4435388"
+        },
+        {
+            "map": "Oke Gas 2 [Gaspol bareng Apol]",
+            "artist": "Richard Jersey",
+            "mapper": "Revv-",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4475157"
+        },
+        {
+            "map": "Good Parts (when the quality is bad but I am) [LN Parts (when you do not like long notes but I am)]",
+            "artist": "LE SSERAFIM",
+            "mapper": "Ilham",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4448608"
+        },
+        {
+            "map": "TOKAKU=ALMiRAJ [MEOWKKE. (OD 6)]",
+            "artist": "MYUKKE.",
+            "mapper": "PiNkCeLiA",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4473953"
+        },
+        {
+            "map": "Dogbite [Anjing]",
+            "artist": "t+pazolite",
+            "mapper": "Fawcro",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4445759"
+        },
+        {
+            "map": "Lobby [Shaman space trooper comboku]",
+            "artist": "Lost Saga",
+            "mapper": "Syrion-",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4474921"
+        },
+        {
+            "map": "Cache (Cut Ver.) [Chasing 16-Bit Dreams _+]",
+            "artist": "linear ring",
+            "mapper": "[-SVzzZ-]",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4467004"
+        },
+        {
+            "map": "Usagi Flap [Revv's Bnuuy]",
+            "artist": "Nor",
+            "mapper": "zutu",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4066028"
+        },
+        {
+            "map": "You Are The Reason [pembalap]",
+            "artist": "Dede Riandi x Si Babon Tolok",
+            "mapper": "Reihynn",
+            "mod": "MM1",
+            "link": "https://osu.ppy.sh/b/4478273"
+        },
+        {
+            "map": "Roti asmara sepikoe [rasa enak bikin candu]",
+            "artist": "Ikuy",
+            "mapper": "Yacchie-",
+            "mod": "MM2",
+            "link": "https://osu.ppy.sh/b/4459482"
+        },
+        {
+            "map": "Gemu Fa Mi Re [Senam Jari]",
+            "artist": "Nyong Franco",
+            "mapper": "Revv-",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4479507"
+        }
+    ],
+
+    "qf": [{
+            "map": "Rasakno!! Loli-Kami Requiem* (Cut Ver.) [Gangguan Jawa]",
+            "artist": "Cecilia Lieberia",
+            "mapper": "Reihynn",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4484339"
+        },
+        {
+            "map": "Yakin [Apol's Percaya Diri]",
+            "artist": "Endank Soekamti",
+            "mapper": "Antipole",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4420879"
+        },
+        {
+            "map": "Neo City Dive [Dystopia]",
+            "artist": "KARUT",
+            "mapper": "Revv-",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4461898"
+        },
+        {
+            "map": "Construction Site [Under Construction]",
+            "artist": "Unknown Artist",
+            "mapper": "Revv-",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4438727"
+        },
+        {
+            "map": "zeke didn't \"invent dariacore\", i did [uishig didn't \"invent stamina\", i did]",
+            "artist": "coltrane",
+            "mapper": "Ainer",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4452023"
+        },
+        {
+            "map": "Himitsu no Toilette -Midnight Lab Remix- [a symphony of sensuality and intrigue (edit)]",
+            "artist": "Ichinose Shiki (CV: Aihara Kotomi)",
+            "mapper": "Ainer",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4438379"
+        },
+        {
+            "map": "MISSIN YOU (Cut Ver.) [Nisin wafer]",
+            "artist": "KARNAMEREKA",
+            "mapper": "Antipole",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4437982"
+        },
+        {
+            "map": "Space Invaders (Cut Ver.) [LN Expert // Infringer (OD6.5)]",
+            "artist": "Teminite & MDK",
+            "mapper": "FelixSpade",
+            "mod": "LN3",
+            "link": "https://osu.ppy.sh/b/4486045"
+        },
+        {
+            "map": "The Dunes [Sandstorm]",
+            "artist": "BLV3HAZUKI",
+            "mapper": "Fawcro",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4486045"
+        },
+        {
+            "map": "Give You My World [Love World!]",
+            "artist": "EmoCosine",
+            "mapper": "Fawcro",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4432147"
+        },
+        {
+            "map": "Aoharu [Miracles]",
+            "artist": "Nor",
+            "mapper": "Revv-",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/3880669"
+        },
+        {
+            "map": "dashstar* (Cut Ver.) [Neophyte]",
+            "artist": "Knock2",
+            "mapper": "Revv-",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4452191"
+        },
+        {
+            "map": "Maling pangsit [maling matamu]",
+            "artist": "Unknown Artist",
+            "mapper": "towakane",
+            "mod": "MM1",
+            "link": "https://osu.ppy.sh/b/4439498"
+        },
+        {
+            "map": "Dj Salting (Cut Ver.) [boom]",
+            "artist": "DJ Mbon Mbon",
+            "mapper": "danar",
+            "mod": "MM2",
+            "link": "https://osu.ppy.sh/b/4411902"
+        },
+        {
+            "map": "Fatalism [Critical]",
+            "artist": "Endorfin.",
+            "mapper": "FelixSpade",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4486043"
+        }
+    ],
+
+    "sf": [{
+            "map": "Point Blank Lobby [Chain Killer]",
+            "artist": "Unknown Artist",
+            "mapper": "Revv-",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4493556"
+        },
+        {
+            "map": "Aimai Attitude (feat. Nakamura Sanso) (Cut Ver.) [Aimai Gohan]",
+            "artist": "rejection",
+            "mapper": "Ilham",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4447469"
+        },
+        {
+            "map": "Cinta Satu Malam (Mede's Frenchcore Bootleg) [gak bahaya ta??]",
+            "artist": "Melinda",
+            "mapper": "Reihynn",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4420038"
+        },
+        {
+            "map": "Catalyst. (Cut Ver.) [Vengeance.]",
+            "artist": "Weird Genius ft. Pepita",
+            "mapper": "Revv-",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4424408"
+        },
+        {
+            "map": "Lost Umbrella [Payung Hilang]",
+            "artist": "inabakumori",
+            "mapper": "Antipole",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4483986"
+        },
+        {
+            "map": "+Danshi (Cut Ver.) [LN Expert // Youth]",
+            "artist": "Reol",
+            "mapper": "FelixSpade",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4497708"
+        },
+        {
+            "map": "Koise yo Minna, Hai! [Mr. Ainer's Young Bride]",
+            "artist": "Pyxis",
+            "mapper": "Ainer",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4275152"
+        },
+        {
+            "map": "Secret Illumination [Veiled Luminescence]",
+            "artist": "Yooh",
+            "mapper": "Antipole",
+            "mod": "LN3",
+            "link": "https://osu.ppy.sh/b/4446191"
+        },
+        {
+            "map": "Memento (Cut Ver.) [Iwak]",
+            "artist": "Eluveitie",
+            "mapper": "Antipole",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4491149"
+        },
+        {
+            "map": "Flashkick [Flying Tackle ft. Apol]",
+            "artist": "Yooh",
+            "mapper": "Revv-",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4496184"
+        },
+        {
+            "map": "Meant To Be (Nightcore Mix) [inSVitable]",
+            "artist": "ZOOTAH & GA-SUUU & Petboy",
+            "mapper": "Ainer",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4169940"
+        },
+        {
+            "map": "Miracle Sugar Land (Cut Ver.) [Sweet Paradise]",
+            "artist": "Yunomi (feat. Momobako)",
+            "mapper": "[-SVzzZ-]",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4446648"
+        },
+        {
+            "map": "Kerja Lembur Bagai Kuda [staff gulanocup]",
+            "artist": "Ramayana",
+            "mapper": "FelixSpade",
+            "mod": "MM1",
+            "link": "https://osu.ppy.sh/b/4496945"
+        },
+        {
+            "map": "dikananmu [rindu bapak]",
+            "artist": "mamang epep",
+            "mapper": "Reihynn",
+            "mod": "MM2",
+            "link": "https://osu.ppy.sh/b/4497964"
+        },
+        {
+            "map": "PERSONA [Sirkus Gulanova]",
+            "artist": "Omaru Polka",
+            "mapper": "Reihynn",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4494896"
+        }
+    ],
+
+    "f": [{
+            "map": "Bull's Eye [Perfect (cut + edit)]",
+            "artist": "nano",
+            "mapper": "FelixSpade",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4498250"
+        },
+        {
+            "map": "Mousou <3 Chuu!! [Daisuki!! (edit)]",
+            "artist": "Ponchi feat. haxchi",
+            "mapper": "Syrion-",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4462553"
+        },
+        {
+            "map": "Walk This Way! (Cut Ver.) [Lewat Sini Tuan]",
+            "artist": "Kano",
+            "mapper": "danar",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4498376"
+        },
+        {
+            "map": "Goodbye (feat. Receptor) [Departure (edit)]",
+            "artist": "Magnetude",
+            "mapper": "Revv-",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4505702"
+        },
+        {
+            "map": "CyberConnect [Initializing Protocol]",
+            "artist": "Blacklolita",
+            "mapper": "Antipole",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4491146"
+        },
+        {
+            "map": "Exitium [Destruction]",
+            "artist": "Laur",
+            "mapper": "Ainer",
+            "mod": "RC6",
+            "link": "https://osu.ppy.sh/b/4479254"
+        },
+        {
+            "map": "Kirameki Inokori Daisensou [Revv, Ainer, Who'll win?]",
+            "artist": "ShinRa-Bansho",
+            "mapper": "Revv-",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4379012"
+        },
+        {
+            "map": "MEJIRUSHI [Stage 7: Domination]",
+            "artist": "Zekk",
+            "mapper": "Ainer",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4126635"
+        },
+        {
+            "map": "Distorted Fate [Glitched Moon]",
+            "artist": "Sakuzyo",
+            "mapper": "Antipole",
+            "mod": "LN3",
+            "link": "https://osu.ppy.sh/b/4446368"
+        },
+        {
+            "map": "Oxygen Destroyer [Asphyxiate]",
+            "artist": "KARUT",
+            "mapper": "Revv-",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4471275"
+        },
+        {
+            "map": "squall [Bliss of Otherworld's Embrace]",
+            "artist": "Nekomata Master+",
+            "mapper": "Syrion-",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4491285"
+        },
+        {
+            "map": "Qliphothgear [Finality]",
+            "artist": "Juggernaut.",
+            "mapper": "Virtue-",
+            "mod": "HB3",
+            "link": "https://osu.ppy.sh/b/4506217"
+        },
+        {
+            "map": "Elevator (Nightcore Mix) [Levitation]",
+            "artist": "Eliminate",
+            "mapper": "Ainer",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4126482"
+        },
+        {
+            "map": "Goal Wo Nerae! [Stage 1: Ikuzo!]",
+            "artist": "KARUT",
+            "mapper": "Revv-",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4358272"
+        },
+        {
+            "map": "Tiap Hari Bangka Dada [Bangka Dadang]",
+            "artist": "Patrick Joget",
+            "mapper": "Revv-",
+            "mod": "MM1",
+            "link": "https://osu.ppy.sh/b/4502970"
+        },
+        {
+            "map": "Shelter (Shrek Medan Cover) - Supported By Nasi Lemak KFC [nyanyi yang penting X yang penting nyanyi V]",
+            "artist": "Janda Collective",
+            "mapper": "Reihynn",
+            "mod": "MM2",
+            "link": "https://osu.ppy.sh/b/4506771"
+        },
+        {
+            "map": "Intro + Dualive [Escape]",
+            "artist": "Quarks (kradness&Camellia)",
+            "mapper": "FelixSpade",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4506107"
+        }
+    ],
+
+    "gf": [{
+            "map": "Sakit Jiwa [Udah Gila]",
+            "artist": "NTRL",
+            "mapper": "FelixSpade",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4477594"
+        },
+        {
+            "map": "AAAA Chazuke Gang [nasi goreng original]",
+            "artist": "Kuki Akumu",
+            "mapper": "Syrion-",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4467638"
+        },
+        {
+            "map": "No.39 [Relentless]",
+            "artist": "Nanahoshi Kangengakudan",
+            "mapper": "Revv-",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4500005"
+        },
+        {
+            "map": "Whiplash feat. josh pan (sakuraburst Remix) [Running to the heart]",
+            "artist": "X&G",
+            "mapper": "Antipole",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4440404"
+        },
+        {
+            "map": "Apocaliptix [bukan bencana]",
+            "artist": "Juggernaut.",
+            "mapper": "-Yubi-",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4517522"
+        },
+        {
+            "map": "Still Into You [Fluttering Desire]",
+            "artist": "Paramore",
+            "mapper": "Reihynn",
+            "mod": "RC6",
+            "link": "https://osu.ppy.sh/b/4186640"
+        },
+        {
+            "map": "FORTALiCE [ENCOUNTER]",
+            "artist": "ZxNX",
+            "mapper": "Ainer",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4513475"
+        },
+        {
+            "map": "Yuru Fuwa Jukai Girl (Cut Ver.) [cewe ganja]",
+            "artist": "Lon",
+            "mapper": "Ainer",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4526077"
+        },
+        {
+            "map": "potential curve [vehemence]",
+            "artist": "Camellia",
+            "mapper": "Antipole",
+            "mod": "LN3",
+            "link": "https://osu.ppy.sh/b/4437980"
+        },
+        {
+            "map": "CROSS OVER [HybriD GothiC]",
+            "artist": "HyuN feat. LyuU",
+            "mapper": "Ilham",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4493632"
+        },
+        {
+            "map": "Chronos (Cut Ver.) [The end of time]",
+            "artist": "KOAN Sound",
+            "mapper": "Antipole",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4491150"
+        },
+        {
+            "map": ":OLPHEUX: [Musibah ft. PiNkCeLiA]",
+            "artist": "Juggernaut.",
+            "mapper": "Revv-",
+            "mod": "HB3",
+            "link": "https://osu.ppy.sh/b/4522456"
+        },
+        {
+            "map": "Nemesis (Cut Ver.) [Musuh Terlihat]",
+            "artist": "MUZZ",
+            "mapper": "Revv-",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4527113"
+        },
+        {
+            "map": "996 [\"Pekerja Keras\"]",
+            "artist": "Li Huayu",
+            "mapper": "Ainer",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4526775"
+        },
+        {
+            "map": "Joged Caesar [digidigidaw bareng rehin]",
+            "artist": "Caisar Aditya Putra",
+            "mapper": "Syrion-",
+            "mod": "MM1",
+            "link": "https://osu.ppy.sh/b/4525895"
+        },
+        {
+            "map": "Sule [Sule's lasting legacy]",
+            "artist": "Entis Sutisna",
+            "mapper": "danar",
+            "mod": "MM2",
+            "link": "https://osu.ppy.sh/b/4524648"
+        },
+        {
+            "map": "Obscura Nova [Pancaran Kejora]",
+            "artist": "LUMiNOZ Sound Team",
+            "mapper": "Revv-",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4527115"
+        }
+    ]
+}
