@@ -94,12 +94,12 @@ $(document).ready(function () {
                     mappool[stageId].forEach(mappoolEntry => {
                         const row = `
                     <tr class="border-b bg-gray-800 border-gray-700">
-                        <td class="px-3 py-2 md:px-6 md:py-4">${mappoolEntry.map}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4">${mappoolEntry.artist}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4">${mappoolEntry.mapper}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4">${mappoolEntry.mod}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4 text-blue-600">
-                            <a href="${mappoolEntry.link}" target="_blank">click</a>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4">${mappoolEntry.map}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4">${mappoolEntry.artist}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4">${mappoolEntry.mapper}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4">${mappoolEntry.mod}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4 text-blue-600">
+                            <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300" href="${mappoolEntry.link}" target="_blank">Link</a>
                         </td>
                     </tr>
                 `;
@@ -143,12 +143,12 @@ $(document).ready(function () {
                     schedule[stageId].forEach(scheduleEntry => {
                         const row = `
                     <tr class="border-b bg-gray-800 border-gray-700">
-                        <td class="px-3 py-2 md:px-6 md:py-4">${scheduleEntry.date}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4">${scheduleEntry.time}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4">${scheduleEntry.referee}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4">${scheduleEntry.player_one} vs ${scheduleEntry.player_two}</td>
-                        <td class="px-3 py-2 md:px-6 md:py-4 text-blue-600">
-                            <a href="${scheduleEntry.link}" target="_blank">click</a>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.date}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.time}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.referee}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.player_one} vs ${scheduleEntry.player_two}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-4 text-blue-600">
+                            <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300" href="${scheduleEntry.link}" target="_blank">Link</a>
                         </td>
                     </tr>
                 `;
