@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.navbar-scrolled.scrolled {
+    @apply bg-sky-950 transition duration-300 border-black shadow-lg;
+ }
