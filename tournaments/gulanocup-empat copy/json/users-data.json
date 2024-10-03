@@ -37,7 +37,7 @@
   {
     "userId": "17258072",
     "username": "Antipole",
-    "role": "mappooler, mapper, playtester, commentator"
+    "role": "mappooler, mapper, commentator"
   },
   {
     "userId": "24490429",
@@ -72,7 +72,7 @@
   {
     "userId": "31335682",
     "username": "darkplayzosu",
-    "role": "playtester, referee, commentator"
+    "role": "playtester, referee"
   },
   {
     "userId": "5198950",
@@ -83,11 +83,6 @@
     "userId": "17237364",
     "username": "EstaticStatisIO",
     "role": "commentator"
-  },
-  {
-    "userId": "8647138",
-    "username": "eZmmR",
-    "role": "gfx"
   },
   {
     "userId": "12170494",
@@ -157,7 +152,7 @@
   {
     "userId": "13385865",
     "username": "Reyi",
-    "role": "referee"
+    "role": "playtester"
   },
   {
     "userId": "15380643",
