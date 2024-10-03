@@ -17,8 +17,8 @@ window.onload = async function () {
     } else if (accessToken) {
         // If there is an access token and no OAuth code, proceed with fetching user data
         const avatar = document.getElementById('avatar');
-        
-        
+
+
         const cachedAvatarUrl = localStorage.getItem('avatar_url');
         // avatar.parentElement.href = "/"
         try {
@@ -73,25 +73,25 @@ $(function () {
 
 $("#staff-btn").click(function () {
     $(".section").addClass("hidden");
-    $("#staff").removeClass("hidden"); 
+    $("#staff").removeClass("hidden");
 });
 
 $("#player-btn").click(function () {
-    $(".section").addClass("hidden"); 
-    $("#player").removeClass("hidden"); 
+    $(".section").addClass("hidden");
+    $("#player").removeClass("hidden");
 });
 
 $("#mappool-btn").click(function () {
-    $(".section").addClass("hidden"); 
-    $("#mappool").removeClass("hidden"); 
+    $(".section").addClass("hidden");
+    $("#mappool").removeClass("hidden");
 });
 
 $("#match-btn").click(function () {
     $(".section").addClass("hidden");
-    $("#match").removeClass("hidden"); 
+    $("#match").removeClass("hidden");
 });
 
 $("#challonge-btn").click(function () {
     $(".section").addClass("hidden");
-    $("#challonge").removeClass("hidden"); 
+    $("#challonge").removeClass("hidden");
 });
