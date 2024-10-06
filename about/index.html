@@ -18,23 +18,26 @@
 
 <body class="bg-black">
     <!-- Navbar -->
-    <nav class="border-gray-200 bg-black bg-opacity-100 md:bg-opacity-60 fixed w-full z-20 top-0 start-0 navbar-scrolled transition duration-300">
+    <nav
+        class="border-gray-200 bg-black bg-opacity-100 md:bg-opacity-60 fixed w-full z-20 top-0 start-0 navbar-scrolled transition duration-300">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="/dist/img/gulanova.png" class="h-8" alt="Gulanova Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Gulanova</span>
             </a>
             <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-[3px] ring-gulanova transition duration-300" id="user-menu-button"
-                    aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                <button type="button"
+                    class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-[3px] ring-gulanova transition duration-300"
+                    id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                    data-dropdown-placement="bottom">
                     <span class="sr-only">Open user menu</span>
-                    <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/guess" id="avatar" alt="user photo">
+                    <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/guest" id="avatar" alt="user photo">
                 </button>
                 <!-- Dropdown menu -->
                 <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gulanovaDark divide-gulanova"
                     id="user-dropdown">
                     <div class="px-4 py-3">
-                        <span class="block text-sm text-white">Guest</span>
+                        <span class="block text-sm text-white" id="username">Guest</span>
                     </div>
                     <li>
                         <div class="block px-4 py-2 text-sm text-gray-200">You are:
@@ -52,7 +55,7 @@
                     </ul>
                 </div>
                 <button data-collapse-toggle="navbar-user" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-gray-400 hover:bg-gray-700"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-white hover:bg-gulanova"
                     aria-controls="navbar-user" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -64,19 +67,19 @@
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
                 <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent md:bg-transparent border-gray-700">
+                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent md:bg-transparent border-white">
                     <li>
                         <a href="/"
-                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">Home</a>
+                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gulanova hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">Home</a>
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-white bg-gulanovaDark rounded md:bg-transparent md:p-0 md:text-gulanova"
+                            class="block py-2 px-3 text-white bg-gulanovaDark rounded md:bg-transparent md:p-0 md:text-gulanova md:hover:text-white transition duration-300"
                             aria-current="page">About</a>
                     </li>
                     <li>
                         <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            class="flex items-center justify-between w-full py-2 px-3 rounded md:border-0 md:p-0 md:w-auto text-white md:hover:text-gulanova border-gray-700 hover:bg-gray-700 md:hover:bg-transparent transition duration-300">Tournaments
+                            class="flex items-center justify-between w-full py-2 px-3 rounded md:border-0 md:p-0 md:w-auto text-white md:hover:text-gulanova border-gray-700 hover:bg-gulanova md:hover:bg-transparent transition duration-300">Tournaments
                             <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                 fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
@@ -84,30 +87,30 @@
                             </svg></button>
                         <!-- Dropdown menu -->
                         <div id="dropdownNavbar"
-                            class="z-10 hidden font-normal divide-y rounded-lg shadow w-44 bg-gulanovaDark divide-gulanova">
+                            class="z-10 hidden font-normal divide-y rounded-lg shadow w-44 bg-gulanovaDark divide-gray-600">
                             <ul class="py-2 text-sm text-white" aria-labelledby="dropdownLargeButton">
                                 <li>
-                                    <a href="/tournaments/gulanocup-satu.html"
+                                    <a href="/tournaments/gulanocup-satu/"
                                         class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
                                         1</a>
                                 </li>
                                 <li>
-                                    <a href="/tournaments/gulanocup-dua.html"
+                                    <a href="/tournaments/gulanocup-dua/"
                                         class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
                                         2</a>
                                 </li>
                                 <li>
-                                    <a href="/tournaments/gulanocup-tiga.html"
+                                    <a href="/tournaments/gulanocup-tiga/"
                                         class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
                                         3</a>
                                 </li>
                                 <li>
-                                    <a href="/tournaments/gulanocup-empat.html"
+                                    <a href="/tournaments/gulanocup-empat/"
                                         class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
                                         4</a>
                                 </li>
                                 <li>
-                                    <a href="/tournaments/gulanocup-lima.html"
+                                    <a href="/tournaments/gulanocup-lima/"
                                         class="block px-4 py-2 hover:bg-gulanova hover:text-white transition duration-300">Gulanocup
                                         5</a>
                                 </li>
@@ -116,7 +119,7 @@
                     </li>
                     <li>
                         <a href="/khodam/"
-                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gray-700 hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">Khodam</a>
+                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gulanova hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">Khodam</a>
                     </li>
                 </ul>
             </div>
@@ -128,31 +131,12 @@
     <!-- Jumbotron -->
     <section class="masthead">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-20 md:py-52">
-            <h1 class="mb-5">
+            <h1 class="mb-5 font-bold" data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true">
                 About</h1>
-            <p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Apakah anda cape denger (N word) your mom puki bapakkau? kita juga sama!, maka dari itu sini joinlah Gulanova! A fun Indonesian community, Come join the fun! tempat dimana kita bakal nerima kenyamanan kalian dengan orang yang itu lagi itu lagi
-
-                ᆍᆍᆍᆍᆍᆍᆍᆍᆍᆍᆍᆍᆍᆍᆍ
-                Di server ini banyak hal tersedia:
-                ꧞ Server nyantai
-                ꧞ Channel bebas + Channel terserah (our best feature)
-                ꧞ Casual chat (berbagi pengalaman pribadi, kenalan, dll)
-                ꧞ Room music
-                ꧞ Room main bareng
-                ꧞ Osu tracking channel
-                ꧞ Osu bot
-                ꧞ CSGO
-                ꧞ Osu! & osu!mania players
-                ꧞ penyuka anime (mau manggil wibu terserah)
-                ꧞ Sundanese
-                ᆂᆂᆂᆂᆂᆂᆂᆂᆂᆂᆂᆂᆂᆂᆂ
-                
-                Semoga tertarik dan silahkan dicoba apakah komunitas kami cocok dengan anda <3.
-                
-                kalo gak cocok yaudah sih:(</p>
-            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-                <!-- IDK Here-->
-            </div>
+            <p class="text-white text-lg px-4 mx-auto max-w-3xl text-center py-6 mb-20 rounded-lg bg-black bg-opacity-50"
+                data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+                A fun Indonesian community with
+                a lot of gaming and dumbasses. Come and join the fun! atau gua pukul</p>
         </div>
     </section>
     <!-- Jumbotron-END -->
@@ -161,7 +145,7 @@
     <!-- Footer -->
     <footer class="bg-black m-4">
         <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-            <div class="flex social items-center justify-center">
+            <div class="social flex items-center justify-center">
                 <a class="mx-2 hover:scale-125 hover:text-gulanova transition duration-300" href="/twitch"><i
                         class="bi bi-twitch"></i></a>
                 <a class="mx-2 hover:scale-125 hover:text-gulanova transition duration-300" href="/youtube"><i
@@ -179,7 +163,7 @@
     <!-- Footer-END -->
 
     <script src="/dist/js/script.js"></script>
-    <script src="/dist/js/gulanovaAPI.js"></script>
+    <script src="/dist/js/gulanovaApi.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();

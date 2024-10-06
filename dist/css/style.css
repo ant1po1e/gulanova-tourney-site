@@ -67,8 +67,3 @@
       font-size: 1.25rem;
    }
 }
-
-.navbar-scrolled.scrolled {
-   background-color: #0b4453 !important;
-   transition: background-color 200ms linear;
-}
