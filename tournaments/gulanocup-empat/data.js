@@ -15,7 +15,7 @@ function createProfileCard(userId, displayName) {
     return profileCard;
 }
 
-fetch('/json/users-data.json')
+fetch('json/users-data.json')
     .then(response => response.json())
     .then(data => {
         data.forEach(row => {
@@ -73,7 +73,7 @@ fetch('/json/users-data.json')
 
 $(document).ready(function () {
     function loadStages() {
-        fetch('/json/stages.json')
+        fetch('json/stages.json')
             .then(response => response.json())
             .then(stages => {
                 stages.forEach(stage => {
@@ -84,7 +84,7 @@ $(document).ready(function () {
     }
 
     function loadMappool(stageId) {
-        fetch('/json/mappool.json')
+        fetch('json/mappool.json')
             .then(response => response.json())
             .then(mappool => {
                 $('#mappool-body').empty();
@@ -120,7 +120,7 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     function loadStages() {
-        fetch('/json/stages.json')
+        fetch('json/stages.json')
             .then(response => response.json())
             .then(stages => {
                 stages.forEach(stage => {
@@ -131,7 +131,7 @@ $(document).ready(function () {
     }
 
     function loadSchedule(stageId) {
-        fetch('/json/match.json')
+        fetch('json/match.json')
             .then(response => response.json())
             .then(schedule => {
                 $('#schedule-body').empty();
