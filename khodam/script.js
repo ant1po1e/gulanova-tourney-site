@@ -1,13 +1,13 @@
 const images = [
-    "../dist/img/khodam-img/1.png",
-    "../dist/img/khodam-img/2.png",
-    "../dist/img/khodam-img/3.png",
-    "../dist/img/khodam-img/4.png",
-    "../dist/img/khodam-img/5.png",
-    "../dist/img/khodam-img/6.jpg",
-    "../dist/img/khodam-img/7.png",
-    "../dist/img/khodam-img/8.png",
-    "../dist/img/khodam-img/9.png",
+    "../dist/img/khodam-img/1.webp",
+    "../dist/img/khodam-img/2.webp",
+    "../dist/img/khodam-img/3.webp",
+    "../dist/img/khodam-img/4.webp",
+    "../dist/img/khodam-img/5.webp",
+    "../dist/img/khodam-img/6.webp",
+    "../dist/img/khodam-img/7.webp",
+    "../dist/img/khodam-img/8.webp",
+    "../dist/img/khodam-img/9.webp",
 ]
 
 const slotMachine = document.getElementById('slotMachine');
