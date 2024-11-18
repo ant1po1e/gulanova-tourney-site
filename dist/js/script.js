@@ -95,3 +95,36 @@ $("#challonge-btn").click(function () {
     $(".section").addClass("hidden");
     $("#challonge").removeClass("hidden");
 });
+
+function createStars() {
+    const starContainer = document.getElementById('star-background');
+    for (let i = 0; i < 100; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+        animateStar(star);
+        starContainer.appendChild(star);
+    }
+}
+
+function animateStar(star) {
+    const randomDuration = Math.random() * 5 + 3;
+    const randomX = (Math.random() - 0.5) * 75;
+    const randomY = (Math.random() - 0.5) * 75;
+
+    star.animate([{
+            transform: 'translate(0px, 0px)'
+        },
+        {
+            transform: `translate(${randomX}px, ${randomY}px)`
+        }
+    ], {
+        duration: randomDuration * 1000,
+        iterations: Infinity,
+        direction: 'alternate',
+        easing: 'ease-in-out'
+    });
+}
+
+createStars();

@@ -1,13 +1,13 @@
 function createProfileCard(userId, displayName) {
     var profileCard = displayName == localStorage.getItem("username") ?
         `
-<a href="https://osu.ppy.sh/users/${userId}" class="ring-2 ring-gulanova ring-offset-2 ring-offset-cyan-950 text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:bg-[#156a70] hover:scale-110 transition duration-300" target="_blank">
+<a href="https://osu.ppy.sh/users/${userId}" class="ring-2 ring-gulanova ring-offset-2 ring-offset-cyan-950 text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
     <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
     ${displayName}
 </a>
 ` :
         `
-<a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:bg-[#156a70] hover:scale-110 transition duration-300" target="_blank">
+<a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
     <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
     ${displayName}
 </a>
