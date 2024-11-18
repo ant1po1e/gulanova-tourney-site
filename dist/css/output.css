@@ -1063,6 +1063,10 @@ input:checked + .toggle-bg {
   border-width: 0;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .visible {
   visibility: visible;
 }
@@ -1904,6 +1908,10 @@ input:checked + .toggle-bg {
   transition-duration: 300ms;
 }
 
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
 }
@@ -1946,9 +1954,9 @@ input:checked + .toggle-bg {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
-.hover\:bg-\[\#156a70\]:hover {
+.hover\:bg-\[\#15575c\]:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(21 106 112 / var(--tw-bg-opacity));
+  background-color: rgb(21 87 92 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-blue-800:hover {
