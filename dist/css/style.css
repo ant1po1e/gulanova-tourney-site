@@ -82,6 +82,7 @@
    background-color: white;
    border-radius: 50%;
    opacity: 0.8;
+   z-index: -1;
    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
       0 0 10px rgba(255, 255, 255, 0.6),
       0 0 15px rgba(255, 255, 255, 0.4);
