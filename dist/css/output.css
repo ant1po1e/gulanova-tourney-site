@@ -1547,12 +1547,12 @@ input:checked + .toggle-bg {
 
 .border-gulanovaDark {
   --tw-border-opacity: 1;
-  border-color: rgb(14 116 144 / var(--tw-border-opacity));
+  border-color: rgb(62 134 140 / var(--tw-border-opacity));
 }
 
 .border-white {
   --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+  border-color: rgb(242 242 242 / var(--tw-border-opacity));
 }
 
 .\!bg-gray-50 {
@@ -1606,7 +1606,7 @@ input:checked + .toggle-bg {
 
 .bg-gulanovaDark {
   --tw-bg-opacity: 1;
-  background-color: rgb(14 116 144 / var(--tw-bg-opacity));
+  background-color: rgb(62 134 140 / var(--tw-bg-opacity));
 }
 
 .bg-transparent {
@@ -1615,11 +1615,11 @@ input:checked + .toggle-bg {
 
 .bg-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
 .bg-white\/50 {
-  background-color: rgb(255 255 255 / 0.5);
+  background-color: rgb(242 242 242 / 0.5);
 }
 
 .bg-opacity-100 {
@@ -1783,6 +1783,11 @@ input:checked + .toggle-bg {
   line-height: 2.25rem;
 }
 
+.text-\[\#74E3EC\] {
+  --tw-text-opacity: 1;
+  color: rgb(116 227 236 / var(--tw-text-opacity));
+}
+
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
@@ -1820,7 +1825,7 @@ input:checked + .toggle-bg {
 
 .text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(242 242 242 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -1907,7 +1912,7 @@ input:checked + .toggle-bg {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(8 47 73 / var(--tw-bg-opacity));
+  background-color: rgb(21 87 92 / var(--tw-bg-opacity));
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1941,6 +1946,11 @@ input:checked + .toggle-bg {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.hover\:bg-\[\#156a70\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 106 112 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 66 159 / var(--tw-bg-opacity));
@@ -1963,12 +1973,12 @@ input:checked + .toggle-bg {
 
 .hover\:bg-gulanovaDark:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(14 116 144 / var(--tw-bg-opacity));
+  background-color: rgb(62 134 140 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(242 242 242 / var(--tw-bg-opacity));
 }
 
 .hover\:text-blue-600:hover {
@@ -1993,7 +2003,7 @@ input:checked + .toggle-bg {
 
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(242 242 242 / var(--tw-text-opacity));
 }
 
 .hover\:ring-\[3px\]:hover {
@@ -2093,7 +2103,7 @@ input:checked + .toggle-bg {
 
 .dark\:text-white:is(.dark *) {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(242 242 242 / var(--tw-text-opacity));
 }
 
 .dark\:hover\:bg-blue-700:hover:is(.dark *) {
@@ -2123,7 +2133,7 @@ input:checked + .toggle-bg {
 
 .dark\:hover\:text-white:hover:is(.dark *) {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(242 242 242 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
@@ -2255,6 +2265,11 @@ input:checked + .toggle-bg {
     line-height: 1.25rem;
   }
 
+  .md\:text-\[\#74E3EC\] {
+    --tw-text-opacity: 1;
+    color: rgb(116 227 236 / var(--tw-text-opacity));
+  }
+
   .md\:text-gulanova {
     --tw-text-opacity: 1;
     color: rgb(83 172 180 / var(--tw-text-opacity));
@@ -2271,7 +2286,7 @@ input:checked + .toggle-bg {
 
   .md\:hover\:text-white:hover {
     --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
+    color: rgb(242 242 242 / var(--tw-text-opacity));
   }
 }
 

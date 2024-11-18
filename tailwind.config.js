@@ -8,7 +8,8 @@ module.exports = {
     extend: {
       colors: {
         gulanova: '#53ACB4',
-        gulanovaDark: '#0E7490',
+        gulanovaDark: '#3e868c',
+        white: '#F2F2F2',
       },
     },
   },

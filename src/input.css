@@ -4,5 +4,5 @@
 
 
 .navbar-scrolled.scrolled {
-    @apply bg-sky-950 transition duration-300 border-black shadow-lg;
+    @apply bg-[#15575c] transition duration-300 border-black shadow-lg;
  }
