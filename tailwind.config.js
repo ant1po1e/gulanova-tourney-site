@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        gulanova: '#53ACB4',
-        gulanovaDark: '#3e868c',
+        gulanova: '#45898f',
+        gulanovaDark: '#286166',
         white: '#F2F2F2',
       },
     },
