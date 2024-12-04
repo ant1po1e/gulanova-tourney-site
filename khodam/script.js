@@ -8,6 +8,8 @@ const images = [
     "../dist/img/khodam-img/7.webp",
     "../dist/img/khodam-img/8.webp",
     "../dist/img/khodam-img/9.webp",
+    "../dist/img/khodam-img/10.webp",
+    "../dist/img/khodam-img/11.webp",
 ]
 
 const slotMachine = document.getElementById('slotMachine');

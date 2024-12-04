@@ -46,7 +46,7 @@ particlesJS('particles-js',
         "anim": {
           "enable": false,
           "speed": 1,
-          "opacity_min": 0.1,
+          "opacity_min": 0.3,
           "sync": false
         }
       },
@@ -56,7 +56,7 @@ particlesJS('particles-js',
         "anim": {
           "enable": false,
           "speed": 40,
-          "size_min": 0.1,
+          "size_min": 1,
           "sync": false
         }
       },
@@ -65,11 +65,11 @@ particlesJS('particles-js',
         "distance": 150,
         "color": "#ffffff",
         "opacity": 0.6,
-        "width": 1
+        "width": 1.3
       },
       "move": {
         "enable": true,
-        "speed": 3,
+        "speed": 1,
         "direction": "none",
         "random": false,
         "straight": false,
