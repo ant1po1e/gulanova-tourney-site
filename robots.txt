@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /about/
+Allow: /tournaments/gulanocup-lima/
+Allow: /tournaments/gulanocup-empat/
+Allow: /tournaments/khodam/
+Allow: /tournaments/discord/
+Allow: /tournaments/twitch/
+Allow: /tournaments/youtube/
+
+Sitemap: https://gulanova.top/sitemap.xml
