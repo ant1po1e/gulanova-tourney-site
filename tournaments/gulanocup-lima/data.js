@@ -35,6 +35,9 @@ fetch('json/users-data.json')
                     case 'host':
                         document.getElementById('profile-host').innerHTML += createProfileCard(userId, username);
                         break;
+                    case 'organizer':
+                        document.getElementById('profile-organizer').innerHTML += createProfileCard(userId, username);
+                        break;
                     case 'sheeter':
                         document.getElementById('profile-sheeter').innerHTML += createProfileCard(userId, username);
                         break;
@@ -59,11 +62,11 @@ fetch('json/users-data.json')
                     case 'gfx':
                         document.getElementById('profile-gfx').innerHTML += createProfileCard(userId, username);
                         break;
-                    case 'player':
-                        document.getElementById('profile-player').innerHTML += createProfileCard(userId, username);
-                        break;
                     case 'programmer':
                         document.getElementById('profile-programmer').innerHTML += createProfileCard(userId, username);
+                        break;
+                    case 'player':
+                        document.getElementById('profile-player').innerHTML += createProfileCard(userId, username);
                         break;
                     default:
                         console.warn(`Role tidak dikenali: ${role} untuk user ${username}`);
