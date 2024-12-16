@@ -2199,11 +2199,6 @@ input:checked + .toggle-bg {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .sm\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
   .sm\:text-center {
     text-align: center;
   }
@@ -2321,19 +2316,18 @@ input:checked + .toggle-bg {
     padding-bottom: 1rem;
   }
 
-  .md\:py-52 {
-    padding-top: 13rem;
-    padding-bottom: 13rem;
-  }
-
   .md\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
 
-  .md\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+  .md\:py-52 {
+    padding-top: 13rem;
+    padding-bottom: 13rem;
+  }
+
+  .md\:pt-52 {
+    padding-top: 13rem;
   }
 
   .md\:text-lg {
