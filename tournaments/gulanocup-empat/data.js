@@ -1,17 +1,17 @@
 function createProfileCard(userId, displayName) {
     var profileCard = displayName == localStorage.getItem("username") ?
         `
-<a href="https://osu.ppy.sh/users/${userId}" class="ring-2 ring-gulanova ring-offset-2 ring-offset-cyan-950 text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
-    <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
-    ${displayName}
-</a>
-` :
-        `
-<a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
-    <img class="w-20 h-20 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
-    ${displayName}
-</a>
-`;
+            <a href="https://osu.ppy.sh/users/${userId}" class="ring-2 ring-gulanova ring-offset-2 ring-offset-cyan-950 text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
+                <img class="w-28 h-28 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
+                <p class="truncate hover:overflow-visible hover:whitespace-normal bg-[#15575c] rounded-lg px-2 py-1 font-normal text-xs max-w-[7rem]">${displayName}</p>
+            </a>
+            ` :
+                    `
+            <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 bg-gulanova p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
+                <img class="w-28 h-28 mb-2 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
+                <p class="truncate hover:overflow-visible hover:whitespace-normal bg-[#15575c] rounded-lg px-2 py-1 font-normal text-xs max-w-[7rem]">${displayName}</p>
+            </a>
+        `;
     return profileCard;
 }
 
@@ -94,10 +94,10 @@ $(document).ready(function () {
                         const row = `
                     <tr class="border-b bg-gray-800 border-gray-700">
                         <td class="px-1.5 py-2 md:px-2 md:py-3"><a href="${mappoolEntry.link}" target="_blank"><img class="hover:scale-105 transition duration-300" src="${mappoolEntry.cover}"></a></td>
-                        <td class="px-1.5 py-2 md:px-6 md:py-3">${mappoolEntry.map}</td>
-                        <td class="px-1.5 py-2 md:px-6 md:py-3">${mappoolEntry.artist}</td>
-                        <td class="px-1.5 py-2 md:px-6 md:py-3">${mappoolEntry.mapper}</td>
-                        <td class="px-1.5 py-2 md:px-6 md:py-3">${mappoolEntry.mod}</td>
+                        <td class="truncate hover:overflow-visible hover:whitespace-normal px-1.5 py-2 md:px-6 md:py-3 max-w-[12rem] transition duration-300">${mappoolEntry.map}</td>
+                        <td class="truncate hover:overflow-visible hover:whitespace-normal px-1.5 py-2 md:px-6 md:py-3 max-w-[8rem] transition duration-300">${mappoolEntry.artist}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-3 max-w-[8rem]">${mappoolEntry.mapper}</td>
+                        <td class="px-1.5 py-2 md:px-6 md:py-3 max-w-[8rem]">${mappoolEntry.mod}</td>
                     </tr>
                 `;
                         $('#mappool-body').append(row);
