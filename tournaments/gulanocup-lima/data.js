@@ -2,7 +2,7 @@ function createProfileCard(userId, displayName) {
     var profileCard = displayName == localStorage.getItem("username") ?
         `
             <a href="https://osu.ppy.sh/users/${userId}" class="ring-2 ring-gulanova ring-offset-2 ring-offset-cyan-950 text-white m-4 font-bold bg-gulanova text-xs p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
-                <img class="w-28 h-28 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
+                <img class="w-28 h-28 mb-2 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
                 <p class="truncate hover:overflow-visible hover:whitespace-normal bg-[#15575c] rounded-lg px-2 py-1 font-normal text-xs max-w-[7rem]">${displayName}</p>
             </a>
             ` :
