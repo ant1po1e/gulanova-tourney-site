@@ -1,7 +1,7 @@
 [{
         "userId": "17851478",
         "username": "-Yubi-",
-        "role": "mappooler, mapper, commentator, playtester"
+        "role": "mappooler, mapper, streamer, commentator, playtester"
     },
     {
         "userId": "4632359",
@@ -11,7 +11,7 @@
     {
         "userId": "9382787",
         "username": "[ Friz ]",
-        "role": "programmer, referee"
+        "role": "referee"
     },
     {
         "userId": "20037405",
@@ -84,14 +84,15 @@
         "role": "gfx, mapper"
     },
     {
-        "userId": "12170494",
-        "username": "Fawcro",
-        "role": "mapper"
-    },
-    {
         "userId": "2651304",
         "username": "FelixSpade",
-        "role": "mappooler, mapper, programmer, organizer"
+        "role": "mappooler, mapper, streamer, programmer, organizer"
+    },
+
+    {
+        "userId": "20788796",
+        "username": "FerryAnanda",
+        "role": "referee"
     },
     {
         "userId": "10069307",
@@ -111,7 +112,7 @@
     {
         "userId": "16176978",
         "username": "Kada-",
-        "role": "gfx"
+        "role": "gfx, playtester"
     },
     {
         "userId": "8867495",
@@ -146,7 +147,7 @@
     {
         "userId": "10478980",
         "username": "Rakanovan",
-        "role": "sheeter, commentator, playtester"
+        "role": "sheeter, mappooler, commentator"
     },
     {
         "userId": "16630515",
@@ -176,11 +177,282 @@
     {
         "userId": "6144772",
         "username": "Virtue-",
+        "role": "streamer"
+    },
+    {
+        "userId": "24787752",
+        "username": "Who_is_Marpang",
         "role": "mapper"
     },
     {
         "userId": "12143152",
         "username": "Yangga",
         "role": "commentator, playtester, referee"
+    },
+    {
+        "userId": "20834055",
+        "username": "_yea",
+        "role": "player"
+    },
+    {
+        "userId": "10058745",
+        "username": "-Aji",
+        "role": "player"
+    },
+    {
+        "userId": "11829623",
+        "username": "[ -Asriel- ]",
+        "role": "player"
+    },
+    {
+        "userId": "8405046",
+        "username": "[ Zenith ]",
+        "role": "player"
+    },
+    {
+        "userId": "34756991",
+        "username": "[-Vanart-]",
+        "role": "player"
+    },
+    {
+        "userId": "8810018",
+        "username": "[ID]Catalyst-",
+        "role": "player"
+    },
+    {
+        "userId": "20040064",
+        "username": "[LS] akarii",
+        "role": "player"
+    },
+    {
+        "userId": "16263257",
+        "username": "124fa",
+        "role": "player"
+    },
+    {
+        "userId": "34647476",
+        "username": "A bad hd playeR",
+        "role": "player"
+    },
+    {
+        "userId": "29169697",
+        "username": "ARDHANA",
+        "role": "player"
+    },
+    {
+        "userId": "8911771",
+        "username": "Ascelice",
+        "role": "player"
+    },
+    {
+        "userId": "15801261",
+        "username": "Az-u",
+        "role": "player"
+    },
+    {
+        "userId": "11330898",
+        "username": "Catzu",
+        "role": "player"
+    },
+    {
+        "userId": "20835843",
+        "username": "chantomoe",
+        "role": "player"
+    },
+    {
+        "userId": "3565870",
+        "username": "ChocoCoki-",
+        "role": "player"
+    },
+    {
+        "userId": "7421690",
+        "username": "D31T7",
+        "role": "player"
+    },
+    {
+        "userId": "8029883",
+        "username": "DAENGXicisae-",
+        "role": "player"
+    },
+    {
+        "userId": "13859109",
+        "username": "danar mw",
+        "role": "player"
+    },
+    {
+        "userId": "15597315",
+        "username": "Dogethedoge25",
+        "role": "player"
+    },
+    {
+        "userId": "14588134",
+        "username": "Endorfinn-",
+        "role": "player"
+    },
+    {
+        "userId": "13762505",
+        "username": "EterEnvy",
+        "role": "player"
+    },
+    {
+        "userId": "11405908",
+        "username": "EVIRE-",
+        "role": "player"
+    },
+    {
+        "userId": "14875989",
+        "username": "ImOyZo",
+        "role": "player"
+    },
+    {
+        "userId": "31102647",
+        "username": "KafuuChlno",
+        "role": "player"
+    },
+    {
+        "userId": "13451556",
+        "username": "Kimotaki16",
+        "role": "player"
+    },
+    {
+        "userId": "13403380",
+        "username": "KyoukaRy",
+        "role": "player"
+    },
+    {
+        "userId": "19724595",
+        "username": "lucknut",
+        "role": "player"
+    },
+    {
+        "userId": "6807769",
+        "username": "LuxSenaa",
+        "role": "player"
+    },
+    {
+        "userId": "9670957",
+        "username": "Lyz-",
+        "role": "player"
+    },
+    {
+        "userId": "33495414",
+        "username": "MahiroCHID",
+        "role": "player"
+    },
+    {
+        "userId": "12423717",
+        "username": "Marcille-",
+        "role": "player"
+    },
+    {
+        "userId": "16800937",
+        "username": "MGD Furry",
+        "role": "player"
+    },
+    {
+        "userId": "34454156",
+        "username": "MightyTech",
+        "role": "player"
+    },
+    {
+        "userId": "16824892",
+        "username": "Molten Cheese",
+        "role": "player"
+    },
+    {
+        "userId": "24285111",
+        "username": "My Angel Chen",
+        "role": "player"
+    },
+    {
+        "userId": "36244414",
+        "username": "MyRisu",
+        "role": "player"
+    },
+    {
+        "userId": "14659672",
+        "username": "MzLord",
+        "role": "player"
+    },
+    {
+        "userId": "30833471",
+        "username": "Napeace",
+        "role": "player"
+    },
+    {
+        "userId": "11608122",
+        "username": "Neptunia-chan",
+        "role": "player"
+    },
+    {
+        "userId": "11190601",
+        "username": "OOOOAAAAEEEEEE",
+        "role": "player"
+    },
+    {
+        "userId": "8410575",
+        "username": "Proxae",
+        "role": "player"
+    },
+    {
+        "userId": "18777094",
+        "username": "Remuu",
+        "role": "player"
+    },
+    {
+        "userId": "32350370",
+        "username": "skadidragen",
+        "role": "player"
+    },
+    {
+        "userId": "22842079",
+        "username": "SnakesYxle",
+        "role": "player"
+    },
+    {
+        "userId": "23484954",
+        "username": "syamisu-",
+        "role": "player"
+    },
+    {
+        "userId": "13716503",
+        "username": "uThot",
+        "role": "player"
+    },
+    {
+        "userId": "13274715",
+        "username": "Violet-",
+        "role": "player"
+    },
+    {
+        "userId": "25905194",
+        "username": "Virz12",
+        "role": "player"
+    },
+    {
+        "userId": "31408326",
+        "username": "vivol",
+        "role": "player"
+    },
+    {
+        "userId": "15302695",
+        "username": "XZeuzCR",
+        "role": "player"
+    },
+    {
+        "userId": "33683529",
+        "username": "yeedinobro",
+        "role": "player"
+    },
+    {
+        "userId": "19541103",
+        "username": "Zhask_667",
+        "role": "player"
+    },
+    {
+        "userId": "23539213",
+        "username": "zReol",
+        "role": "player"
     }
+
 ]
