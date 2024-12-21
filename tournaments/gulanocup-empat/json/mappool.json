@@ -353,7 +353,7 @@
 
     "qf": [{
             "cover": "https://assets.ppy.sh/beatmaps/2131948/covers/cover.jpg?1709722875",
-            "map": "Rasakno!! Loli-Kami Requiem* (Cut Ver.) [Gangguan Jawa]",
+            "map": "Cecilia Lieberia - Rasakno!! Loli-Kami Requiem* (Cut Ver.) [Gangguan Jawa]",
             "artist": "Cecilia Lieberia",
             "mapper": "Reihynn",
             "mod": "RC1",
@@ -361,7 +361,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2106796/covers/cover.jpg?1705568451",
-            "map": "Yakin [Apol's Percaya Diri]",
+            "map": "Endank Soekamti - Yakin [Apol's Percaya Diri]",
             "artist": "Endank Soekamti",
             "mapper": "Antipole",
             "mod": "RC2",
@@ -369,7 +369,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2123210/covers/cover.jpg?1708277510",
-            "map": "Neo City Dive [Dystopia]",
+            "map": "KARUT - Neo City Dive [Dystopia]",
             "artist": "KARUT",
             "mapper": "Revv-",
             "mod": "RC3",
@@ -377,7 +377,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2113973/covers/cover.jpg?1706819475",
-            "map": "Construction Site [Under Construction]",
+            "map": "Unknown Artist - Construction Site [Under Construction]",
             "artist": "Unknown Artist",
             "mapper": "Revv-",
             "mod": "RC4",
@@ -385,7 +385,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2119383/covers/cover.jpg?1707670888",
-            "map": "zeke didn't \"invent dariacore\", i did [uishig didn't \"invent stamina\", i did]",
+            "map": "coltrane - zeke didn't \"invent dariacore\", i did [uishig didn't \"invent stamina\", i did]",
             "artist": "coltrane",
             "mapper": "Ainer",
             "mod": "RC5",
@@ -393,15 +393,15 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2090262/covers/cover.jpg?1717471299",
-            "map": "Himitsu no Toilette -Midnight Lab Remix- [a symphony of sensuality and intrigue (edit)]",
+            "map": "Ichinose Shiki (CV: Aihara Kotomi) - Himitsu no Toilette -Midnight Lab Remix- [a symphony of sensuality and intrigue (edit)]",
             "artist": "Ichinose Shiki (CV: Aihara Kotomi)",
             "mapper": "Ainer",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4437982"
+            "link": "https://osu.ppy.sh/b/4380884"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2113662/covers/cover.jpg?1707478261",
-            "map": "MISSIN YOU (Cut Ver.) [Nisin wafer]",
+            "map": "KARNAMEREKA - MISSIN YOU (Cut Ver.) [Nisin wafer]",
             "artist": "KARNAMEREKA",
             "mapper": "Antipole",
             "mod": "LN2",
@@ -409,47 +409,47 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2132580/covers/cover.jpg?1709841672",
-            "map": "Space Invaders (Cut Ver.) [LN Expert // Infringer (OD6.5)]",
+            "map": "Teminite & MDK - Space Invaders (Cut Ver.) [LN Expert // Infringer (OD6.5)]",
             "artist": "Teminite & MDK",
             "mapper": "FelixSpade",
             "mod": "LN3",
             "link": "https://osu.ppy.sh/b/4486045"
         },
         {
-            "cover": "https://assets.ppy.sh/beatmaps/2132580/covers/cover.jpg?2111347",
-            "map": "The Dunes [Sandstorm]",
+            "cover": "https://assets.ppy.sh/beatmaps/2111347/covers/cover.jpg?1706968879",
+            "map": "BLV3HAZUKI - The Dunes [Sandstorm]",
             "artist": "BLV3HAZUKI",
             "mapper": "Fawcro",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4486045"
-        },
-        {
-            "cover": "https://assets.ppy.sh/beatmaps/2111347/covers/cover.jpg?1706968879",
-            "map": "Give You My World [Love World!]",
-            "artist": "EmoCosine",
-            "mapper": "Fawcro",
-            "mod": "HB2",
             "link": "https://osu.ppy.sh/b/4432147"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1884795/covers/cover.jpg?1707220863",
-            "map": "Aoharu [Miracles]",
-            "artist": "Nor",
-            "mapper": "Revv-",
-            "mod": "SV1",
+            "map": "EmoCosine - Give You My World [Love World!]",
+            "artist": "EmoCosine",
+            "mapper": "Fawcro",
+            "mod": "HB2",
             "link": "https://osu.ppy.sh/b/3880669"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2119447/covers/cover.jpg?1707676262",
-            "map": "dashstar* (Cut Ver.) [Neophyte]",
-            "artist": "Knock2",
+            "map": "Nor - Aoharu [Miracles]",
+            "artist": "Nor",
             "mapper": "Revv-",
-            "mod": "SV2",
+            "mod": "SV1",
             "link": "https://osu.ppy.sh/b/4452191"
         },
         {
+            "cover": "https://assets.ppy.sh/beatmaps/2046157/covers/cover.jpg?1694795462",
+            "map": "Knock2 - dashstar* (Cut Ver.) [Neophyte]",
+            "artist": "Knock2",
+            "mapper": "Revv-",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4271070"
+        },
+        {
             "cover": "https://assets.ppy.sh/beatmaps/2114277/covers/cover.jpg?1706779856",
-            "map": "Maling pangsit [maling matamu]",
+            "map": "Unknown Artist - Maling pangsit [maling matamu]",
             "artist": "Unknown Artist",
             "mapper": "towakane",
             "mod": "MM1",
@@ -457,7 +457,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2102813/covers/cover.jpg?1706023843",
-            "map": "Dj Salting (Cut Ver.) [boom]",
+            "map": "DJ Mbon Mbon - Dj Salting (Cut Ver.) [boom]",
             "artist": "DJ Mbon Mbon",
             "mapper": "danar",
             "mod": "MM2",
@@ -465,7 +465,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2132578/covers/cover.jpg?1709841667",
-            "map": "Fatalism [Critical]",
+            "map": "Endorfin. - Fatalism [Critical]",
             "artist": "Endorfin.",
             "mapper": "FelixSpade",
             "mod": "TB",
