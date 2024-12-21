@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gulano Cup #4</title>
+</head>
+
+<body style="background-color: #313338; align-items: center;">
+    <video width="640" height="640" autoplay id="myvid" muted
+        style="left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%);">
+        <source src="../dist/vid/gulanovamenyapa.mp4" type="video/mp4" />
+    </video>
+</body>
+<script>
+    let link = 'https://docs.google.com/document/d/1dCHLV0qcDxMzglhj5l5uXlPlPEGskkP9/edit?usp=sharing&ouid=105646114480862530768&rtpof=true&sd=true'
+    video = document.getElementById('myvid');
+    video.onended = function (e) {
+        window.location.replace(link);
+    }   
+</script>
+
+</html>
