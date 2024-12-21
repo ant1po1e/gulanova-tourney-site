@@ -95,3 +95,20 @@ $("#challonge-btn").click(function () {
     $(".section").addClass("hidden");
     $("#challonge").removeClass("hidden");
 });
+
+const back2Top = document.querySelector('#backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 200) {
+        back2Top.classList.remove('opacity-0');
+        back2Top.classList.add('opacity-100');
+    } else {
+        back2Top.classList.add('opacity-0');
+        back2Top.classList.remove('opacity-100');
+    }
+});
+
+back2Top.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+});

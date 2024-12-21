@@ -35,7 +35,7 @@
     <title>Gulanova | Home</title>
 </head>
 
-<body class="bg-black">
+<body class="bg-black" id="home">
     <!-- Navbar -->
     <nav
         class="border-gray-200 bg-black bg-opacity-100 md:bg-opacity-60 fixed w-full z-20 top-0 start-0 navbar-scrolled transition duration-300">
@@ -153,11 +153,15 @@
                     rel="noopener noreferrer">Gulano Cup #5</a>
             </h1>
             <p class="text-white text-lg px-4 mx-auto max-w-3xl text-center py-6 mb-20 rounded-lg bg-black bg-opacity-50"
-                data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">Gulanova kembali hadir dengan edisi selanjutnya teruntuk pemain osu!mania
+                data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">Gulanova kembali hadir dengan edisi
+                selanjutnya teruntuk pemain osu!mania
 
-                Kesempatan kali ini kami membawakan turnamen dengan range yang lebih luas hanya dengan pengecualian MWC Player karena mereka udah keren, dan disini waktunya untuk melepaskan potensi kalian!!
-                
-                Gulano Cup itu sendiri adalah series turnamen yang diadakan oleh server komunitas Gulanova. Turnamen ini bersistem 1v1 Double Elimination dengan gimik misteri, semuanya singkat aja jadi ya stay tune untuk acaranya..</p>
+                Kesempatan kali ini kami membawakan turnamen dengan range yang lebih luas hanya dengan pengecualian MWC
+                Player karena mereka udah keren, dan disini waktunya untuk melepaskan potensi kalian!!
+
+                Gulano Cup itu sendiri adalah series turnamen yang diadakan oleh server komunitas Gulanova. Turnamen ini
+                bersistem 1v1 Double Elimination dengan gimik misteri, semuanya singkat aja jadi ya stay tune untuk
+                acaranya..</p>
 
             <div class="inline-flex w-full flex-col rounded-md shadow-sm sm:flex-row sm:justify-center" role="group"
                 data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true">
@@ -425,6 +429,15 @@
     </footer>
     <!-- Footer-END -->
 
+    <!-- Back-to-Top -->
+    <div class="fixed z-30 bottom-0 right-0 mr-10 mb-10">
+        <a href="#home" id="backToTop"
+            class="justify-center items-center opacity-0 text-white font-bold text-4xl block bg-gulanova rounded-full bg-opacity-50 lg:text-5xl md:text-6xl ease-in animate-bounce transition-opacity duration-300">
+            <span><i class="bi bi-arrow-up-circle"></i></span>
+        </a>
+    </div>
+    <!-- Back-to-Top-END -->
+
     <script src="/dist/js/script.js"></script>
     <script src="/dist/js/particles.js"></script>
     <script src="/dist/js/particle-config.js"></script>
@@ -434,10 +447,6 @@
     <script>
         AOS.init();
     </script>
-    <script>
-
-    </script>
-
 </body>
 
 </html>
