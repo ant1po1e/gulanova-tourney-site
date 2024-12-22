@@ -75,3 +75,19 @@
    background-color: transparent;
    z-index: -1;
 }
+
+ol::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 2rem;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 2.5px;
+   background-color: #fff;
+   z-index: 0;
+}
+
+li div {
+   z-index: 1;
+}
