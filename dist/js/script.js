@@ -1,6 +1,6 @@
 async function getUserRole() {
     const currentPath = window.location.pathname; // Mendapatkan path dari URL saat ini
-    const jsonEndpoint = `${currentPath}/json/users-data`; // URL untuk JSON
+    const jsonEndpoint = `${currentPath}/json/users-data.json`; // URL untuk JSON
 
     try {
         const response = await fetch(jsonEndpoint);
