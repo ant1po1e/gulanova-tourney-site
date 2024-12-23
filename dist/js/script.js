@@ -2,10 +2,9 @@ window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code'); // Extract the 'code' parameter from URL
     const accessToken = localStorage.getItem('access_token');
-    const currentPath = window.location.pathname; // Get current path (e.g., /gulanocup-lima/)
-    const userJsonUrl = `${currentPath}json/users-data`; // Construct the JSON URL
 
     if (code) {
+        // Proses OAuth token exchange (sama seperti sebelumnya)
         try {
             const response = await axios.get(`https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`);
             if (response.data.access_token) {
@@ -17,45 +16,47 @@ window.onload = async function () {
         }
     } else if (accessToken) {
         const avatar = document.getElementById('avatar');
-        const cachedAvatarUrl = localStorage.getItem('avatar_url');
-
-        try {
-            if (cachedAvatarUrl) {
-                avatar.src = cachedAvatarUrl; // Use cached avatar
-            } else {
-                const userData = await callOsuApi('/me/osu');
-                avatar.src = userData.avatar_url;
-                localStorage.setItem('avatar_url', userData.avatar_url);
-                localStorage.setItem("username", userData.username);
-            }
-
-            // Fetch role data from JSON
-            const response = await fetch(userJsonUrl);
-            if (!response.ok) {
-                throw new Error(`Error fetching JSON data: ${response.status}`);
-            }
-            const userJson = await response.json();
-
-            // Determine user role
-            let userRole = 'Visitor';
-            if (userJson.role) {
-                userRole = userJson.role === 'player' ? 'Player' : 'Staff';
-            }
-
-            // Update UI
-            const roleElement = document.querySelector('#user-dropdown li .block');
-            roleElement.textContent = `You are: ${userRole}`;
-        } catch (err) {
-            console.error('Error fetching user data or role:', err);
-        }
-
+        const usernameElement = document.getElementById('username');
+        const userRoleElement = document.querySelector('#user-dropdown li div');
         const login = document.getElementById('login');
         const logout = document.getElementById('logout');
-        login.classList.add("hidden");
-        logout.classList.remove("hidden");
 
-        const username = document.getElementById('username');
-        username.innerHTML = localStorage.getItem("username");
+        try {
+            // Dapatkan path halaman saat ini
+            const currentPath = window.location.pathname;
+            
+            // Fetch user data dari JSON sesuai path
+            const response = await fetch(`${currentPath}json/users-data.json`);
+            const userData = await response.json();
+
+            // Set avatar
+            const cachedAvatarUrl = localStorage.getItem('avatar_url');
+            avatar.src = cachedAvatarUrl || (await callOsuApi('/me/osu')).avatar_url;
+            
+            // Set username
+            usernameElement.innerHTML = userData.username;
+
+            // Tentukan role pengguna
+            let userRole = 'Visitor';
+            if (userData.role === 'player') {
+                userRole = 'Player';
+            } else if (userData.role && userData.role !== 'player') {
+                userRole = 'Staff';
+            }
+
+            // Update role di dropdown
+            userRoleElement.textContent = `You are: ${userRole}`;
+
+            // Tampilkan/sembunyikan tombol login/logout
+            login.classList.add("hidden");
+            logout.classList.remove("hidden");
+
+        } catch (err) {
+            console.error('Error fetching user data:', err);
+            // Fallback ke visitor jika ada error
+            usernameElement.innerHTML = 'Guest';
+            userRoleElement.textContent = 'You are: Visitor';
+        }
     } else {
         console.error('No access token or OAuth code found');
     }
