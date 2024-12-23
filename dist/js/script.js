@@ -3,53 +3,73 @@ window.onload = async function () {
     const code = urlParams.get('code'); // Extract the 'code' parameter from URL
     const accessToken = localStorage.getItem('access_token');
 
+    const avatar = document.getElementById('avatar');
+    const login = document.getElementById('login');
+    const logout = document.getElementById('logout');
+    const username = document.getElementById('username');
+    const userRoleElement = document.querySelector('.block.px-4.py-2.text-sm.text-gray-200'); // Element for role display
+
     if (code) {
-        // If there is an OAuth code, prioritize exchanging it for a new token
+        // Exchange OAuth code for access token
         try {
             const response = await axios.get(`https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`);
             if (response.data.access_token) {
                 localStorage.setItem("access_token", response.data.access_token);
-                window.location.href = '/'; // Redirect to clear the URL and reload with new token
+                window.location.href = '/'; // Redirect to clear the URL and reload
             }
         } catch (error) {
             console.error('Error during OAuth token exchange:', error);
         }
     } else if (accessToken) {
-        // If there is an access token and no OAuth code, proceed with fetching user data
-        const avatar = document.getElementById('avatar');
-
-
-        const cachedAvatarUrl = localStorage.getItem('avatar_url');
-        // avatar.parentElement.href = "/"
+        // If access token exists, fetch user data
         try {
-            if (cachedAvatarUrl) {
-                avatar.src = cachedAvatarUrl; // Use cached avatar
+            const cachedAvatarUrl = localStorage.getItem('avatar_url');
+            const cachedUsername = localStorage.getItem('username');
+            const cachedRole = localStorage.getItem('role');
+
+            if (cachedAvatarUrl && cachedUsername && cachedRole) {
+                // Use cached data if available
+                updateUI(cachedUsername, cachedRole, cachedAvatarUrl);
             } else {
-                const userData = await callOsuApi('/me/osu'); // Await the API call
-                avatar.src = userData.avatar_url; // Set the avatar src
-                localStorage.setItem('avatar_url', userData.avatar_url); // Cache the avatar URL and everything else
-                localStorage.setItem("username", userData.username)
+                // Fetch fresh data
+                const userData = await callOsuApi('/me/osu');
+                const { username: fetchedUsername, role } = userData;
+
+                avatar.src = userData.avatar_url;
+                localStorage.setItem('avatar_url', userData.avatar_url);
+                localStorage.setItem('username', fetchedUsername);
+                localStorage.setItem('role', role);
+
+                updateUI(fetchedUsername, role, userData.avatar_url);
             }
         } catch (err) {
             console.error('Error fetching user data:', err);
         }
-
-        // disable enable login button
-        const login = document.getElementById('login');
-        const logout = document.getElementById('logout');
-        login.classList.add("hidden");
-        logout.classList.remove("hidden");
-
-        // change username
-        const username = document.getElementById('username');
-        username.innerHTML = localStorage.getItem("username")
-
-
     } else {
-        // If neither an access token nor code is present, handle login initiation here
         console.error('No access token or OAuth code found');
     }
+
+    function updateUI(usernameValue, role, avatarUrl) {
+        // Update avatar and username
+        avatar.src = avatarUrl;
+        username.innerHTML = usernameValue;
+
+        // Determine user role and update role display
+        let roleDisplay = "Visitor";
+        if (role === "player") {
+            roleDisplay = "Player";
+        } else if (role) {
+            roleDisplay = "Staff";
+        }
+
+        userRoleElement.innerHTML = `You are: ${roleDisplay}`;
+
+        // Show logout button, hide login button
+        login.classList.add("hidden");
+        logout.classList.remove("hidden");
+    }
 };
+
 
 function testistwo() {
     console.log(callOsuApi('/me/osu'))
