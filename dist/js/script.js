@@ -54,7 +54,7 @@ window.onload = async function () {
         username.innerHTML = usernameValue;
 
         let roleDisplay = "VISITOR";
-        if (role === "player") {
+        if (role == "player") {
             roleDisplay = "PLAYER";
         } else if (role) {
             roleDisplay = "STAFF";
