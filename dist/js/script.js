@@ -6,7 +6,7 @@ window.onload = async function () {
     if (code) {
         // If there is an OAuth code, prioritize exchanging it for a new token
         try {
-            const response = await axios.get('https://gulanova-auth.vercel.app/api/osuAuth?code=${code}');
+            const response = await axios.get(`https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`);
             if (response.data.access_token) {
                 localStorage.setItem("access_token", response.data.access_token);
                 window.location.href = '/'; // Redirect to clear the URL and reload with new token
@@ -50,7 +50,6 @@ window.onload = async function () {
         console.error('No access token or OAuth code found');
     }
 };
-
 
 function testistwo() {
     console.log(callOsuApi('/me/osu'))
