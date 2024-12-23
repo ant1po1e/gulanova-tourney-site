@@ -96,6 +96,11 @@ $("#challonge-btn").click(function () {
     $("#challonge").removeClass("hidden");
 });
 
+$("#timeline-btn").click(function () {
+    $(".section").addClass("hidden");
+    $("#timeline").removeClass("hidden");
+});
+
 const back2Top = document.querySelector('#backToTop');
 
 window.addEventListener('scroll', () => {
