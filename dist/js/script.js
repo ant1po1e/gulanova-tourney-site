@@ -1,39 +1,7 @@
-async function determineUserRole() {
-    const currentPath = window.location.pathname; // Ambil path URL saat ini, e.g., '/gulanocup-lima/'
-    const jsonUrl = `${currentPath}/json/users-data`; // Tentukan URL JSON berdasarkan path
-    
-    try {
-        // Ambil data pengguna dari JSON
-        const response = await fetch(jsonUrl);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch user data: ${response.status}`);
-        }
-        const userData = await response.json();
-
-        // Tentukan peran pengguna
-        const roleElement = document.querySelector("#user-dropdown .block");
-        if (userData.role === "player") {
-            roleElement.textContent = "You are: Player";
-        } else if (userData.role && userData.role !== "player") {
-            roleElement.textContent = "You are: Staff";
-        } else {
-            roleElement.textContent = "You are: Visitor";
-        }
-    } catch (error) {
-        console.error("Error determining user role:", error);
-        // Fallback jika data gagal diambil
-        const roleElement = document.querySelector("#user-dropdown .block");
-        roleElement.textContent = "You are: Visitor";
-    }
-}
-
-
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code'); // Extract the 'code' parameter from URL
     const accessToken = localStorage.getItem('access_token');
-
-    await determineUserRole()
 
     if (code) {
         // If there is an OAuth code, prioritize exchanging it for a new token
