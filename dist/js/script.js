@@ -1,41 +1,9 @@
-async function getUserRole() {
-    const currentPath = window.location.pathname; // Mendapatkan path dari URL saat ini
-    const jsonEndpoint = `${currentPath}/json/users-data.json`; // URL untuk JSON
-
-    try {
-        const response = await fetch(jsonEndpoint);
-        if (!response.ok) {
-            throw new Error(`Failed to fetch user data: ${response.statusText}`);
-        }
-
-        const userData = await response.json();
-        const role = userData.role;
-
-        // Tentukan role user
-        let userRole = 'Visitor';
-        if (role === 'player') {
-            userRole = 'Player';
-        } else if (role && role !== 'player') {
-            userRole = 'Staff';
-        }
-
-        // Update UI dengan role pengguna
-        const roleDisplay = document.querySelector('#user-dropdown .block');
-        if (roleDisplay) {
-            roleDisplay.textContent = `You are: ${userRole}`;
-        }
-
-        // Jika diperlukan, simpan role ke localStorage
-        localStorage.setItem('user_role', userRole);
-    } catch (error) {
-        console.error('Error fetching user role:', error);
-    }
-}
-
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code'); // Extract the 'code' parameter from URL
     const accessToken = localStorage.getItem('access_token');
+    const currentPath = window.location.pathname; // Get current path (e.g., /gulanocup-lima/)
+    const userJsonUrl = `${currentPath}json/users-data`; // Construct the JSON URL
 
     if (code) {
         try {
@@ -53,33 +21,46 @@ window.onload = async function () {
 
         try {
             if (cachedAvatarUrl) {
-                avatar.src = cachedAvatarUrl;
+                avatar.src = cachedAvatarUrl; // Use cached avatar
             } else {
                 const userData = await callOsuApi('/me/osu');
                 avatar.src = userData.avatar_url;
                 localStorage.setItem('avatar_url', userData.avatar_url);
                 localStorage.setItem("username", userData.username);
             }
+
+            // Fetch role data from JSON
+            const response = await fetch(userJsonUrl);
+            if (!response.ok) {
+                throw new Error(`Error fetching JSON data: ${response.status}`);
+            }
+            const userJson = await response.json();
+
+            // Determine user role
+            let userRole = 'Visitor';
+            if (userJson.role) {
+                userRole = userJson.role === 'player' ? 'Player' : 'Staff';
+            }
+
+            // Update UI
+            const roleElement = document.querySelector('#user-dropdown li .block');
+            roleElement.textContent = `You are: ${userRole}`;
         } catch (err) {
-            console.error('Error fetching user data:', err);
+            console.error('Error fetching user data or role:', err);
         }
 
-        // Update login/logout button visibility
         const login = document.getElementById('login');
         const logout = document.getElementById('logout');
         login.classList.add("hidden");
         logout.classList.remove("hidden");
 
-        // Update username display
         const username = document.getElementById('username');
         username.innerHTML = localStorage.getItem("username");
-
-        // Periksa role pengguna
-        await getUserRole();
     } else {
         console.error('No access token or OAuth code found');
     }
 };
+
 
 function testistwo() {
     console.log(callOsuApi('/me/osu'))
