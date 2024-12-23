@@ -7,7 +7,7 @@ window.onload = async function () {
     const login = document.getElementById('login');
     const logout = document.getElementById('logout');
     const username = document.getElementById('username');
-    const userRoleElement = document.querySelector('.block.px-4.py-2.text-sm.text-gray-200'); // Element for role display
+    const userRoleElement = document.querySelector('#role-display'); 
 
     if (code) {
         // Exchange OAuth code for access token
@@ -50,39 +50,33 @@ window.onload = async function () {
     }
 
     function updateUI(usernameValue, role, avatarUrl) {
-        // Update avatar and username
         avatar.src = avatarUrl;
         username.innerHTML = usernameValue;
 
-        // Determine user role and update role display
-        let roleDisplay = "Visitor";
+        let roleDisplay = "VISITOR";
         if (role === "player") {
-            roleDisplay = "Player";
+            roleDisplay = "PLAYER";
         } else if (role) {
-            roleDisplay = "Staff";
+            roleDisplay = "STAFF";
         }
 
         userRoleElement.innerHTML = `You are: ${roleDisplay}`;
 
-        // Show logout button, hide login button
         login.classList.add("hidden");
         logout.classList.remove("hidden");
     }
 };
-
 
 function testistwo() {
     console.log(callOsuApi('/me/osu'))
 
 }
 
-
 function deb() {
     var string = window.location.href
     part = string.match(/code=(.*$)/)[1];
     console.log(part)
 }
-
 
 $(function () {
     $(document).scroll(function () {
