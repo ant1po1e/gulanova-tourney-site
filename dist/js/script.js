@@ -1,12 +1,44 @@
+async function determineUserRole() {
+    const currentPath = window.location.pathname; // Ambil path URL saat ini, e.g., '/gulanocup-lima/'
+    const jsonUrl = `${currentPath}/json/users-data`; // Tentukan URL JSON berdasarkan path
+    
+    try {
+        // Ambil data pengguna dari JSON
+        const response = await fetch(jsonUrl);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch user data: ${response.status}`);
+        }
+        const userData = await response.json();
+
+        // Tentukan peran pengguna
+        const roleElement = document.querySelector("#user-dropdown .block");
+        if (userData.role === "player") {
+            roleElement.textContent = "You are: Player";
+        } else if (userData.role && userData.role !== "player") {
+            roleElement.textContent = "You are: Staff";
+        } else {
+            roleElement.textContent = "You are: Visitor";
+        }
+    } catch (error) {
+        console.error("Error determining user role:", error);
+        // Fallback jika data gagal diambil
+        const roleElement = document.querySelector("#user-dropdown .block");
+        roleElement.textContent = "You are: Visitor";
+    }
+}
+
+
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code'); // Extract the 'code' parameter from URL
     const accessToken = localStorage.getItem('access_token');
 
+    await determineUserRole()
+
     if (code) {
-        // Proses OAuth token exchange (sama seperti sebelumnya)
+        // If there is an OAuth code, prioritize exchanging it for a new token
         try {
-            const response = await axios.get(`https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`);
+            const response = await axios.get('https://gulanova-auth.vercel.app/api/osuAuth?code=${code}');
             if (response.data.access_token) {
                 localStorage.setItem("access_token", response.data.access_token);
                 window.location.href = '/'; // Redirect to clear the URL and reload with new token
@@ -15,49 +47,38 @@ window.onload = async function () {
             console.error('Error during OAuth token exchange:', error);
         }
     } else if (accessToken) {
+        // If there is an access token and no OAuth code, proceed with fetching user data
         const avatar = document.getElementById('avatar');
-        const usernameElement = document.getElementById('username');
-        const userRoleElement = document.querySelector('#user-dropdown li div');
-        const login = document.getElementById('login');
-        const logout = document.getElementById('logout');
 
+
+        const cachedAvatarUrl = localStorage.getItem('avatar_url');
+        // avatar.parentElement.href = "/"
         try {
-            // Dapatkan path halaman saat ini
-            const currentPath = window.location.pathname;
-            
-            // Fetch user data dari JSON sesuai path
-            const response = await fetch(`${currentPath}json/users-data.json`);
-            const userData = await response.json();
-
-            // Set avatar
-            const cachedAvatarUrl = localStorage.getItem('avatar_url');
-            avatar.src = cachedAvatarUrl || (await callOsuApi('/me/osu')).avatar_url;
-            
-            // Set username
-            usernameElement.innerHTML = userData.username;
-
-            // Tentukan role pengguna
-            let userRole = 'Visitor';
-            if (userData.role === 'player') {
-                userRole = 'Player';
-            } else if (userData.role && userData.role !== 'player') {
-                userRole = 'Staff';
+            if (cachedAvatarUrl) {
+                avatar.src = cachedAvatarUrl; // Use cached avatar
+            } else {
+                const userData = await callOsuApi('/me/osu'); // Await the API call
+                avatar.src = userData.avatar_url; // Set the avatar src
+                localStorage.setItem('avatar_url', userData.avatar_url); // Cache the avatar URL and everything else
+                localStorage.setItem("username", userData.username)
             }
-
-            // Update role di dropdown
-            userRoleElement.textContent = `You are: ${userRole}`;
-
-            // Tampilkan/sembunyikan tombol login/logout
-            login.classList.add("hidden");
-            logout.classList.remove("hidden");
-
         } catch (err) {
             console.error('Error fetching user data:', err);
-            // Fallback ke visitor jika ada error
-            usernameElement.innerHTML = 'Guest';
-            userRoleElement.textContent = 'You are: Visitor';
         }
+
+        // disable enable login button
+        const login = document.getElementById('login');
+        const logout = document.getElementById('logout');
+        login.classList.add("hidden");
+        logout.classList.remove("hidden");
+
+        // change username
+        const username = document.getElementById('username');
+        username.innerHTML = localStorage.getItem("username")
+
+
     } else {
+        // If neither an access token nor code is present, handle login initiation here
         console.error('No access token or OAuth code found');
     }
 };
