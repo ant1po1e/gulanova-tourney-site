@@ -1,69 +1,83 @@
+async function getUserRole() {
+    const currentPath = window.location.pathname; // Mendapatkan path dari URL saat ini
+    const jsonEndpoint = `${currentPath}/json/users-data`; // URL untuk JSON
+
+    try {
+        const response = await fetch(jsonEndpoint);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch user data: ${response.statusText}`);
+        }
+
+        const userData = await response.json();
+        const role = userData.role;
+
+        // Tentukan role user
+        let userRole = 'Visitor';
+        if (role === 'player') {
+            userRole = 'Player';
+        } else if (role && role !== 'player') {
+            userRole = 'Staff';
+        }
+
+        // Update UI dengan role pengguna
+        const roleDisplay = document.querySelector('#user-dropdown .block');
+        if (roleDisplay) {
+            roleDisplay.textContent = `You are: ${userRole}`;
+        }
+
+        // Jika diperlukan, simpan role ke localStorage
+        localStorage.setItem('user_role', userRole);
+    } catch (error) {
+        console.error('Error fetching user role:', error);
+    }
+}
+
 window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code'); // Extract the 'code' parameter from URL
     const accessToken = localStorage.getItem('access_token');
 
-    const avatar = document.getElementById('avatar');
-    const login = document.getElementById('login');
-    const logout = document.getElementById('logout');
-    const username = document.getElementById('username');
-    const userRoleElement = document.querySelector('#role-display'); 
-
     if (code) {
-        // Exchange OAuth code for access token
         try {
             const response = await axios.get(`https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`);
             if (response.data.access_token) {
                 localStorage.setItem("access_token", response.data.access_token);
-                window.location.href = '/'; // Redirect to clear the URL and reload
+                window.location.href = '/'; // Redirect to clear the URL and reload with new token
             }
         } catch (error) {
             console.error('Error during OAuth token exchange:', error);
         }
     } else if (accessToken) {
-        // If access token exists, fetch user data
+        const avatar = document.getElementById('avatar');
+        const cachedAvatarUrl = localStorage.getItem('avatar_url');
+
         try {
-            const cachedAvatarUrl = localStorage.getItem('avatar_url');
-            const cachedUsername = localStorage.getItem('username');
-            const cachedRole = localStorage.getItem('role');
-
-            if (cachedAvatarUrl && cachedUsername && cachedRole) {
-                // Use cached data if available
-                updateUI(cachedUsername, cachedRole, cachedAvatarUrl);
+            if (cachedAvatarUrl) {
+                avatar.src = cachedAvatarUrl;
             } else {
-                // Fetch fresh data
                 const userData = await callOsuApi('/me/osu');
-                const { username: fetchedUsername, role } = userData;
-
                 avatar.src = userData.avatar_url;
                 localStorage.setItem('avatar_url', userData.avatar_url);
-                localStorage.setItem('username', fetchedUsername);
-                localStorage.setItem('role', role);
-
-                updateUI(fetchedUsername, role, userData.avatar_url);
+                localStorage.setItem("username", userData.username);
             }
         } catch (err) {
             console.error('Error fetching user data:', err);
         }
-    } else {
-        console.error('No access token or OAuth code found');
-    }
 
-    function updateUI(usernameValue, role, avatarUrl) {
-        avatar.src = avatarUrl;
-        username.innerHTML = usernameValue;
-
-        let roleDisplay = "VISITOR";
-        if (role == "player") {
-            roleDisplay = "PLAYER";
-        } else if (role) {
-            roleDisplay = "STAFF";
-        }
-
-        userRoleElement.innerHTML = `You are: ${roleDisplay}`;
-
+        // Update login/logout button visibility
+        const login = document.getElementById('login');
+        const logout = document.getElementById('logout');
         login.classList.add("hidden");
         logout.classList.remove("hidden");
+
+        // Update username display
+        const username = document.getElementById('username');
+        username.innerHTML = localStorage.getItem("username");
+
+        // Periksa role pengguna
+        await getUserRole();
+    } else {
+        console.error('No access token or OAuth code found');
     }
 };
 
