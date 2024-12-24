@@ -1,17 +1,14 @@
 async function fetchUserRole() {
     try {
-        // Ambil username pengguna yang login dari localStorage
         const loggedInUsername = localStorage.getItem("username");
         if (!loggedInUsername) {
             console.error("No logged-in username found.");
             return;
         }
 
-        // URL JSON berdasarkan page saat ini
         const pagePath = window.location.pathname;
         const jsonUrl = `${pagePath}/json/users-data.json`;
 
-        // Ambil data JSON
         const response = await fetch(jsonUrl);
         if (!response.ok) {
             throw new Error(`Error fetching JSON file: ${response.status}`);
@@ -19,7 +16,6 @@ async function fetchUserRole() {
 
         const usersData = await response.json();
 
-        // Cari user berdasarkan username
         const user = usersData.find(user => user.username === loggedInUsername);
 
         if (!user) {
@@ -27,29 +23,25 @@ async function fetchUserRole() {
             return;
         }
 
-        // Ambil role dari user
         const userRole = user.role;
 
-        // Update HTML berdasarkan role
         const userRoleElement = document.getElementById("user-role");
 
         if (userRole === "player") {
-            userRoleElement.textContent = "You are: Player";
+            userRoleElement.textContent = "You are: PLAYER";
         } else if (userRole) {
-            userRoleElement.textContent = "You are: Staff";
+            userRoleElement.textContent = "You are: STAFF";
         } else {
-            userRoleElement.textContent = "You are: Visitor";
+            userRoleElement.textContent = "You are: VISITOR";
         }
     } catch (error) {
         console.error("Error processing user role:", error);
     }
 }
 
-// Panggil fungsi saat halaman dimuat
 window.onload = async function () {
     await fetchUserRole();
 
-    // Tambahkan logika lainnya seperti di kode awal
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
     const accessToken = localStorage.getItem('access_token');
