@@ -1,55 +1,97 @@
+async function fetchUserRole() {
+    try {
+        // Ambil username pengguna yang login dari localStorage
+        const loggedInUsername = localStorage.getItem("username");
+        if (!loggedInUsername) {
+            console.error("No logged-in username found.");
+            return;
+        }
+
+        // URL JSON berdasarkan page saat ini
+        const pagePath = window.location.pathname;
+        const jsonUrl = `${pagePath}/json/users-data.json`;
+
+        // Ambil data JSON
+        const response = await fetch(jsonUrl);
+        if (!response.ok) {
+            throw new Error(`Error fetching JSON file: ${response.status}`);
+        }
+
+        const usersData = await response.json();
+
+        // Cari user berdasarkan username
+        const user = usersData.find(user => user.username === loggedInUsername);
+
+        if (!user) {
+            console.error("User not found in JSON.");
+            return;
+        }
+
+        // Ambil role dari user
+        const userRole = user.role;
+
+        // Update HTML berdasarkan role
+        const userRoleElement = document.getElementById("user-role");
+
+        if (userRole === "player") {
+            userRoleElement.textContent = "You are: Player";
+        } else if (userRole) {
+            userRoleElement.textContent = "You are: Staff";
+        } else {
+            userRoleElement.textContent = "You are: Visitor";
+        }
+    } catch (error) {
+        console.error("Error processing user role:", error);
+    }
+}
+
+// Panggil fungsi saat halaman dimuat
 window.onload = async function () {
+    await fetchUserRole();
+
+    // Tambahkan logika lainnya seperti di kode awal
     const urlParams = new URLSearchParams(window.location.search);
-    const code = urlParams.get('code'); // Extract the 'code' parameter from URL
+    const code = urlParams.get('code');
     const accessToken = localStorage.getItem('access_token');
 
     if (code) {
-        // If there is an OAuth code, prioritize exchanging it for a new token
         try {
             const response = await axios.get(`https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`);
             if (response.data.access_token) {
                 localStorage.setItem("access_token", response.data.access_token);
-                window.location.href = '/'; // Redirect to clear the URL and reload with new token
+                window.location.href = '/';
             }
         } catch (error) {
             console.error('Error during OAuth token exchange:', error);
         }
     } else if (accessToken) {
-        // If there is an access token and no OAuth code, proceed with fetching user data
-        const avatar = document.getElementById('avatar');
-
-
-        const cachedAvatarUrl = localStorage.getItem('avatar_url');
-        // avatar.parentElement.href = "/"
         try {
+            const avatar = document.getElementById('avatar');
+            const cachedAvatarUrl = localStorage.getItem('avatar_url');
             if (cachedAvatarUrl) {
-                avatar.src = cachedAvatarUrl; // Use cached avatar
+                avatar.src = cachedAvatarUrl;
             } else {
-                const userData = await callOsuApi('/me/osu'); // Await the API call
-                avatar.src = userData.avatar_url; // Set the avatar src
-                localStorage.setItem('avatar_url', userData.avatar_url); // Cache the avatar URL and everything else
-                localStorage.setItem("username", userData.username)
+                const userData = await callOsuApi('/me/osu');
+                avatar.src = userData.avatar_url;
+                localStorage.setItem('avatar_url', userData.avatar_url);
+                localStorage.setItem("username", userData.username);
             }
         } catch (err) {
             console.error('Error fetching user data:', err);
         }
 
-        // disable enable login button
         const login = document.getElementById('login');
         const logout = document.getElementById('logout');
         login.classList.add("hidden");
         logout.classList.remove("hidden");
 
-        // change username
         const username = document.getElementById('username');
-        username.innerHTML = localStorage.getItem("username")
-
-
+        username.innerHTML = localStorage.getItem("username");
     } else {
-        // If neither an access token nor code is present, handle login initiation here
         console.error('No access token or OAuth code found');
     }
 };
+
 
 function testistwo() {
     console.log(callOsuApi('/me/osu'))
