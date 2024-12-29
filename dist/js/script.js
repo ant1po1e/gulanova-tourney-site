@@ -45,14 +45,14 @@ window.onload = async function () {
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
     const accessToken = localStorage.getItem('access_token');
-    const redirectTo = urlParams.get('redirect') || window.location.pathname;
+    const currentPath = window.location.pathname;
 
     if (code) {
         try {
             const response = await axios.get(`https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`);
             if (response.data.access_token) {
                 localStorage.setItem("access_token", response.data.access_token);
-                window.location.href = redirectTo;
+                window.location.href = currentPath;
             }
         } catch (error) {
             console.error('Error during OAuth token exchange:', error);
@@ -85,10 +85,6 @@ window.onload = async function () {
     }
 };
 
-document.getElementById('login').addEventListener('click', () => {
-    const currentPath = window.location.pathname;
-    window.location.href = `https://gulanova-auth.vercel.app/login?redirect=${encodeURIComponent(currentPath)}`;
-});
 
 function testistwo() {
     console.log(callOsuApi('/me/osu'))
