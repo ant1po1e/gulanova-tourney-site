@@ -52,11 +52,7 @@ window.onload = async function () {
             const response = await axios.get(`https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`);
             if (response.data.access_token) {
                 localStorage.setItem("access_token", response.data.access_token);
-
-                // Redirect to the previous URL if available, otherwise to the current path
-                const redirectUrl = localStorage.getItem('redirect_url') || currentPath;
-                localStorage.removeItem('redirect_url'); // Clear after redirect
-                window.location.href = redirectUrl;
+                window.location.href = currentPath;
             }
         } catch (error) {
             console.error('Error during OAuth token exchange:', error);
@@ -85,22 +81,21 @@ window.onload = async function () {
         const username = document.getElementById('username');
         username.innerHTML = localStorage.getItem("username");
     } else {
-        // Save the current URL for redirecting after login
-        localStorage.setItem('redirect_url', window.location.href);
         console.error('No access token or OAuth code found');
     }
 };
 
+
 function testistwo() {
-    console.log(callOsuApi('/me/osu'));
+    console.log(callOsuApi('/me/osu'))
+
 }
 
 function deb() {
-    var string = window.location.href;
-    const part = string.match(/code=(.*$)/)[1];
-    console.log(part);
+    var string = window.location.href
+    part = string.match(/code=(.*$)/)[1];
+    console.log(part)
 }
-
 
 $(function () {
     $(document).scroll(function () {
@@ -153,9 +148,5 @@ window.addEventListener('scroll', () => {
 
 back2Top.addEventListener('click', (e) => {
     e.preventDefault();
-    window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    });
+    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
 });
