@@ -171,3 +171,32 @@ $(document).ready(function () {
 
     loadSchedule('qualifiers');
 });
+
+function loadTimeline() {
+    fetch('json/timeline.json')
+        .then(response => response.json())
+        .then(timeline => {
+            const timelineContainer = document.querySelector("#timeline ol");
+            timelineContainer.innerHTML = ""; 
+
+            timeline.forEach((entry, index) => {
+                const isLeftAligned = index % 2 === 0;
+                const alignmentClass = isLeftAligned ? "items-end text-left pl-14" : "items-start text-right pr-14";
+
+                const timelineItem = `
+                    <li class="mb-14 flex flex-col ${alignmentClass} relative md:mb-20">
+                        <div class="absolute w-10 h-10 bg-white border-[10px] border-black rounded-full start-1/2 transform -translate-x-1/2 md:w-16 md:h-16 md:border-[20px]"></div>
+                        <div class="w-1/2">
+                            <h3 class="text-lg font-semibold text-white md:text-3xl">${entry.stage}</h3>
+                            <time class="mb-1 text-sm font-normal leading-none text-[#51f1ff] md:text-lg">${entry.date}</time>
+                        </div>
+                    </li>
+                `;
+
+                timelineContainer.insertAdjacentHTML("beforeend", timelineItem);
+            });
+        })
+        .catch(error => console.error('Error fetching timeline:', error));
+}
+
+document.addEventListener("DOMContentLoaded", loadTimeline);
