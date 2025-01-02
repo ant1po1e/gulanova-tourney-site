@@ -134,6 +134,11 @@ $("#timeline-btn").click(function () {
     $("#timeline").removeClass("hidden");
 });
 
+$("#procedure-btn").click(function () {
+    $(".section").addClass("hidden");
+    $("#procedure").removeClass("hidden");
+});
+
 const back2Top = document.querySelector('#backToTop');
 
 window.addEventListener('scroll', () => {
