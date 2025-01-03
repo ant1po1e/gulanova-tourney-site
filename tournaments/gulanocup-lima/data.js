@@ -181,12 +181,12 @@ function loadTimeline() {
 
             timeline.forEach((entry, index) => {
                 const isLeftAligned = index % 2 === 0;
-                const alignmentClass = isLeftAligned ? "items-end text-left pl-14" : "items-start text-right pr-14";
+                const alignmentClass = isLeftAligned ? "md:items-end md:text-left md:pl-14" : "md:items-start md:text-right md:pr-14";
 
                 const timelineItem = `
                     <li class="mb-14 flex flex-col ${alignmentClass} relative md:mb-20">
-                        <div class="absolute w-10 h-10 bg-white border-[10px] border-black rounded-full start-1/2 transform -translate-x-1/2 md:w-16 md:h-16 md:border-[20px]"></div>
-                        <div class="w-1/2">
+                        <div class="absolute w-10 h-10 bg-white border-[10px] border-black rounded-full md:start-1/2 transform -translate-x-1/2 md:w-16 md:h-16 md:border-[20px]"></div>
+                        <div class="ml-10 md:ml-0 md:w-1/2">
                             <h3 class="text-lg font-semibold text-white md:text-3xl">${entry.stage}</h3>
                             <time class="mb-1 text-sm font-normal leading-none text-[#51f1ff] md:text-lg">${entry.date}</time>
                         </div>
