@@ -2,8 +2,7 @@
     "qualifiers": [
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122428/covers/cover.jpg?1708176677",
-            "map": "Ka",
-            "diff": "[Stage 3: Chaos Carnival]",
+            "map": "Ka [Stage 3: Chaos Carnival]",
             "artist": "LeaF",
             "mapper": "Antipole",
             "mod": "RC1",
@@ -11,8 +10,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122124/covers/cover.jpg?1708126251",
-            "map": "Nouri no Machina",
-            "diff": "[Stage 2: Swaying]",
+            "map": "Nouri no Machina [Stage 2: Swaying]\r\n",
             "artist": "Folicca feat. KAFU",
             "mapper": "Reihynn",
             "mod": "RC2",
@@ -20,8 +18,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122397/covers/cover.jpg?1708171304",
-            "map": "<3",
-            "diff": "[Stage 4: Lovely]",
+            "map": "<3 [Stage 4: Lovely]",
             "artist": "Moe Shop",
             "mapper": "Ainer",
             "mod": "LN1",
@@ -29,8 +26,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122382/covers/cover.jpg?1708171284",
-            "map": "Chat perdu",
-            "diff": "[Stage 5: Meong Ngicalang]",
+            "map": "Chat perdu [Stage 5: Meong Ngicalang]",
             "artist": "Feryquitous",
             "mapper": "Syrion-",
             "mod": "LN2",
@@ -38,8 +34,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122383/covers/cover.jpg?1708171289",
-            "map": "Blue Bird feat. k*chan [ dj-Jo Remix ] (Cut ver.)",
-            "diff": "[Stage 6: Freed]",
+            "map": "Blue Bird feat. k*chan [ dj-Jo Remix ] (Cut ver.) [Stage 6: Freed]",
             "artist": "Ikimonogakari",
             "mapper": "FelixSpade",
             "mod": "HB1",
@@ -47,15 +42,14 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122390/covers/cover.jpg?1708171295",
-            "map": "Up to 21C",
-            "diff": "[Stage 1: Usagi Flap]",
+            "map": "Up to 21C [Stage 1: Usagi Flap]",
             "artist": "Nor",
             "mapper": "Revv-",
             "mod": "SV1",
             "link": "https://osu.ppy.sh/b/4459871"
         }
     ],
-
+    
     "ro48d1": [
         {
             "cover": "https://assets.ppy.sh/beatmaps/2116381/covers/cover.jpg?1707134489",

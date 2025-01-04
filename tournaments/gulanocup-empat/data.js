@@ -91,45 +91,50 @@ $(document).ready(function () {
 
                 if (mappool[stageId]) {
                     mappool[stageId].forEach(mappoolEntry => {
-                        let modType = mappoolEntry.mod.replace(/\d+/g, '');
+                        let modType = mappoolEntry.mod.replace(/\d+/g, '');  
 
                         let modColorClass = '';
                         switch (modType) {
                             case 'RC':
-                                modColorClass = 'bg-[#bfe1f6] text-[#0a53a8]';
+                                modColorClass = 'bg-[#bfe1f6] text-[#0a53a8]';  
                                 break;
                             case 'LN':
-                                modColorClass = 'bg-[#ffe5a0] text-[#943846]';
+                                modColorClass = 'bg-[#ffe5a0] text-[#943846]';  
                                 break;
                             case 'HB':
-                                modColorClass = 'bg-[#d4edbc] text-[#11734b]';
+                                modColorClass = 'bg-[#d4edbc] text-[#11734b]';  
                                 break;
                             case 'SV':
-                                modColorClass = 'bg-[#ffcfc9] text-[#c5293c]';
+                                modColorClass = 'bg-[#ffcfc9] text-[#b10202]';  
                                 break;
                             case 'GM':
-                                modColorClass = 'bg-[#e6cff2] text-[#633986]';
+                                modColorClass = 'bg-[#e6cff2] text-[#633986]';  
                                 break;
                             case 'TB':
-                                modColorClass = 'bg-[#3d3d3d] text-white';
+                                modColorClass = 'bg-[#3d3d3d] text-white';  
                                 break;
                             default:
-                                modColorClass = 'bg-gray-600 text-white';
+                                modColorClass = 'bg-gray-600 text-white';  
                                 break;
                         }
 
                         const card = `
-                        <div class="w-full md:w-1/2 p-2 hover:scale-105 transition duration-300">
-                            <div class="max-w-sm rounded-lg shadow bg-gulanova border-4 border-gulanova m-4">
-                                <a href="${mappoolEntry.link}" target="_blank">
-                                    <img class="rounded-t-lg w-full h-32 object-cover" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
+                        <div class="w-full md:w-1/2 p-2 group hover:scale-105 transition duration-300">
+                            <div class="max-w-sm rounded-lg shadow bg-gulanova border-8 border-gulanova m-4 group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
+                                <a href="${mappoolEntry.link}" target="_blank" class="relative block">
+                                    <img class="w-full h-32 object-cover rounded-t-md" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
                                 </a>
-                                <div class="p-5">
-                                    <h5 class="truncate mb-2 text-lg font-bold tracking-tight text-white">${mappoolEntry.artist} - ${mappoolEntry.map}</h5>
-                                    <p class="mb-3 font-normal text-white">Mapped by: ${mappoolEntry.mapper}</p>
-                                    <span class="inline-flex items-center px-3 py-2 text-sm font-bold rounded-lg ${modColorClass}">
-                                        ${mappoolEntry.mod}
-                                    </span>
+                                <div class="pb-3">
+                                    <div class="truncate w-full text-white bg-gulanovaDark rounded-b-md flex items-start">
+                                        <span class="items-center relative z-1 justify-center m-0 px-2 py-3 text-xl font-bold ${modColorClass}">
+                                            ${mappoolEntry.mod}
+                                        </span>
+                                        <div class="flex flex-col z-0 pl-2 my-1 text-start">
+                                            <p class="text-base font-bold">${mappoolEntry.map}</p>
+                                            <p class="text-sm">${mappoolEntry.artist}</p>
+                                        </div>
+                                    </div>
+                                    <p class="font-mono mt-3 text-white">Mapped by ${mappoolEntry.mapper}</p>
                                 </div>
                             </div>
                         </div>
@@ -140,7 +145,7 @@ $(document).ready(function () {
             })
             .catch(error => console.error('Error fetching mappool:', error));
     }
-
+    
     loadStages();
 
     $('#stage-map-select').change(function () {
