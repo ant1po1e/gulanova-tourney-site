@@ -122,7 +122,7 @@ $(document).ready(function () {
                         <div class="w-full md:w-1/2 p-2 group hover:scale-105 transition duration-300">
                             <div class="max-w-sm rounded-lg shadow bg-gulanova border-8 border-gulanova m-4 group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
                                 <a href="${mappoolEntry.link}" target="_blank" class="relative block">
-                                    <img class="w-full h-32 object-cover rounded-t-md" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
+                                    <img class="w-full h-3o object-cover rounded-t-md" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
                                 </a>
                                 <div class="pb-3">
                                     <div class="truncate w-full text-white bg-gulanovaDark rounded-b-md flex items-start">
