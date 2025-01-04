@@ -1,8 +1,7 @@
 {
     "qualifiers": [{
             "cover": "https://assets.ppy.sh/beatmaps/2299918/covers/cover.jpg?1735387490",
-            "map": "SPOOKY BADBALL",
-            "diff": "[Stage 2: Ghostly Treats]",
+            "map": "SPOOKY BADBALL [Stage 2: Ghostly Treats]",
             "artist": "D-D-Dice vs. Tanchiky",
             "mapper": "-Yubi-",
             "mod": "RC1",
@@ -10,8 +9,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299916/covers/cover.jpg?1735387242",
-            "map": "Iris",
-            "diff": "[Stage 3: Santai]",
+            "map": "Iris [Stage 3: Santai]",
             "artist": "gsharp",
             "mapper": "Reihynn",
             "mod": "RC2",
@@ -19,8 +17,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299915/covers/cover.jpg?1735387280",
-            "map": "Amaama Toutetsu Bonbon",
-            "diff": "[Stage 4: Desserts]",
+            "map": "Amaama Toutetsu Bonbon [Stage 4: Desserts]",
             "artist": "Kolaa & Kumaku",
             "mapper": "Antipole",
             "mod": "LN1",
@@ -28,8 +25,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299917/covers/cover.jpg?1735387259",
-            "map": "To the Milky Way",
-            "diff": "[Stage 5: Pemimpi]",
+            "map": "To the Milky Way [Stage 5: Pemimpi]",
             "artist": "Chroma",
             "mapper": "FelixSpade",
             "mod": "LN2",
@@ -37,8 +33,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299919/covers/cover.jpg?1735387641",
-            "map": "Cubibibibism",
-            "diff": "[Stage 6: Kawakawa]",
+            "map": "Cubibibibism [Stage 6: Kawakawa]",
             "artist": "Sasuke Haraguchi feat. Choten-chan",
             "mapper": "Revv-",
             "mod": "HB1",
@@ -46,8 +41,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299921/covers/cover.jpg?1735387767",
-            "map": "Lagtrain (Redsign Remix) (Cut Ver.)",
-            "diff": "[Stage 1: Delay]",
+            "map": "Lagtrain (Redsign Remix) (Cut Ver.) [Stage 1: Delay]",
             "artist": "inabakumori",
             "mapper": "Ainer",
             "mod": "SV1",

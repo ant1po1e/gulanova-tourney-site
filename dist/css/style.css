@@ -81,18 +81,9 @@ ol::before {
    background-color: #fff;
 }
 
-li div {
-   z-index: 1;
-}
-
 .navbar-scrolled.scrolled {
    background-color: #15575c;
    transition: all 0.3s ease-in-out;
    border: 1px solid black;
    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-[data-accordion-target] + div {
-   transition: max-height 0.3s ease, opacity 0.3s ease;
-   overflow: hidden;
 }

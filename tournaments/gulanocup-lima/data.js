@@ -97,21 +97,50 @@ $(document).ready(function () {
 
                 if (mappool[stageId]) {
                     mappool[stageId].forEach(mappoolEntry => {
+                        let modType = mappoolEntry.mod.replace(/\d+/g, '');  
+
+                        let modColorClass = '';
+                        switch (modType) {
+                            case 'RC':
+                                modColorClass = 'bg-[#bfe1f6] text-[#0a53a8]';  
+                                break;
+                            case 'LN':
+                                modColorClass = 'bg-[#ffe5a0] text-[#943846]';  
+                                break;
+                            case 'HB':
+                                modColorClass = 'bg-[#d4edbc] text-[#11734b]';  
+                                break;
+                            case 'SV':
+                                modColorClass = 'bg-[#ffcfc9] text-[#b10202]';  
+                                break;
+                            case 'GM':
+                                modColorClass = 'bg-[#e6cff2] text-[#633986]';  
+                                break;
+                            case 'TB':
+                                modColorClass = 'bg-[#3d3d3d] text-white';  
+                                break;
+                            default:
+                                modColorClass = 'bg-gray-600 text-white';  
+                                break;
+                        }
+
                         const card = `
                         <div class="w-full md:w-1/2 p-2 group hover:scale-105 transition duration-300">
-                            <div class="max-w-sm rounded-lg shadow bg-gulanova border-4 border-gulanova m-4 group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
+                            <div class="max-w-sm rounded-lg shadow bg-gulanova border-8 border-gulanova m-4 group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
                                 <a href="${mappoolEntry.link}" target="_blank" class="relative block">
-                                    <img class="w-full h-32 object-cover rounded-lg" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
-                                    <span
-                                        class="absolute inset-0 flex items-center justify-center rounded-lg px-3 py-2 text-3xl font-bold group-hover:opacity-0 bg-opacity-50 transition duration-300 bg-black text-white">
-                                        ${mappoolEntry.mod}
-                                    </span>
+                                    <img class="w-full h-32 object-cover rounded-t-md" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
                                 </a>
-                                <div class="p-5">
-                                    <h5 class="truncate text-xl font-bold tracking-tight text-white bg-gulanovaDark rounded-md pt-1 px-2">${mappoolEntry.map}</h5>
-                                    <h5 class="truncate text-sm font-semibold tracking-tight bg-gulanovaDark rounded-b-md mx-auto pb-1 px-2 w-40 self-center text-white">${mappoolEntry.artist}</h5>
-                                    <p class="mb-3 font-normal text-white">${mappoolEntry.diff}</p>
-                                    <p class="font-mono text-white">Mapped by ${mappoolEntry.mapper}</p>
+                                <div class="pb-3">
+                                    <div class="truncate w-full text-white bg-gulanovaDark rounded-b-md flex items-start">
+                                        <span class="items-center relative z-1 justify-center m-0 px-2 py-3 text-xl font-bold ${modColorClass}">
+                                            ${mappoolEntry.mod}
+                                        </span>
+                                        <div class="flex flex-col z-0 pl-2 my-1 text-start">
+                                            <p class="text-base font-bold">${mappoolEntry.map}</p>
+                                            <p class="text-sm">${mappoolEntry.artist}</p>
+                                        </div>
+                                    </div>
+                                    <p class="font-mono mt-3 text-white">Mapped by ${mappoolEntry.mapper}</p>
                                 </div>
                             </div>
                         </div>
