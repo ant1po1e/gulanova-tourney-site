@@ -47,5 +47,65 @@
             "mod": "SV1",
             "link": "https://osu.ppy.sh/b/4914479"
         }
+    ],
+    "ro64": [
+        {
+            "cover": "tebak",
+            "map": "mau tau aja",
+            "artist": "kepo",
+            "mapper": "wokwok",
+            "mod": "kepo",
+            "link": "kepo"
+        }
+    ],
+    "ro32": [
+        {
+            "cover": "tebak",
+            "map": "mau tau aja",
+            "artist": "kepo",
+            "mapper": "wokwok",
+            "mod": "kepo",
+            "link": "kepo"
+        }
+    ],
+    "qf": [
+        {
+            "cover": "tebak",
+            "map": "mau tau aja",
+            "artist": "kepo",
+            "mapper": "wokwok",
+            "mod": "kepo",
+            "link": "kepo"
+        }
+    ],
+    "sf": [
+        {
+            "cover": "tebak",
+            "map": "mau tau aja",
+            "artist": "kepo",
+            "mapper": "wokwok",
+            "mod": "kepo",
+            "link": "kepo"
+        }
+    ],
+    "f": [
+        {
+            "cover": "tebak",
+            "map": "mau tau aja",
+            "artist": "kepo",
+            "mapper": "wokwok",
+            "mod": "kepo",
+            "link": "kepo"
+        }
+    ],
+    "gf": [
+        {
+            "cover": "tebak",
+            "map": "mau tau aja",
+            "artist": "kepo",
+            "mapper": "wokwok",
+            "mod": "kepo",
+            "link": "kepo"
+        }
     ]
 }
