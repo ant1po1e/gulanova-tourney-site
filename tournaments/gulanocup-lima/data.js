@@ -6,7 +6,7 @@ function createProfileCard(userId, displayName) {
                 <p class="truncate hover:overflow-visible hover:whitespace-normal bg-[#15575c] rounded-lg px-2 py-1 font-normal text-xs max-w-[7rem]">${displayName}</p>
             </a>
             ` :
-                    `
+        `
             <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 bg-gulanova p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
                 <img class="w-28 h-28 mb-2 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
                 <p class="truncate hover:overflow-visible hover:whitespace-normal bg-[#15575c] rounded-lg px-2 py-1 font-normal text-xs max-w-[7rem]">${displayName}</p>
@@ -97,16 +97,50 @@ $(document).ready(function () {
 
                 if (mappool[stageId]) {
                     mappool[stageId].forEach(mappoolEntry => {
-                        const row = `
-                    <tr class="border-b bg-gray-800 border-gray-700">
-                        <td class="px-1.5 py-2 md:px-2 md:py-3"><a href="${mappoolEntry.link}" target="_blank"><img class="hover:scale-105 transition duration-300" src="${mappoolEntry.cover}"></a></td>
-                        <td class="truncate hover:overflow-visible hover:whitespace-normal px-1.5 py-2 md:px-6 md:py-3 max-w-[12rem] transition duration-300">${mappoolEntry.map}</td>
-                        <td class="truncate hover:overflow-visible hover:whitespace-normal px-1.5 py-2 md:px-6 md:py-3 max-w-[8rem] transition duration-300">${mappoolEntry.artist}</td>
-                        <td class="px-1.5 py-2 md:px-6 md:py-3 max-w-[8rem]">${mappoolEntry.mapper}</td>
-                        <td class="px-1.5 py-2 md:px-6 md:py-3 max-w-[8rem]">${mappoolEntry.mod}</td>
-                    </tr>
-                `;
-                        $('#mappool-body').append(row);
+                        let modType = mappoolEntry.mod.replace(/\d+/g, '');
+
+                        let modColorClass = '';
+                        switch (modType) {
+                            case 'RC':
+                                modColorClass = 'bg-[#bfe1f6] text-[#0a53a8]';
+                                break;
+                            case 'LN':
+                                modColorClass = 'bg-[#ffe5a0] text-[#943846]';
+                                break;
+                            case 'HB':
+                                modColorClass = 'bg-[#d4edbc] text-[#11734b]';
+                                break;
+                            case 'SV':
+                                modColorClass = 'bg-[#ffcfc9] text-[#c5293c]';
+                                break;
+                            case 'GM':
+                                modColorClass = 'bg-[#e6cff2] text-[#633986]';
+                                break;
+                            case 'TB':
+                                modColorClass = 'bg-[#3d3d3d] text-white';
+                                break;
+                            default:
+                                modColorClass = 'bg-gray-600 text-white';
+                                break;
+                        }
+
+                        const card = `
+                        <div class="w-full md:w-1/2 p-2 hover:scale-105 transition duration-300">
+                            <div class="max-w-sm rounded-lg shadow bg-gulanova border-4 border-gulanova m-4">
+                                <a href="${mappoolEntry.link}" target="_blank">
+                                    <img class="rounded-t-lg w-full h-32 object-cover" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
+                                </a>
+                                <div class="p-5">
+                                    <h5 class="truncate mb-2 text-lg font-bold tracking-tight text-white">${mappoolEntry.artist} - ${mappoolEntry.map}</h5>
+                                    <p class="mb-3 font-normal text-white">Mapped by: ${mappoolEntry.mapper}</p>
+                                    <span class="inline-flex items-center px-3 py-2 text-sm font-bold rounded-lg ${modColorClass}">
+                                        ${mappoolEntry.mod}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                        $('#mappool-body').append(card);
                     });
                 }
             })
@@ -177,7 +211,7 @@ function loadTimeline() {
         .then(response => response.json())
         .then(timeline => {
             const timelineContainer = document.querySelector("#timeline ol");
-            timelineContainer.innerHTML = ""; 
+            timelineContainer.innerHTML = "";
 
             timeline.forEach((entry, index) => {
                 const isLeftAligned = index % 2 === 0;
