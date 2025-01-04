@@ -5,7 +5,8 @@
             "artist": "D-D-Dice vs. Tanchiky",
             "mapper": "-Yubi-",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4914476"
+            "link": "https://osu.ppy.sh/b/4914476",
+            "custom": "true"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299916/covers/cover.jpg?1735387242",
@@ -13,7 +14,8 @@
             "artist": "gsharp",
             "mapper": "Reihynn",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4914474"
+            "link": "https://osu.ppy.sh/b/4914474",
+            "custom": "true"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299915/covers/cover.jpg?1735387280",
@@ -21,7 +23,8 @@
             "artist": "Kolaa & Kumaku",
             "mapper": "Antipole",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4914473"
+            "link": "https://osu.ppy.sh/b/4914473",
+            "custom": "true"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299917/covers/cover.jpg?1735387259",
@@ -29,7 +32,8 @@
             "artist": "Chroma",
             "mapper": "FelixSpade",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4914475"
+            "link": "https://osu.ppy.sh/b/4914475",
+            "custom": "true"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299919/covers/cover.jpg?1735387641",
@@ -37,7 +41,8 @@
             "artist": "Sasuke Haraguchi feat. Choten-chan",
             "mapper": "Revv-",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4914477"
+            "link": "https://osu.ppy.sh/b/4914477",
+            "custom": "true"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299921/covers/cover.jpg?1735387767",
@@ -45,7 +50,8 @@
             "artist": "inabakumori",
             "mapper": "Ainer",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4914479"
+            "link": "https://osu.ppy.sh/b/4914479",
+            "custom": "true"
         }
     ],
     "ro64": [
