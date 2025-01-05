@@ -6,7 +6,7 @@
             "mapper": "-Yubi-",
             "mod": "RC1",
             "link": "https://osu.ppy.sh/b/4914476",
-            "custom": "FALSE"
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299916/covers/cover.jpg?1735387242",
@@ -33,7 +33,7 @@
             "mapper": "FelixSpade",
             "mod": "LN2",
             "link": "https://osu.ppy.sh/b/4914475",
-            "custom": "FALSE"
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299919/covers/cover.jpg?1735387641",

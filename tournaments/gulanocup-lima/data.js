@@ -81,7 +81,7 @@ $(document).ready(function () {
 
                         const card = `
                             <a href="${mappoolEntry.link}" class="w-full p-2 group hover:scale-105 transition duration-300" target="_blank">
-                                <div class="rounded-lg shadow border-8 m-4 bg-gulanova border-gulanova group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
+                                <div class="rounded-lg shadow border-4 bg-gulanova border-gulanova group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
                                     <div class="relative overflow-hidden rounded-lg bg-gulanovaDark shadow-lg">
                                         <img class="h-32 w-full object-cover" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
                                         <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center gap-4 px-4 group-hover:bg-opacity-50 transition duration-300">
@@ -89,9 +89,9 @@ $(document).ready(function () {
                                                 ${mappoolEntry.mod}
                                             </span>
                                             <div class="text-white text-start">
-                                                <p class="text-sm my-1 font-bold truncate">${mappoolEntry.map} <span class="inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 ml-2 text-xs font-medium text-yellow-800 ${customMap}">Custom</span></p>
-                                                <p class="text-sm my-1 truncate">${mappoolEntry.artist}</p>
-                                                <p class="text-sm my-1 truncate">Mapped by ${mappoolEntry.mapper}</p>
+                                                <p class="text-base md:text-lg my-1 font-bold truncate">${mappoolEntry.map} <span class="inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 ml-2 text-xs font-medium text-yellow-800 ${customMap}">Custom</span></p>
+                                                <p class="text-xs md:text-sm my-1 truncate">${mappoolEntry.artist}</p>
+                                                <p class="text-xs md:text-sm my-1 truncate">Mapped by ${mappoolEntry.mapper}</p>
                                             </div>
                                         </div>
                                     </div>
