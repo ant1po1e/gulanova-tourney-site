@@ -142,7 +142,7 @@
             "mapper": "danar",
             "mod": "MM2",
             "link": "https://osu.ppy.sh/b/4445964",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2124675/covers/cover.jpg?1708534865",
@@ -333,7 +333,7 @@
             "mapper": "Fawcro",
             "mod": "HB1",
             "link": "https://osu.ppy.sh/b/4445759",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2128411/covers/cover.jpg?1709445684",
@@ -369,7 +369,7 @@
             "mapper": "Reihynn",
             "mod": "MM1",
             "link": "https://osu.ppy.sh/b/4478273",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122199/covers/cover.jpg?1708144236",
@@ -387,7 +387,7 @@
             "mapper": "Revv-",
             "mod": "TB",
             "link": "https://osu.ppy.sh/b/4479507",
-            "custom": ""
+            "custom": "TRUE"
         }
     ],
     "qf": [{
@@ -514,7 +514,7 @@
             "mapper": "danar",
             "mod": "MM2",
             "link": "https://osu.ppy.sh/b/4411902",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2132578/covers/cover.jpg?1709841667",
@@ -596,7 +596,7 @@
             "mapper": "Antipole",
             "mod": "LN3",
             "link": "https://osu.ppy.sh/b/4446191",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2134540/covers/cover.jpg?1710556245",
@@ -687,7 +687,7 @@
             "mapper": "danar",
             "mod": "RC3",
             "link": "https://osu.ppy.sh/b/4498376",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2140801/covers/cover.jpg?1711224080",
@@ -741,7 +741,7 @@
             "mapper": "Antipole",
             "mod": "LN3",
             "link": "https://osu.ppy.sh/b/4446368",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2126961/covers/cover.jpg?1708878689",
@@ -823,7 +823,7 @@
             "mapper": "FelixSpade",
             "mod": "RC1",
             "link": "https://osu.ppy.sh/b/4477594",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2125544/covers/cover.jpg?1712109627",
@@ -832,7 +832,7 @@
             "mapper": "Syrion-",
             "mod": "RC2",
             "link": "https://osu.ppy.sh/b/4467638",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2138230/covers/cover.jpg?1728302466",
@@ -850,7 +850,7 @@
             "mapper": "Antipole",
             "mod": "RC4",
             "link": "https://osu.ppy.sh/b/4440404",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2144858/covers/cover.jpg?1712154672",
@@ -859,7 +859,7 @@
             "mapper": "-Yubi-",
             "mod": "RC5",
             "link": "https://osu.ppy.sh/b/4517522",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2011972/covers/cover.jpg?1689739237",
@@ -877,7 +877,7 @@
             "mapper": "Ainer",
             "mod": "LN1",
             "link": "https://osu.ppy.sh/b/4513475",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2148591/covers/cover.jpg?1712514708",
@@ -886,7 +886,7 @@
             "mapper": "Ainer",
             "mod": "LN2",
             "link": "https://osu.ppy.sh/b/4526077",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2113660/covers/cover.jpg?1707541248",
@@ -895,7 +895,7 @@
             "mapper": "Antipole",
             "mod": "LN3",
             "link": "https://osu.ppy.sh/b/4437980",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2135569/covers/cover.jpg?1712593826",
@@ -922,7 +922,7 @@
             "mapper": "Revv-",
             "mod": "HB3",
             "link": "https://osu.ppy.sh/b/4522456",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2149002/covers/cover.jpg?1712593851",
@@ -931,7 +931,7 @@
             "mapper": "Revv-",
             "mod": "SV1",
             "link": "https://osu.ppy.sh/b/4527113",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2148865/covers/cover.jpg?1712667653",
@@ -940,7 +940,7 @@
             "mapper": "Ainer",
             "mod": "SV2",
             "link": "https://osu.ppy.sh/b/4526775",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2148519/covers/cover.jpg?1712503902",
@@ -949,7 +949,7 @@
             "mapper": "Syrion-",
             "mod": "MM1",
             "link": "https://osu.ppy.sh/b/4525895",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2147986/covers/cover.jpg?1712487639",
@@ -958,7 +958,7 @@
             "mapper": "danar",
             "mod": "MM2",
             "link": "https://osu.ppy.sh/b/4524648",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2149003/covers/cover.jpg?1712593860",
@@ -967,7 +967,7 @@
             "mapper": "Revv-",
             "mod": "TB",
             "link": "https://osu.ppy.sh/b/4527115",
-            "custom": ""
+            "custom": "TRUE"
         }
     ]
 }
