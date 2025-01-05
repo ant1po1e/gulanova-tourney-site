@@ -1,0 +1,11 @@
+[
+    { "stage": "Qualifier Showcase", "date": "28 Desember 2024" },
+    { "stage": "Qualifier Stage", "date": "4 Januari 2025" },
+    { "stage": "Round of 64", "date": "11 Januari 2025" },
+    { "stage": "Round of 32", "date": "18 Januari 2025" },
+    { "stage": "Round of 16", "date": "25 Januari 2025" },
+    { "stage": "Quarterfinals", "date": "1 Februari 2025" },
+    { "stage": "Semifinals", "date": "8 Februari 2025" },
+    { "stage": "Finals", "date": "15 Februari 2025" },
+    { "stage": "Grandfinals", "date": "22 Februari 2025" }
+]

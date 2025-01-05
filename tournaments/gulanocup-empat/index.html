@@ -290,7 +290,7 @@
             <h1 class="mb-5 text-2xl font-bold text-white">
                 Mappools
             </h1>
-            <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
+            <div class="px-4 mx-auto max-w-3xl text-balance py-6 mb-20 md:rounded-lg">
                 <div class="flex flex-wrap justify-center">
                     <div class="mb-4">
                         <label for="stage-map-select" class="mb-4 text-white">Select Stage</label>
@@ -300,30 +300,8 @@
                     </div>
 
                     <div class="relative w-full">
-                        <table class="w-full text-[11px] md:text-sm text-left rtl:text-right text-gray-400">
-                            <thead class="text-xs uppercase bg-gray-700 text-gray-400">
-                                <tr>
-                                    <th scope="col" class="px-1.5 py-2 md:px-2 md:py-3">
-                                        #
-                                    </th>
-                                    <th scope="col" class="px-1.5 py-2 md:px-6 md:py-3">
-                                        Map
-                                    </th>
-                                    <th scope="col" class="px-1.5 py-2 md:px-6 md:py-3">
-                                        Artist
-                                    </th>
-                                    <th scope="col" class="px-1.5 py-2 md:px-6 md:py-3">
-                                        Mapper
-                                    </th>
-                                    <th scope="col" class="px-1.5 py-2 md:px-6 md:py-3">
-                                        Mod
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody id="mappool-body"></tbody>
-                            <!-- Rows will be dynamically added here -->
-                            </tbody>
-                        </table>
+                        <div id="mappool-body" class="flex flex-wrap justify-center"></div>
+
                     </div>
                 </div>
             </div>
@@ -374,7 +352,7 @@
                 </div>
             </div>
         </section>
-        <!-- Mappool Section-END -->
+        <!-- Match Section-END -->
 
 
         <!-- Challonge Section -->
