@@ -131,7 +131,7 @@
             "map": "Ident Tv one [Revv's ChordJackowi]",
             "artist": "TV ONE",
             "mapper": "zutu",
-            "mod": "MM1",
+            "mod": "GM1",
             "link": "https://osu.ppy.sh/b/3291250",
             "custom": ""
         },
@@ -140,7 +140,7 @@
             "map": "Asu no Yozora Shoukaihan [zutu's catastrope]",
             "artist": "Orangestar feat.IA",
             "mapper": "danar",
-            "mod": "MM2",
+            "mod": "GM2",
             "link": "https://osu.ppy.sh/b/4445964",
             "custom": "TRUE"
         },
@@ -242,14 +242,14 @@
             "mapper": "Ainer",
             "mod": "SV2",
             "link": "https://osu.ppy.sh/b/4462867",
-            "custom": "TRUE"
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1578221/covers/cover.jpg?1642595439",
             "map": "The Amazing World of Gumball [EXTRA DAN gumball Delta]",
             "artist": "Ben Locket",
             "mapper": "zutu",
-            "mod": "MM1",
+            "mod": "GM1",
             "link": "https://osu.ppy.sh/b/3371567",
             "custom": ""
         },
@@ -258,7 +258,7 @@
             "map": "i wanted to eat a croissant [Revv's Molen]",
             "artist": "kessoku band",
             "mapper": "zutu",
-            "mod": "MM2",
+            "mod": "GM2",
             "link": "https://osu.ppy.sh/b/3981226",
             "custom": ""
         },
@@ -310,7 +310,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2118120/covers/cover.jpg?1733721007",
-            "map": "Good Parts (when the quality is bad but I am) [LN Parts (when you do not like long notes but I am)]",
+            "map": "Good Parts (when the GM1uality is bad but I am) [LN Parts (when you do not like long notes but I am)]",
             "artist": "LE SSERAFIM",
             "mapper": "Ilham",
             "mod": "LN1",
@@ -367,7 +367,7 @@
             "map": "You Are The Reason [pembalap]",
             "artist": "Dede Riandi x Si Babon Tolok",
             "mapper": "Reihynn",
-            "mod": "MM1",
+            "mod": "GM1",
             "link": "https://osu.ppy.sh/b/4478273",
             "custom": "TRUE"
         },
@@ -376,7 +376,7 @@
             "map": "Roti asmara sepikoe [rasa enak bikin candu]",
             "artist": "Ikuy",
             "mapper": "Yacchie-",
-            "mod": "MM2",
+            "mod": "GM2",
             "link": "https://osu.ppy.sh/b/4459482",
             "custom": ""
         },
@@ -397,7 +397,7 @@
             "mapper": "Reihynn",
             "mod": "RC1",
             "link": "https://osu.ppy.sh/b/4484339",
-            "custom": "TRUE"
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2106796/covers/cover.jpg?1705568451",
@@ -433,7 +433,7 @@
             "mapper": "Ainer",
             "mod": "RC5",
             "link": "https://osu.ppy.sh/b/4452023",
-            "custom": "TRUE"
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2090262/covers/cover.jpg?1717471299",
@@ -460,7 +460,7 @@
             "mapper": "FelixSpade",
             "mod": "LN3",
             "link": "https://osu.ppy.sh/b/4486045",
-            "custom": "TRUE"
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2111347/covers/cover.jpg?1706968879",
@@ -503,7 +503,7 @@
             "map": "Unknown Artist - Maling pangsit [maling matamu]",
             "artist": "Unknown Artist",
             "mapper": "towakane",
-            "mod": "MM1",
+            "mod": "GM1",
             "link": "https://osu.ppy.sh/b/4439498",
             "custom": ""
         },
@@ -512,7 +512,7 @@
             "map": "DJ Mbon Mbon - Dj Salting (Cut Ver.) [boom]",
             "artist": "DJ Mbon Mbon",
             "mapper": "danar",
-            "mod": "MM2",
+            "mod": "GM2",
             "link": "https://osu.ppy.sh/b/4411902",
             "custom": "TRUE"
         },
@@ -639,7 +639,7 @@
             "map": "Kerja Lembur Bagai Kuda [staff gulanocup]",
             "artist": "Ramayana",
             "mapper": "FelixSpade",
-            "mod": "MM1",
+            "mod": "GM1",
             "link": "https://osu.ppy.sh/b/4496945",
             "custom": "TRUE"
         },
@@ -648,7 +648,7 @@
             "map": "dikananmu [rindu bapak]",
             "artist": "mamang epep",
             "mapper": "Reihynn",
-            "mod": "MM2",
+            "mod": "GM2",
             "link": "https://osu.ppy.sh/b/4497964",
             "custom": "TRUE"
         },
@@ -793,7 +793,7 @@
             "map": "Tiap Hari Bangka Dada [Bangka Dadang]",
             "artist": "Patrick Joget",
             "mapper": "Revv-",
-            "mod": "MM1",
+            "mod": "GM1",
             "link": "https://osu.ppy.sh/b/4502970",
             "custom": "TRUE"
         },
@@ -802,7 +802,7 @@
             "map": "Shelter (Shrek Medan Cover) - Supported By Nasi Lemak KFC [nyanyi yang penting X yang penting nyanyi V]",
             "artist": "Janda Collective",
             "mapper": "Reihynn",
-            "mod": "MM2",
+            "mod": "GM2",
             "link": "https://osu.ppy.sh/b/4506771",
             "custom": "TRUE"
         },
@@ -868,7 +868,7 @@
             "mapper": "Reihynn",
             "mod": "RC6",
             "link": "https://osu.ppy.sh/b/4186640",
-            "custom": "TRUE"
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2137575/covers/cover.jpg?1711726260",
@@ -947,7 +947,7 @@
             "map": "Joged Caesar [digidigidaw bareng rehin]",
             "artist": "Caisar Aditya Putra",
             "mapper": "Syrion-",
-            "mod": "MM1",
+            "mod": "GM1",
             "link": "https://osu.ppy.sh/b/4525895",
             "custom": "TRUE"
         },
@@ -956,7 +956,7 @@
             "map": "Sule [Sule's lasting legacy]",
             "artist": "Entis Sutisna",
             "mapper": "danar",
-            "mod": "MM2",
+            "mod": "GM2",
             "link": "https://osu.ppy.sh/b/4524648",
             "custom": "TRUE"
         },
