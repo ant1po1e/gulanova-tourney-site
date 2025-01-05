@@ -77,7 +77,7 @@ $(document).ready(function () {
                             TB: 'bg-[#3d3d3d] text-white'
                         };
                         const modColorClass = modColorClassMap[modType] || 'bg-gray-600 text-white';
-                        const customMap = mappoolEntry.custom === "true" ? 'bg-gulanovaYellow' : 'bg-gulanovaDark';
+                        const customMap = mappoolEntry.custom === "TRUE" ? 'bg-gulanovaYellow' : 'bg-gulanovaDark';
 
                         const card = `
                             <div class="w-full md:w-1/2 p-2 group hover:scale-105 transition duration-300">

@@ -1,117 +1,105 @@
 {
     "qualifiers": [{
             "cover": "https://assets.ppy.sh/beatmaps/2299918/covers/cover.jpg?1735387490",
-            "map": "SPOOKY BADBALL [Stage 2: Ghostly Treats]",
+            "map": "D-D-Dice vs. Tanchiky - SPOOKY BADBALL [Stage 2: Ghostly Treats]",
             "artist": "D-D-Dice vs. Tanchiky",
             "mapper": "-Yubi-",
             "mod": "RC1",
             "link": "https://osu.ppy.sh/b/4914476",
-            "custom": "true"
+            "custom": "FALSE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299916/covers/cover.jpg?1735387242",
-            "map": "Iris [Stage 3: Santai]",
+            "map": "gsharp - Iris [Stage 3: Santai]",
             "artist": "gsharp",
             "mapper": "Reihynn",
             "mod": "RC2",
             "link": "https://osu.ppy.sh/b/4914474",
-            "custom": "true"
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299915/covers/cover.jpg?1735387280",
-            "map": "Amaama Toutetsu Bonbon [Stage 4: Desserts]",
+            "map": "Kolaa & Kumaku - Amaama Toutetsu Bonbon [Stage 4: Desserts]",
             "artist": "Kolaa & Kumaku",
             "mapper": "Antipole",
             "mod": "LN1",
             "link": "https://osu.ppy.sh/b/4914473",
-            "custom": "true"
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299917/covers/cover.jpg?1735387259",
-            "map": "To the Milky Way [Stage 5: Pemimpi]",
+            "map": "Chroma - To the Milky Way [Stage 5: Pemimpi]",
             "artist": "Chroma",
             "mapper": "FelixSpade",
             "mod": "LN2",
             "link": "https://osu.ppy.sh/b/4914475",
-            "custom": "true"
+            "custom": "FALSE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299919/covers/cover.jpg?1735387641",
-            "map": "Cubibibibism [Stage 6: Kawakawa]",
+            "map": "Sasuke Haraguchi feat. Choten-chan - Cubibibibism [Stage 6: Kawakawa]",
             "artist": "Sasuke Haraguchi feat. Choten-chan",
             "mapper": "Revv-",
             "mod": "HB1",
             "link": "https://osu.ppy.sh/b/4914477",
-            "custom": "true"
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2299921/covers/cover.jpg?1735387767",
-            "map": "Lagtrain (Redsign Remix) (Cut Ver.) [Stage 1: Delay]",
+            "map": "inabakumori - Lagtrain (Redsign Remix) (Cut Ver.) [Stage 1: Delay]",
             "artist": "inabakumori",
             "mapper": "Ainer",
             "mod": "SV1",
             "link": "https://osu.ppy.sh/b/4914479",
-            "custom": "true"
+            "custom": "TRUE"
         }
     ],
-    "ro64": [
-        {
-            "cover": "tebak",
-            "map": "mau tau aja",
-            "artist": "kepo",
-            "mapper": "wokwok",
-            "mod": "kepo",
-            "link": "kepo"
-        }
-    ],
-    "ro32": [
-        {
-            "cover": "tebak",
-            "map": "mau tau aja",
-            "artist": "kepo",
-            "mapper": "wokwok",
-            "mod": "kepo",
-            "link": "kepo"
-        }
-    ],
-    "qf": [
-        {
-            "cover": "tebak",
-            "map": "mau tau aja",
-            "artist": "kepo",
-            "mapper": "wokwok",
-            "mod": "kepo",
-            "link": "kepo"
-        }
-    ],
-    "sf": [
-        {
-            "cover": "tebak",
-            "map": "mau tau aja",
-            "artist": "kepo",
-            "mapper": "wokwok",
-            "mod": "kepo",
-            "link": "kepo"
-        }
-    ],
-    "f": [
-        {
-            "cover": "tebak",
-            "map": "mau tau aja",
-            "artist": "kepo",
-            "mapper": "wokwok",
-            "mod": "kepo",
-            "link": "kepo"
-        }
-    ],
-    "gf": [
-        {
-            "cover": "tebak",
-            "map": "mau tau aja",
-            "artist": "kepo",
-            "mapper": "wokwok",
-            "mod": "kepo",
-            "link": "kepo"
-        }
-    ]
+    "ro64": [{
+        "cover": "tebak",
+        "map": "mau tau aja",
+        "artist": "kepo",
+        "mapper": "wokwok",
+        "mod": "kepo",
+        "link": "kepo"
+    }],
+    "ro32": [{
+        "cover": "tebak",
+        "map": "mau tau aja",
+        "artist": "kepo",
+        "mapper": "wokwok",
+        "mod": "kepo",
+        "link": "kepo"
+    }],
+    "qf": [{
+        "cover": "tebak",
+        "map": "mau tau aja",
+        "artist": "kepo",
+        "mapper": "wokwok",
+        "mod": "kepo",
+        "link": "kepo"
+    }],
+    "sf": [{
+        "cover": "tebak",
+        "map": "mau tau aja",
+        "artist": "kepo",
+        "mapper": "wokwok",
+        "mod": "kepo",
+        "link": "kepo"
+    }],
+    "f": [{
+        "cover": "tebak",
+        "map": "mau tau aja",
+        "artist": "kepo",
+        "mapper": "wokwok",
+        "mod": "kepo",
+        "link": "kepo"
+    }],
+    "gf": [{
+        "cover": "tebak",
+        "map": "mau tau aja",
+        "artist": "kepo",
+        "mapper": "wokwok",
+        "mod": "kepo",
+        "link": "kepo"
+    }]
 }
