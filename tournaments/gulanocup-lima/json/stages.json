@@ -1,3 +1,10 @@
 [
-    
+    { "id": "qualifiers", "name": "Qualifiers" },
+    { "id": "ro64", "name": "Round of 64" },
+    { "id": "ro32", "name": "Round of 32" },
+    { "id": "ro16", "name": "Round of 16" },
+    { "id": "qf", "name": "Quarterfinals" },
+    { "id": "sf", "name": "Semifinals" },
+    { "id": "f", "name": "Finals" },
+    { "id": "gf", "name": "Grandfinals" }
 ]

@@ -5,7 +5,8 @@
             "artist": "LeaF",
             "mapper": "Antipole",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4459942"
+            "link": "https://osu.ppy.sh/b/4459942",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122124/covers/cover.jpg?1708126251",
@@ -13,7 +14,8 @@
             "artist": "Folicca feat. KAFU",
             "mapper": "Reihynn",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4459312"
+            "link": "https://osu.ppy.sh/b/4459312",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122397/covers/cover.jpg?1708171304",
@@ -21,7 +23,8 @@
             "artist": "Moe Shop",
             "mapper": "Ainer",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4459879"
+            "link": "https://osu.ppy.sh/b/4459879",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122382/covers/cover.jpg?1708171284",
@@ -29,7 +32,8 @@
             "artist": "Feryquitous",
             "mapper": "Syrion-",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4459860"
+            "link": "https://osu.ppy.sh/b/4459860",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122383/covers/cover.jpg?1708171289",
@@ -37,7 +41,8 @@
             "artist": "Ikimonogakari",
             "mapper": "FelixSpade",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4459862"
+            "link": "https://osu.ppy.sh/b/4459862",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122390/covers/cover.jpg?1708171295",
@@ -45,17 +50,18 @@
             "artist": "Nor",
             "mapper": "Revv-",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4459871"
+            "link": "https://osu.ppy.sh/b/4459871",
+            "custom": "TRUE"
         }
     ],
-
     "ro48d1": [{
             "cover": "https://assets.ppy.sh/beatmaps/2116381/covers/cover.jpg?1707134489",
             "map": "Rolling Beat [Hard]",
             "artist": "Mitsukiyo",
             "mapper": "Revv-",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4444484"
+            "link": "https://osu.ppy.sh/b/4444484",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2098906/covers/cover.jpg?1704153684",
@@ -63,7 +69,8 @@
             "artist": "HOYO-MiX",
             "mapper": "Reihynn",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4402744"
+            "link": "https://osu.ppy.sh/b/4402744",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2053653/covers/cover.jpg?1706810451",
@@ -71,7 +78,8 @@
             "artist": "Lil $ilit",
             "mapper": "Ainer",
             "mod": "RC3",
-            "link": "https://osu.ppy.sh/b/4289794"
+            "link": "https://osu.ppy.sh/b/4289794",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2118696/covers/cover.jpg?1707571884",
@@ -79,7 +87,8 @@
             "artist": "Wali",
             "mapper": "danar",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4450061"
+            "link": "https://osu.ppy.sh/b/4450061",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2119311/covers/cover.jpg?1707661891",
@@ -87,7 +96,8 @@
             "artist": "RiraN feat. core mc",
             "mapper": "Fawcro",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4451819"
+            "link": "https://osu.ppy.sh/b/4451819",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2123765/covers/cover.jpg?1708363895",
@@ -95,7 +105,8 @@
             "artist": "Sephid",
             "mapper": "Syrion-",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4463301"
+            "link": "https://osu.ppy.sh/b/4463301",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1930924/covers/cover.jpg?1707687022",
@@ -103,7 +114,8 @@
             "artist": "litmus*",
             "mapper": "PiNkCeLiA",
             "mod": "HB2",
-            "link": "https://osu.ppy.sh/b/3988872"
+            "link": "https://osu.ppy.sh/b/3988872",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2118161/covers/cover.jpg?1707571861",
@@ -111,7 +123,8 @@
             "artist": "Sound Souler",
             "mapper": "Fawcro",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4448704"
+            "link": "https://osu.ppy.sh/b/4448704",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1611664/covers/cover.jpg?1637744431",
@@ -119,7 +132,8 @@
             "artist": "TV ONE",
             "mapper": "zutu",
             "mod": "MM1",
-            "link": "https://osu.ppy.sh/b/3291250"
+            "link": "https://osu.ppy.sh/b/3291250",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2117063/covers/cover.jpg?1707244266",
@@ -127,7 +141,8 @@
             "artist": "Orangestar feat.IA",
             "mapper": "danar",
             "mod": "MM2",
-            "link": "https://osu.ppy.sh/b/4445964"
+            "link": "https://osu.ppy.sh/b/4445964",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2124675/covers/cover.jpg?1708534865",
@@ -135,17 +150,18 @@
             "artist": "Street",
             "mapper": "FelixSpade",
             "mod": "TB",
-            "link": "https://osu.ppy.sh/b/4465542"
+            "link": "https://osu.ppy.sh/b/4465542",
+            "custom": "TRUE"
         }
     ],
-
     "ro48d2": [{
             "cover": "https://assets.ppy.sh/beatmaps/2116381/covers/cover.jpg?1707134489",
             "map": "Rolling Beat [Hard]",
             "artist": "Mitsukiyo",
             "mapper": "Revv-",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4444484"
+            "link": "https://osu.ppy.sh/b/4444484",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2113661/covers/cover.jpg?1707478246",
@@ -153,7 +169,8 @@
             "artist": "Ungu",
             "mapper": "Antipole",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4437981"
+            "link": "https://osu.ppy.sh/b/4437981",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2114544/covers/cover.jpg?1706875246",
@@ -161,7 +178,8 @@
             "artist": "Unknown Artist",
             "mapper": "Revv-",
             "mod": "RC3",
-            "link": "https://osu.ppy.sh/b/4440099"
+            "link": "https://osu.ppy.sh/b/4440099",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2123448/covers/cover.jpg?1708315264",
@@ -169,7 +187,8 @@
             "artist": "Magnetude",
             "mapper": "Syrion-",
             "mod": "RC4",
-            "link": "https://osu.ppy.sh/b/4462552"
+            "link": "https://osu.ppy.sh/b/4462552",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2118696/covers/cover.jpg?1707571884",
@@ -177,7 +196,8 @@
             "artist": "Wali",
             "mapper": "danar",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4450061"
+            "link": "https://osu.ppy.sh/b/4450061",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2124971/covers/cover.jpg?1708581660",
@@ -185,7 +205,8 @@
             "artist": "Mitsukiyo",
             "mapper": "Syrion-",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4466349"
+            "link": "https://osu.ppy.sh/b/4466349",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2123765/covers/cover.jpg?1708363895",
@@ -193,7 +214,8 @@
             "artist": "Sephid",
             "mapper": "Syrion-",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4463301"
+            "link": "https://osu.ppy.sh/b/4463301",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2111248/covers/cover.jpg?1706274063",
@@ -201,7 +223,8 @@
             "artist": "Kobo Kanaeru",
             "mapper": "Revv-",
             "mod": "HB2",
-            "link": "https://osu.ppy.sh/b/4431966"
+            "link": "https://osu.ppy.sh/b/4431966",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2118161/covers/cover.jpg?1707571861",
@@ -209,7 +232,8 @@
             "artist": "Sound Souler",
             "mapper": "Fawcro",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4448704"
+            "link": "https://osu.ppy.sh/b/4448704",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2123580/covers/cover.jpg?1708345847",
@@ -217,7 +241,8 @@
             "artist": "Borgore & Sikdope",
             "mapper": "Ainer",
             "mod": "SV2",
-            "link": "https://osu.ppy.sh/b/4462867"
+            "link": "https://osu.ppy.sh/b/4462867",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1578221/covers/cover.jpg?1642595439",
@@ -225,7 +250,8 @@
             "artist": "Ben Locket",
             "mapper": "zutu",
             "mod": "MM1",
-            "link": "https://osu.ppy.sh/b/3371567"
+            "link": "https://osu.ppy.sh/b/3371567",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1927787/covers/cover.jpg?1676887262",
@@ -233,7 +259,8 @@
             "artist": "kessoku band",
             "mapper": "zutu",
             "mod": "MM2",
-            "link": "https://osu.ppy.sh/b/3981226"
+            "link": "https://osu.ppy.sh/b/3981226",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2124689/covers/cover.jpg?1708536679",
@@ -241,17 +268,18 @@
             "artist": "Vizunave",
             "mapper": "danar",
             "mod": "TB",
-            "link": "https://osu.ppy.sh/b/4465560"
+            "link": "https://osu.ppy.sh/b/4465560",
+            "custom": "TRUE"
         }
     ],
-
     "ro16": [{
             "cover": "https://assets.ppy.sh/beatmaps/2125163/covers/cover.jpg?1708763477",
             "map": "Fleur de Lapin - Chaotic*Dream*Festival [Nasi Pakai Gula]",
             "artist": "Rabbit House",
             "mapper": "Fawcro",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4466813"
+            "link": "https://osu.ppy.sh/b/4466813",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2117391/covers/cover.jpg?1715011666",
@@ -259,7 +287,8 @@
             "artist": "NayutalieN",
             "mapper": "danar",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4446769"
+            "link": "https://osu.ppy.sh/b/4446769",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2053656/covers/cover.jpg?1706481047",
@@ -267,7 +296,8 @@
             "artist": "Photon Maiden",
             "mapper": "Ainer",
             "mod": "RC3",
-            "link": "https://osu.ppy.sh/b/4435388"
+            "link": "https://osu.ppy.sh/b/4435388",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2128534/covers/cover.jpg?1709173879",
@@ -275,15 +305,17 @@
             "artist": "Richard Jersey",
             "mapper": "Revv-",
             "mod": "RC4",
-            "link": "https://osu.ppy.sh/b/4475157"
+            "link": "https://osu.ppy.sh/b/4475157",
+            "custom": "TRUE"
         },
         {
-            "cover": "https://assets.ppy.sh/beatmaps/2118120/covers/cover.jpg?1707573633",
+            "cover": "https://assets.ppy.sh/beatmaps/2118120/covers/cover.jpg?1733721007",
             "map": "Good Parts (when the quality is bad but I am) [LN Parts (when you do not like long notes but I am)]",
             "artist": "LE SSERAFIM",
             "mapper": "Ilham",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4448608"
+            "link": "https://osu.ppy.sh/b/4448608",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2126969/covers/cover.jpg?1709055046",
@@ -291,7 +323,8 @@
             "artist": "MYUKKE.",
             "mapper": "PiNkCeLiA",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4473953"
+            "link": "https://osu.ppy.sh/b/4473953",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2116976/covers/cover.jpg?1707481820",
@@ -299,7 +332,8 @@
             "artist": "t+pazolite",
             "mapper": "Fawcro",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4445759"
+            "link": "https://osu.ppy.sh/b/4445759",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2128411/covers/cover.jpg?1709445684",
@@ -307,7 +341,8 @@
             "artist": "Lost Saga",
             "mapper": "Syrion-",
             "mod": "HB2",
-            "link": "https://osu.ppy.sh/b/4474921"
+            "link": "https://osu.ppy.sh/b/4474921",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2125259/covers/cover.jpg?1709427639",
@@ -315,7 +350,8 @@
             "artist": "linear ring",
             "mapper": "[-SVzzZ-]",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4467004"
+            "link": "https://osu.ppy.sh/b/4467004",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1961870/covers/cover.jpg?1682083956",
@@ -323,7 +359,8 @@
             "artist": "Nor",
             "mapper": "zutu",
             "mod": "SV2",
-            "link": "https://osu.ppy.sh/b/4066028"
+            "link": "https://osu.ppy.sh/b/4066028",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2129668/covers/cover.jpg?1709352057",
@@ -331,7 +368,8 @@
             "artist": "Dede Riandi x Si Babon Tolok",
             "mapper": "Reihynn",
             "mod": "MM1",
-            "link": "https://osu.ppy.sh/b/4478273"
+            "link": "https://osu.ppy.sh/b/4478273",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2122199/covers/cover.jpg?1708144236",
@@ -339,7 +377,8 @@
             "artist": "Ikuy",
             "mapper": "Yacchie-",
             "mod": "MM2",
-            "link": "https://osu.ppy.sh/b/4459482"
+            "link": "https://osu.ppy.sh/b/4459482",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2130216/covers/cover.jpg?1709512262",
@@ -347,17 +386,18 @@
             "artist": "Nyong Franco",
             "mapper": "Revv-",
             "mod": "TB",
-            "link": "https://osu.ppy.sh/b/4479507"
+            "link": "https://osu.ppy.sh/b/4479507",
+            "custom": ""
         }
     ],
-
     "qf": [{
             "cover": "https://assets.ppy.sh/beatmaps/2131948/covers/cover.jpg?1709722875",
             "map": "Cecilia Lieberia - Rasakno!! Loli-Kami Requiem* (Cut Ver.) [Gangguan Jawa]",
             "artist": "Cecilia Lieberia",
             "mapper": "Reihynn",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4484339"
+            "link": "https://osu.ppy.sh/b/4484339",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2106796/covers/cover.jpg?1705568451",
@@ -365,7 +405,8 @@
             "artist": "Endank Soekamti",
             "mapper": "Antipole",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4420879"
+            "link": "https://osu.ppy.sh/b/4420879",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2123210/covers/cover.jpg?1708277510",
@@ -373,7 +414,8 @@
             "artist": "KARUT",
             "mapper": "Revv-",
             "mod": "RC3",
-            "link": "https://osu.ppy.sh/b/4461898"
+            "link": "https://osu.ppy.sh/b/4461898",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2113973/covers/cover.jpg?1706819475",
@@ -381,7 +423,8 @@
             "artist": "Unknown Artist",
             "mapper": "Revv-",
             "mod": "RC4",
-            "link": "https://osu.ppy.sh/b/4438727"
+            "link": "https://osu.ppy.sh/b/4438727",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2119383/covers/cover.jpg?1707670888",
@@ -389,7 +432,8 @@
             "artist": "coltrane",
             "mapper": "Ainer",
             "mod": "RC5",
-            "link": "https://osu.ppy.sh/b/4452023"
+            "link": "https://osu.ppy.sh/b/4452023",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2090262/covers/cover.jpg?1717471299",
@@ -397,7 +441,8 @@
             "artist": "Ichinose Shiki (CV: Aihara Kotomi)",
             "mapper": "Ainer",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4380884"
+            "link": "https://osu.ppy.sh/b/4380884",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2113662/covers/cover.jpg?1707478261",
@@ -405,7 +450,8 @@
             "artist": "KARNAMEREKA",
             "mapper": "Antipole",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4437982"
+            "link": "https://osu.ppy.sh/b/4437982",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2132580/covers/cover.jpg?1709841672",
@@ -413,7 +459,8 @@
             "artist": "Teminite & MDK",
             "mapper": "FelixSpade",
             "mod": "LN3",
-            "link": "https://osu.ppy.sh/b/4486045"
+            "link": "https://osu.ppy.sh/b/4486045",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2111347/covers/cover.jpg?1706968879",
@@ -421,7 +468,8 @@
             "artist": "BLV3HAZUKI",
             "mapper": "Fawcro",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4432147"
+            "link": "https://osu.ppy.sh/b/4432147",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1884795/covers/cover.jpg?1707220863",
@@ -429,7 +477,8 @@
             "artist": "EmoCosine",
             "mapper": "Fawcro",
             "mod": "HB2",
-            "link": "https://osu.ppy.sh/b/3880669"
+            "link": "https://osu.ppy.sh/b/3880669",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2119447/covers/cover.jpg?1707676262",
@@ -437,7 +486,8 @@
             "artist": "Nor",
             "mapper": "Revv-",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4452191"
+            "link": "https://osu.ppy.sh/b/4452191",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2046157/covers/cover.jpg?1694795462",
@@ -445,7 +495,8 @@
             "artist": "Knock2",
             "mapper": "Revv-",
             "mod": "SV2",
-            "link": "https://osu.ppy.sh/b/4271070"
+            "link": "https://osu.ppy.sh/b/4271070",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2114277/covers/cover.jpg?1706779856",
@@ -453,7 +504,8 @@
             "artist": "Unknown Artist",
             "mapper": "towakane",
             "mod": "MM1",
-            "link": "https://osu.ppy.sh/b/4439498"
+            "link": "https://osu.ppy.sh/b/4439498",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2102813/covers/cover.jpg?1706023843",
@@ -461,7 +513,8 @@
             "artist": "DJ Mbon Mbon",
             "mapper": "danar",
             "mod": "MM2",
-            "link": "https://osu.ppy.sh/b/4411902"
+            "link": "https://osu.ppy.sh/b/4411902",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2132578/covers/cover.jpg?1709841667",
@@ -469,17 +522,18 @@
             "artist": "Endorfin.",
             "mapper": "FelixSpade",
             "mod": "TB",
-            "link": "https://osu.ppy.sh/b/4486043"
+            "link": "https://osu.ppy.sh/b/4486043",
+            "custom": "TRUE"
         }
     ],
-
     "sf": [{
             "cover": "https://assets.ppy.sh/beatmaps/2135529/covers/cover.jpg?1710327640",
             "map": "Point Blank Lobby [Chain Killer]",
             "artist": "Unknown Artist",
             "mapper": "Revv-",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4493556"
+            "link": "https://osu.ppy.sh/b/4493556",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2117690/covers/cover.jpg?1707391829",
@@ -487,7 +541,8 @@
             "artist": "rejection",
             "mapper": "Ilham",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4447469"
+            "link": "https://osu.ppy.sh/b/4447469",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2106440/covers/cover.jpg?1713438039",
@@ -495,7 +550,8 @@
             "artist": "Melinda",
             "mapper": "Reihynn",
             "mod": "RC3",
-            "link": "https://osu.ppy.sh/b/4420038"
+            "link": "https://osu.ppy.sh/b/4420038",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2108051/covers/cover.jpg?1705797057",
@@ -503,7 +559,8 @@
             "artist": "Weird Genius ft. Pepita",
             "mapper": "Revv-",
             "mod": "RC4",
-            "link": "https://osu.ppy.sh/b/4424408"
+            "link": "https://osu.ppy.sh/b/4424408",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2131797/covers/cover.jpg?1709683277",
@@ -511,7 +568,8 @@
             "artist": "inabakumori",
             "mapper": "Antipole",
             "mod": "RC5",
-            "link": "https://osu.ppy.sh/b/4483986"
+            "link": "https://osu.ppy.sh/b/4483986",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2137253/covers/cover.jpg?1710660683",
@@ -519,7 +577,8 @@
             "artist": "Reol",
             "mapper": "FelixSpade",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4497708"
+            "link": "https://osu.ppy.sh/b/4497708",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2047646/covers/cover.jpg?1694935883",
@@ -527,7 +586,8 @@
             "artist": "Pyxis",
             "mapper": "Ainer",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4275152"
+            "link": "https://osu.ppy.sh/b/4275152",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2117158/covers/cover.jpg?1713249028",
@@ -535,7 +595,8 @@
             "artist": "Yooh",
             "mapper": "Antipole",
             "mod": "LN3",
-            "link": "https://osu.ppy.sh/b/4446191"
+            "link": "https://osu.ppy.sh/b/4446191",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2134540/covers/cover.jpg?1710556245",
@@ -543,7 +604,8 @@
             "artist": "Eluveitie",
             "mapper": "Antipole",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4491149"
+            "link": "https://osu.ppy.sh/b/4491149",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2136611/covers/cover.jpg?1710860491",
@@ -551,15 +613,17 @@
             "artist": "Yooh",
             "mapper": "Revv-",
             "mod": "HB2",
-            "link": "https://osu.ppy.sh/b/4496184"
+            "link": "https://osu.ppy.sh/b/4496184",
+            "custom": "TRUE"
         },
         {
-            "cover": "https://assets.ppy.sh/beatmaps/2005066/covers/cover.jpg?1727300550",
+            "cover": "https://assets.ppy.sh/beatmaps/2005066/covers/cover.jpg?1729118283",
             "map": "Meant To Be (Nightcore Mix) [inSVitable]",
             "artist": "ZOOTAH & GA-SUUU & Petboy",
             "mapper": "Ainer",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4169940"
+            "link": "https://osu.ppy.sh/b/4169940",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2117335/covers/cover.jpg?1707391846",
@@ -567,7 +631,8 @@
             "artist": "Yunomi (feat. Momobako)",
             "mapper": "[-SVzzZ-]",
             "mod": "SV2",
-            "link": "https://osu.ppy.sh/b/4446648"
+            "link": "https://osu.ppy.sh/b/4446648",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2136950/covers/cover.jpg?1710574242",
@@ -575,7 +640,8 @@
             "artist": "Ramayana",
             "mapper": "FelixSpade",
             "mod": "MM1",
-            "link": "https://osu.ppy.sh/b/4496945"
+            "link": "https://osu.ppy.sh/b/4496945",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2137326/covers/cover.jpg?1710639061",
@@ -583,7 +649,8 @@
             "artist": "mamang epep",
             "mapper": "Reihynn",
             "mod": "MM2",
-            "link": "https://osu.ppy.sh/b/4497964"
+            "link": "https://osu.ppy.sh/b/4497964",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2136106/covers/cover.jpg?1710430251",
@@ -591,17 +658,18 @@
             "artist": "Omaru Polka",
             "mapper": "Reihynn",
             "mod": "TB",
-            "link": "https://osu.ppy.sh/b/4494896"
+            "link": "https://osu.ppy.sh/b/4494896",
+            "custom": "TRUE"
         }
     ],
-
     "f": [{
             "cover": "https://assets.ppy.sh/beatmaps/2112466/covers/cover.jpg?1710660661",
             "map": "Bull's Eye [Perfect (cut + edit)]",
             "artist": "nano",
             "mapper": "FelixSpade",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4498250"
+            "link": "https://osu.ppy.sh/b/4498250",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2123449/covers/cover.jpg?1708581646",
@@ -609,7 +677,8 @@
             "artist": "Ponchi feat. haxchi",
             "mapper": "Syrion-",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4462553"
+            "link": "https://osu.ppy.sh/b/4462553",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2137513/covers/cover.jpg?1710669662",
@@ -617,7 +686,8 @@
             "artist": "Kano",
             "mapper": "danar",
             "mod": "RC3",
-            "link": "https://osu.ppy.sh/b/4498376"
+            "link": "https://osu.ppy.sh/b/4498376",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2140801/covers/cover.jpg?1711224080",
@@ -625,7 +695,8 @@
             "artist": "Magnetude",
             "mapper": "Revv-",
             "mod": "RC4",
-            "link": "https://osu.ppy.sh/b/4505702"
+            "link": "https://osu.ppy.sh/b/4505702",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2134538/covers/cover.jpg?1710147652",
@@ -633,7 +704,8 @@
             "artist": "Blacklolita",
             "mapper": "Antipole",
             "mod": "RC5",
-            "link": "https://osu.ppy.sh/b/4491146"
+            "link": "https://osu.ppy.sh/b/4491146",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2130104/covers/cover.jpg?1709416879",
@@ -641,7 +713,8 @@
             "artist": "Laur",
             "mapper": "Ainer",
             "mod": "RC6",
-            "link": "https://osu.ppy.sh/b/4479254"
+            "link": "https://osu.ppy.sh/b/4479254",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2089546/covers/cover.jpg?1706242963",
@@ -649,7 +722,8 @@
             "artist": "ShinRa-Bansho",
             "mapper": "Revv-",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4379012"
+            "link": "https://osu.ppy.sh/b/4379012",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1986590/covers/cover.jpg?1716975057",
@@ -657,7 +731,8 @@
             "artist": "Zekk",
             "mapper": "Ainer",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4126635"
+            "link": "https://osu.ppy.sh/b/4126635",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2117229/covers/cover.jpg?1707868858",
@@ -665,7 +740,8 @@
             "artist": "Sakuzyo",
             "mapper": "Antipole",
             "mod": "LN3",
-            "link": "https://osu.ppy.sh/b/4446368"
+            "link": "https://osu.ppy.sh/b/4446368",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2126961/covers/cover.jpg?1708878689",
@@ -673,7 +749,8 @@
             "artist": "KARUT",
             "mapper": "Revv-",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4471275"
+            "link": "https://osu.ppy.sh/b/4471275",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2134621/covers/cover.jpg?1710221437",
@@ -681,7 +758,8 @@
             "artist": "Nekomata Master+",
             "mapper": "Syrion-",
             "mod": "HB2",
-            "link": "https://osu.ppy.sh/b/4491285"
+            "link": "https://osu.ppy.sh/b/4491285",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2140989/covers/cover.jpg?1711274455",
@@ -689,7 +767,8 @@
             "artist": "Juggernaut.",
             "mapper": "Virtue-",
             "mod": "HB3",
-            "link": "https://osu.ppy.sh/b/4506217"
+            "link": "https://osu.ppy.sh/b/4506217",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/1986520/covers/cover.jpg?1689851442",
@@ -697,7 +776,8 @@
             "artist": "Eliminate",
             "mapper": "Ainer",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4126482"
+            "link": "https://osu.ppy.sh/b/4126482",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2081173/covers/cover.jpg?1700911863",
@@ -705,7 +785,8 @@
             "artist": "KARUT",
             "mapper": "Revv-",
             "mod": "SV2",
-            "link": "https://osu.ppy.sh/b/4358272"
+            "link": "https://osu.ppy.sh/b/4358272",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2139543/covers/cover.jpg?1712514692",
@@ -713,7 +794,8 @@
             "artist": "Patrick Joget",
             "mapper": "Revv-",
             "mod": "MM1",
-            "link": "https://osu.ppy.sh/b/4502970"
+            "link": "https://osu.ppy.sh/b/4502970",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2141223/covers/cover.jpg?1711288875",
@@ -721,25 +803,27 @@
             "artist": "Janda Collective",
             "mapper": "Reihynn",
             "mod": "MM2",
-            "link": "https://osu.ppy.sh/b/4506771"
+            "link": "https://osu.ppy.sh/b/4506771",
+            "custom": "TRUE"
         },
         {
-            "cover": "https://assets.ppy.sh/beatmaps/2140932/covers/cover.jpg?1713097903",
+            "cover": "https://assets.ppy.sh/beatmaps/2140932/covers/cover.jpg?1735290060",
             "map": "Intro + Dualive [Escape]",
             "artist": "Quarks (kradness&Camellia)",
             "mapper": "FelixSpade",
             "mod": "TB",
-            "link": "https://osu.ppy.sh/b/4506107"
+            "link": "https://osu.ppy.sh/b/4506107",
+            "custom": "TRUE"
         }
     ],
-
     "gf": [{
             "cover": "https://assets.ppy.sh/beatmaps/2129376/covers/cover.jpg?1709307049",
             "map": "Sakit Jiwa [Udah Gila]",
             "artist": "NTRL",
             "mapper": "FelixSpade",
             "mod": "RC1",
-            "link": "https://osu.ppy.sh/b/4477594"
+            "link": "https://osu.ppy.sh/b/4477594",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2125544/covers/cover.jpg?1712109627",
@@ -747,15 +831,17 @@
             "artist": "Kuki Akumu",
             "mapper": "Syrion-",
             "mod": "RC2",
-            "link": "https://osu.ppy.sh/b/4467638"
+            "link": "https://osu.ppy.sh/b/4467638",
+            "custom": ""
         },
         {
-            "cover": "https://assets.ppy.sh/beatmaps/2138230/covers/cover.jpg?1725883148",
+            "cover": "https://assets.ppy.sh/beatmaps/2138230/covers/cover.jpg?1728302466",
             "map": "No.39 [Relentless]",
             "artist": "Nanahoshi Kangengakudan",
             "mapper": "Revv-",
             "mod": "RC3",
-            "link": "https://osu.ppy.sh/b/4500005"
+            "link": "https://osu.ppy.sh/b/4500005",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2114642/covers/cover.jpg?1710475230",
@@ -763,7 +849,8 @@
             "artist": "X&G",
             "mapper": "Antipole",
             "mod": "RC4",
-            "link": "https://osu.ppy.sh/b/4440404"
+            "link": "https://osu.ppy.sh/b/4440404",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2144858/covers/cover.jpg?1712154672",
@@ -771,7 +858,8 @@
             "artist": "Juggernaut.",
             "mapper": "-Yubi-",
             "mod": "RC5",
-            "link": "https://osu.ppy.sh/b/4517522"
+            "link": "https://osu.ppy.sh/b/4517522",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2011972/covers/cover.jpg?1689739237",
@@ -779,7 +867,8 @@
             "artist": "Paramore",
             "mapper": "Reihynn",
             "mod": "RC6",
-            "link": "https://osu.ppy.sh/b/4186640"
+            "link": "https://osu.ppy.sh/b/4186640",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2137575/covers/cover.jpg?1711726260",
@@ -787,7 +876,8 @@
             "artist": "ZxNX",
             "mapper": "Ainer",
             "mod": "LN1",
-            "link": "https://osu.ppy.sh/b/4513475"
+            "link": "https://osu.ppy.sh/b/4513475",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2148591/covers/cover.jpg?1712514708",
@@ -795,7 +885,8 @@
             "artist": "Lon",
             "mapper": "Ainer",
             "mod": "LN2",
-            "link": "https://osu.ppy.sh/b/4526077"
+            "link": "https://osu.ppy.sh/b/4526077",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2113660/covers/cover.jpg?1707541248",
@@ -803,7 +894,8 @@
             "artist": "Camellia",
             "mapper": "Antipole",
             "mod": "LN3",
-            "link": "https://osu.ppy.sh/b/4437980"
+            "link": "https://osu.ppy.sh/b/4437980",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2135569/covers/cover.jpg?1712593826",
@@ -811,7 +903,8 @@
             "artist": "HyuN feat. LyuU",
             "mapper": "Ilham",
             "mod": "HB1",
-            "link": "https://osu.ppy.sh/b/4493632"
+            "link": "https://osu.ppy.sh/b/4493632",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2134541/covers/cover.jpg?1710147658",
@@ -819,7 +912,8 @@
             "artist": "KOAN Sound",
             "mapper": "Antipole",
             "mod": "HB2",
-            "link": "https://osu.ppy.sh/b/4491150"
+            "link": "https://osu.ppy.sh/b/4491150",
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2146979/covers/cover.jpg?1712277068",
@@ -827,7 +921,8 @@
             "artist": "Juggernaut.",
             "mapper": "Revv-",
             "mod": "HB3",
-            "link": "https://osu.ppy.sh/b/4522456"
+            "link": "https://osu.ppy.sh/b/4522456",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2149002/covers/cover.jpg?1712593851",
@@ -835,7 +930,8 @@
             "artist": "MUZZ",
             "mapper": "Revv-",
             "mod": "SV1",
-            "link": "https://osu.ppy.sh/b/4527113"
+            "link": "https://osu.ppy.sh/b/4527113",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2148865/covers/cover.jpg?1712667653",
@@ -843,7 +939,8 @@
             "artist": "Li Huayu",
             "mapper": "Ainer",
             "mod": "SV2",
-            "link": "https://osu.ppy.sh/b/4526775"
+            "link": "https://osu.ppy.sh/b/4526775",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2148519/covers/cover.jpg?1712503902",
@@ -851,7 +948,8 @@
             "artist": "Caisar Aditya Putra",
             "mapper": "Syrion-",
             "mod": "MM1",
-            "link": "https://osu.ppy.sh/b/4525895"
+            "link": "https://osu.ppy.sh/b/4525895",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2147986/covers/cover.jpg?1712487639",
@@ -859,7 +957,8 @@
             "artist": "Entis Sutisna",
             "mapper": "danar",
             "mod": "MM2",
-            "link": "https://osu.ppy.sh/b/4524648"
+            "link": "https://osu.ppy.sh/b/4524648",
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2149003/covers/cover.jpg?1712593860",
@@ -867,7 +966,8 @@
             "artist": "LUMiNOZ Sound Team",
             "mapper": "Revv-",
             "mod": "TB",
-            "link": "https://osu.ppy.sh/b/4527115"
+            "link": "https://osu.ppy.sh/b/4527115",
+            "custom": ""
         }
     ]
 }
