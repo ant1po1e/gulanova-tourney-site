@@ -79,8 +79,8 @@ $(document).ready(function () {
                         const customMap = mappoolEntry.custom === "true" ? 'bg-gulanovaYellow' : 'bg-gulanovaDark';
 
                         const card = `
-                            <div class="w-full md:w-1/2 p-2 group hover:scale-105 transition duration-300">
-                                <div class="max-w-sm rounded-lg shadow border-8 m-4 bg-gulanova border-gulanova group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
+                            <div class="w-full p-2 group hover:scale-105 transition duration-300">
+                                <div class="rounded-lg shadow border-8 m-4 bg-gulanova border-gulanova group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
                                     <a href="${mappoolEntry.link}" target="_blank" class="relative block">
                                         <img class="w-full h-30 object-cover rounded-t-md" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
                                     </a>
@@ -97,7 +97,7 @@ $(document).ready(function () {
                                         <p class="font-mono mt-3 text-white">Mapped by ${mappoolEntry.mapper}</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div>123
                         `;
                         $('#mappool-body').append(card);
                     });
