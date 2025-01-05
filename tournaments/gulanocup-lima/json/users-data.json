@@ -29,6 +29,11 @@
         "role": "commentator, playtester"
     },
     {
+      "userId": "16768803",
+      "username": "[ReyZ]",
+      "role": "playtester"
+  },
+    {
         "userId": "7621604",
         "username": "2ndlegend",
         "role": "commentator"
@@ -79,6 +84,11 @@
         "role": "organizer, referee"
     },
     {
+      "userId": "15822192",
+      "username": "exvius",
+      "role": "referee"
+  },
+    {
         "userId": "8647138",
         "username": "eZmmR",
         "role": "gfx, mapper"
@@ -97,7 +107,7 @@
     {
         "userId": "10069307",
         "username": "Fyl",
-        "role": "referee, playtester"
+        "role": "streamer, referee, playtester"
     },
     {
         "userId": "8243526",
@@ -107,7 +117,7 @@
     {
         "userId": "19030920",
         "username": "Hookseye",
-        "role": "streamer"
+        "role": "streamer, playtester"
     },
     {
         "userId": "3057154",
@@ -165,9 +175,19 @@
         "role": "host, mappooler, mapper, sheeter, gfx, playtester, referee, commentator, organizer"
     },
     {
+      "userId": "13385865",
+      "username": "Reyi",
+      "role": "streamer"
+  },
+    {
         "userId": "5246861",
         "username": "Sarahkuai",
         "role": "mapper"
+    },
+    {
+      "userId": "3484485",
+      "username": "Syadow-",
+      "role": "referee"
     },
     {
         "userId": "15380643",
