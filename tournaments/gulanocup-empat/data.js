@@ -81,7 +81,7 @@ $(document).ready(function () {
 
                         const card = `
                             <a href="${mappoolEntry.link}" class="w-full p-2 group hover:scale-105 transition duration-300" target="_blank">
-                                <div class="rounded-lg shadow border-4 bg-gulanova border-gulanova group-hover:bg-gulanovaDark group-hover:border-gulanovaDark transition duration-300">
+                                <div class="rounded-lg shadow border-2 bg-gulanova border-gulanova group-hover:bg-gulanovaDark group-hover:border-white transition duration-300">
                                     <div class="relative overflow-hidden rounded-lg bg-gulanovaDark shadow-lg">
                                         <img class="h-32 w-full object-cover" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
                                         <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center gap-4 px-4 group-hover:bg-opacity-50 transition duration-300">
