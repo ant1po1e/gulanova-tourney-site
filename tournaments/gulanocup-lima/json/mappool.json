@@ -55,13 +55,96 @@
         }
     ],
     "ro64": [{
-        "cover": "tebak",
-        "map": "mau tau aja",
-        "artist": "kepo",
-        "mapper": "wokwok",
-        "mod": "kepo",
-        "link": "kepo"
-    }],
+            "cover": "https://assets.ppy.sh/beatmaps/2279873/covers/cover.jpg?1735548461",
+            "map": "Battle Sirens (RIOT Remix) (Cut Ver.) [Catastrophe]",
+            "artist": "Knife Party & Tom Morello",
+            "mapper": "Revv-",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4859707",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2280008/covers/cover.jpg?1734062461",
+            "map": "Cari Pokemon (Sped Up Ver.) [pokemon pokemon]",
+            "artist": "Faiha",
+            "mapper": "Reihynn",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4860042",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2289079/covers/cover.jpg?1735779625",
+            "map": "Ginga Tetsudou no Penguin ft. nicamoq (Stripe.P Remix) [Us]",
+            "artist": "Aiobahn & Yunomi",
+            "mapper": "Syrion-",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4884894",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2297726/covers/cover.jpg?1734972228",
+            "map": "Ghost (feat. Hatsune Miku) [Disguise's hyper (edit)]",
+            "artist": "KAIRUI",
+            "mapper": "FelixSpade",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4908209",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2291542/covers/cover.jpg?1733892230",
+            "map": "POP IN 2 (Cut Ver.) [LN Debut]",
+            "artist": "B Komachi",
+            "mapper": "Revv-",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4892200",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2301053/covers/cover.jpg?1735746311",
+            "map": "Seandainya (Cut Ver.) [Rindu Padamu (edit)]",
+            "artist": "Vierra",
+            "mapper": "Reihynn",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4917448",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2297576/covers/cover.jpg?1734967504",
+            "map": "Burn (Cut Ver.) [Encounter]",
+            "artist": "Zekk",
+            "mapper": "Revv-",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4907782",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2299377/covers/cover.jpg?1735288885",
+            "map": "Continue (feat. Takahashi Megumi) (Cut Ver.) [Lanjut part 2]",
+            "artist": "tokiwa",
+            "mapper": "[-SVzzZ-]",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4913079",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2303857/covers/cover.jpg?1736072624",
+            "map": "VYSE [Metalweaver]",
+            "artist": "KORDHELL x VALORANT",
+            "mapper": "Revv-",
+            "mod": "SV",
+            "link": "https://osu.ppy.sh/b/4924554",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2303845/covers/cover.jpg?1736070820",
+            "map": "NERF THIS! [<<OVER//POWER>>]",
+            "artist": "splitter",
+            "mapper": "Ainer",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4924528",
+            "custom": "TRUE"
+        }
+    ],
     "ro32": [{
         "cover": "tebak",
         "map": "mau tau aja",
