@@ -1319,6 +1319,14 @@ input:checked + .toggle-bg {
   height: 2.25rem;
 }
 
+.max-h-16 {
+  max-height: 4rem;
+}
+
+.max-h-14 {
+  max-height: 3.5rem;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -2166,6 +2174,18 @@ input:checked + .toggle-bg {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[max-height\] {
+  transition-property: max-height;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -2176,6 +2196,10 @@ input:checked + .toggle-bg {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .before\:absolute::before {
@@ -2541,6 +2565,14 @@ input:checked + .toggle-bg {
     height: 4rem;
   }
 
+  .md\:max-h-\[3em\] {
+    max-height: 3em;
+  }
+
+  .md\:max-h-\[1em\] {
+    max-height: 1em;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2632,10 +2664,6 @@ input:checked + .toggle-bg {
     padding: 0px;
   }
 
-  .md\:p-24 {
-    padding: 6rem;
-  }
-
   .md\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -2660,40 +2688,20 @@ input:checked + .toggle-bg {
     padding-left: 3.5rem;
   }
 
-  .md\:pr-14 {
-    padding-right: 3.5rem;
-  }
-
-  .md\:pt-52 {
-    padding-top: 13rem;
-  }
-
-  .md\:pl-16 {
-    padding-left: 4rem;
-  }
-
-  .md\:pr-16 {
-    padding-right: 4rem;
-  }
-
-  .md\:pr-20 {
-    padding-right: 5rem;
-  }
-
-  .md\:pl-20 {
-    padding-left: 5rem;
-  }
-
-  .md\:pl-96 {
-    padding-left: 24rem;
-  }
-
   .md\:pl-24 {
     padding-left: 6rem;
   }
 
+  .md\:pr-14 {
+    padding-right: 3.5rem;
+  }
+
   .md\:pr-24 {
     padding-right: 6rem;
+  }
+
+  .md\:pt-52 {
+    padding-top: 13rem;
   }
 
   .md\:text-left {
@@ -2775,6 +2783,14 @@ input:checked + .toggle-bg {
     display: block;
     -webkit-box-orient: horizontal;
     -webkit-line-clamp: none;
+  }
+
+  .md\:hover\:max-h-\[20em\]:hover {
+    max-height: 20em;
+  }
+
+  .md\:hover\:max-h-\[200px\]:hover {
+    max-height: 200px;
   }
 
   .md\:hover\:bg-transparent:hover {
