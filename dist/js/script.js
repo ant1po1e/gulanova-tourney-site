@@ -5,39 +5,21 @@ $(function () {
     });
 });
 
-$("#staff-btn").click(function () {
-    $(".section").addClass("hidden");
-    $("#staff").removeClass("hidden");
-});
+const buttons = [
+    { id: "#staff-btn", section: "#staff" },
+    { id: "#player-btn", section: "#player" },
+    { id: "#mappool-btn", section: "#mappool" },
+    { id: "#match-btn", section: "#match" },
+    { id: "#challonge-btn", section: "#challonge" },
+    { id: "#timeline-btn", section: "#timeline" },
+    { id: "#procedure-btn", section: "#procedure" }
+];
 
-$("#player-btn").click(function () {
-    $(".section").addClass("hidden");
-    $("#player").removeClass("hidden");
-});
-
-$("#mappool-btn").click(function () {
-    $(".section").addClass("hidden");
-    $("#mappool").removeClass("hidden");
-});
-
-$("#match-btn").click(function () {
-    $(".section").addClass("hidden");
-    $("#match").removeClass("hidden");
-});
-
-$("#challonge-btn").click(function () {
-    $(".section").addClass("hidden");
-    $("#challonge").removeClass("hidden");
-});
-
-$("#timeline-btn").click(function () {
-    $(".section").addClass("hidden");
-    $("#timeline").removeClass("hidden");
-});
-
-$("#procedure-btn").click(function () {
-    $(".section").addClass("hidden");
-    $("#procedure").removeClass("hidden");
+buttons.forEach(button => {
+    $(button.id).click(function () {
+        $(".section").addClass("hidden");
+        $(button.section).removeClass("hidden");
+    });
 });
 
 const back2Top = document.querySelector('#backToTop');

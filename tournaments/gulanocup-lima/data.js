@@ -37,7 +37,11 @@ fetch('json/users-data.json')
     .then(response => response.json())
     .then(data => {
         data.forEach(row => {
-            const { userId, username, role } = row;
+            const {
+                userId,
+                username,
+                role
+            } = row;
             if (!role) {
                 document.getElementById('profile-player').innerHTML += createProfileCard(userId, username);
                 return;
@@ -89,9 +93,9 @@ $(document).ready(function () {
                                                 ${mappoolEntry.mod}
                                             </span>
                                             <div class="text-white text-start">
-                                                <p class="text-base md:text-lg my-1 font-bold truncate">${mappoolEntry.map} <span class="inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 ml-2 text-xs font-medium text-yellow-800 ${customMap}">Custom</span></p>
-                                                <p class="text-xs md:text-sm my-1 truncate">${mappoolEntry.artist}</p>
-                                                <p class="text-xs md:text-sm my-1 truncate">Mapped by ${mappoolEntry.mapper}</p>
+                                                <p class="text-base md:text-lg my-1 font-bold line-clamp-1">${mappoolEntry.map} <span class="inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 ml-2 text-xs font-medium text-yellow-800 ${customMap}">Custom</span></p>
+                                                <p class="text-xs md:text-sm my-1 line-clamp-1">${mappoolEntry.artist}</p>
+                                                <p class="text-xs md:text-sm my-1 line-clamp-1">Mapped by ${mappoolEntry.mapper}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -138,7 +142,7 @@ $(document).ready(function () {
                 timelineContainer.innerHTML = "";
                 timeline.forEach((entry, index) => {
                     const isLeftAligned = index % 2 === 0;
-                    const alignmentClass = isLeftAligned ? "md:items-end md:text-left md:pl-14" : "md:items-start md:text-right md:pr-14";
+                    const alignmentClass = isLeftAligned ? "md:items-end md:text-left md:pl-24" : "md:items-start md:text-right md:pr-24";
                     const timelineItem = `
                         <li class="mb-14 flex flex-col ${alignmentClass} relative md:mb-20">
                             <div class="absolute w-10 h-10 bg-white border-[10px] border-black rounded-full md:start-1/2 transform -translate-x-1/2 md:w-16 md:h-16 md:border-[20px]"></div>
