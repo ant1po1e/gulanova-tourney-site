@@ -1,18 +1,18 @@
-function callOsuApi(endpoint) {
-    const accessToken = localStorage.getItem("access_token"); // Retrieve the access token from localStorage
+async function callOsuApi(endpoint) {
+    const accessToken = localStorage.getItem("access_token");
 
-    return fetch(`https://gulanova-auth.vercel.app/api/osuApi?endpoint=${encodeURIComponent(endpoint)}`, {
-        method: 'GET', // or 'POST', 'PUT', etc. depending on the endpoint
+    const response = await fetch(`https://gulanova-auth.vercel.app/api/osuApi?endpoint=${encodeURIComponent(endpoint)}`, {
+        method: 'GET',
         headers: {
-            Authorization: `Bearer ${accessToken}`, // Include the access token in the headers
+            Authorization: `Bearer ${accessToken}`,
         },
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
     });
+
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    return response.json();
 }
 
 async function fetchUserRole() {
@@ -32,7 +32,6 @@ async function fetchUserRole() {
         }
 
         const usersData = await response.json();
-
         const user = usersData.find(user => user.username === loggedInUsername);
 
         if (!user) {
@@ -41,7 +40,6 @@ async function fetchUserRole() {
         }
 
         const userRole = user.role;
-
         const userRoleElement = document.getElementById("user-role");
 
         if (userRole === "player") {
@@ -90,26 +88,20 @@ window.onload = async function () {
             console.error('Error fetching user data:', err);
         }
 
-        const login = document.getElementById('login');
-        const logout = document.getElementById('logout');
-        login.classList.add("hidden");
-        logout.classList.remove("hidden");
-
-        const username = document.getElementById('username');
-        username.innerHTML = localStorage.getItem("username");
+        document.getElementById('login').classList.add("hidden");
+        document.getElementById('logout').classList.remove("hidden");
+        document.getElementById('username').innerHTML = localStorage.getItem("username");
     } else {
         console.error('No access token or OAuth code found');
     }
 };
 
-
 function testistwo() {
-    console.log(callOsuApi('/me/osu'))
-
+    console.log(callOsuApi('/me/osu'));
 }
 
 function deb() {
-    var string = window.location.href
-    part = string.match(/code=(.*$)/)[1];
-    console.log(part)
+    const string = window.location.href;
+    const part = string.match(/code=(.*$)/)[1];
+    console.log(part);
 }
