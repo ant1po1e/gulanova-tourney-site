@@ -105,24 +105,3 @@ function deb() {
     const part = string.match(/code=(.*$)/)[1];
     console.log(part);
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-    const avatar = document.getElementById('avatar');
-    const usernameElement = document.getElementById('username');
-    const userRoleElement = document.getElementById('user-role');
-    const cachedAvatarUrl = localStorage.getItem('avatar_url');
-    const cachedUsername = localStorage.getItem('username');
-    const cachedUserRole = localStorage.getItem('user_role');
-
-    if (cachedAvatarUrl && cachedUsername && cachedUserRole) {
-        avatar.src = cachedAvatarUrl;
-        usernameElement.textContent = cachedUsername;
-        userRoleElement.textContent = `You are: ${cachedUserRole}`;
-    }
-
-    // Show the logout button and hide the login button if user is logged in
-    if (localStorage.getItem('access_token')) {
-        document.getElementById('logout').classList.remove('hidden');
-        document.getElementById('login').classList.add('hidden');
-    }
-});
