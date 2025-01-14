@@ -146,6 +146,115 @@
         }
     ],
     "ro32": [{
+            "cover": "https://assets.ppy.sh/beatmaps/2234791/covers/cover.jpg?1726461071",
+            "map": "SATELLITE [STARLINK]",
+            "artist": "NOMA",
+            "mapper": "Revv-",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4747279",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2287149/covers/cover.jpg?1735637431",
+            "map": "Triumph & Regret [Conquest]",
+            "artist": "typeMARS",
+            "mapper": "FelixSpade",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4879617",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2302062/covers/cover.jpg?1736653830",
+            "map": "Back! to the Future (Cut Ver.) [Balik! Ke depan]",
+            "artist": "Dempagumi.inc",
+            "mapper": "Reihynn",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4920010",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2234584/covers/cover.jpg?1733185838",
+            "map": "Hallucinate (Cut Ver.) [elexire's Insane]",
+            "artist": "False Noise",
+            "mapper": "elexire",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4849054",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2306282/covers/cover.jpg?1736654134",
+            "map": "Press Start (Game Ver.) [Continue?]",
+            "artist": "MDK",
+            "mapper": "Reihynn",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4931827",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2302500/covers/cover.jpg?1735828674",
+            "map": "Transform (Original Mix) [Homeomorphism (edit)]",
+            "artist": "IAHN",
+            "mapper": "HowToPlayLN",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4921258",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2306581/covers/cover.jpg?1736590100",
+            "map": "Baddie [2 Baddies feat. Ainer (edit)]",
+            "artist": "IVE",
+            "mapper": "Ilham & Ainer",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4932616",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1927610/covers/cover.jpg?1676847742",
+            "map": "Marsh Winds [Desolate Technology]",
+            "artist": "ETIA.",
+            "mapper": "Saemitsu",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/3980698",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2289421/covers/cover.jpg?1733746967",
+            "map": "Attention (Cut Ver.) [C1ingy]",
+            "artist": "Kep1er",
+            "mapper": "Ilham",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4885834",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "#ERROR!",
+            "map": "Point of No Return (feat. Shizuku) (Cut Ver.) [Turning Point]",
+            "artist": "lapix",
+            "mapper": "[-SVzzZ-]",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4935549",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2306539/covers/cover.jpg?1736589605",
+            "map": "Heart111 [sv <3]",
+            "artist": "yuri",
+            "mapper": "Ainer",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4932494",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2307664/covers/cover.jpg?1736769120",
+            "map": "Multiple Objectivity [Convergence]",
+            "artist": "YUKIYANAGI",
+            "mapper": "danar, Revv-, FelixSpade, Ilham & -Yubi-",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4935546",
+            "custom": "TRUE"
+        }
+    ],
+    "ro16": [{
         "cover": "tebak",
         "map": "mau tau aja",
         "artist": "kepo",
