@@ -66,7 +66,7 @@
     {
         "userId": "11184912",
         "username": "danar",
-        "role": "host, sheeter, mapper, referee, streamer, commentator, programmer, organizer"
+        "role": "host, sheeter, mapper, streamer, commentator, programmer, organizer"
     },
     {
         "userId": "10262909",
@@ -91,7 +91,7 @@
     {
         "userId": "2651304",
         "username": "FelixSpade",
-        "role": "mappooler, mapper, streamer, programmer, organizer"
+        "role": "mappooler, mapper, streamer, commentator, programmer, organizer"
     },
 
     {
@@ -102,7 +102,7 @@
     {
         "userId": "10069307",
         "username": "Fyl",
-        "role": "streamer, referee, playtester"
+        "role": "streamer, commentator, referee, playtester"
     },
     {
         "userId": "8243526",
@@ -117,12 +117,12 @@
     {
         "userId": "3057154",
         "username": "Ilham",
-        "role": "mapper"
+        "role": "mapper, referee"
     },
     {
         "userId": "16176978",
         "username": "Kada-",
-        "role": "gfx, playtester"
+        "role": "gfx, playtester, commentator"
     },
     {
         "userId": "8867495",
@@ -167,12 +167,12 @@
     {
         "userId": "12424909",
         "username": "Revv-",
-        "role": "host, mappooler, mapper, sheeter, gfx, playtester, referee, commentator, organizer"
+        "role": "host, mappooler, mapper, sheeter, gfx, playtester, commentator, organizer"
     },
     {
       "userId": "13385865",
       "username": "Reyi",
-      "role": "streamer"
+      "role": "mapper, streamer, commentator"
   },
     {
         "userId": "5246861",
@@ -192,7 +192,7 @@
     {
         "userId": "18215071",
         "username": "vexule-",
-        "role": "gfx, referee"
+        "role": "gfx"
     },
     {
         "userId": "6144772",
