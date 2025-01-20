@@ -255,13 +255,114 @@
         }
     ],
     "ro16": [{
-        "cover": "tebak",
-        "map": "mau tau aja",
-        "artist": "kepo",
-        "mapper": "wokwok",
-        "mod": "kepo",
-        "link": "kepo"
-    }],
+            "cover": "https://assets.ppy.sh/beatmaps/2290277/covers/cover.jpg?1737360928",
+            "map": "Time Files [Chrono Shift]",
+            "artist": "xi",
+            "mapper": "danar",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4888290",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2304810/covers/cover.jpg?1736843907",
+            "map": "sink to the deep sea world (FIFTH DREAM PARALLEL REMIX) (Cut Ver.) [serenity.]",
+            "artist": "Chroma",
+            "mapper": "Reihynn",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4927147",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2301995/covers/cover.jpg?1735732327",
+            "map": "SKYLIT (Cut Ver.) [i'm up in the sky]",
+            "artist": "ISOxo",
+            "mapper": "Ainer",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4919822",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2214467/covers/cover.jpg?1723422685",
+            "map": "JACKPOT 777 [Gacor]",
+            "artist": "KARUT",
+            "mapper": "Revv-",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4692135",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2310562/covers/cover.jpg?1737376051",
+            "map": "Firestarter [bagjettka's Blazing (OD8)]",
+            "artist": "Tanger",
+            "mapper": "FelixSpade",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4942972",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2277758/covers/cover.jpg?1735975278",
+            "map": "Shooting Star [Ga1axy]",
+            "artist": "Kep1er",
+            "mapper": "Ilham",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4854404",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2267940/covers/cover.jpg?1736534559",
+            "map": "What Is Vibe [apa ya]",
+            "artist": "PSYQUI",
+            "mapper": "-Yubi-",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4829699",
+            "custom": " "
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2289420/covers/cover.jpg?1735977643",
+            "map": "citrus [Sweet Drop (edit)]",
+            "artist": "kamome sano",
+            "mapper": "danar",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4885832",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1683802/covers/cover.jpg?1649422197",
+            "map": "Turbulence [Insane]",
+            "artist": "Zekk",
+            "mapper": "TheFunk",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/3440474",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2311016/covers/cover.jpg?1737374692",
+            "map": "PLAY (Cut Ver.) [MABAR]",
+            "artist": "TOKYO MACHINE",
+            "mapper": "[-SVzzZ-]",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4943927",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2311009/covers/cover.jpg?1737374355",
+            "map": "Future Ghost (VIP Mix) [Ethereal]",
+            "artist": "Weird Genius, Violette Wautier",
+            "mapper": "Revv-",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4943918",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2310983/covers/cover.jpg?1737370594",
+            "map": "Drug on the Drop (Zekk Remix) [Methamphetamine]",
+            "artist": "uet",
+            "mapper": "Revv-, Ainer, Angki, Antipole, FelixSpade",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4943852",
+            "custom": "TRUE"
+        }
+    ],
     "qf": [{
         "cover": "tebak",
         "map": "mau tau aja",
