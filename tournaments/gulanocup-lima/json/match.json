@@ -1,3 +1,557 @@
-[
-  
-]
+{
+    "qualifiers": [],
+    "ro64": [{
+            "date": "1/8/2025",
+            "time": "20:00 WIB",
+            "referee": "Elin-",
+            "player_one": "Remuu",
+            "player_two": "lucknut",
+            "link": "https://osu.ppy.sh/mp/116751128"
+        },
+        {
+            "date": "1/8/2025",
+            "time": "19:00 WIB",
+            "referee": "exvius",
+            "player_one": "[LS]Robi",
+            "player_two": "[-Vanart-]",
+            "link": "https://osu.ppy.sh/community/matches/116750818"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "15:00 WIB",
+            "referee": "[ Friz ]",
+            "player_one": "Tsurumaki_",
+            "player_two": "FinHazel",
+            "link": "https://osu.ppy.sh/mp/116768605"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "19:00 WIB",
+            "referee": "Reihynn",
+            "player_one": "askL330",
+            "player_two": "MrFlinxy",
+            "link": "https://osu.ppy.sh/community/matches/116769667"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "20:00 WIB",
+            "referee": "exvius",
+            "player_one": "ARDHANA",
+            "player_two": "KyoukaRy",
+            "link": "https://osu.ppy.sh/community/matches/116770092"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "16:00 WIB",
+            "referee": "[ Friz ]",
+            "player_one": "_yea",
+            "player_two": "lyoneljose",
+            "link": "https://osu.ppy.sh/community/matches/116768861"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "20:00 WIB",
+            "referee": "Gxbran",
+            "player_one": "Catzu",
+            "player_two": "Neptunia-chan",
+            "link": "https://osu.ppy.sh/mp/116770167"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "21:00 WIB",
+            "referee": "[ Raiid ]",
+            "player_one": "NizT",
+            "player_two": "[ Heez ]",
+            "link": "https://osu.ppy.sh/mp/116770552"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "19:00 WIB",
+            "referee": "Fyl",
+            "player_one": "Prinow6",
+            "player_two": "EterEnvy",
+            "link": "https://osu.ppy.sh/community/matches/116769632"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "19:00 WIB",
+            "referee": "exvius",
+            "player_one": "yeedinobro",
+            "player_two": "-Aji",
+            "link": "https://osu.ppy.sh/community/matches/116769603"
+        },
+        {
+            "date": "1/10/2025",
+            "time": "23:00 WIB",
+            "referee": "Kurami_San",
+            "player_one": "Az-u",
+            "player_two": "Lyz-",
+            "link": "https://osu.ppy.sh/community/matches/116771814"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "20:00 WIB",
+            "referee": "exvius",
+            "player_one": "lisachandra",
+            "player_two": "KafuuChlno",
+            "link": "https://osu.ppy.sh/community/matches/116782135"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "14:00 WIB",
+            "referee": "Elin-",
+            "player_one": "[ -Asriel- ]",
+            "player_two": "skadidragen",
+            "link": "https://osu.ppy.sh/mp/116779876"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "14:00 WIB",
+            "referee": "Syadow-",
+            "player_one": "MightyTech",
+            "player_two": "Marcille-",
+            "link": "https://osu.ppy.sh/mp/116779830"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "16:00 WIB",
+            "referee": "Yangga",
+            "player_one": "RaffCo",
+            "player_two": "Aimaina",
+            "link": "https://osu.ppy.sh/community/matches/116780536"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "10:00 WIB",
+            "referee": "Aikiyo Fuuka",
+            "player_one": "IzKun-",
+            "player_two": "_Reggie_",
+            "link": "https://osu.ppy.sh/mp/116778358"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "20:10 WIB",
+            "referee": "Ilham",
+            "player_one": "SnakesYxle",
+            "player_two": "shidqidragon",
+            "link": "https://osu.ppy.sh/mp/116782218"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "19:00 WIB",
+            "referee": "Yangga",
+            "player_one": "spectator_boi",
+            "player_two": "ZhasK_667",
+            "link": "https://osu.ppy.sh/community/matches/116781605"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "15:00 WIB",
+            "referee": "Syadow-",
+            "player_one": "ocaibo",
+            "player_two": "Darrel27",
+            "link": "https://osu.ppy.sh/community/matches/116780225"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "23:00 WIB",
+            "referee": "Aikiyo Fuuka",
+            "player_one": "danar mw",
+            "player_two": "syamisu-",
+            "link": ""
+        },
+        {
+            "date": "1/11/2025",
+            "time": "20:00 WIB",
+            "referee": "FerryAnanda",
+            "player_one": "uThot",
+            "player_two": "Proxae",
+            "link": "https://osu.ppy.sh/mp/116782137"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "19:00 WIB",
+            "referee": "[ Friz ]",
+            "player_one": "[LS] akarii",
+            "player_two": "Raeaw",
+            "link": "https://osu.ppy.sh/mp/116781627"
+        },
+        {
+            "date": "1/11/2025",
+            "time": "21:00 WIB",
+            "referee": "Aikiyo Fuuka",
+            "player_one": "tentrempm",
+            "player_two": "beethiven",
+            "link": "https://osu.ppy.sh/mp/116782802"
+        },
+        {
+            "date": "1/12/2025",
+            "time": "21:00 WIB",
+            "referee": "My Angel Satori",
+            "player_one": "My Angel Chen",
+            "player_two": "Animerge",
+            "link": "https://osu.ppy.sh/community/matches/116795797"
+        },
+        {
+            "date": "1/12/2025",
+            "time": "16:00 WIB",
+            "referee": "Elin-",
+            "player_one": "Napeace",
+            "player_two": "[Shiroko]",
+            "link": "https://osu.ppy.sh/mp/116793555"
+        },
+        {
+            "date": "1/12/2025",
+            "time": "19:00 WIB",
+            "referee": "My Angel Satori",
+            "player_one": "-Nandakai-",
+            "player_two": "ChocoCoki-",
+            "link": "https://osu.ppy.sh/community/matches/116794654"
+        },
+        {
+            "date": "1/12/2025",
+            "time": "18:00 WIB",
+            "referee": "Gxbran",
+            "player_one": "AzusaNakano2",
+            "player_two": "Dogethedoge25",
+            "link": "https://osu.ppy.sh/mp/116794278"
+        },
+        {
+            "date": "1/12/2025",
+            "time": "20.30 WIB",
+            "referee": "Gxbran",
+            "player_one": "DAENGXicisae-",
+            "player_two": "[-Elaina-]",
+            "link": "https://osu.ppy.sh/mp/116795517"
+        },
+        {
+            "date": "1/12/2025",
+            "time": "20:00 WIB",
+            "referee": "Ilham",
+            "player_one": "D_ana",
+            "player_two": "[ Zenith ]",
+            "link": "https://osu.ppy.sh/mp/116795160"
+        },
+        {
+            "date": "1/12/2025",
+            "time": "20:00 WIB",
+            "referee": "[ Raiid ]",
+            "player_one": "KinoJourney",
+            "player_two": "Molten Cheese",
+            "link": "https://osu.ppy.sh/mp/116795356"
+        },
+        {
+            "date": "1/13/2025",
+            "time": "18:00 WIB",
+            "referee": "Gxbran",
+            "player_one": "ImOyZo",
+            "player_two": "MzLord",
+            "link": "https://osu.ppy.sh/mp/116805104"
+        },
+        {
+            "date": "1/13/2025",
+            "time": "15:00 WIB",
+            "referee": "exvius",
+            "player_one": "Violet-",
+            "player_two": "TheLegend3RD",
+            "link": "https://osu.ppy.sh/community/matches/116804464"
+        }
+    ],
+    "ro32": [{
+            "date": "1/17/2025",
+            "time": "20:00 WIB",
+            "referee": "[ Friz ]",
+            "player_one": "FinHazel",
+            "player_two": "MzLord",
+            "link": "https://osu.ppy.sh/mp/116843688"
+        },
+        {
+            "date": "1/17/2025",
+            "time": "15:00 WIB",
+            "referee": "Elin-",
+            "player_one": "MrFlinxy",
+            "player_two": "KyoukaRy",
+            "link": "https://osu.ppy.sh/mp/116842013"
+        },
+        {
+            "date": "1/17/2025",
+            "time": "19:00 WIB",
+            "referee": "Angki",
+            "player_one": "KafuuChlno",
+            "player_two": "skadidragen",
+            "link": ""
+        },
+        {
+            "date": "1/17/2025",
+            "time": "16:00 WIB",
+            "referee": "Reihynn",
+            "player_one": "Marcille-",
+            "player_two": "My Angel Chen",
+            "link": "https://osu.ppy.sh/community/matches/116842248"
+        },
+        {
+            "date": "1/17/2025",
+            "time": "17:00 WIB",
+            "referee": "Aikiyo Fuuka",
+            "player_one": "lyoneljose",
+            "player_two": "[Shiroko]",
+            "link": "https://osu.ppy.sh/mp/116842466"
+        },
+        {
+            "date": "1/17/2025",
+            "time": "23:00 WIB",
+            "referee": "[ Raiid ]",
+            "player_one": "NizT",
+            "player_two": "TheLegend3RD",
+            "link": "https://osu.ppy.sh/mp/116845702"
+        },
+        {
+            "date": "1/17/2025",
+            "time": "14:00 WIB",
+            "referee": "Reihynn",
+            "player_one": "syamisu-",
+            "player_two": "KinoJourney",
+            "link": ""
+        },
+        {
+            "date": "1/17/2025",
+            "time": "16:00 WIB",
+            "referee": "Aikiyo Fuuka",
+            "player_one": "_yea",
+            "player_two": "Napeace",
+            "link": "https://osu.ppy.sh/mp/116842206"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "21:00 WIB",
+            "referee": "[ Raiid ]",
+            "player_one": "Aimaina",
+            "player_two": "_Reggie_",
+            "link": "https://osu.ppy.sh/mp/116856870"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "20:15 WIB",
+            "referee": "Gxbran",
+            "player_one": "shidqidragon",
+            "player_two": "Neptunia-chan",
+            "link": "https://osu.ppy.sh/mp/116856433"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "20:00 WIB",
+            "referee": "exvius",
+            "player_one": "ZhasK_667",
+            "player_two": "-Aji",
+            "link": "https://osu.ppy.sh/community/matches/116856266"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "15:00 WIB",
+            "referee": "My Angel Satori",
+            "player_one": "Lyz-",
+            "player_two": "ocaibo",
+            "link": "https://osu.ppy.sh/community/matches/116854112"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "20:00 WIB",
+            "referee": "[ Friz ]",
+            "player_one": "[-Vanart-]",
+            "player_two": "uThot",
+            "link": "https://osu.ppy.sh/mp/116856207"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "21:00 WIB",
+            "referee": "Elin-",
+            "player_one": "Raeaw",
+            "player_two": "beethiven",
+            "link": "https://osu.ppy.sh/mp/116857251"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "14:00 WIB",
+            "referee": "Gxbran",
+            "player_one": "Tsurumaki_",
+            "player_two": "ImOyZo",
+            "link": "https://osu.ppy.sh/mp/116853735"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "15:00 WIB",
+            "referee": "Syadow-",
+            "player_one": "askL330",
+            "player_two": "ARDHANA",
+            "link": "https://osu.ppy.sh/mp/116854154"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "21:00 WIB",
+            "referee": "Ilham",
+            "player_one": "RaffCo",
+            "player_two": "IzKun-",
+            "link": "https://osu.ppy.sh/mp/116856999"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "19:30 WIB",
+            "referee": "[ Raiid ]",
+            "player_one": "[ Heez ]",
+            "player_two": "Violet-",
+            "link": "https://osu.ppy.sh/mp/116855933"
+        },
+        {
+            "date": "1/18/2025",
+            "time": "19:00 WIB",
+            "referee": "Aikiyo Fuuka",
+            "player_one": "Prinow6",
+            "player_two": "ChocoCoki-",
+            "link": "https://osu.ppy.sh/mp/116855737"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "19:00 WIB",
+            "referee": "Yangga",
+            "player_one": "EterEnvy",
+            "player_two": "-Nandakai-",
+            "link": "https://osu.ppy.sh/community/matches/116869865"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "20:00 WIB",
+            "referee": "[ Friz ]",
+            "player_one": "Dogethedoge25",
+            "player_two": "lucknut",
+            "link": "https://osu.ppy.sh/mp/116870473"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "19:00 WIB",
+            "referee": "Angki",
+            "player_one": "[-Elaina-]",
+            "player_two": "[ Zenith ]",
+            "link": "https://osu.ppy.sh/community/matches/116869883"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "17:00 WIB",
+            "referee": "[ Friz ]",
+            "player_one": "lisachandra",
+            "player_two": "[ -Asriel- ]",
+            "link": "https://osu.ppy.sh/mp/116868926"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "07:30 WIB",
+            "referee": "Revv-",
+            "player_one": "SnakesYxle",
+            "player_two": "Catzu",
+            "link": "https://osu.ppy.sh/community/matches/116864929"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "18:00 WIB",
+            "referee": "FerryAnanda",
+            "player_one": "AzusaNakano2",
+            "player_two": "Remuu",
+            "link": "https://osu.ppy.sh/mp/116869412"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "20:00 WIB",
+            "referee": "Ilham",
+            "player_one": "DAENGXicisae-",
+            "player_two": "D_ana",
+            "link": "https://osu.ppy.sh/mp/116870469"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "19:00 WIB",
+            "referee": "My Angel Satori",
+            "player_one": "spectator_boi",
+            "player_two": "yeedinobro",
+            "link": "https://osu.ppy.sh/community/matches/116869935"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "11:00 WIB",
+            "referee": "Reihynn",
+            "player_one": "Az-u",
+            "player_two": "Darrel27",
+            "link": "https://osu.ppy.sh/community/matches/116866455"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "23:00 WIB",
+            "referee": "[ Raiid ]",
+            "player_one": "danar mw",
+            "player_two": "Molten Cheese",
+            "link": "https://osu.ppy.sh/mp/116872662"
+        },
+        {
+            "date": "1/19/2025",
+            "time": "20:00 WIB",
+            "referee": "exvius",
+            "player_one": "[LS] akarii",
+            "player_two": "tentrempm",
+            "link": "https://osu.ppy.sh/community/matches/116870518"
+        },
+        {
+            "date": "1/20/2025",
+            "time": "18:00 WIB",
+            "referee": "exvius",
+            "player_one": "MightyTech",
+            "player_two": "Animerge",
+            "link": "https://osu.ppy.sh/community/matches/116881275"
+        },
+        {
+            "date": "1/20/2025",
+            "time": "18:00 WIB",
+            "referee": "FerryAnanda",
+            "player_one": "[LS]Robi",
+            "player_two": "Proxae",
+            "link": "https://osu.ppy.sh/mp/116881280"
+        }
+    ],
+    "ro16": [{
+        "date": "99/99/9999",
+        "time": "99:99 WIB",
+        "referee": "Kepo",
+        "player_one": "tebak",
+        "player_two": "tebak",
+        "link": "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+    }],
+    "qf": [{
+        "date": "99/99/9999",
+        "time": "99:99 WIB",
+        "referee": "Kepo",
+        "player_one": "tebak",
+        "player_two": "tebak",
+        "link": "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+    }],
+    "sf": [{
+        "date": "99/99/9999",
+        "time": "99:99 WIB",
+        "referee": "Kepo",
+        "player_one": "tebak",
+        "player_two": "tebak",
+        "link": "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+    }],
+    "f": [{
+        "date": "99/99/9999",
+        "time": "99:99 WIB",
+        "referee": "Kepo",
+        "player_one": "tebak",
+        "player_two": "tebak",
+        "link": "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+    }],
+    "gf": [{
+        "date": "99/99/9999",
+        "time": "99:99 WIB",
+        "referee": "Kepo",
+        "player_one": "tebak",
+        "player_two": "tebak",
+        "link": "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+    }]
+}
