@@ -192,9 +192,9 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2302500/covers/cover.jpg?1735828674",
-            "map": "Transform (Original Mix) [Homeomorphism (edit)]",
+            "map": "Transform (Original Mix) [HowToPlayLN's Homeomorphism (edit)]",
             "artist": "IAHN",
-            "mapper": "HowToPlayLN",
+            "mapper": "danar",
             "mod": "LN1",
             "link": "https://osu.ppy.sh/b/4921258",
             "custom": ""
@@ -319,7 +319,7 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2289420/covers/cover.jpg?1735977643",
-            "map": "citrus [Sweet Drop (edit)]",
+            "map": "citrus [_Kobii's Sweet Drop (edit)]",
             "artist": "kamome sano",
             "mapper": "danar",
             "mod": "HB1",

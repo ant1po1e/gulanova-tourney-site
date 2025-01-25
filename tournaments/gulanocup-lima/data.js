@@ -121,7 +121,7 @@ $(document).ready(function () {
                                 <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.date}</td>
                                 <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.time}</td>
                                 <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.referee}</td>
-                                <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.player_one} vs ${scheduleEntry.player_two}</td>
+                                <td class="px-1.5 py-2 md:px-6 md:py-4"><span class="text-white font-semibold">${scheduleEntry.player_one}</span> vs <span class="text-white font-semibold">${scheduleEntry.player_two}</span></td>
                                 <td class="px-1.5 py-2 md:px-6 md:py-4">
                                     <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300" href="${scheduleEntry.link}" target="_blank">Link</a>
                                 </td>
