@@ -424,7 +424,7 @@
             "mapper": "Onta_Bekasi, eZmmR",
             "mod": "LN1",
             "link": "https://osu.ppy.sh/b/4939189",
-            "custom": ""
+            "custom": "TRUE"
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2314208/covers/cover.jpg?1737942394",
@@ -433,7 +433,7 @@
             "mapper": "danar",
             "mod": "LN2",
             "link": "https://osu.ppy.sh/b/4952410",
-            "custom": "TRUE"
+            "custom": ""
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2314455/covers/cover.jpg?1737968803",
