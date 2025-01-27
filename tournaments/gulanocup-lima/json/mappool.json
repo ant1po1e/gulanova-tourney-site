@@ -364,13 +364,132 @@
         }
     ],
     "qf": [{
-        "cover": "tebak",
-        "map": "mau tau aja",
-        "artist": "kepo",
-        "mapper": "wokwok",
-        "mod": "kepo",
-        "link": "kepo"
-    }],
+            "cover": "https://assets.ppy.sh/beatmaps/2311482/covers/cover.jpg?1737908229",
+            "map": "Absolute Queen [Absolute Lunacy]",
+            "artist": "Laur",
+            "mapper": "Reihynn",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4945294",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2285361/covers/cover.jpg?1735234247",
+            "map": "Kamiari Algorithm (katagiri Bootleg) [Faithful Love]",
+            "artist": "Masayoshi Oishi",
+            "mapper": "Revv-",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4874803",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2290027/covers/cover.jpg?1735975828",
+            "map": "Anemone [Delusional]",
+            "artist": "DUSTCELL",
+            "mapper": "Revv-",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4887458",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2314587/covers/cover.jpg?1737979773",
+            "map": "Curiosity [Killed the Kucing]",
+            "artist": "Toromaru",
+            "mapper": "Reyi, Revv-",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4953341",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2314539/covers/cover.jpg?1737969106",
+            "map": "Watashi dake Yuurei [Oleng]",
+            "artist": "SICK HACK",
+            "mapper": "FelixSpade, Ainer, Revv-",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4953210",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2273117/covers/cover.jpg?1732770078",
+            "map": "Mind Disorder [Kesalahan Berfikir]",
+            "artist": "Alkome",
+            "mapper": "Sarahkuai",
+            "mod": "RC6",
+            "link": "https://osu.ppy.sh/b/4842476",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2308907/covers/cover.jpg?1737798152",
+            "map": "Boku wa... [\"My Kisah\"]",
+            "artist": "Atarayo",
+            "mapper": "Onta_Bekasi, eZmmR",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4939189",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2314208/covers/cover.jpg?1737942394",
+            "map": "Mousou Aika [:D (edit)]",
+            "artist": "MIMI feat. Hatsune Miku & Kafu",
+            "mapper": "danar",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4952410",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2314455/covers/cover.jpg?1737968803",
+            "map": "Heathens (Magnetude Bootleg) (Cut Ver.) [Deep Into the Abyss]",
+            "artist": "Twenty One Pilots",
+            "mapper": "Antipole, Ainer",
+            "mod": "LN3",
+            "link": "https://osu.ppy.sh/b/4952987",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2283410/covers/cover.jpg?1734683473",
+            "map": "Hesperides [Nymphs of the West]",
+            "artist": "xi",
+            "mapper": "Syrion-",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4869530",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1941403/covers/cover.jpg?1697083660",
+            "map": "Digibuprofen [Another]",
+            "artist": "Kolaa x Mestie",
+            "mapper": "AelSan",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4015444",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2314510/covers/cover.jpg?1737960682",
+            "map": "No Dazzle, No Break [No Limit]",
+            "artist": "HOYO-MiX feat. REOL",
+            "mapper": "Revv-",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4953127",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2314508/covers/cover.jpg?1737960872",
+            "map": "Isekai Girls Talk (TV Size) [Special]",
+            "artist": "Hara Yumi, Amamiya Sora, Takahashi Rie, Yuuki Aoi",
+            "mapper": "Ainer",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4953122",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2314527/covers/cover.jpg?1737964672",
+            "map": "A Day At The Arcade (Cut Ver.) [No game, no life]",
+            "artist": "ReeK",
+            "mapper": "Antipole, eZmmR, Syrion-, Who_is_Marpang",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4953187",
+            "custom": "TRUE"
+        }
+    ],
     "sf": [{
         "cover": "tebak",
         "map": "mau tau aja",
