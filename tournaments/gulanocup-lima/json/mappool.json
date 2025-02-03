@@ -83,9 +83,9 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2297726/covers/cover.jpg?1734972228",
-            "map": "Ghost (feat. Hatsune Miku) [Disguise's hyper (edit)]",
+            "map": "Ghost (feat. Hatsune Miku) [hyper (edit)]",
             "artist": "KAIRUI",
-            "mapper": "FelixSpade",
+            "mapper": "Disguise",
             "mod": "RC4",
             "link": "https://osu.ppy.sh/b/4908209",
             "custom": ""
@@ -192,9 +192,9 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2302500/covers/cover.jpg?1735828674",
-            "map": "Transform (Original Mix) [HowToPlayLN's Homeomorphism (edit)]",
+            "map": "Transform (Original Mix) [Homeomorphism (edit)]",
             "artist": "IAHN",
-            "mapper": "danar",
+            "mapper": "HowToPlayLN",
             "mod": "LN1",
             "link": "https://osu.ppy.sh/b/4921258",
             "custom": ""
@@ -319,9 +319,9 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2289420/covers/cover.jpg?1735977643",
-            "map": "citrus [_Kobii's Sweet Drop (edit)]",
+            "map": "citrus [Sweet Drop (edit)]",
             "artist": "kamome sano",
-            "mapper": "danar",
+            "mapper": "_Kobii",
             "mod": "HB1",
             "link": "https://osu.ppy.sh/b/4885832",
             "custom": ""
@@ -428,9 +428,9 @@
         },
         {
             "cover": "https://assets.ppy.sh/beatmaps/2314208/covers/cover.jpg?1737942394",
-            "map": "Mousou Aika [Castella's :D (edit)]",
+            "map": "Mousou Aika [:D (edit)]",
             "artist": "MIMI feat. Hatsune Miku & Kafu",
-            "mapper": "danar",
+            "mapper": "Castella",
             "mod": "LN2",
             "link": "https://osu.ppy.sh/b/4952410",
             "custom": ""
@@ -491,13 +491,132 @@
         }
     ],
     "sf": [{
-        "cover": "tebak",
-        "map": "mau tau aja",
-        "artist": "kepo",
-        "mapper": "wokwok",
-        "mod": "kepo",
-        "link": "kepo"
-    }],
+            "cover": "https://assets.ppy.sh/beatmaps/2312699/covers/cover.jpg?1738485218",
+            "map": "Dynamite (Camellia's MACHO TNT REMIX) (Cut ver.) [Combustible]",
+            "artist": "USAO",
+            "mapper": "FelixSpade",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4948497",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2315902/covers/cover.jpg?1738213575",
+            "map": "Txxs or get the fxxk out!! [Kick some, what?]",
+            "artist": "Morimori Atsushi",
+            "mapper": "Syrion-",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4957744",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2317792/covers/cover.jpg?1738514162",
+            "map": "UNDEAD [To feel alive again]",
+            "artist": "YOASOBI",
+            "mapper": "-Yubi-",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4963678",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2315921/covers/cover.jpg?1738386491",
+            "map": "Matusa Bomber [bom dia]",
+            "artist": "Rahatt",
+            "mapper": "Reyi",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4957796",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2262551/covers/cover.jpg?1738215816",
+            "map": "Labyrinth (Cut Ver.) [Geng mafia elite]",
+            "artist": "lapix",
+            "mapper": "Antipole",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4816184",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2292156/covers/cover.jpg?1736618464",
+            "map": "Autoscopy [Battlefield]",
+            "artist": "Yousei Teikoku",
+            "mapper": "FelixSpade",
+            "mod": "RC6",
+            "link": "https://osu.ppy.sh/b/4894048",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2317010/covers/cover.jpg?1738524566",
+            "map": "CROSS FATE [The Light of the Collapsing Afterimage | Insane]",
+            "artist": "HyuN feat. Ms.Valentine",
+            "mapper": "eZmmR",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4961444",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2317560/covers/cover.jpg?1738496843",
+            "map": "VANGUARD-2 [MULTITUDES OF RHYTHMIC DISHEVELMEN (edit)]",
+            "artist": "II-L",
+            "mapper": "Lott",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4962988",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2318210/covers/cover.jpg?1738587563",
+            "map": "Dille [(edit) => { return sub_edit }]",
+            "artist": "Feryquitous",
+            "mapper": "[Crz]Crysarlene",
+            "mod": "LN3",
+            "link": "https://osu.ppy.sh/b/4965088",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2318275/covers/cover.jpg?1738589163",
+            "map": "pipa dariacore ke gulanocup volume 5 [pipebomb]",
+            "artist": "Reyi",
+            "mapper": "FelixSpade, Reyi & Reihynn",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4965303",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2275651/covers/cover.jpg?1733230860",
+            "map": "Kissing Lucifer [R U Beat Strucker (edit)]",
+            "artist": "ETIA.",
+            "mapper": "[Crz]hinako1804",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4849465",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2317847/covers/cover.jpg?1738521843",
+            "map": "Ber Zer Ker (Rob Gasser Remix) (Cut Ver.) [Anomali]",
+            "artist": "WATEVA",
+            "mapper": "[-SVzzZ-]",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4963941",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2318187/covers/cover.jpg?1738575187",
+            "map": "Chamber (M!R4 & LGC Jersey Club Edit) [Dimensional Drift]",
+            "artist": "ISOxo",
+            "mapper": "Ainer",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4965027",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2318241/covers/cover.jpg?1738587611",
+            "map": "INVERSION [_.revers(e)_al._shift._]",
+            "artist": "tn-shi",
+            "mapper": "FelixSpade, Antipole, Ilham, Onta_Bekasi, Revv-, Sarahkuai & Syrion-",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4965149",
+            "custom": "TRUE"
+        }
+    ],
     "f": [{
         "cover": "tebak",
         "map": "mau tau aja",
