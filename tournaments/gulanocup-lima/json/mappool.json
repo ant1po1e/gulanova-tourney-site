@@ -618,13 +618,150 @@
         }
     ],
     "f": [{
-        "cover": "tebak",
-        "map": "mau tau aja",
-        "artist": "kepo",
-        "mapper": "wokwok",
-        "mod": "kepo",
-        "link": "kepo"
-    }],
+            "cover": "https://assets.ppy.sh/beatmaps/2320029/covers/cover.jpg?1738932779",
+            "map": "The Everlasting Calamity That Shifts The Time - Space Continuum... [DISTORTED (edit)]",
+            "artist": "ReeK",
+            "mapper": "Eclipse-",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4969969",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2321334/covers/cover.jpg?1739125056",
+            "map": "Overdrive (Yuuni's J-Core Bootleg) [GASKEUN]",
+            "artist": "Harada Hitomi",
+            "mapper": "Reihynn",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4973255",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2320566/covers/cover.jpg?1739013183",
+            "map": "Infiltration [Breakthrough]",
+            "artist": "ParagonX9",
+            "mapper": "-Yubi-",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4971201",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2311459/covers/cover.jpg?1737451483",
+            "map": "Kek [Neurodivergent]",
+            "artist": "False Noise",
+            "mapper": "Reyi",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4945262",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2312760/covers/cover.jpg?1739187852",
+            "map": "Stained Satin [Rust]",
+            "artist": "BilliumMoto",
+            "mapper": "Who_is_Marpang",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4948797",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1857860/covers/cover.jpg?1666971088",
+            "map": "MAGNETAR GIRL [Cheerful]",
+            "artist": "Yu-dachi",
+            "mapper": "Merian",
+            "mod": "RC6",
+            "link": "https://osu.ppy.sh/b/3818588",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1994488/covers/cover.jpg?1686976250",
+            "map": "Eve Stepper [Till death]",
+            "artist": "Hitorie",
+            "mapper": "Alptraum",
+            "mod": "RC7",
+            "link": "https://osu.ppy.sh/b/4144914",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2321303/covers/cover.jpg?1739120952",
+            "map": "S.M.L [Choose. Choose. Choose. Choose.]",
+            "artist": "Afilia Saga",
+            "mapper": "Onta_Bekasi & eZmmR",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4973181",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2294886/covers/cover.jpg?1737176437",
+            "map": "TSUYOGARU GIRL feat. Mossa (NECRY TALKIE) [Recover]",
+            "artist": "BotchiBoromaru",
+            "mapper": "Selitation",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/4900739",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1865981/covers/cover.jpg?1668229237",
+            "map": "Cathedral [Exposure to a downpour of sunlight and a thousand chords held in]",
+            "artist": "Sta feat. Ice",
+            "mapper": "Micleak",
+            "mod": "LN3",
+            "link": "https://osu.ppy.sh/b/3838235",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2093971/covers/cover.jpg?1703784657",
+            "map": "Valhalla (Cut Ver.) [Einherjar]",
+            "artist": "Magnetude",
+            "mapper": "Reyi",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4395899",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2267737/covers/cover.jpg?1738074372",
+            "map": "Biquette (Cut Ver.) [Terme d'affection]",
+            "artist": "Igorrr & Ruby My Dear",
+            "mapper": "Antipole",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4829268",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1942708/covers/cover.jpg?1679151732",
+            "map": "5D TETRIS MATCH & REMATCH (Cut Ver.) [Ultimatris]",
+            "artist": "lhk",
+            "mapper": "TheFunk",
+            "mod": "HB3",
+            "link": "https://osu.ppy.sh/b/4018544",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2321702/covers/cover.jpg?1739187327",
+            "map": "Looking for Edge of Ground (Cut Ver.) [Expedition]",
+            "artist": "Camellia",
+            "mapper": "Revv-",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4974095",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2321701/covers/cover.jpg?1739187288",
+            "map": "Do You Love Me (feat. Shizaki Yuki) (Cut Ver.) [Ansvver ;(]",
+            "artist": "Srav3R",
+            "mapper": "[-SVzzZ-]",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4974093",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2321726/covers/cover.jpg?1739191881",
+            "map": "THE PLATINUM TROPHY [Decagrammaton]",
+            "artist": "KEMOMIMI EDM SQUAD",
+            "mapper": "FelixSpade, -Yubi-, Ainer, Angki, Antipole, Onta_Bekasi, Reihynn, Reyi, Sarahkuai & Who_is_Marpang",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4974142",
+            "custom": "TRUE"
+        }
+    ],
     "gf": [{
         "cover": "tebak",
         "map": "mau tau aja",
