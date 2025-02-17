@@ -1,9 +1,9 @@
 function createProfileCard(userId, displayName) {
     const isCurrentUser = displayName === localStorage.getItem("username");
     const profileCard = `
-        <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 ${isCurrentUser ? 'ring-2 ring-gulanova ring-offset-2 ring-offset-cyan-950 font-bold' : ''} bg-gulanova text-xs p-2 rounded-md hover:bg-[#15575c] hover:scale-110 transition duration-300" target="_blank">
+        <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 ${isCurrentUser ? 'ring-2 ring-gulanova ring-offset-2 ring-offset-gulanovaDark font-bold' : ''} bg-gulanova text-xs p-2 rounded-md hover:bg-gulanovaDark hover:scale-110 transition duration-300" target="_blank">
             <img class="w-28 h-28 mb-2 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
-            <p class="truncate hover:overflow-visible hover:whitespace-normal bg-[#15575c] rounded-lg px-2 py-1 font-normal text-xs max-w-[7rem]">${displayName}</p>
+            <p class="truncate hover:overflow-visible hover:whitespace-normal bg-gulanovaDark rounded-lg px-2 py-1 font-normal text-xs max-w-[7rem]">${displayName}</p>
         </a>
     `;
     return profileCard;
@@ -148,7 +148,7 @@ $(document).ready(function () {
                             <div class="absolute w-10 h-10 bg-white border-[10px] border-black rounded-full md:start-1/2 transform -translate-x-1/2 md:w-16 md:h-16 md:border-[20px]"></div>
                             <div class="ml-10 md:ml-0 md:w-1/2">
                                 <h3 class="text-lg font-semibold text-white md:text-3xl">${entry.stage}</h3>
-                                <time class="mb-1 text-sm font-normal leading-none text-[#51f1ff] md:text-lg">${entry.date}</time>
+                                <time class="mb-1 text-sm font-normal leading-none text-gulanova md:text-lg">${entry.date}</time>
                             </div>
                         </li>
                     `;
