@@ -763,11 +763,148 @@
         }
     ],
     "gf": [{
-        "cover": "tebak",
-        "map": "mau tau aja",
-        "artist": "kepo",
-        "mapper": "wokwok",
-        "mod": "kepo",
-        "link": "kepo"
-    }]
+            "cover": "https://assets.ppy.sh/beatmaps/2292615/covers/cover.jpg?1736418644",
+            "map": "Protogene (Cut Ver.) [DOMiNANCE]",
+            "artist": "AXiS as EQUiON",
+            "mapper": "FelixSpade",
+            "mod": "RC1",
+            "link": "https://osu.ppy.sh/b/4895261",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2310367/covers/cover.jpg?1739727647",
+            "map": "DESERT AFTER TEARS [Dehydration (edit)]",
+            "artist": "Falcom Sound Team jdk",
+            "mapper": "[GB]Oceanus",
+            "mod": "RC2",
+            "link": "https://osu.ppy.sh/b/4983912",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2325181/covers/cover.jpg?1739728444",
+            "map": "Holy Knight [Crimson rose faltering before the firmament chevalier.]",
+            "artist": "Eyemedia",
+            "mapper": "Reihynn",
+            "mod": "RC3",
+            "link": "https://osu.ppy.sh/b/4983922",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2231418/covers/cover.jpg?1725984123",
+            "map": "The Bridgeport Run [Slip (nerfed)]",
+            "artist": "The Flashbulb",
+            "mapper": "Micleak",
+            "mod": "RC4",
+            "link": "https://osu.ppy.sh/b/4736089",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2126471/covers/cover.jpg?1708813853",
+            "map": "ACIDGLINT [REWIRE_FLESH]",
+            "artist": "Earthists.",
+            "mapper": "Valedict",
+            "mod": "RC5",
+            "link": "https://osu.ppy.sh/b/4470118",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2325642/covers/cover.jpg?1739799064",
+            "map": "saitei [the worst]",
+            "artist": "sokoninaru",
+            "mapper": "FelixSpade & Reihynn",
+            "mod": "RC6",
+            "link": "https://osu.ppy.sh/b/4985111",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2298494/covers/cover.jpg?1738189829",
+            "map": "Gaviscon (Cut Ver.) [Keep on holding to the fragments]",
+            "artist": "Ruby My Dear",
+            "mapper": "Antipole",
+            "mod": "RC7",
+            "link": "https://osu.ppy.sh/b/4910398",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2324950/covers/cover.jpg?1739807205",
+            "map": "SECRET BOSS (Cut ver.) [Last staNd (w/ [Crz]Crysarlene)]",
+            "artist": "Camellia",
+            "mapper": "danar",
+            "mod": "LN1",
+            "link": "https://osu.ppy.sh/b/4983390",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1856605/covers/cover.jpg?1666746057",
+            "map": "Endgame [Dance of the Reaper]",
+            "artist": "Miyashita Yuu",
+            "mapper": "doctormango",
+            "mod": "LN2",
+            "link": "https://osu.ppy.sh/b/3815684",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/1888853/covers/cover.jpg?1671373857",
+            "map": "Sulfide (Cut Ver.) [Acetification]",
+            "artist": "Camellia",
+            "mapper": "Micleak",
+            "mod": "LN3",
+            "link": "https://osu.ppy.sh/b/3890073",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2230770/covers/cover.jpg?1725894119",
+            "map": "Susano Habakiri [Dexterous]",
+            "artist": "Halv",
+            "mapper": "[Crz]FolAH1217",
+            "mod": "HB1",
+            "link": "https://osu.ppy.sh/b/4734283",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2323233/covers/cover.jpg?1739441986",
+            "map": "Xronier (\"geneXe\" Long ver.) [Chronos (cut + edit)]",
+            "artist": "Camellia as \"fluX Xroise\"",
+            "mapper": "danar",
+            "mod": "HB2",
+            "link": "https://osu.ppy.sh/b/4978482",
+            "custom": ""
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2305743/covers/cover.jpg?1737977904",
+            "map": "Konran Shoujo Soflan-chan!! [Poliritem]",
+            "artist": "Camellia feat. Nanahira",
+            "mapper": "Antipole",
+            "mod": "HB3",
+            "link": "https://osu.ppy.sh/b/4929891",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2325533/covers/cover.jpg?1739782855",
+            "map": "BLEEP BLOOP [POWER COGS]",
+            "artist": "Tokyo Machine",
+            "mapper": "[-SVzzZ-]",
+            "mod": "SV1",
+            "link": "https://osu.ppy.sh/b/4984847",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2325529/covers/cover.jpg?1739780926",
+            "map": "ENERGY [amfilinyaenaji debeslaintekontollomi]",
+            "artist": "ISOKNOCK feat. Bantu",
+            "mapper": "Ainer",
+            "mod": "SV2",
+            "link": "https://osu.ppy.sh/b/4984835",
+            "custom": "TRUE"
+        },
+        {
+            "cover": "https://assets.ppy.sh/beatmaps/2325708/covers/cover.jpg?1739807358",
+            "map": "Kemilau Fana feat. Altair Aquila & Mariela Riona [Menuliskan Takdir di Atas Abu Keraguan]",
+            "artist": "morethanahalf & typeMARS",
+            "mapper": "Revv-, -Yubi-, [-SVzzZ-], Aikiyo Fuuka, Ainer, Angki, Antipole, danar, eZmmR, FelixSpade, Fyl, Ilham, Kada-, nayuu, Onta_Bekasi, Raakcon, Reihynn, Reyi, Sarahkuai, Syadow-, Syadow-, Virtue- & Who_is_Marpang",
+            "mod": "TB",
+            "link": "https://osu.ppy.sh/b/4985255",
+            "custom": "TRUE"
+        }
+    ]
 }
