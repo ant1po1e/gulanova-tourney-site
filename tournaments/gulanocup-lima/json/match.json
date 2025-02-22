@@ -966,13 +966,38 @@
         }
     ],
     "f": [{
-        "date": "99/99/9999",
-        "time": "99:99 WIB",
-        "referee": "Kepo",
-        "player_one": "tebak",
-        "player_two": "tebak",
-        "link": "https://www.youtube.com/watch?v=xvFZjo5PgG0"
-    }],
+            "date": "2/15/2025",
+            "time": "19:00 WIB",
+            "referee": "Kurami_San",
+            "player_one": "SnakesYxle",
+            "player_two": "MightyTech",
+            "link": "https://osu.ppy.sh/mp/117182865"
+        },
+        {
+            "date": "2/13/2025",
+            "time": "21:00 WIB",
+            "referee": "Ilham",
+            "player_one": "DAENGXicisae-",
+            "player_two": "[LS] akarii",
+            "link": "https://osu.ppy.sh/mp/117160009"
+        },
+        {
+            "date": "2/16/2025",
+            "time": "19:30 WIB",
+            "referee": "Elin-",
+            "player_one": "MightyTech",
+            "player_two": "[LS] akarii",
+            "link": "https://osu.ppy.sh/mp/117197903"
+        },
+        {
+            "date": "2/15/2025",
+            "time": "20:30 WIB",
+            "referee": "FerryAnanda",
+            "player_one": "lisachandra",
+            "player_two": "[LS]Robi",
+            "link": "https://osu.ppy.sh/mp/117183784"
+        }
+    ],
     "gf": [{
         "date": "99/99/9999",
         "time": "99:99 WIB",
