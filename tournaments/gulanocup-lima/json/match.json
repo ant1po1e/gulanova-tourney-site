@@ -999,11 +999,28 @@
         }
     ],
     "gf": [{
-        "date": "99/99/9999",
-        "time": "99:99 WIB",
-        "referee": "Kepo",
-        "player_one": "tebak",
-        "player_two": "tebak",
-        "link": "https://www.youtube.com/watch?v=xvFZjo5PgG0"
-    }]
+            "date": "2/21/2025",
+            "time": "20:00 WIB",
+            "referee": "Reihynn",
+            "player_one": "[LS]Robi",
+            "player_two": "MightyTech",
+            "link": "https://osu.ppy.sh/mp/117252175"
+        },
+        {
+            "date": "2/22/2025",
+            "time": "17:00 WIB",
+            "referee": "Kurami_San",
+            "player_one": "GENG MAFIA",
+            "player_two": "GENG MOTOR",
+            "link": "https://osu.ppy.sh/community/matches/117263740"
+        },
+        {
+            "date": "2/22/2025",
+            "time": "20:00 WIB",
+            "referee": "Elin-",
+            "player_one": "lisachandra",
+            "player_two": "[LS]Robi",
+            "link": "https://osu.ppy.sh/mp/117265369"
+        }
+    ]
 }
