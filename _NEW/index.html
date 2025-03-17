@@ -75,6 +75,8 @@
 </head>
 
 <body>
+    <div class="relative overflow-hidden">
+        <div id="particles-js" class="absolute inset-0 pointer-events-none"></div>
     <div class="container mx-auto px-20 py-6">
         <!-- Header -->
         <header class="flex justify-between items-center mb-8">
@@ -193,11 +195,12 @@
         </div>
 
         <!-- Footer -->
-        <footer class="text-white text-center">
+        <footer class="text-white text-lg text-center">
             <p>© Gulanova 2024, developed by <a href="#" class="underline">Antipole</a> and <a href="#"
                     class="underline">danar</a>.</p>
         </footer>
     </div>
+</div>
 
     <script>
         // JavaScript can be added here for any interactive features
@@ -216,6 +219,8 @@
         });
     </script>
     <script src="/dist/js/script.js"></script>
+    <script src="/dist/js/particles.js"></script>
+    <script src="/dist/js/particle-config.js"></script>
     <script src="/dist/js/gulanovaApi.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
