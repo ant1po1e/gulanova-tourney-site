@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-adsense-account" content="ca-pub-4499218414555492">
+
+    <meta property="description"
+        content="A fun Indonesian community with a lot of gaming and dumbasses. Come and join the fun! atau gua pukul">
+
+    <meta property="og:title" content="Gulanova | Indonesian Gaming Community">
+    <meta property="og:description"
+        content="A fun Indonesian community with a lot of gaming and dumbasses. Come and join the fun! atau gua pukul">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.gulanova.top/">
+    <meta property="og:image" content="https://www.gulanova.top/dist/img/bg-masthead.webp">
+    <meta property="og:site_name" content="Gulanova">
+    <meta property="og:locale" content="id_ID">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gulanova | Indonesian Gaming Community">
+    <meta name="twitter:description"
+        content="A fun Indonesian community with a lot of gaming and dumbasses. Come and join the fun! atau gua pukul">
+    <meta name="twitter:image" content="https://www.gulanova.top/dist/img/bg-masthead.webp">
+
+    <link rel="stylesheet" href="/dist/css/output.css">
+    <link rel="stylesheet" href="/dist/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="/dist/js/jquery.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/dist/flowbite/dist/flowbite.min.js"></script>
+    <title>Gulanova | Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #000f24 0%, #00102e 25%, #000513 50%, #001443 75%, #000515 100%);
+            min-height: 100vh;
+        }
+
+        .nav-link {
+            position: relative;
+            margin: 0 1rem;
+            color: white;
+            font-weight: 500;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background-color: white;
+            transition: width 0.3s ease, left 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+            left: 50%;
+        }
+
+        .container-card {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto px-20 py-6">
+        <!-- Header -->
+        <header class="flex justify-between items-center mb-8">
+            <div class="flex-1">
+                <!-- Empty space for layout balance -->
+            </div>
+            <div class="flex-1 flex justify-center">
+                <a href="/" class="flex items-center">
+                    <img src="../dist/img/gulanova.webp" alt="Gulanova Logo" class="h-20">
+                    <span class="text-white text-[48px] font-bold ml-3">GULANOVA</span>
+                </a>
+            </div>
+            <div class="flex-1 flex justify-end">
+                <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-[3px] ring-[#9BC4FF] transition duration-300"
+                        id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                        data-dropdown-placement="bottom">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-14 h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar" alt="user photo">
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
+                        id="user-dropdown">
+                        <div class="px-4 py-3">
+                            <span class="block text-sm text-white" id="username">Guest</span>
+                        </div>
+                        <li>
+                            <div class="block px-4 py-2 text-sm text-gray-200">You are:
+                                VISITOR</div>
+                        </li>
+                        <ul class="py-2" aria-labelledby="user-menu-button">
+                            <li>
+                                <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                                    class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
+                                    out</button>
+                                <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                                    class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
+                                    in</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <button data-collapse-toggle="navbar-user" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-white hover:bg-gulanova"
+                        aria-controls="navbar-user" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="flex justify-center mb-8 ">
+            <a href="#" class="nav-link">HOME</a>
+            <span class="text-white mx-1">•</span>
+            <a href="#" class="nav-link">ABOUT</a>
+            <span class="text-white mx-1">•</span>
+            <a href="#" class="nav-link">TOURNAMENTS</a>
+            <span class="text-white mx-1">•</span>
+            <a href="#" class="nav-link">KHODAM</a>
+        </nav>
+
+        <div class="container-card bg-gradient-to-br from-gray-900 to-blue-900 mb-8">
+            <div class="w-full h-[40rem] overflow-hidden">
+                <!-- Set a fixed height -->
+                <img src="../dist/img/bg-masthead.webp" alt="Anime Character" class="w-full object-cover">
+            </div>
+        </div>
+
+        <!-- Discord Button -->
+        <div class="flex justify-center mb-28">
+            <a
+                class="bg-gradient-to-r from-[#729dd8] to-[#3166a7] text-white font-bold py-3 px-20 rounded-md text-xl shadow ring-4 ring-[#98bcee] hover:ring-8 transition-all duration-300">
+                DISCORD
+            </a>
+        </div>
+
+        <!-- Brand Name -->
+        <div class="text-center mb-8">
+            <h2 class="text-white text-4xl font-bold">GULANOVA</h2>
+        </div>
+
+
+        <!-- Social Media Icons -->
+        <div class="flex justify-center items-center mb-8">
+            <div
+                class="bg-black bg-opacity-50 text-white font-bold py-8 px-20 rounded-md text-xl">
+                <div class="flex justify-center space-x-8">
+                    <a href="#"
+                        class="flex items-center text-white hover:scale-110 hover:text-[#9BC4FF] transition duration-300">
+                        <i class="bi bi-twitch text-2xl"></i>
+                        <span class="ml-2">TWITCH</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center text-white hover:scale-110 hover:text-[#9BC4FF] transition duration-300">
+                        <i class="bi bi-youtube text-2xl"></i>
+                        <span class="ml-2">YOUTUBE</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center text-white hover:scale-110 hover:text-[#9BC4FF] transition duration-300">
+                        <i class="bi bi-instagram text-2xl"></i>
+                        <span class="ml-2">INSTAGRAM</span>
+                    </a>
+                    <a href="#"
+                        class="flex items-center text-white hover:scale-110 hover:text-[#9BC4FF] transition duration-300">
+                        <i class="bi bi-diagram-3 text-2xl"></i>
+                        <span class="ml-2">OSU! TEAM</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-white text-center">
+            <p>© Gulanova 2024, developed by <a href="#" class="underline">Antipole</a> and <a href="#"
+                    class="underline">danar</a>.</p>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript can be added here for any interactive features
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animation for the header logo
+            const logo = document.querySelector('header img');
+            logo.style.transition = 'transform 0.5s ease';
+
+            logo.addEventListener('mouseover', function () {
+                this.style.transform = 'rotate(5deg) scale(1.1)';
+            });
+
+            logo.addEventListener('mouseout', function () {
+                this.style.transform = 'rotate(0) scale(1)';
+            });
+        });
+    </script>
+    <script src="/dist/js/script.js"></script>
+    <script src="/dist/js/gulanovaApi.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
