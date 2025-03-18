@@ -42,11 +42,9 @@
             min-height: 100vh;
         }
 
+        /* Styles that can't be fully converted to Tailwind */
         .nav-link {
             position: relative;
-            margin: 0 1rem;
-            color: white;
-            font-weight: 500;
         }
 
         .nav-link::after {
@@ -66,10 +64,49 @@
             left: 50%;
         }
 
-        .container-card {
-            border-radius: 30px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        /* Navbar scrolled effect */
+        .navbar-scrolled.scrolled {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 15, 36, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            padding: 20px;
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            transform: translateY(0);
+        }
+
+        .glow-text {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .glow-text::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 15px;    
+            height: 15px;
+            background: #fff;
+            border-radius: 50%;
+            transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+            box-shadow: 0 0 30px 20px rgba(173, 216, 230, 0.4);
+            filter: blur(15px); /* Menambah efek fade-out */
         }
     </style>
 </head>
@@ -77,147 +114,139 @@
 <body>
     <div class="relative overflow-hidden">
         <div id="particles-js" class="absolute inset-0 pointer-events-none"></div>
-    <div class="container mx-auto px-20 py-6">
-        <!-- Header -->
-        <header class="flex justify-between items-center mb-8">
-            <div class="flex-1">
-                <!-- Empty space for layout balance -->
+        <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6">
+            <!-- Header -->
+            <header class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="flex-1 hidden md:block">
+                    <!-- Empty space for layout balance -->
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <a href="/" class="header-logo flex items-center">
+                        <img src="../dist/img/gulanova.webp" alt="Gulanova Logo" class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
+                        <span class="text-white text-3xl md:text-5xl font-bold ml-3">GULANOVA</span>
+                    </a>
+                </div>
+                <div class="flex-1 flex justify-end mt-4 md:mt-0">
+                    <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button type="button"
+                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                            id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                            data-dropdown-placement="bottom">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar"
+                                alt="user photo">
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
+                            id="user-dropdown">
+                            <div class="px-4 py-3">
+                                <span class="block text-sm text-white" id="username">Guest</span>
+                            </div>
+                            <li>
+                                <div class="block px-4 py-2 text-sm text-gray-200">You are:
+                                    VISITOR</div>
+                            </li>
+                            <ul class="py-2" aria-labelledby="user-menu-button">
+                                <li>
+                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
+                                        out</button>
+                                    <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
+                                        in</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="mobile-menu-toggle" type="button"
+                            class="md:hidden ml-2 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-blue-700"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 17 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Navigation - Desktop -->
+            <nav class="w-full z-50">
+                <div class="navbar-scrolled hidden md:flex justify-center mb-8 py-2">
+                    <a href="#" class="text-white font-medium mx-4 glow-text">HOME</a>
+                    <span class="text-white mx-1">•</span>
+                    <a href="#" class="nav-link text-white font-medium mx-4">ABOUT</a>
+                    <span class="text-white mx-1">•</span>
+                    <a href="#" class="nav-link text-white font-medium mx-4">TOURNAMENTS</a>
+                    <span class="text-white mx-1">•</span>
+                    <a href="#" class="nav-link text-white font-medium mx-4">KHODAM</a>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-full h-full bg-blue-900/95 flex flex-col justify-center items-center z-50">
+                <button id="mobile-menu-close" class="absolute top-8 right-8 text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+                <a href="#" class="nav-link text-white font-medium text-xl my-4">HOME</a>
+                <a href="#" class="nav-link text-white font-medium text-xl my-4">ABOUT</a>
+                <a href="#" class="nav-link text-white font-medium text-xl my-4">TOURNAMENTS</a>
+                <a href="#" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
             </div>
-            <div class="flex-1 flex justify-center">
-                <a href="/" class="flex items-center">
-                    <img src="../dist/img/gulanova.webp" alt="Gulanova Logo" class="h-20">
-                    <span class="text-white text-[48px] font-bold ml-3">GULANOVA</span>
+
+            <div class="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-gray-900 to-blue-900 mb-8">
+                <div class="w-full h-64 md:h-96 lg:h-[40rem] overflow-hidden">
+                    <img src="../dist/img/bg-masthead.webp" alt="Anime Character" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Discord Button -->
+            <div class="flex justify-center mb-16 md:mb-28">
+                <a href="#" class="bg-gradient-to-r from-[#729dd8] to-[#3166a7] text-white font-bold py-2 px-12 md:py-3 md:px-20 rounded-md text-lg md:text-xl shadow-lg ring-4 ring-[#98bcee] hover:ring-8 transition-all duration-300">
+                    DISCORD
                 </a>
             </div>
-            <div class="flex-1 flex justify-end">
-                <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <button type="button"
-                        class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-[3px] ring-[#9BC4FF] transition duration-300"
-                        id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
-                        data-dropdown-placement="bottom">
-                        <span class="sr-only">Open user menu</span>
-                        <img class="w-14 h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar" alt="user photo">
-                    </button>
-                    <!-- Dropdown menu -->
-                    <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
-                        id="user-dropdown">
-                        <div class="px-4 py-3">
-                            <span class="block text-sm text-white" id="username">Guest</span>
-                        </div>
-                        <li>
-                            <div class="block px-4 py-2 text-sm text-gray-200">You are:
-                                VISITOR</div>
-                        </li>
-                        <ul class="py-2" aria-labelledby="user-menu-button">
-                            <li>
-                                <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
-                                    class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
-                                    out</button>
-                                <button type="button" onclick="window.location.href='/auth/login'" id="login"
-                                    class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
-                                    in</button>
-                            </li>
-                        </ul>
+
+            <!-- Brand Name -->
+            <div class="text-center mb-8">
+                <h2 class="text-white text-3xl md:text-4xl font-bold">GULANOVA</h2>
+            </div>
+
+            <!-- Social Media Icons -->
+            <div class="flex justify-center items-center mb-8">
+                <div class="bg-black bg-opacity-50 text-white font-bold py-4 md:py-8 px-4 md:px-12 lg:px-20 rounded-md text-lg md:text-xl">
+                    <div class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-8">
+                        <a href="#" class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            <i class="bi bi-twitch text-2xl"></i>
+                            <span class="ml-2 hidden md:block">TWITCH</span>
+                        </a>
+                        <a href="#" class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            <i class="bi bi-youtube text-2xl"></i>
+                            <span class="ml-2 hidden md:block">YOUTUBE</span>
+                        </a>
+                        <a href="#" class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            <i class="bi bi-instagram text-2xl"></i>
+                            <span class="ml-2 hidden md:block">INSTAGRAM</span>
+                        </a>
+                        <a href="#" class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            <i class="bi bi-diagram-3 text-2xl"></i>
+                            <span class="ml-2 hidden md:block">OSU! TEAM</span>
+                        </a>
                     </div>
-                    <button data-collapse-toggle="navbar-user" type="button"
-                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-white hover:bg-gulanova"
-                        aria-controls="navbar-user" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 17 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 1h15M1 7h15M1 13h15" />
-                        </svg>
-                    </button>
                 </div>
             </div>
-        </header>
 
-        <!-- Navigation -->
-        <nav class="flex justify-center mb-8 ">
-            <a href="#" class="nav-link">HOME</a>
-            <span class="text-white mx-1">•</span>
-            <a href="#" class="nav-link">ABOUT</a>
-            <span class="text-white mx-1">•</span>
-            <a href="#" class="nav-link">TOURNAMENTS</a>
-            <span class="text-white mx-1">•</span>
-            <a href="#" class="nav-link">KHODAM</a>
-        </nav>
-
-        <div class="container-card bg-gradient-to-br from-gray-900 to-blue-900 mb-8">
-            <div class="w-full h-[40rem] overflow-hidden">
-                <!-- Set a fixed height -->
-                <img src="../dist/img/bg-masthead.webp" alt="Anime Character" class="w-full object-cover">
-            </div>
+            <!-- Footer -->
+            <footer class="text-white text-base md:text-lg text-center">
+                <p>© Gulanova 2024, developed by <a href="#" class="underline">Antipole</a> and <a href="#"
+                        class="underline">danar</a>.</p>
+            </footer>
         </div>
-
-        <!-- Discord Button -->
-        <div class="flex justify-center mb-28">
-            <a
-                class="bg-gradient-to-r from-[#729dd8] to-[#3166a7] text-white font-bold py-3 px-20 rounded-md text-xl shadow ring-4 ring-[#98bcee] hover:ring-8 transition-all duration-300">
-                DISCORD
-            </a>
-        </div>
-
-        <!-- Brand Name -->
-        <div class="text-center mb-8">
-            <h2 class="text-white text-4xl font-bold">GULANOVA</h2>
-        </div>
-
-
-        <!-- Social Media Icons -->
-        <div class="flex justify-center items-center mb-8">
-            <div
-                class="bg-black bg-opacity-50 text-white font-bold py-8 px-20 rounded-md text-xl">
-                <div class="flex justify-center space-x-8">
-                    <a href="#"
-                        class="flex items-center text-white hover:scale-110 hover:text-[#9BC4FF] transition duration-300">
-                        <i class="bi bi-twitch text-2xl"></i>
-                        <span class="ml-2">TWITCH</span>
-                    </a>
-                    <a href="#"
-                        class="flex items-center text-white hover:scale-110 hover:text-[#9BC4FF] transition duration-300">
-                        <i class="bi bi-youtube text-2xl"></i>
-                        <span class="ml-2">YOUTUBE</span>
-                    </a>
-                    <a href="#"
-                        class="flex items-center text-white hover:scale-110 hover:text-[#9BC4FF] transition duration-300">
-                        <i class="bi bi-instagram text-2xl"></i>
-                        <span class="ml-2">INSTAGRAM</span>
-                    </a>
-                    <a href="#"
-                        class="flex items-center text-white hover:scale-110 hover:text-[#9BC4FF] transition duration-300">
-                        <i class="bi bi-diagram-3 text-2xl"></i>
-                        <span class="ml-2">OSU! TEAM</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="text-white text-lg text-center">
-            <p>© Gulanova 2024, developed by <a href="#" class="underline">Antipole</a> and <a href="#"
-                    class="underline">danar</a>.</p>
-        </footer>
     </div>
-</div>
 
-    <script>
-        // JavaScript can be added here for any interactive features
-        document.addEventListener('DOMContentLoaded', function () {
-            // Animation for the header logo
-            const logo = document.querySelector('header img');
-            logo.style.transition = 'transform 0.5s ease';
-
-            logo.addEventListener('mouseover', function () {
-                this.style.transform = 'rotate(5deg) scale(1.1)';
-            });
-
-            logo.addEventListener('mouseout', function () {
-                this.style.transform = 'rotate(0) scale(1)';
-            });
-        });
-    </script>
     <script src="/dist/js/script.js"></script>
     <script src="/dist/js/particles.js"></script>
     <script src="/dist/js/particle-config.js"></script>
@@ -225,6 +254,23 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+
+        // Sticky navbar functionality
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".navbar-scrolled");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $(".header-logo").offset().top);
+            });
+        });
+
+        // Mobile menu functionality
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.add('active');
+        });
+
+        document.getElementById('mobile-menu-close').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.remove('active');
+        });
     </script>
 </body>
 
