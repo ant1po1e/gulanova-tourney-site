@@ -35,47 +35,99 @@
     <title>Gulanova | Home</title>
 </head>
 
-<body class="bg-black">
-    <!-- Navbar -->
-    <nav
-        class="border-gray-200 bg-black bg-opacity-100 md:bg-opacity-60 fixed w-full z-20 top-0 start-0 navbar-scrolled transition duration-300">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="/dist/img/gulanova.webp" class="h-8 w-8" alt="Gulanova Logo" />
-                <span class="self-center text-sm md:text-lg font-semibold whitespace-nowrap text-white">Gulanova</span>
-            </a>
-            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button"
-                    class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-[3px] ring-gulanova transition duration-300"
-                    id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
-                    data-dropdown-placement="bottom">
-                    <span class="sr-only">Open user menu</span>
-                    <img class="w-8 h-8 rounded-full" src="https://a.ppy.sh/guest" id="avatar" alt="user photo">
-                </button>
-                <!-- Dropdown menu -->
-                <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gulanovaDark divide-gulanova"
-                    id="user-dropdown">
-                    <div class="px-4 py-3">
-                        <span class="block text-sm text-white" id="username">Guest</span>
+<body>
+    <div class="relative overflow-hidden">
+        <div id="particles-js" class="absolute inset-0 pointer-events-none"></div>
+        <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6">
+            <!-- Header -->
+            <header class="flex flex-row justify-between items-center mb-8">
+                <div class="flex-1">
+                    <!-- Mobile login -->
+                    <div class="block md:hidden">
+                        <button type="button"
+                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                            id="open-modal">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar"
+                                alt="user photo">
+                        </button>
                     </div>
-                    <li>
-                        <div class="block px-4 py-2 text-sm text-gray-200">You are:
-                            VISITOR</div>
-                    </li>
-                    <ul class="py-2" aria-labelledby="user-menu-button">
-                        <li>
-                            <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
-                                class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
-                                out</button>
-                            <button type="button" onclick="window.location.href='/auth/login'" id="login"
-                                class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
-                                in</button>
-                        </li>
-                    </ul>
+
+                    <!-- Modal -->
+                    <div id="user-modal"
+                        class="fixed inset-0 bg-black bg-opacity-75 hidden flex flex-col text-center items-center justify-center z-[1000]">
+                        <!-- Modal content -->
+                        <div
+                            class="relative my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova w-72">
+                            <div class="px-4 py-3">
+                                <span class="block text-sm text-white font-bold" id="username">Guest</span>
+                            </div>
+                            <li>
+                                <div class="block px-4 py-2 text-sm text-gray-200">You are: VISITOR</div>
+                            </li>
+                            <ul class="py-2">
+                                <li>
+                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
+                                        Log out
+                                    </button>
+                                    <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300">
+                                        Log in
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="close-modal" class="mt-2 p-2 rounded-full text-2xl text-white shadow-lg">
+                            <i class="bi bi-x-circle-fill"></i>
+                        </button>
+                    </div>
                 </div>
-                <button data-collapse-toggle="navbar-user" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden text-white hover:bg-gulanova"
-                    aria-controls="navbar-user" aria-expanded="false">
+                <div class="flex-1 flex justify-center ">
+                    <a href="/" class="header-logo flex items-center">
+                        <img src="../dist/img/gulanova.webp" alt="Gulanova Logo"
+                            class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
+                        <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
+                    </a>
+                </div>
+                <div class="flex-1 flex justify-end mt-4 md:mt-0">
+                    <!-- Profile button only visible on tablet and desktop -->
+                    <div class="hidden md:flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                        <button type="button"
+                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                            id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                            data-dropdown-placement="bottom">
+                            <span class="sr-only">Open user menu</span>
+                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar"
+                                alt="user photo">
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
+                            id="user-dropdown">
+                            <div class="px-4 py-3">
+                                <span class="block text-sm text-white" id="username">Guest</span>
+                            </div>
+                            <li>
+                                <div class="block px-4 py-2 text-sm text-gray-200">You are:
+                                    VISITOR</div>
+                            </li>
+                            <ul class="py-2" aria-labelledby="user-menu-button">
+                                <li>
+                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
+                                        out</button>
+                                    <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
+                                        in</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mobile hamburger menu - positioned to be in-between with logo -->
+                <button id="mobile-menu-toggle" type="button"
+                    class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
+                    aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 17 14">
@@ -83,106 +135,106 @@
                             d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-            </div>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
-                <ul
-                    class="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 bg-transparent md:bg-transparent border-white">
-                    <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-white bg-gulanovaDark rounded md:bg-transparent md:p-0 md:text-[#6b95d1] md:hover:text-white transition duration-300"
-                            aria-current="page">Home</a>
-                    </li>
-                    <li>
-                        <a href="/about/"
-                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gulanova hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">About</a>
-                    </li>
-                    <li>
-                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar"
-                            class="flex items-center justify-between w-full py-2 px-3 rounded md:border-0 md:p-0 md:w-auto text-white md:hover:text-gulanova border-gray-700 hover:bg-gulanova md:hover:bg-transparent transition duration-300">Tournaments
-                            <svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                fill="none" viewBox="0 0 10 6">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke-width="2" d="m1 1 4 4 4-4" />
-                            </svg></button>
-                        <!-- Dropdown menu -->
-                        <div id="dropdownNavbar"
-                            class="z-10 hidden font-normal divide-y rounded-lg shadow w-44 bg-gulanovaDark divide-gray-600">
-                            <ul class="py-2 text-sm text-white" aria-labelledby="dropdownLargeButton">
-                                <li>
-                                    <a href="/tournaments/gulanocup-empat/"
-                                        class="block px-4 py-2 hover:bg-gulanova hover:text-gulanovaDark transition duration-300">Gulanocup
-                                        4</a>
-                                </li>
-                                <li>
-                                    <a href="/tournaments/gulanocup-lima/"
-                                        class="block px-4 py-2 hover:bg-gulanova hover:text-gulanovaDark transition duration-300">Gulanocup
-                                        5</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <a href="/khodam/"
-                            class="block py-2 px-3 rounded md:p-0 text-white md:hover:text-gulanova hover:bg-gulanova hover:text-white md:hover:bg-transparent border-gray-700 transition duration-300">Khodam</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar-END -->
+            </header>
 
+            <!-- Navigation - Desktop -->
+            <nav class="w-full z-50">
+                <div class="navbar-scrolled hidden md:flex justify-center mb-8 py-2">
+                    <a href="#" class="text-white font-medium mx-4 glow-text">HOME</a>
+                    <span class="text-white mx-1">•</span>
+                    <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
+                    <span class="text-white mx-1">•</span>
+                    <a href="/tournaments/" class="nav-link text-white font-medium mx-4">TOURNAMENTS</a>
+                    <span class="text-white mx-1">•</span>
+                    <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
+                </div>
+            </nav>
 
-    <!-- Jumbotron -->
-    <section class="masthead">
-        <div class="px-4 mx-auto max-w-screen-xl text-center py-20 md:pt-52">
-            <h1 class="mb-5 font-bold" data-aos="zoom-in" data-aos-duration="2000" data-aos-once="true">
-                Gulanova</h1>
-            <p class="text-white text-lg px-4 mx-auto max-w-3xl text-center py-6 mb-20 rounded-lg bg-black bg-opacity-50"
-                data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">A
-                fun Indonesian community with
-                a lot of gaming and dumbasses. Come and join the fun! atau gua pukul</p>
-            <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0" data-aos="zoom-in"
-                data-aos-duration="2000" data-aos-once="true">
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="mobile-menu fixed top-0 left-0 w-full h-full bg-blue-900/95 flex flex-col justify-center items-center z-[100]">
+                <button id="mobile-menu-close" class="absolute top-8 right-8 text-white p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </button>
+                <a href="#" class="nav-link text-white font-medium text-xl my-4">HOME</a>
+                <a href="/about/" class="nav-link text-white font-medium text-xl my-4">ABOUT</a>
+                <a href="/tournaments/" class="nav-link text-white font-medium text-xl my-4">TOURNAMENTS</a>
+                <a href="/khodam/" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
+            </div>
+
+            <div class="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-gray-900 to-blue-900 mb-8">
+                <div class="w-full h-64 md:h-96 lg:h-[40rem] overflow-hidden">
+                    <img src="../dist/img/bg-masthead.webp" alt="Guramee" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <!-- Discord Button -->
+            <div class="flex justify-center mb-16 md:mb-28">
                 <a href="/discord/"
-                    class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-[#61719f] rounded-lg bg-gulanova hover:bg-gulanovaDark hover:text-white transition duration-300">
-                    Discord
+                    class="z-0 relative flex h-[50px] w-40 items-center rounded-lg justify-center overflow-hidden bg-gradient-to-r from-[#729dd8] to-[#3166a7] text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#9BC4FF] before:duration-500 before:ease-out hover:shadow-[#9BC4FF] hover:before:h-56 hover:before:w-56">
+                    <span class="relative">DISCORD</span>
                 </a>
             </div>
-        </div>
-    </section>
-    <!-- Jumbotron-END -->
 
-
-    <!-- Footer -->
-    <footer class="bg-black m-4">
-        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
-            <div class="social flex items-center justify-center">
-                <a class="mx-2 hover:scale-125 hover:text-gulanova transition duration-300" href="/twitch"
-                    aria-label="Twitch"><i class="bi bi-twitch"></i></a>
-                <a class="mx-2 hover:scale-125 hover:text-gulanova transition duration-300" href="/youtube"
-                    aria-label="Youtube"><i class="bi bi-youtube"></i></a>
-                <a class="mx-2 hover:scale-125 hover:text-gulanova transition duration-300" href="/instagram"
-                    aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <!-- Brand Name -->
+            <div class="text-center mb-8">
+                <h2 class="text-white text-3xl md:text-4xl font-bold">GULANOVA</h2>
             </div>
-            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-            <span class="block text-sm sm:text-center text-gray-200">© Gulanova 2024, developed by <a
-                    class="text-gulanova" href="http://github.com/ant1po1e" target="_blank"
-                    rel="noopener noreferrer">Antipole</a> and <a class="text-gulanova" href="https://github.com/ZuTuu"
-                    target="_blank" rel="noopener noreferrer">danar</a>.</span>
+
+            <!-- Social Media Icons -->
+            <div class="flex justify-center items-center mb-8">
+                <div
+                    class="bg-black bg-opacity-50 text-white font-bold py-4 md:py-8 px-4 md:px-12 lg:px-20 rounded-md text-lg md:text-xl">
+                    <div class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-8">
+                        <a href="/twitch/"
+                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            <i class="bi bi-twitch text-2xl"></i>
+                            <span class="ml-2 hidden md:block">TWITCH</span>
+                        </a>
+                        <a href="/youtube/"
+                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            <i class="bi bi-youtube text-2xl"></i>
+                            <span class="ml-2 hidden md:block">YOUTUBE</span>
+                        </a>
+                        <a href="/instagram/"
+                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            <i class="bi bi-instagram text-2xl"></i>
+                            <span class="ml-2 hidden md:block">INSTAGRAM</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            <i class="bi bi-diagram-3 text-2xl"></i>
+                            <span class="ml-2 hidden md:block">OSU! TEAM</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="text-white text-base md:text-lg text-center">
+                <p>© Gulanova 2024, developed by <a href="https://github.com/ant1po1e" class="underline">Antipole</a>
+                    and <a href="https://github.com/ZuTuu" class="underline">danar</a>.</p>
+            </footer>
         </div>
-    </footer>
-    <!-- Footer-END -->
+    </div>
 
     <!-- Back-to-Top -->
     <div class="fixed z-30 bottom-0 right-0 mr-10 mb-10">
-        <a href="#home" id="backToTop"
-            class="justify-center items-center opacity-0 text-white font-bold text-4xl block bg-gulanova rounded-full bg-opacity-50 lg:text-5xl md:text-6xl ease-in animate-bounce transition-opacity duration-300" aria-label="Back to Top>
+        <a href="#" id="backToTop"
+            class="justify-center items-center opacity-0 text-white font-bold text-4xl block bg-gulanova rounded-full bg-opacity-50 lg:text-5xl md:text-6xl ease-in animate-bounce transition-opacity duration-300"
+            aria-label="Back to Top">
             <span><i class="bi bi-arrow-up-circle"></i></span>
         </a>
     </div>
     <!-- Back-to-Top-END -->
 
     <script src="/dist/js/script.js"></script>
+    <script src="/dist/js/particles.js"></script>
+    <script src="/dist/js/particle-config.js"></script>
     <script src="/dist/js/gulanovaApi.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
