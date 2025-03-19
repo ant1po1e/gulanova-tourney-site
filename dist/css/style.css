@@ -1,94 +1,3 @@
-.social a {
-   text-align: center;
-   height: 3rem;
-   width: 3rem;
-   line-height: 3rem;
-   color: rgba(255, 255, 255, 0.3);
-   background: rgba(255, 255, 255, 0.1);
-   border-radius: 100%;
-}
-
-.masthead {
-   position: relative;
-   width: 100%;
-   height: auto;
-   min-height: 35rem;
-   padding: 15rem 0;
-   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../img/bg-masthead.webp");
-   background-position: center;
-   background-repeat: no-repeat;
-   background-attachment: scroll;
-   background-size: cover;
-}
-
-.masthead h1,
-.masthead .h1 {
-   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-   font-size: 2.5rem;
-   line-height: 2.5rem;
-   letter-spacing: 0.8rem;
-   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
-   -webkit-text-fill-color: transparent;
-   -webkit-background-clip: text;
-   background-clip: text;
-}
-
-.masthead h2,
-.masthead .h2 {
-   max-width: 20rem;
-   font-size: 1rem;
-}
-
-@media (min-width: 768px) {
-
-   .masthead h1,
-   .masthead .h1 {
-      font-size: 4rem;
-      line-height: 4rem;
-   }
-}
-
-@media (min-width: 992px) {
-   .masthead {
-      height: 100vh;
-      padding: 0;
-   }
-
-   .masthead h1,
-   .masthead .h1 {
-      font-size: 6.5rem;
-      line-height: 6.5rem;
-      letter-spacing: 0.8rem;
-   }
-
-   .masthead h2,
-   .masthead .h2 {
-      max-width: 30rem;
-      font-size: 1.25rem;
-   }
-}
-
-#particles-js {
-   position: absolute;
-   width: 100%;
-   height: 1200px;
-   background-color: transparent;
-   z-index: -1;
-}
-
-ol::before {
-   content: "";
-   background-color: #fff;
-}
-
-.navbar-scrolled.scrolled {
-   background-color: #313d60;
-   transition: all 0.3s ease-in-out;
-   border: 1px solid black;
-   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
-/*new */ 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 body {
@@ -163,4 +72,12 @@ body {
 
 .fade-out-bg {
    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+#particles-js {
+   position: absolute;
+   width: 100%;
+   height: 1300px;
+   background-color: transparent;
+   z-index: -1;
 }
