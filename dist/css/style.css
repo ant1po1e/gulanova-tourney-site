@@ -22,6 +22,11 @@ body {
    transform: translateX(-50%);
 }
 
+.ol::before {
+   content: "";
+   background-color: #fff;
+}
+
 .nav-link:hover::after {
    width: 100%;
    left: 50%;

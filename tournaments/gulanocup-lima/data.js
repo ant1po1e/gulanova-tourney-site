@@ -1,10 +1,29 @@
 function createProfileCard(userId, displayName) {
     const isCurrentUser = displayName === localStorage.getItem("username");
     const profileCard = `
-        <a href="https://osu.ppy.sh/users/${userId}" class="text-white m-4 ${isCurrentUser ? 'ring-2 ring-gulanova ring-offset-2 ring-offset-gulanovaDark font-bold' : ''} bg-gulanova text-xs p-2 rounded-md hover:bg-gulanovaDark hover:scale-110 transition duration-300" target="_blank">
-            <img class="w-28 h-28 mb-2 rounded" src="https://a.ppy.sh/${userId}" alt="${displayName}">
-            <p class="truncate hover:overflow-visible hover:whitespace-normal bg-gulanovaDark rounded-lg px-2 py-1 font-normal text-xs max-w-[7rem]">${displayName}</p>
-        </a>
+            <a href="https://osu.ppy.sh/users/${userId}"
+                class="flex flex-col items-center bg-gradient-to-br from-[#4a76b8] to-[#2c4f8a] m-4 p-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border border-[#729dd8]/30 ${isCurrentUser ? 'ring-2 ring-gulanova ring-offset-2 ring-offset-gulanovaDark' : ''}"
+                target="_blank">
+
+                <!-- User Avatar with Decorative Border -->
+                <div class="relative mb-3">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-[#9BC4FF] to-[#517fc1] rounded-full blur-sm -z-10">
+                    </div>
+                    <img class="w-28 h-28 rounded-full object-cover border-2 border-[#9BC4FF]"
+                        src="https://a.ppy.sh/${userId}" alt="${displayName}">
+                </div>
+
+                <!-- Username Display -->
+                <div class="bg-[#153561] backdrop-blur-sm rounded-lg px-3 py-2 w-full text-center">
+                    <p class="text-white font-medium text-sm truncate hover:overflow-visible hover:whitespace-normal">
+                        ${displayName}
+                    </p>
+                </div>
+
+                <!-- Subtle Indicator for Current User -->
+                ${isCurrentUser ? '<div class="mt-2 text-xs text-[#9BC4FF] font-bold">• YOU •</div>' : ''}
+            </a>
     `;
     return profileCard;
 }
@@ -84,20 +103,36 @@ $(document).ready(function () {
                         const customMap = mappoolEntry.custom === "TRUE" ? '' : 'hidden';
 
                         const card = `
-                            <a href="${mappoolEntry.link}" class="w-full p-2 group hover:scale-105 transition duration-300" target="_blank">
-                                <div class="rounded-lg shadow border-2 bg-gulanova border-gulanova group-hover:bg-gulanovaDark group-hover:border-white transition duration-300">
-                                    <div class="relative overflow-hidden rounded-lg bg-gulanovaDark shadow-lg">
-                                        <img class="h-32 w-full object-cover" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
-                                        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center gap-4 px-4 group-hover:bg-opacity-35 transition duration-300">
-                                            <span class="flex-shrink-0 px-3 py-1 text-sm font-bold ${modColorClass} rounded-lg">
-                                                ${mappoolEntry.mod}
-                                            </span>
-                                            <div class="text-white text-start">
-                                                <p class="text-base md:text-lg my-1 font-bold line-clamp-1">${mappoolEntry.map} <span class="inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 ml-2 text-xs font-medium text-yellow-800 ${customMap}">Custom</span></p>
-                                                <p class="text-xs md:text-sm my-1 line-clamp-1">${mappoolEntry.artist}</p>
-                                                <p class="text-xs md:text-sm my-1 line-clamp-1">Mapped by ${mappoolEntry.mapper}</p>
+                            <a href="${mappoolEntry.link}" class="w-full p-2 group hover:scale-105 transition-all duration-300 ease-out" target="_blank">
+                                <div class="rounded-xl overflow-hidden backdrop-blur-md border border-white/20 shadow-lg hover:shadow-xl">
+                                    <!-- Image Container -->
+                                    <div class="relative h-40 w-full">
+                                        <!-- Background Image -->
+                                        <img class="h-full w-full object-cover" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
+                                        
+                                        <!-- Glass Effect Overlay -->
+                                        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#3166a7]/80 backdrop-blur-sm transition-all duration-300 group-hover:backdrop-blur-none">
+                                            <!-- Content Container -->
+                                            <div class="flex items-center h-full p-4 gap-3">
+                                                <!-- Mod Badge -->
+                                                <span class="flex-shrink-0 px-3 py-2 text-sm font-bold ${modColorClass} rounded-lg shadow-md">
+                                                    ${mappoolEntry.mod}
+                                                </span>
+                                                
+                                                <!-- Map Details -->
+                                                <div class="text-white text-start">
+                                                    <div class="flex items-center">
+                                                        <p class="text-base md:text-lg font-bold line-clamp-1">${mappoolEntry.map}</p>
+                                                        <span class="inline-flex items-center rounded-md bg-yellow-200 px-2 py-1 ml-2 text-xs font-medium text-yellow-800 ${customMap}">Custom</span>
+                                                    </div>
+                                                    <p class="text-xs md:text-sm my-1 opacity-90 line-clamp-1">${mappoolEntry.artist}</p>
+                                                    <p class="text-xs md:text-sm text-[#9BC4FF] line-clamp-1">Mapped by ${mappoolEntry.mapper}</p>
+                                                </div>
                                             </div>
                                         </div>
+                                        
+                                        <!-- Subtle Border Gradient -->
+                                        <div class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-[#517fc1] via-[#9BC4FF] to-[#517fc1] group-hover:opacity-100 opacity-70 transition-opacity duration-300"></div>
                                     </div>
                                 </div>
                             </a>
@@ -117,12 +152,14 @@ $(document).ready(function () {
                 if (schedule[stageId]) {
                     schedule[stageId].forEach(scheduleEntry => {
                         const row = `
-                            <tr class="border-b bg-gray-800 border-gray-700">
-                                <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.date}</td>
-                                <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.time}</td>
-                                <td class="px-1.5 py-2 md:px-6 md:py-4">${scheduleEntry.referee}</td>
-                                <td class="px-1.5 py-2 md:px-6 md:py-4"><span class="text-white font-semibold">${scheduleEntry.player_one}</span> vs <span class="text-white font-semibold">${scheduleEntry.player_two}</span></td>
-                                <td class="px-1.5 py-2 md:px-6 md:py-4">
+                            <tr class="border-b border-white/20 hover:bg-white/20 transition duration-300">
+                                <td class="px-4 py-3">${scheduleEntry.date}</td>
+                                <td class="px-4 py-3">${scheduleEntry.time}</td>
+                                <td class="px-4 py-3">${scheduleEntry.referee}</td>
+                                <td class="px-4 py-3">
+                                    <span class="text-white font-semibold">${scheduleEntry.player_one}</span> vs <span class="text-white font-semibold">${scheduleEntry.player_two}</span>
+                                </td>
+                                <td class="px-4 py-3">
                                     <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300" href="${scheduleEntry.link}" target="_blank">Link</a>
                                 </td>
                             </tr>
@@ -145,7 +182,7 @@ $(document).ready(function () {
                     const alignmentClass = isLeftAligned ? "md:items-end md:text-left md:pl-24" : "md:items-start md:text-right md:pr-24";
                     const timelineItem = `
                         <li class="mb-14 flex flex-col ${alignmentClass} relative md:mb-20">
-                            <div class="absolute w-10 h-10 bg-white border-[10px] border-black rounded-full md:start-1/2 transform -translate-x-1/2 md:w-16 md:h-16 md:border-[20px]"></div>
+                            <div class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2"></div>
                             <div class="ml-10 md:ml-0 md:w-1/2">
                                 <h3 class="text-lg font-semibold text-white md:text-3xl">${entry.stage}</h3>
                                 <time class="mb-1 text-sm font-normal leading-none text-gulanova md:text-lg">${entry.date}</time>
