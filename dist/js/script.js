@@ -1,7 +1,35 @@
 $(function () {
     $(document).scroll(function () {
         var $nav = $(".navbar-scrolled");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $(".header-logo").offset().top);
+    });
+});
+
+document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.add('active');
+});
+
+document.getElementById('mobile-menu-close').addEventListener('click', function () {
+    document.getElementById('mobile-menu').classList.remove('active');
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const openModal = document.getElementById("open-modal");
+    const closeModal = document.getElementById("close-modal");
+    const userModal = document.getElementById("user-modal");
+
+    openModal.addEventListener("click", function () {
+        userModal.classList.remove("hidden");
+    });
+
+    closeModal.addEventListener("click", function () {
+        userModal.classList.add("hidden");
+    });
+
+    userModal.addEventListener("click", function (event) {
+        if (event.target === userModal) {
+            userModal.classList.add("hidden");
+        }
     });
 });
 
