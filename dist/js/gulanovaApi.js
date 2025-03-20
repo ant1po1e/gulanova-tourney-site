@@ -111,48 +111,30 @@ window.onload = async function () {
         }
     } else if (accessToken) {
         try {
-            const avatar = document.getElementById('avatar_mobile');
-            const cachedAvatarUrl = localStorage.getItem('avatar_url');
-            if (cachedAvatarUrl) {
-                avatar.src = cachedAvatarUrl;
-            } else {
-                const userData = await callOsuApi('/me/osu');
-                avatar.src = userData.avatar_url;
-                localStorage.setItem('avatar_url', userData.avatar_url);
-                localStorage.setItem("username", userData.username);
-            }
-        } catch (err) {
-            console.error('Error fetching user data:', err);
-        } finally
-        {
-            document.getElementById('login-desktop').classList.add("hidden");
-            document.getElementById('logout-desktop').classList.remove("hidden");
-            document.getElementById('username-desktop').innerHTML = localStorage.getItem("username");
-        }
+            const userData = await callOsuApi('/me/osu');
+            localStorage.setItem("username", userData.username);
+            localStorage.setItem("avatar_url", userData.avatar_url);
 
-        try {
-            const avatar = document.getElementById('avatar_desktop');
-            const cachedAvatarUrl = localStorage.getItem('avatar_url');
-            if (cachedAvatarUrl) {
-                avatar.src = cachedAvatarUrl;
-            } else {
-                const userData = await callOsuApi('/me/osu');
-                avatar.src = userData.avatar_url;
-                localStorage.setItem('avatar_url', userData.avatar_url);
-                localStorage.setItem("username", userData.username);
-            }
-        } catch (err) {
-            console.error('Error fetching user data:', err);
-        } finally 
-        {
+            document.getElementById('avatar_mobile').src = userData.avatar_url;
+            document.getElementById('username-mobile').innerText = userData.username;
             document.getElementById('login-mobile').classList.add("hidden");
             document.getElementById('logout-mobile').classList.remove("hidden");
-            document.getElementById('username-mobile').innerHTML = localStorage.getItem("username");
+
+            document.getElementById('avatar_desktop').src = userData.avatar_url;
+            document.getElementById('username-desktop').innerText = userData.username;
+            document.getElementById('login-desktop').classList.add("hidden");
+            document.getElementById('logout-desktop').classList.remove("hidden");
+
+            localStorage.setItem("username_desktop", userData.username);
+            localStorage.setItem("username_mobile", userData.username);
+        } catch (err) {
+            console.error('Error fetching user data:', err);
         }
     } else {
         console.error('No access token or OAuth code found');
     }
 };
+
 
 function testistwo() {
     console.log(callOsuApi('/me/osu'));
