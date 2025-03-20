@@ -17,7 +17,7 @@ async function callOsuApi(endpoint) {
 
 async function fetchUserRole() {
     try {
-        const loggedInUsername = localStorage.getItem("username");
+        const loggedInUsername = localStorage.getItem("username_desktop");
         if (!loggedInUsername) {
             console.error("No logged-in username found.");
             return;
@@ -40,7 +40,44 @@ async function fetchUserRole() {
         }
 
         const userRole = user.role;
-        const userRoleElement = document.getElementById("user-role");
+        const userRoleElement = document.getElementById("user-role-desktop");
+
+        if (userRole === "player") {
+            userRoleElement.textContent = "You are: PLAYER";
+        } else if (userRole) {
+            userRoleElement.textContent = "You are: STAFF";
+        } else {
+            userRoleElement.textContent = "You are: VISITOR";
+        }
+    } catch (error) {
+        console.error("Error processing user role:", error);
+    }
+
+    try {
+        const loggedInUsername = localStorage.getItem("username_mobile");
+        if (!loggedInUsername) {
+            console.error("No logged-in username found.");
+            return;
+        }
+
+        const pagePath = window.location.pathname;
+        const jsonUrl = `${pagePath}/json/users-data.json`;
+
+        const response = await fetch(jsonUrl);
+        if (!response.ok) {
+            throw new Error(`Error fetching JSON file: ${response.status}`);
+        }
+
+        const usersData = await response.json();
+        const user = usersData.find(user => user.username === loggedInUsername);
+
+        if (!user) {
+            console.error("User not found in JSON.");
+            return;
+        }
+
+        const userRole = user.role;
+        const userRoleElement = document.getElementById("user-role-mobile");
 
         if (userRole === "player") {
             userRoleElement.textContent = "You are: PLAYER";
@@ -86,6 +123,11 @@ window.onload = async function () {
             }
         } catch (err) {
             console.error('Error fetching user data:', err);
+        } finally
+        {
+            document.getElementById('login-desktop').classList.add("hidden");
+            document.getElementById('logout-desktop').classList.remove("hidden");
+            document.getElementById('username-desktop').innerHTML = localStorage.getItem("username");
         }
 
         try {
@@ -101,11 +143,12 @@ window.onload = async function () {
             }
         } catch (err) {
             console.error('Error fetching user data:', err);
+        } finally 
+        {
+            document.getElementById('login-mobile').classList.add("hidden");
+            document.getElementById('logout-mobile').classList.remove("hidden");
+            document.getElementById('username-mobile').innerHTML = localStorage.getItem("username");
         }
-
-        document.getElementById('login').classList.add("hidden");
-        document.getElementById('logout').classList.remove("hidden");
-        document.getElementById('username').innerHTML = localStorage.getItem("username");
     } else {
         console.error('No access token or OAuth code found');
     }
