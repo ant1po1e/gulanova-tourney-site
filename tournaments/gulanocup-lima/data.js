@@ -11,7 +11,7 @@ function createProfileCard(userId, displayName) {
                         class="absolute inset-0 bg-gradient-to-tr from-[#9BC4FF] to-[#517fc1] rounded-full blur-sm -z-10">
                     </div>
                     <img class="w-28 h-28 rounded-full object-cover border-2 border-[#9BC4FF]"
-                        src="https://a.ppy.sh/${userId}" alt="${displayName}">
+                        src="https://a.ppy.sh/${userId}" alt="${displayName} loading="lazy"">
                 </div>
 
                 <!-- Username Display -->
@@ -108,7 +108,7 @@ $(document).ready(function () {
                                     <!-- Image Container -->
                                     <div class="relative h-40 w-full">
                                         <!-- Background Image -->
-                                        <img class="h-full w-full object-cover" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" />
+                                        <img class="h-full w-full object-cover" src="${mappoolEntry.cover}" alt="${mappoolEntry.map}" loading="lazy" />
                                         
                                         <!-- Glass Effect Overlay -->
                                         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#3166a7]/80 backdrop-blur-sm transition-all duration-300 group-hover:backdrop-blur-none">

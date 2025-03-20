@@ -59,18 +59,18 @@
                         <div
                             class="relative my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova w-72">
                             <div class="px-4 py-3">
-                                <span class="block text-sm text-white font-bold" id="username">Guest</span>
+                                <span class="block text-sm text-white font-bold text-center" id="username-mobile">Guest</span>
                             </div>
                             <li>
-                                <div class="block px-4 py-2 text-sm text-gray-200">You are: VISITOR</div>
+                                <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-mobile">You are: VISITOR</div>
                             </li>
                             <ul class="py-2">
                                 <li>
-                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout-mobile"
                                         class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
                                         Log out
                                     </button>
-                                    <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                                    <button type="button" onclick="window.location.href='/auth/login'" id="login-mobile"
                                         class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300">
                                         Log in
                                     </button>
@@ -104,18 +104,18 @@
                         <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
                             id="user-dropdown">
                             <div class="px-4 py-3">
-                                <span class="block text-sm text-white" id="username">Guest</span>
+                                <span class="block text-sm text-white text-center" id="username-desktop">Guest</span>
                             </div>
                             <li>
-                                <div class="block px-4 py-2 text-sm text-gray-200">You are:
+                                <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-desktop">You are:
                                     VISITOR</div>
                             </li>
                             <ul class="py-2" aria-labelledby="user-menu-button">
                                 <li>
-                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout"
+                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout-desktop"
                                         class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
                                         out</button>
-                                    <button type="button" onclick="window.location.href='/auth/login'" id="login"
+                                    <button type="button" onclick="window.location.href='/auth/login'" id="login-desktop"
                                         class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
                                         in</button>
                                 </li>
@@ -143,7 +143,7 @@
                     <span class="text-white mx-1">•</span>
                     <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
                     <span class="text-white mx-1">•</span>
-                    <a href="#" class="nav-link text-white font-medium mx-4 glow-text">TOURNAMENTS</a>
+                    <a href="#" class="text-white font-medium mx-4 glow-text">TOURNAMENTS</a>
                     <span class="text-white mx-1">•</span>
                     <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
                 </div>
@@ -159,9 +159,9 @@
                         </path>
                     </svg>
                 </button>
-                <a href="/" class="nav-link text-white font-medium text-xl my-4">HOME</a>
+                <a href="#" class="nav-link text-white font-medium text-xl my-4">HOME</a>
                 <a href="/about/" class="nav-link text-white font-medium text-xl my-4">ABOUT</a>
-                <a href="#" class="nav-link text-white font-medium text-xl my-4">TOURNAMENTS</a>
+                <a href="/tournaments/" class="nav-link text-white font-medium text-xl my-4">TOURNAMENTS</a>
                 <a href="/khodam/" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
             </div>
 
