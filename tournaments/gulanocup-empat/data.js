@@ -11,7 +11,7 @@ function createProfileCard(userId, displayName) {
                         class="absolute inset-0 bg-gradient-to-tr from-[#9BC4FF] to-[#517fc1] rounded-full blur-sm -z-10">
                     </div>
                     <img class="w-28 h-28 rounded-full object-cover border-2 border-[#9BC4FF]"
-                        src="https://a.ppy.sh/${userId}" alt="${displayName} loading="lazy"">
+                        src="https://a.ppy.sh/${userId}" alt="${displayName}" loading="lazy">
                 </div>
 
                 <!-- Username Display -->
