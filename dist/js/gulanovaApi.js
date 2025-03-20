@@ -74,7 +74,22 @@ window.onload = async function () {
         }
     } else if (accessToken) {
         try {
-            const avatar = document.getElementById('avatar');
+            const avatar = document.getElementById('avatar_mobile');
+            const cachedAvatarUrl = localStorage.getItem('avatar_url');
+            if (cachedAvatarUrl) {
+                avatar.src = cachedAvatarUrl;
+            } else {
+                const userData = await callOsuApi('/me/osu');
+                avatar.src = userData.avatar_url;
+                localStorage.setItem('avatar_url', userData.avatar_url);
+                localStorage.setItem("username", userData.username);
+            }
+        } catch (err) {
+            console.error('Error fetching user data:', err);
+        }
+
+        try {
+            const avatar = document.getElementById('avatar_desktop');
             const cachedAvatarUrl = localStorage.getItem('avatar_url');
             if (cachedAvatarUrl) {
                 avatar.src = cachedAvatarUrl;
