@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gulano Cup</title>
+</head>
+
+<body style="background-color: #313338; align-items: center;">
+    <video width="640" height="640" autoplay id="myvid" muted
+        style="left: 50%; position: absolute; top: 50%; transform: translate(-50%, -50%);">
+        <source src="../../../dist/vid/gulanovamenyapa.mp4" type="video/mp4" />
+    </video>
+</body>
+<script>
+    let link = 'https://osu.ppy.sh/wiki/en/Tournaments/GNV/5'
+    video = document.getElementById('myvid');
+    video.onended = function (e) {
+        window.location.replace(link);
+    }   
+</script>
+
+</html>
