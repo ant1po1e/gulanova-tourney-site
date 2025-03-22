@@ -1,7 +1,38 @@
-$(function () {
-    $(document).scroll(function () {
-        var $nav = $(".navbar-scrolled");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $(".header-logo").offset().top);
+// Check Screen Size
+function checkScreenSize() {
+    return window.innerWidth >= 768;
+}
+
+// Smoother Header Navigation
+document.addEventListener("DOMContentLoaded", function () {
+    if (!checkScreenSize()) return;
+
+    const header = document.querySelector("header");
+    const nav = document.querySelector("nav");
+    const content = document.getElementById("main-content");
+    const headerOffset = header.offsetTop + header.offsetHeight;
+
+    // Check If Scrolling Up or Down To Add Or Remove Class
+    function handleScroll() {
+        if (window.scrollY >= headerOffset) {
+            nav.classList.add("header-fixed");
+            content.classList.add("header-active");
+        } else {
+            nav.classList.remove("header-fixed");
+            content.classList.remove("header-active");
+        };
+    };
+
+    // Add Event Listener To Scroll Event To Check Header State
+    window.addEventListener("scroll", handleScroll);
+
+    // Handler If Screen Size Has Changed
+    window.addEventListener("resize", function () {
+        if (!checkScreenSize()) {
+            window.removeEventListener("scroll", handleScroll);
+        } else {
+            window.addEventListener("scroll", handleScroll);
+        }
     });
 });
 
