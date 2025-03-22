@@ -32,17 +32,22 @@ body {
    left: 50%;
 }
 
-.navbar-scrolled.scrolled {
+/* Header */
+.header-fixed {
    position: fixed;
    top: 0;
    left: 0;
    width: 100%;
-   background: rgba(0, 15, 36, 0.9);
-   backdrop-filter: blur(10px);
-   -webkit-backdrop-filter: blur(10px);
-   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-   z-index: 1000;
-   padding: 20px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   background: rgb(0, 0, 0, 50%);
+   --tw-backdrop-blur: blur(10px);
+   backdrop-filter: var(--tw-backdrop-blur);
+   transition: top 0.3s ease-in-out;
+}
+
+/* Image */
+.header-active {
+   margin-top: 4rem;
 }
 
 .mobile-menu {

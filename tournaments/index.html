@@ -39,7 +39,7 @@
         <div id="particles-js" class="absolute inset-0 pointer-events-none"></div>
         <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6">
             <!-- Header -->
-            <header class="flex flex-row justify-between items-center mb-8">
+            <header class="flex flex-row justify-between items-center">
                 <div class="flex-1">
                     <!-- Mobile login -->
                     <div class="block md:hidden">
@@ -54,7 +54,7 @@
 
                     <!-- Modal -->
                     <div id="user-modal"
-                        class="fixed inset-0 bg-black bg-opacity-75 hidden flex flex-col text-center items-center justify-center z-[1000]">
+                        class="fixed inset-0 bg-black bg-opacity-75 md:hidden flex flex-col text-center items-center justify-center z-[1000]">
                         <!-- Modal content -->
                         <div
                             class="relative my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova w-72">
@@ -82,6 +82,7 @@
                         </button>
                     </div>
                 </div>
+
                 <div class="flex-1 flex justify-center ">
                     <a href="/" class="header-logo flex items-center">
                         <img src="../dist/img/gulanova.webp" alt="Gulanova Logo"
@@ -89,6 +90,7 @@
                         <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
                     </a>
                 </div>
+
                 <div class="flex-1 flex justify-end mt-4 md:mt-0">
                     <!-- Profile button only visible on tablet and desktop -->
                     <div class="hidden md:flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
@@ -100,6 +102,7 @@
                             <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar_desktop"
                                 alt="user photo">
                         </button>
+
                         <!-- Dropdown menu -->
                         <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
                             id="user-dropdown">
@@ -123,6 +126,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <!-- Mobile hamburger menu - positioned to be in-between with logo -->
                 <button id="mobile-menu-toggle" type="button"
                     class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
@@ -138,12 +142,12 @@
 
             <!-- Navigation - Desktop -->
             <nav class="w-full z-50">
-                <div class="navbar-scrolled hidden md:flex justify-center mb-8 py-2">
-                    <a href="/" class="nav-link text-white font-medium mx-4">HOME</a>
+                <div class="hidden md:flex justify-center items-center p-5">
+                    <a href="/" class="text-white font-medium mx-4">HOME</a>
                     <span class="text-white mx-1">•</span>
                     <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
                     <span class="text-white mx-1">•</span>
-                    <a href="#" class="text-white font-medium mx-4 glow-text">TOURNAMENTS</a>
+                    <a href="#" class="nav-link text-white font-medium mx-4 glow-text">TOURNAMENTS</a>
                     <span class="text-white mx-1">•</span>
                     <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
                 </div>
@@ -165,7 +169,7 @@
                 <a href="/khodam/" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
             </div>
 
-            <div class="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] overflow-hidden fade-out-bg mb-28">
+            <div id="main-content" class="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] overflow-hidden fade-out-bg mb-28">
                 <div class="w-full h-[40rem]">
                     <div class="text-center text-white font-bold mt-20">
                         <h2 class="text-4xl">Tournaments</h2>
