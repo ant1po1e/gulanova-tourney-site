@@ -1438,6 +1438,11 @@ input:checked + .toggle-bg {
   height: auto;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .h-full {
   height: 100%;
 }
@@ -2148,10 +2153,6 @@ input:checked + .toggle-bg {
   padding: 0.25rem;
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-16 {
   padding: 4rem;
 }
@@ -2240,16 +2241,6 @@ input:checked + .toggle-bg {
   padding-bottom: 1.5rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .pl-2\.5 {
   padding-left: 0.625rem;
 }
@@ -2260,10 +2251,6 @@ input:checked + .toggle-bg {
 
 .pr-12 {
   padding-right: 3rem;
-}
-
-.pt-14 {
-  padding-top: 3.5rem;
 }
 
 .pt-2 {
@@ -3069,6 +3056,10 @@ input:checked + .toggle-bg {
     order: 2;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:mb-20 {
     margin-bottom: 5rem;
   }
@@ -3099,10 +3090,6 @@ input:checked + .toggle-bg {
 
   .md\:mt-16 {
     margin-top: 4rem;
-  }
-
-  .md\:mb-0 {
-    margin-bottom: 0px;
   }
 
   .md\:block {

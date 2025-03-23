@@ -1,39 +1,44 @@
-// Check Screen Size
-function checkScreenSize() {
-    return window.innerWidth >= 768;
-}
+// GSAP Configuration
+gsap.registerPlugin(ScrollTrigger);
 
-// Smoother Header Navigation
-document.addEventListener("DOMContentLoaded", function () {
-    if (!checkScreenSize()) return;
+// Desktop Navigation Function
+const navigation = document.getElementById("desktop-nav");
+const user = document.getElementById("desktop-user");
 
-    const header = document.querySelector("header");
-    const nav = document.querySelector("nav");
-    const content = document.getElementById("main-content");
-    const headerOffset = header.offsetTop + header.offsetHeight;
+// Header Function
+gsap.to(navigation, {
+    scrollTrigger: {
+        trigger: navigation,
+        start: "active-nav",
+        endTrigger: ".footer",
+        pin: true,
+        pinSpacing: false,
+        onEnter: () => {
+            gsap.to('.active-nav', {
+                backdropFilter: "blur(10px)",
+                duration: 0.5,
+                ease: "power1.inOut",
+            });
+        },
+        onLeaveBack: () => {
+            gsap.to('.active-nav', {
+                duration: 0.5,
+                clearProps: "all",
+                ease: "power1.inOut",
+            });
+        },
+    },
+});
 
-    // Check If Scrolling Up or Down To Add Or Remove Class
-    function handleScroll() {
-        if (window.scrollY >= headerOffset) {
-            nav.classList.add("header-fixed");
-            content.classList.add("header-active");
-        } else {
-            nav.classList.remove("header-fixed");
-            content.classList.remove("header-active");
-        };
-    };
-
-    // Add Event Listener To Scroll Event To Check Header State
-    window.addEventListener("scroll", handleScroll);
-
-    // Handler If Screen Size Has Changed
-    window.addEventListener("resize", function () {
-        if (!checkScreenSize()) {
-            window.removeEventListener("scroll", handleScroll);
-        } else {
-            window.addEventListener("scroll", handleScroll);
-        }
-    });
+// User Profile Function
+gsap.to(user, {
+    scrollTrigger: {
+        trigger: user,
+        start: "active-user",
+        endTrigger: ".footer",
+        pin: true,
+        pinSpacing: false,
+    },
 });
 
 document.getElementById('mobile-menu-toggle').addEventListener('click', function () {

@@ -32,22 +32,24 @@ body {
    left: 50%;
 }
 
-/* Header */
-.header-fixed {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-   background: rgb(0, 0, 0, 50%);
-   --tw-backdrop-blur: blur(10px);
-   backdrop-filter: var(--tw-backdrop-blur);
-   transition: top 0.3s ease-in-out;
+.user-container .pin-spacer,
+.desktop-active {
+   order: 2 !important;
+   margin-top: 2px !important;
 }
 
-/* Image */
-.header-active {
-   margin-top: 4rem;
+.desktop-menu .pin-spacer,
+.active-nav {
+   top: 0 !important;
+   left: 0 !important;
+   width: 100% !important;
+   max-width: none !important;
+   z-index: 50 !important;
+   display: flex !important;
+   justify-content: center !important;
+   align-items: center !important;
+   margin-left: auto !important;
+   margin-right: auto !important;
 }
 
 .mobile-menu {

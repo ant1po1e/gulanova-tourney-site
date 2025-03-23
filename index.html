@@ -94,15 +94,15 @@
                     </a>
                 </div>
 
-                <div class="flex-1 flex justify-end mt-4 md:mt-0">
+                <div class="user-container flex-1 flex justify-end mt-4 md:mt-0 z-[100]">
                     <!-- Profile button only visible on tablet and desktop -->
-                    <div class="hidden md:flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <div id="desktop-user" class="desktop-active hidden md:flex">
                         <button type="button"
                             class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                             data-dropdown-placement="bottom">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
+                            <img class="w-8 h-8 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
                                 id="avatar_desktop" alt="user photo">
                         </button>
 
@@ -146,15 +146,17 @@
             </header>
 
             <!-- Navigation - Desktop -->
-            <nav class="w-full z-50">
-                <div class="hidden md:flex justify-center items-center p-5">
-                    <a href="#" class="text-white font-medium mx-4 glow-text">HOME</a>
-                    <span class="text-white mx-1">•</span>
-                    <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
-                    <span class="text-white mx-1">•</span>
-                    <a href="/tournaments/" class="nav-link text-white font-medium mx-4">TOURNAMENTS</a>
-                    <span class="text-white mx-1">•</span>
-                    <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
+            <nav class="dekstop-menu flex w-full justify-center items-center top-0 left-0 h-fit">
+                <div id="desktop-nav" class="active-nav">
+                    <div class="hidden md:flex justify-center items-center p-5">
+                        <a href="/" class="nav-link text-white font-medium mx-4 glow-text">HOME</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/tournaments/" class="nav-link text-white font-medium mx-4">TOURNAMENTS</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
+                    </div>
                 </div>
             </nav>
 
@@ -174,7 +176,8 @@
                 <a href="/khodam/" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
             </div>
 
-            <div id="main-content" class="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-gray-900 to-blue-900 mb-8">
+            <div id="main-content"
+                class="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-gray-900 to-blue-900 mb-8">
                 <div class="w-full h-64 md:h-96 lg:h-[40rem] overflow-hidden">
                     <img src="../dist/img/bg-masthead.webp" alt="Guramee" class="w-full h-full object-cover">
                 </div>
@@ -238,8 +241,13 @@
             <span><i class="bi bi-arrow-up-circle"></i></span>
         </a>
     </div>
-
     <!-- Back-to-Top-END -->
+
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Script -->
     <script src="/dist/js/script.js"></script>
     <script src="/dist/js/particles.js" defer></script>
     <script src="/dist/js/particle-config.js" defer></script>
