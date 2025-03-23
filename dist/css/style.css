@@ -32,17 +32,24 @@ body {
    left: 50%;
 }
 
-.navbar-scrolled.scrolled {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   background: rgba(0, 15, 36, 0.9);
-   backdrop-filter: blur(10px);
-   -webkit-backdrop-filter: blur(10px);
-   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-   z-index: 1000;
-   padding: 20px;
+.user-container .pin-spacer,
+.desktop-active {
+   order: 2 !important;
+   margin-top: 2px !important;
+}
+
+.desktop-menu .pin-spacer,
+.active-nav {
+   top: 0 !important;
+   left: 0 !important;
+   width: 100% !important;
+   max-width: none !important;
+   z-index: 50 !important;
+   display: flex !important;
+   justify-content: center !important;
+   align-items: center !important;
+   margin-left: auto !important;
+   margin-right: auto !important;
 }
 
 .mobile-menu {
