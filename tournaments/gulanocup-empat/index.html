@@ -39,724 +39,717 @@
         <div id="particles-js" class="absolute inset-0 pointer-events-none"></div>
         <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6">
             <!-- Header -->
-            <header class="flex flex-row justify-between items-center mb-8">
-                <div class="flex-1">
-                    <!-- Mobile login -->
-                    <div class="block md:hidden">
-                        <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
-                            id="open-modal">
-                            <span class="sr-only">Open user menu</span>
-                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar_mobile"
-                                alt="user photo">
-                        </button>
-                    </div>
+            <header class="flex flex-row justify-between items-center mb-5 md:mb-0"">
+                <div class=" flex-1">
+                <!-- Mobile login -->
+                <div class="block md:hidden">
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                        id="open-modal">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
+                            id="avatar_mobile" alt="user photo">
+                    </button>
+                </div>
 
-                    <!-- Modal -->
-                    <div id="user-modal"
-                        class="fixed inset-0 bg-black bg-opacity-75 hidden flex flex-col text-center items-center justify-center z-[1000]">
-                        <!-- Modal content -->
-                        <div
-                            class="relative my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova w-72">
-                            <div class="px-4 py-3">
-                                <span class="block text-sm text-white font-bold text-center" id="username-mobile">Guest</span>
-                            </div>
-                            <li>
-                                <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-mobile">You are: VISITOR</div>
-                            </li>
-                            <ul class="py-2">
-                                <li>
-                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout-mobile"
-                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
-                                        Log out
-                                    </button>
-                                    <button type="button" onclick="window.location.href='/auth/login'" id="login-mobile"
-                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300">
-                                        Log in
-                                    </button>
-                                </li>
-                            </ul>
+                <!-- Modal -->
+                <div id="user-modal"
+                    class="fixed inset-0 bg-black bg-opacity-75 hidden md:hidden flex-col text-center items-center justify-center z-[1000]">
+                    <!-- Modal content -->
+                    <div
+                        class="relative my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova w-72">
+                        <div class="px-4 py-3">
+                            <span class="block text-sm text-white font-bold text-center"
+                                id="username-mobile">Guest</span>
                         </div>
-                        <button id="close-modal" class="mt-2 p-2 rounded-full text-2xl text-white shadow-lg">
-                            <i class="bi bi-x-circle-fill"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="flex-1 flex justify-center ">
-                    <a href="/" class="header-logo flex items-center">
-                        <img src="../../dist/img/gulanova.webp" alt="Gulanova Logo"
-                            class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
-                        <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
-                    </a>
-                </div>
-                <div class="flex-1 flex justify-end mt-4 md:mt-0">
-                    <!-- Profile button only visible on tablet and desktop -->
-                    <div class="hidden md:flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                        <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
-                            id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
-                            data-dropdown-placement="bottom">
-                            <span class="sr-only">Open user menu</span>
-                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar_desktop"
-                                alt="user photo">
-                        </button>
-                        <!-- Dropdown menu -->
-                        <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
-                            id="user-dropdown">
-                            <div class="px-4 py-3">
-                                <span class="block text-sm text-white text-center" id="username-desktop">Guest</span>
-                            </div>
+                        <li>
+                            <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-mobile">You are:
+                                VISITOR</div>
+                        </li>
+                        <ul class="py-2">
                             <li>
-                                <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-desktop">You are:
-                                    VISITOR</div>
+                                <button type="button" onclick="window.location.href='/auth/logout'" id="logout-mobile"
+                                    class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
+                                    Log out
+                                </button>
+                                <button type="button" onclick="window.location.href='/auth/login'" id="login-mobile"
+                                    class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300">
+                                    Log in
+                                </button>
                             </li>
-                            <ul class="py-2" aria-labelledby="user-menu-button">
-                                <li>
-                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout-desktop"
-                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
-                                        out</button>
-                                    <button type="button" onclick="window.location.href='/auth/login'" id="login-desktop"
-                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
-                                        in</button>
-                                </li>
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
+                    <button id="close-modal" class="mt-2 p-2 rounded-full text-2xl text-white shadow-lg">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </button>
                 </div>
-                <!-- Mobile hamburger menu - positioned to be in-between with logo -->
-                <button id="mobile-menu-toggle" type="button"
-                    class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
-                    aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
+        </div>
+
+        <div class="flex-1 flex justify-center ">
+            <a href="/" class="header-logo flex items-center">
+                <img src="../../dist/img/gulanova.webp" alt="Gulanova Logo"
+                    class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
+                <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
+            </a>
+        </div>
+
+        <div class="user-container flex-1 flex justify-end mt-4 md:mt-0 z-[100]">
+            <!-- Profile button only visible on tablet and desktop -->
+            <div id="desktop-user" class="desktop-active hidden md:flex">
+                <button type="button"
+                    class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                    id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                    data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar_desktop"
+                        alt="user photo">
                 </button>
-            </header>
 
-            <!-- Navigation - Desktop -->
-            <nav class="w-full z-50">
-                <div class="navbar-scrolled hidden md:flex justify-center mb-8 py-2">
-                    <a href="/" class="nav-link text-white font-medium mx-4">HOME</a>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
+                    id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <span class="block text-sm text-white text-center" id="username-desktop">Guest</span>
+                    </div>
+                    <li>
+                        <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-desktop">You are:
+                            VISITOR</div>
+                    </li>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+                        <li>
+                            <button type="button" onclick="window.location.href='/auth/logout'" id="logout-desktop"
+                                class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
+                                out</button>
+                            <button type="button" onclick="window.location.href='/auth/login'" id="login-desktop"
+                                class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
+                                in</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile hamburger menu - positioned to be in-between with logo -->
+        <button id="mobile-menu-toggle" type="button"
+            class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
+            aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+        </button>
+        </header>
+
+        <!-- Navigation - Desktop -->
+        <nav class="dekstop-menu flex w-full justify-center items-center top-0 left-0 h-fit">
+            <div id="desktop-nav" class="active-nav">
+                <div class="hidden md:flex justify-center items-center p-5">
+                    <a href="/" class="text-white font-medium mx-4">HOME</a>
                     <span class="text-white mx-1">•</span>
                     <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
                     <span class="text-white mx-1">•</span>
-                    <a href="/tournaments/" class="nav-link text-white ml-4 font-medium">TOURNAMENTS</a>
+                    <a href="/tournaments/" class="nav-link text-white font-medium ml-4">TOURNAMENTS</a>
                     <p class="text-white font-medium mr-4 glow-text"><i class="bi bi-arrow-right"></i> Gulano Cup #4
                     </p>
                     <span class="text-white mx-1">•</span>
                     <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
                 </div>
-            </nav>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu"
-                class="mobile-menu fixed top-0 left-0 w-full h-full bg-blue-900/95 flex flex-col justify-center items-center z-[100]">
-                <button id="mobile-menu-close" class="absolute top-8 right-8 text-white p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </button>
-                <a href="/" class="nav-link text-white font-medium text-xl my-4">HOME</a>
-                <a href="#" class="nav-link text-white font-medium text-xl my-4">ABOUT</a>
-                <a href="/tournaments/" class="nav-link text-white font-medium text-xl my-4">TOURNAMENTS</a>
-                <a href="/khodam/" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
             </div>
+        </nav>
 
-            <div class="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] overflow-hidden fade-out-bg mb-28">
-                <div class="w-full h-auto">
-                    <div class="text-center text-white font-bold mt-20">
-                        <h2 class="text-4xl">GULANO CUP #4</h2>
-                        <div class="flex justify-center gap-8 mt-3">
-                            <div class="w-3 h-3 bg-white rounded-full"></div>
-                            <div class="w-3 h-3 bg-white rounded-full"></div>
-                            <div class="w-3 h-3 bg-white rounded-full"></div>
-                        </div>
-                    </div>
-
-                    <div class="p-24 text-white text-justify text-lg font-medium">
-                        Gulanocup (Gulanova Cup) adalah series turnamen yang diadakan oleh Gulanova, dan kali ini kita
-                        mengadakan turnamen ke-4 kami yaitu turnamen osu!mania khusus region Indonesia dengan batasan
-                        rank 3 Digit 4K Rank Indonesia (Kisaran #4500 - #26000 Global Rank). Turnamen ini bersistem 1v1
-                        Double Elimination dengan sedikit gimik yang membuat turnamennya tidak terlalu formal,
-                        penjelasan akan lebih lanjut pada saat Showcase Pertama via Presentasi.
-                    </div>
-
-                    <div class="inline-flex w-full flex-col rounded-md shadow-sm sm:flex-row sm:justify-center"
-                        role="group">
-                        <button type="button" id="staff-btn"
-                            class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-l-md shadow-2xl group">
-                            <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
-                            <!-- Top glass gradient -->
-                            <span
-                                class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-                            <!-- Bottom gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-                            <!-- Left gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-                            <!-- Right gradient -->
-                            <span
-                                class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-                            <span
-                                class="absolute inset-0 w-full h-full border border-white rounded-l-md opacity-10"></span>
-                            <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                            <span class="relative">STAFF</span>
-                        </button>
-                        <button type="button" id="player-btn"
-                            class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
-                            <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
-                            <!-- Top glass gradient -->
-                            <span
-                                class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-                            <!-- Bottom gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-                            <!-- Left gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-                            <!-- Right gradient -->
-                            <span
-                                class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-                            <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
-                            <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                            <span class="relative">PLAYER</span>
-                        </button>
-                        <button type="button" id="mappool-btn"
-                            class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
-                            <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
-                            <!-- Top glass gradient -->
-                            <span
-                                class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-                            <!-- Bottom gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-                            <!-- Left gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-                            <!-- Right gradient -->
-                            <span
-                                class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-                            <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
-                            <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                            <span class="relative">MAPPPOOL</span>
-                        </button>
-                        <button type="button" id="match-btn"
-                            class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
-                            <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
-                            <!-- Top glass gradient -->
-                            <span
-                                class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-                            <!-- Bottom gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-                            <!-- Left gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-                            <!-- Right gradient -->
-                            <span
-                                class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-                            <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
-                            <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                            <span class="relative">MATCH</span>
-                        </button>
-                        <button type="button" id="challonge-btn"
-                            class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
-                            <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
-                            <!-- Top glass gradient -->
-                            <span
-                                class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-                            <!-- Bottom gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-                            <!-- Left gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-                            <!-- Right gradient -->
-                            <span
-                                class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-                            <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
-                            <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                            <span class="relative">CHALLONGE</span>
-                        </button>
-
-                        <button type="button" id="procedure-btn"
-                            class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-r-md shadow-2xl group">
-                            <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
-                            <!-- Top glass gradient -->
-                            <span
-                                class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
-                            <!-- Bottom gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
-                            <!-- Left gradient -->
-                            <span
-                                class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
-                            <!-- Right gradient -->
-                            <span
-                                class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
-                            <span
-                                class="absolute inset-0 w-full h-full border border-white rounded-r-md opacity-10"></span>
-                            <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
-                            <span class="relative">PROCEDURE</span>
-                        </button>
-                    </div>
-
-                    <div class="mt-20">
-                        <!-- Staff Section -->
-                        <section id="staff" class="mx-auto text-center section">
-                            <h1 class="mb-5 text-2xl font-bold text-white">
-                                Staff
-                            </h1>
-                            <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    Host
-                                </h2>
-                                <div id="profile-host" class="flex flex-wrap justify-center">
-
-                                </div>
-
-                                <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    GFX
-                                </h2>
-                                <div id="profile-gfx" class="flex flex-wrap justify-center">
-
-                                </div>
-
-                                <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    Sheeter
-                                </h2>
-                                <div id="profile-sheeter" class="flex flex-wrap justify-center">
-
-                                </div>
-
-                                <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    Mappooler
-                                </h2>
-                                <div id="profile-mappooler" class="flex flex-wrap justify-center">
-
-                                </div>
-
-                                <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    Mapper
-                                </h2>
-                                <div id="profile-mapper" class="flex flex-wrap justify-center">
-
-                                </div>
-
-                                <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    Playtester
-                                </h2>
-                                <div id="profile-playtester" class="flex flex-wrap justify-center">
-
-                                </div>
-
-                                <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    Referee
-                                </h2>
-                                <div id="profile-referee" class="flex flex-wrap justify-center">
-
-                                </div>
-
-                                <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    Streamer
-                                </h2>
-                                <div id="profile-streamer" class="flex flex-wrap justify-center">
-
-                                </div>
-
-                                <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
-                                <h2 class="mb-5 text-xl font-mono text-white">
-                                    Commentator
-                                </h2>
-                                <div id="profile-commentator" class="flex flex-wrap justify-center">
-
-                                </div>
-                            </div>
-                        </section>
-                        <!-- Staff Section-END -->
-
-
-                        <!-- Player Section -->
-                        <section id="player" class="mx-auto text-center section hidden">
-                            <h1 class="mb-5 text-2xl font-bold text-white">
-                                Players
-                            </h1>
-                            <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
-                                <div id="profile-player" class="flex flex-wrap justify-center">
-
-                                </div>
-                            </div>
-                        </section>
-                        <!-- Player Section-END -->
-
-
-                        <!-- Mappool Section -->
-                        <section id="mappool" class="mx-auto text-center section hidden">
-                            <h1 class="mb-5 text-2xl font-bold text-white">
-                                Mappools
-                            </h1>
-                            <div class="px-4 mx-auto max-w-3xl text-balance py-6 mb-20 md:rounded-lg">
-                                <div class="flex flex-wrap justify-center">
-                                    <div class="mb-4">
-                                        <label for="stage-map-select" class="mb-4 text-white">Select Stage</label>
-                                        <select id="stage-map-select"
-                                            class="w-full bg-gulanova rounded-lg text-[#61719f] hover:bg-gulanovaDark transition duration-300 hover:text-white">
-                                            <!-- Stages will be dynamically added here -->
-                                        </select>
-                                    </div>
-
-
-                                    <div class="relative w-full">
-                                        <div id="mappool-body" class="flex flex-wrap justify-center">
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- Mappool Section-END -->
-
-
-                        <!-- Match Section -->
-                        <section id="match" class="mx-auto text-center section hidden">
-                            <h1 class="mb-5 text-2xl font-bold text-white">Matches</h1>
-                            <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
-                                <div class="flex flex-wrap justify-center">
-                                    <!-- Select Stage -->
-                                    <div class="mb-4">
-                                        <label for="stage-match-select" class="mb-4 text-white">Select Stage</label>
-                                        <select id="stage-match-select"
-                                            class="w-full bg-gulanova rounded-lg text-[#61719f] hover:bg-gulanovaDark transition duration-300 hover:text-white">
-                                        </select>
-                                    </div>
-
-                                    <!-- Glassmorphism Table -->
-                                    <div
-                                        class="relative w-full overflow-hidden rounded-lg shadow-lg backdrop-blur-lg bg-white/10 border border-white/20">
-                                        <table
-                                            class="w-full text-[10px] md:text-sm text-left rtl:text-right text-gray-300 border-separate border-spacing-0">
-                                            <thead class="text-xs uppercase bg-white/20 text-gray-100 backdrop-blur-lg">
-                                                <tr>
-                                                    <th scope="col" class="px-4 py-3">Date (WIB)</th>
-                                                    <th scope="col" class="px-4 py-3">Time (WIB)</th>
-                                                    <th scope="col" class="px-4 py-3">Referee</th>
-                                                    <th scope="col" class="px-4 py-3">Player</th>
-                                                    <th scope="col" class="px-4 py-3">MP Link</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody id="schedule-body">
-                                                <tr
-                                                    class="border-b border-white/20 hover:bg-white/20 transition duration-300">
-                                                    <td class="px-4 py-3">${scheduleEntry.date}</td>
-                                                    <td class="px-4 py-3">${scheduleEntry.time}</td>
-                                                    <td class="px-4 py-3">${scheduleEntry.referee}</td>
-                                                    <td class="px-4 py-3">
-                                                        <span
-                                                            class="text-white font-semibold">${scheduleEntry.player_one}</span>
-                                                        vs
-                                                        <span
-                                                            class="text-white font-semibold">${scheduleEntry.player_two}</span>
-                                                    </td>
-                                                    <td class="px-4 py-3">
-                                                        <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300"
-                                                            href="${scheduleEntry.link}" target="_blank">Link</a>
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Match Section-END -->
-
-
-                        <!-- Challonge Section -->
-                        <section id="challonge" class="mx-auto text-center section hidden">
-                            <h1 class="mb-5 text-2xl font-bold text-white">
-                                Challonge
-                            </h1>
-                            <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
-                                <iframe src="https://challonge.com/gulanocup4/module" width="100%" height="500"
-                                    frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
-                            </div>
-                        </section>
-                        <!-- Challonge Section-END -->
-
-
-                        <!-- Timeline Section -->
-                        <section id="timeline" class="mx-auto text-center section hidden">
-                            <h1 class="mb-5 text-2xl font-bold text-white">
-                                Timeline
-                            </h1>
-                            <div class="px-4 mx-auto max-w-5xl text-left py-6 mb-20 md:rounded-lg">
-
-                                <ol
-                                    class="ol relative mx-auto w-[80%] before:absolute before:top-0 before:bottom-[2rem] before:md:translate-x-[-50%] before:md:left-[50%] before:w-[2.5px] before:z-0">
-                                </ol>
-
-                            </div>
-                        </section>
-                        <!-- Timeline Section-END -->
-
-                        <!-- Procedure Section -->
-                        <section id="procedure" class="mx-auto text-center section hidden">
-                            <h1 class="mb-5 text-2xl font-bold text-white">
-                                Prosedur
-                            </h1>
-
-                            <div class="px-4 mx-auto max-w-5xl text-left py-6 mb-20 md:rounded-lg">
-                                <h2 class="mb-5 text-center text-xl font-mono text-white hidden md:block">
-                                    Prosedur Qualifier
-                                </h2>
-                                <ol
-                                    class="ol relative mb-20 mx-auto w-[80%] md:w-[100%] before:md:absolute before:md:top-0 before:md:bottom-[2rem] before:md:translate-x-[-50%] before:md:left-[50%] before:md:w-[2.5px] before:md:z-0">
-                                    <li class="mb-14 flex flex-col mt-10 md:mt-16 md:pl-14 relative md:mb-32">
-                                        <div
-                                            class="absolute mb-10 w-16 h-16 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 md:w-26 md:h-26 flex items-center justify-center">
-                                            <img src="/dist/img/clipboard.webp" alt="clipboard" class="h-8 w-8">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-14 md:hidden md:text-lg">
-                                            <h3 class="text-xl font-mono text-white leading-relaxed block">
-                                                Prosedur Qualifier
-                                            </h3>
-                                        </div>
-                                    </li>
-
-
-                                    <li class="mb-5 flex flex-col md:items-end md:text-left md:pl-24 relative md:mb-20">
-                                        <div
-                                            class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
-                                            <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
-                                                Wasit akan mengingatkan pemain sekitar 15 menit lewat discord sebelum
-                                                lobi
-                                                yang
-                                                dijadwalkan dimulai.
-                                            </h3>
-                                        </div>
-
-                                    </li>
-
-                                    <li
-                                        class="mb-5 flex flex-col md:items-start md:text-right md:pr-24 relative md:mb-20">
-                                        <div
-                                            class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
-                                            <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
-                                                Lobi akan dimulai ketika semua pemain sudah masuk, atau sudah lewat 10
-                                                menit
-                                                dari waktu
-                                                yang dijadwalkan.
-                                            </h3>
-                                        </div>
-                                    </li>
-
-                                    <li class="mb-5 flex flex-col md:items-end md:text-left md:pl-24 relative md:mb-20">
-                                        <div
-                                            class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
-                                            <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
-                                                Pemain akan memainkan pool stage 1-6 secara urut. Setelah semua stage
-                                                sudah
-                                                dimainkan,
-                                                player diberi waktu istirahat 2 menit sebelum memainkan stage 1-6 lagi
-                                                (kesempatan
-                                                kedua). Dan kesempatan kedua ini sifatnya Opsional namun dianjurkan.
-                                            </h3>
-                                        </div>
-                                    </li>
-
-                                    <li
-                                        class="mb-5 flex flex-col md:items-start md:text-right md:pr-24 relative md:mb-20">
-                                        <div
-                                            class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
-                                            <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
-                                                Skor terbaik dari tiap stage akan diambil sebagai skor qualifier.
-                                            </h3>
-                                        </div>
-                                    </li>
-                                </ol>
-
-                                <h2 class="mb-5 text-center text-xl font-mono text-white hidden md:block">
-                                    Prosedur Match
-                                </h2>
-                                <ol
-                                    class="ol relative mx-auto w-[80%] md:w-[100%] before:md:absolute before:md:top-0 before:md:bottom-[2rem] before:md:translate-x-[-50%] before:md:left-[50%] before:md:w-[2.5px] before:md:z-0">
-                                    <li class="mb-14 flex flex-col mt-10 md:mt-16 md:pl-14 relative md:mb-32">
-                                        <div
-                                            class="absolute mb-10 w-16 h-16 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 md:w-26 md:h-26 flex items-center justify-center">
-                                            <img src="/dist/img/swords.webp" alt="swords" class="h-8 w-8">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-14 md:hidden md:text-lg">
-                                            <h3 class="text-2xl font-mono text-white leading-relaxed block">
-                                                Prosedur Match
-                                            </h3>
-                                        </div>
-                                    </li>
-
-
-                                    <li class="mb-5 flex flex-col md:items-end md:text-left md:pl-24 relative md:mb-20">
-                                        <div
-                                            class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
-                                            <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
-                                                Wasit akan mengingatkan pemain sekitar 15 menit lewat discord sebelum
-                                                lobi
-                                                yang
-                                                dijadwalkan dimulai.
-                                            </h3>
-                                        </div>
-                                    </li>
-
-                                    <li
-                                        class="mb-5 flex flex-col md:items-start md:text-right md:pr-24 relative md:mb-20">
-                                        <div
-                                            class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
-                                            <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
-                                                Pemain berhak untuk bermain satu warm up di lobi (tiap pemain).
-                                            </h3>
-                                        </div>
-                                    </li>
-
-                                    <li class="mb-5 flex flex-col md:items-end md:text-left md:pl-24 relative md:mb-20">
-                                        <div
-                                            class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
-                                            <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
-                                                Setelah warm up berlangsung, kedua pemain akan melakukan !roll. roll
-                                                tertinggi berhak
-                                                memilih untuk melakukan ban atau pick pertama dengan format ABBA.
-                                                contoh:
-                                                Jika pemain A
-                                                memilih pick pertama, maka pemain B akan melakukan ban, kemudian diikuti
-                                                pemain A. lalu
-                                                pemain A dapat memilih pick. Pemenang roll dipastikan mendapatkan
-                                                protect
-                                                pertama.
-                                            </h3>
-                                        </div>
-                                    </li>
-
-                                    <li
-                                        class="mb-5 flex flex-col md:items-start md:text-right md:pr-24 relative md:mb-20">
-                                        <div
-                                            class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
-                                        </div>
-                                        <div
-                                            class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
-                                            <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
-                                                Pemain akan bergantian memilih map hingga pemenang ditentukan. Jika
-                                                kedua
-                                                pemain hanya
-                                                membutuhkan 1 poin lagi untuk memenangkan pertandingan, maka map
-                                                Tiebreaker
-                                                akan
-                                                dimainkan.
-                                            </h3>
-                                        </div>
-                                    </li>
-                                </ol>
-                            </div>
-                        </section>
-                        <!-- Procedure Section-END -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- Brand Name -->
-            <div class="text-center mb-8">
-                <h2 class="text-white text-3xl md:text-4xl font-bold">GULANOVA</h2>
-            </div>
-
-            <!-- Social Media Icons -->
-            <div class="flex justify-center items-center mb-8">
-                <div
-                    class="bg-black bg-opacity-50 text-white font-bold py-4 md:py-8 px-4 md:px-12 lg:px-20 rounded-md text-lg md:text-xl">
-                    <div class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-8">
-                        <a href="/twitch/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
-                            <i class="bi bi-twitch text-2xl"></i>
-                            <span class="ml-2 hidden md:block">TWITCH</span>
-                        </a>
-                        <a href="/youtube/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
-                            <i class="bi bi-youtube text-2xl"></i>
-                            <span class="ml-2 hidden md:block">YOUTUBE</span>
-                        </a>
-                        <a href="/instagram/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
-                            <i class="bi bi-instagram text-2xl"></i>
-                            <span class="ml-2 hidden md:block">INSTAGRAM</span>
-                        </a>
-                        <a href="https://osu.ppy.sh/teams/653"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
-                            <i class="bi bi-diagram-3 text-2xl"></i>
-                            <span class="ml-2 hidden md:block">OSU! TEAM</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Footer -->
-            <footer class="text-white text-base md:text-lg text-center">
-                <p>© Gulanova 2024, developed by <a href="https://github.com/ant1po1e" class="underline">Antipole</a>
-                    and <a href="https://github.com/ZuTuu" class="underline">danar</a>.</p>
-            </footer>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="mobile-menu fixed top-0 left-0 w-full h-full bg-blue-900/95 flex flex-col justify-center items-center z-[100]">
+            <button id="mobile-menu-close" class="absolute top-8 right-8 text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
+            <a href="/" class="nav-link text-white font-medium text-xl my-4">HOME</a>
+            <a href="/about/" class="nav-link text-white font-medium text-xl my-4">ABOUT</a>
+            <a href="/tournaments/" class="nav-link text-white font-medium text-xl my-4">TOURNAMENTS</a>
+            <a href="/khodam/" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
         </div>
+
+        <div class="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] overflow-hidden fade-out-bg mb-28">
+            <div class="w-full h-auto">
+                <div class="text-center text-white font-bold mt-20">
+                    <h2 class="text-4xl">GULANO CUP #4</h2>
+                    <div class="flex justify-center gap-8 mt-3">
+                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
+                </div>
+
+                <div class="px-5 md:px-24 py-16 md:py-24 text-white text-center md:text-justify text-lg font-medium">
+                    Gulanocup (Gulanova Cup) adalah series turnamen yang diadakan oleh Gulanova, dan kali ini kita
+                    mengadakan turnamen ke-4 kami yaitu turnamen osu!mania khusus region Indonesia dengan batasan
+                    rank 3 Digit 4K Rank Indonesia (Kisaran #4500 - #26000 Global Rank). Turnamen ini bersistem 1v1
+                    Double Elimination dengan sedikit gimik yang membuat turnamennya tidak terlalu formal,
+                    penjelasan akan lebih lanjut pada saat Showcase Pertama via Presentasi.
+                </div>
+
+                <div class="inline-flex w-full flex-col rounded-md shadow-sm sm:flex-row sm:justify-center"
+                    role="group">
+                    <button type="button" id="staff-btn"
+                        class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-l-md shadow-2xl group">
+                        <span
+                            class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                        <!-- Top glass gradient -->
+                        <span
+                            class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                        <!-- Bottom gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                        <!-- Left gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                        <!-- Right gradient -->
+                        <span
+                            class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                        <span class="absolute inset-0 w-full h-full border border-white rounded-l-md opacity-10"></span>
+                        <span
+                            class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                        <span class="relative">STAFF</span>
+                    </button>
+                    <button type="button" id="player-btn"
+                        class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
+                        <span
+                            class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                        <!-- Top glass gradient -->
+                        <span
+                            class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                        <!-- Bottom gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                        <!-- Left gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                        <!-- Right gradient -->
+                        <span
+                            class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                        <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
+                        <span
+                            class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                        <span class="relative">PLAYER</span>
+                    </button>
+                    <button type="button" id="mappool-btn"
+                        class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
+                        <span
+                            class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                        <!-- Top glass gradient -->
+                        <span
+                            class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                        <!-- Bottom gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                        <!-- Left gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                        <!-- Right gradient -->
+                        <span
+                            class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                        <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
+                        <span
+                            class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                        <span class="relative">MAPPPOOL</span>
+                    </button>
+                    <button type="button" id="match-btn"
+                        class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
+                        <span
+                            class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                        <!-- Top glass gradient -->
+                        <span
+                            class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                        <!-- Bottom gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                        <!-- Left gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                        <!-- Right gradient -->
+                        <span
+                            class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                        <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
+                        <span
+                            class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                        <span class="relative">MATCH</span>
+                    </button>
+                    <button type="button" id="challonge-btn"
+                        class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
+                        <span
+                            class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                        <!-- Top glass gradient -->
+                        <span
+                            class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                        <!-- Bottom gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                        <!-- Left gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                        <!-- Right gradient -->
+                        <span
+                            class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                        <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
+                        <span
+                            class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                        <span class="relative">CHALLONGE</span>
+                    </button>
+
+                    <button type="button" id="procedure-btn"
+                        class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-r-md shadow-2xl group">
+                        <span
+                            class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                        <!-- Top glass gradient -->
+                        <span
+                            class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
+                        <!-- Bottom gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-white to-transparent opacity-5"></span>
+                        <!-- Left gradient -->
+                        <span
+                            class="absolute bottom-0 left-0 w-4 h-full bg-gradient-to-r from-white to-transparent opacity-5"></span>
+                        <!-- Right gradient -->
+                        <span
+                            class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
+                        <span class="absolute inset-0 w-full h-full border border-white rounded-r-md opacity-10"></span>
+                        <span
+                            class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                        <span class="relative">PROCEDURE</span>
+                    </button>
+                </div>
+
+                <div class="mt-20">
+                    <!-- Staff Section -->
+                    <section id="staff" class="mx-auto text-center section">
+                        <h1 class="mb-5 text-2xl font-bold text-white">
+                            Staff
+                        </h1>
+                        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                Host
+                            </h2>
+                            <div id="profile-host" class="flex flex-wrap justify-center">
+
+                            </div>
+
+                            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                GFX
+                            </h2>
+                            <div id="profile-gfx" class="flex flex-wrap justify-center">
+
+                            </div>
+
+                            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                Sheeter
+                            </h2>
+                            <div id="profile-sheeter" class="flex flex-wrap justify-center">
+
+                            </div>
+
+                            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                Mappooler
+                            </h2>
+                            <div id="profile-mappooler" class="flex flex-wrap justify-center">
+
+                            </div>
+
+                            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                Mapper
+                            </h2>
+                            <div id="profile-mapper" class="flex flex-wrap justify-center">
+
+                            </div>
+
+                            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                Playtester
+                            </h2>
+                            <div id="profile-playtester" class="flex flex-wrap justify-center">
+
+                            </div>
+
+                            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                Referee
+                            </h2>
+                            <div id="profile-referee" class="flex flex-wrap justify-center">
+
+                            </div>
+
+                            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                Streamer
+                            </h2>
+                            <div id="profile-streamer" class="flex flex-wrap justify-center">
+
+                            </div>
+
+                            <hr class="my-6 sm:mx-auto border-gulanovaDark lg:my-8" />
+                            <h2 class="mb-5 text-xl font-mono text-white">
+                                Commentator
+                            </h2>
+                            <div id="profile-commentator" class="flex flex-wrap justify-center">
+
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Staff Section-END -->
+
+
+                    <!-- Player Section -->
+                    <section id="player" class="mx-auto text-center section hidden">
+                        <h1 class="mb-5 text-2xl font-bold text-white">
+                            Players
+                        </h1>
+                        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
+                            <div id="profile-player" class="flex flex-wrap justify-center">
+
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Player Section-END -->
+
+
+                    <!-- Mappool Section -->
+                    <section id="mappool" class="mx-auto text-center section hidden">
+                        <h1 class="mb-5 text-2xl font-bold text-white">
+                            Mappools
+                        </h1>
+                        <div class="px-4 mx-auto max-w-3xl text-balance py-6 mb-20 md:rounded-lg">
+                            <div class="flex flex-wrap justify-center">
+                                <div class="mb-4">
+                                    <label for="stage-map-select" class="mb-4 text-white">Select Stage</label>
+                                    <select id="stage-map-select"
+                                        class="w-full bg-gulanova rounded-lg text-[#61719f] hover:bg-gulanovaDark transition duration-300 hover:text-white">
+                                        <!-- Stages will be dynamically added here -->
+                                    </select>
+                                </div>
+
+
+                                <div class="relative w-full">
+                                    <div id="mappool-body" class="flex flex-wrap justify-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- Mappool Section-END -->
+
+
+                    <!-- Match Section -->
+                    <section id="match" class="mx-auto text-center section hidden">
+                        <h1 class="mb-5 text-2xl font-bold text-white">Matches</h1>
+                        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
+                            <div class="flex flex-wrap justify-center">
+                                <!-- Select Stage -->
+                                <div class="mb-4">
+                                    <label for="stage-match-select" class="mb-4 text-white">Select Stage</label>
+                                    <select id="stage-match-select"
+                                        class="w-full bg-gulanova rounded-lg text-[#61719f] hover:bg-gulanovaDark transition duration-300 hover:text-white">
+                                    </select>
+                                </div>
+
+                                <!-- Glassmorphism Table -->
+                                <div
+                                    class="relative w-full overflow-hidden rounded-lg shadow-lg backdrop-blur-lg bg-white/10 border border-white/20">
+                                    <table
+                                        class="w-full text-[10px] md:text-sm text-left rtl:text-right text-gray-300 border-separate border-spacing-0">
+                                        <thead class="text-xs uppercase bg-white/20 text-gray-100 backdrop-blur-lg">
+                                            <tr>
+                                                <th scope="col" class="px-4 py-3">Date (WIB)</th>
+                                                <th scope="col" class="px-4 py-3">Time (WIB)</th>
+                                                <th scope="col" class="px-4 py-3">Referee</th>
+                                                <th scope="col" class="px-4 py-3">Player</th>
+                                                <th scope="col" class="px-4 py-3">MP Link</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="schedule-body">
+                                            <tr
+                                                class="border-b border-white/20 hover:bg-white/20 transition duration-300">
+                                                <td class="px-4 py-3">${scheduleEntry.date}</td>
+                                                <td class="px-4 py-3">${scheduleEntry.time}</td>
+                                                <td class="px-4 py-3">${scheduleEntry.referee}</td>
+                                                <td class="px-4 py-3">
+                                                    <span
+                                                        class="text-white font-semibold">${scheduleEntry.player_one}</span>
+                                                    vs
+                                                    <span
+                                                        class="text-white font-semibold">${scheduleEntry.player_two}</span>
+                                                </td>
+                                                <td class="px-4 py-3">
+                                                    <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300"
+                                                        href="${scheduleEntry.link}" target="_blank">Link</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Match Section-END -->
+
+
+                    <!-- Challonge Section -->
+                    <section id="challonge" class="mx-auto text-center section hidden">
+                        <h1 class="mb-5 text-2xl font-bold text-white">
+                            Challonge
+                        </h1>
+                        <div class="px-4 mx-auto max-w-3xl text-center py-6 mb-20 md:rounded-lg">
+                            <iframe src="https://challonge.com/gulanocup4/module" width="100%" height="500"
+                                frameborder="0" scrolling="auto" allowtransparency="true"></iframe>
+                        </div>
+                    </section>
+                    <!-- Challonge Section-END -->
+
+
+                    <!-- Timeline Section -->
+                    <section id="timeline" class="mx-auto text-center section hidden">
+                        <h1 class="mb-5 text-2xl font-bold text-white">
+                            Timeline
+                        </h1>
+                        <div class="px-4 mx-auto max-w-5xl text-left py-6 mb-20 md:rounded-lg">
+
+                            <ol
+                                class="ol relative mx-auto w-[80%] before:absolute before:top-0 before:bottom-[2rem] before:md:translate-x-[-50%] before:md:left-[50%] before:w-[2.5px] before:z-0">
+                            </ol>
+
+                        </div>
+                    </section>
+                    <!-- Timeline Section-END -->
+
+                    <!-- Procedure Section -->
+                    <section id="procedure" class="mx-auto text-center section hidden">
+                        <h1 class="mb-5 text-2xl font-bold text-white">
+                            Prosedur
+                        </h1>
+
+                        <div class="px-4 mx-auto max-w-5xl text-left py-6 mb-20 md:rounded-lg">
+                            <h2 class="mb-5 text-center text-xl font-mono text-white hidden md:block">
+                                Prosedur Qualifier
+                            </h2>
+                            <ol
+                                class="ol relative mb-20 mx-auto w-[80%] md:w-[100%] before:md:absolute before:md:top-0 before:md:bottom-[2rem] before:md:translate-x-[-50%] before:md:left-[50%] before:md:w-[2.5px] before:md:z-0">
+                                <li class="mb-14 flex flex-col mt-10 md:mt-16 md:pl-14 relative md:mb-32">
+                                    <div
+                                        class="absolute mb-10 w-16 h-16 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 md:w-26 md:h-26 flex items-center justify-center">
+                                        <img src="/dist/img/clipboard.webp" alt="clipboard" class="h-8 w-8">
+                                    </div>
+                                    <div
+                                        class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-14 md:hidden md:text-lg">
+                                        <h3 class="text-xl font-mono text-white leading-relaxed block">
+                                            Prosedur Qualifier
+                                        </h3>
+                                    </div>
+                                </li>
+
+
+                                <li class="mb-5 flex flex-col md:items-end md:text-left md:pl-24 relative md:mb-20">
+                                    <div
+                                        class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
+                                        <h3
+                                            class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                            Wasit akan mengingatkan pemain sekitar 15 menit lewat discord sebelum
+                                            lobi
+                                            yang
+                                            dijadwalkan dimulai.
+                                        </h3>
+                                    </div>
+
+                                </li>
+
+                                <li class="mb-5 flex flex-col md:items-start md:text-right md:pr-24 relative md:mb-20">
+                                    <div
+                                        class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
+                                        <h3
+                                            class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                            Lobi akan dimulai ketika semua pemain sudah masuk, atau sudah lewat 10
+                                            menit
+                                            dari waktu
+                                            yang dijadwalkan.
+                                        </h3>
+                                    </div>
+                                </li>
+
+                                <li class="mb-5 flex flex-col md:items-end md:text-left md:pl-24 relative md:mb-20">
+                                    <div
+                                        class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
+                                        <h3
+                                            class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                            Pemain akan memainkan pool stage 1-6 secara urut. Setelah semua stage
+                                            sudah
+                                            dimainkan,
+                                            player diberi waktu istirahat 2 menit sebelum memainkan stage 1-6 lagi
+                                            (kesempatan
+                                            kedua). Dan kesempatan kedua ini sifatnya Opsional namun dianjurkan.
+                                        </h3>
+                                    </div>
+                                </li>
+
+                                <li class="mb-5 flex flex-col md:items-start md:text-right md:pr-24 relative md:mb-20">
+                                    <div
+                                        class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
+                                        <h3
+                                            class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                            Skor terbaik dari tiap stage akan diambil sebagai skor qualifier.
+                                        </h3>
+                                    </div>
+                                </li>
+                            </ol>
+
+                            <h2 class="mb-5 text-center text-xl font-mono text-white hidden md:block">
+                                Prosedur Match
+                            </h2>
+                            <ol
+                                class="ol relative mx-auto w-[80%] md:w-[100%] before:md:absolute before:md:top-0 before:md:bottom-[2rem] before:md:translate-x-[-50%] before:md:left-[50%] before:md:w-[2.5px] before:md:z-0">
+                                <li class="mb-14 flex flex-col mt-10 md:mt-16 md:pl-14 relative md:mb-32">
+                                    <div
+                                        class="absolute mb-10 w-16 h-16 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2 md:w-26 md:h-26 flex items-center justify-center">
+                                        <img src="/dist/img/swords.webp" alt="swords" class="h-8 w-8">
+                                    </div>
+                                    <div
+                                        class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-14 md:hidden md:text-lg">
+                                        <h3 class="text-2xl font-mono text-white leading-relaxed block">
+                                            Prosedur Match
+                                        </h3>
+                                    </div>
+                                </li>
+
+
+                                <li class="mb-5 flex flex-col md:items-end md:text-left md:pl-24 relative md:mb-20">
+                                    <div
+                                        class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
+                                        <h3
+                                            class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                            Wasit akan mengingatkan pemain sekitar 15 menit lewat discord sebelum
+                                            lobi
+                                            yang
+                                            dijadwalkan dimulai.
+                                        </h3>
+                                    </div>
+                                </li>
+
+                                <li class="mb-5 flex flex-col md:items-start md:text-right md:pr-24 relative md:mb-20">
+                                    <div
+                                        class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
+                                        <h3
+                                            class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                            Pemain berhak untuk bermain satu warm up di lobi (tiap pemain).
+                                        </h3>
+                                    </div>
+                                </li>
+
+                                <li class="mb-5 flex flex-col md:items-end md:text-left md:pl-24 relative md:mb-20">
+                                    <div
+                                        class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
+                                        <h3
+                                            class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                            Setelah warm up berlangsung, kedua pemain akan melakukan !roll. roll
+                                            tertinggi berhak
+                                            memilih untuk melakukan ban atau pick pertama dengan format ABBA.
+                                            contoh:
+                                            Jika pemain A
+                                            memilih pick pertama, maka pemain B akan melakukan ban, kemudian diikuti
+                                            pemain A. lalu
+                                            pemain A dapat memilih pick. Pemenang roll dipastikan mendapatkan
+                                            protect
+                                            pertama.
+                                        </h3>
+                                    </div>
+                                </li>
+
+                                <li class="mb-5 flex flex-col md:items-start md:text-right md:pr-24 relative md:mb-20">
+                                    <div
+                                        class="absolute w-8 h-8 bg-white rounded-full md:start-1/2 transform -translate-x-1/2 top-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
+                                        <h3
+                                            class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                            Pemain akan bergantian memilih map hingga pemenang ditentukan. Jika
+                                            kedua
+                                            pemain hanya
+                                            membutuhkan 1 poin lagi untuk memenangkan pertandingan, maka map
+                                            Tiebreaker
+                                            akan
+                                            dimainkan.
+                                        </h3>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </section>
+                    <!-- Procedure Section-END -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Brand Name -->
+        <div class="text-center mb-8">
+            <h2 class="text-white text-3xl md:text-4xl font-bold">GULANOVA</h2>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="flex justify-center items-center mb-8">
+            <div
+                class="bg-black bg-opacity-50 text-white font-bold py-4 md:py-8 px-4 md:px-12 lg:px-20 rounded-md text-lg md:text-xl">
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-8">
+                    <a href="/twitch/"
+                        class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                        <i class="bi bi-twitch text-2xl"></i>
+                        <span class="ml-2 hidden md:block">TWITCH</span>
+                    </a>
+                    <a href="/youtube/"
+                        class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                        <i class="bi bi-youtube text-2xl"></i>
+                        <span class="ml-2 hidden md:block">YOUTUBE</span>
+                    </a>
+                    <a href="/instagram/"
+                        class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                        <i class="bi bi-instagram text-2xl"></i>
+                        <span class="ml-2 hidden md:block">INSTAGRAM</span>
+                    </a>
+                    <a href="https://osu.ppy.sh/teams/653"
+                        class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                        <i class="bi bi-diagram-3 text-2xl"></i>
+                        <span class="ml-2 hidden md:block">OSU! TEAM</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-white text-base md:text-lg text-center">
+            <p>© Gulanova 2024, developed by <a href="https://github.com/ant1po1e" class="underline">Antipole</a>
+                and <a href="https://github.com/ZuTuu" class="underline">danar</a>.</p>
+        </footer>
+    </div>
     </div>
 
     <!-- Back-to-Top -->
@@ -769,11 +762,15 @@
     </div>
     <!-- Back-to-Top-END -->
 
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
     <script src="data.js"></script>
-    <script src="/dist/js/script.js"></script>
-    <script src="/dist/js/particles.js" defer></script>
-    <script src="/dist/js/particle-config.js" defer></script>
-    <script src="/dist/js/gulanovaApi.min.js"></script>
+    <script src="../../dist/js/script.js"></script>
+    <script src="../../dist/js/particles.js" defer></script>
+    <script src="../../dist/js/particle-config.js" defer></script>
+    <script src="../../dist/js/gulanovaApi.min.js"></script>
 </body>
 
 </html>
