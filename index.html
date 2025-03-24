@@ -39,7 +39,7 @@
         <div id="particles-js" class="absolute inset-0 pointer-events-none"></div>
         <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6">
             <!-- Header -->
-            <header class="flex flex-row justify-between items-center mb-8">
+            <header class="flex flex-row justify-between items-center mb-5 md:mb-0">
                 <div class="flex-1">
                     <!-- Mobile login -->
                     <div class="block md:hidden">
@@ -47,26 +47,29 @@
                             class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
                             id="open-modal">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar_mobile"
-                                alt="user photo">
+                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
+                                id="avatar_mobile" alt="user photo">
                         </button>
                     </div>
 
                     <!-- Modal -->
                     <div id="user-modal"
-                        class="fixed inset-0 bg-black bg-opacity-75 hidden flex flex-col text-center items-center justify-center z-[1000]">
+                        class="fixed inset-0 bg-black bg-opacity-75 hidden md:hidden flex-col text-center items-center justify-center z-[1000]">
                         <!-- Modal content -->
                         <div
                             class="relative my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova w-72">
                             <div class="px-4 py-3">
-                                <span class="block text-sm text-white font-bold text-center" id="username-mobile">Guest</span>
+                                <span class="block text-sm text-white font-bold text-center"
+                                    id="username-mobile">Guest</span>
                             </div>
                             <li>
-                                <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-mobile">You are: VISITOR</div>
+                                <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-mobile">You are:
+                                    VISITOR</div>
                             </li>
                             <ul class="py-2">
                                 <li>
-                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout-mobile"
+                                    <button type="button" onclick="window.location.href='/auth/logout'"
+                                        id="logout-mobile"
                                         class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
                                         Log out
                                     </button>
@@ -82,24 +85,27 @@
                         </button>
                     </div>
                 </div>
-                <div class="flex-1 flex justify-center ">
+
+                <div class="flex-1 flex justify-center">
                     <a href="/" class="header-logo flex items-center">
                         <img src="../dist/img/gulanova.webp" alt="Gulanova Logo"
                             class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
                         <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
                     </a>
                 </div>
-                <div class="flex-1 flex justify-end mt-4 md:mt-0">
+
+                <div class="user-container flex-1 flex justify-end mt-4 md:mt-0 z-[100]">
                     <!-- Profile button only visible on tablet and desktop -->
-                    <div class="hidden md:flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <div id="desktop-user" class="desktop-active hidden md:flex">
                         <button type="button"
                             class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                             data-dropdown-placement="bottom">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest" id="avatar_desktop"
-                                alt="user photo">
+                            <img class="w-8 h-8 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
+                                id="avatar_desktop" alt="user photo">
                         </button>
+
                         <!-- Dropdown menu -->
                         <div class="z-50 hidden my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova"
                             id="user-dropdown">
@@ -112,10 +118,12 @@
                             </li>
                             <ul class="py-2" aria-labelledby="user-menu-button">
                                 <li>
-                                    <button type="button" onclick="window.location.href='/auth/logout'" id="logout-desktop"
+                                    <button type="button" onclick="window.location.href='/auth/logout'"
+                                        id="logout-desktop"
                                         class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
                                         out</button>
-                                    <button type="button" onclick="window.location.href='/auth/login'" id="login-desktop"
+                                    <button type="button" onclick="window.location.href='/auth/login'"
+                                        id="login-desktop"
                                         class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
                                         in</button>
                                 </li>
@@ -123,6 +131,7 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Mobile hamburger menu - positioned to be in-between with logo -->
                 <button id="mobile-menu-toggle" type="button"
                     class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
@@ -137,15 +146,17 @@
             </header>
 
             <!-- Navigation - Desktop -->
-            <nav class="w-full z-50">
-                <div class="navbar-scrolled hidden md:flex justify-center mb-8 py-2">
-                    <a href="#" class="text-white font-medium mx-4 glow-text">HOME</a>
-                    <span class="text-white mx-1">•</span>
-                    <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
-                    <span class="text-white mx-1">•</span>
-                    <a href="/tournaments/" class="nav-link text-white font-medium mx-4">TOURNAMENTS</a>
-                    <span class="text-white mx-1">•</span>
-                    <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
+            <nav class="dekstop-menu flex w-full justify-center items-center top-0 left-0 h-fit">
+                <div id="desktop-nav" class="active-nav">
+                    <div class="hidden md:flex justify-center items-center p-5">
+                        <a href="/" class="nav-link text-white font-medium mx-4 glow-text">HOME</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/tournaments/" class="nav-link text-white font-medium mx-4">TOURNAMENTS</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
+                    </div>
                 </div>
             </nav>
 
@@ -165,14 +176,15 @@
                 <a href="/khodam/" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
             </div>
 
-            <div class="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-gray-900 to-blue-900 mb-8">
+            <div id="main-content"
+                class="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-gray-900 to-blue-900 mb-8">
                 <div class="w-full h-64 md:h-96 lg:h-[40rem] overflow-hidden">
                     <img src="../dist/img/bg-masthead.webp" alt="Guramee" class="w-full h-full object-cover">
                 </div>
             </div>
 
             <!-- Discord Button -->
-            <div class="flex justify-center mb-16 md:mb-28">
+            <div class="flex justify-center mb-52 md:mb-28">
                 <a href="/discord/"
                     class="z-0 relative flex h-[50px] w-40 items-center rounded-lg justify-center overflow-hidden bg-gradient-to-r from-[#729dd8] to-[#3166a7] text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#9BC4FF] before:duration-500 before:ease-out hover:shadow-[#9BC4FF] hover:before:h-56 hover:before:w-56">
                     <span class="relative">DISCORD</span>
@@ -204,7 +216,7 @@
                             <i class="bi bi-instagram text-2xl"></i>
                             <span class="ml-2 hidden md:block">INSTAGRAM</span>
                         </a>
-                        <a href="#"
+                        <a href="https://osu.ppy.sh/teams/653"
                             class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-diagram-3 text-2xl"></i>
                             <span class="ml-2 hidden md:block">OSU! TEAM</span>
@@ -231,8 +243,13 @@
     </div>
     <!-- Back-to-Top-END -->
 
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+
+    <!-- Script -->
     <script src="/dist/js/script.js"></script>
-    <script src="/dist/js/particles.js" defer></script> 
+    <script src="/dist/js/particles.js" defer></script>
     <script src="/dist/js/particle-config.js" defer></script>
     <script src="/dist/js/gulanovaApi.min.js"></script>
 </body>

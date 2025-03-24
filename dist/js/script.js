@@ -1,8 +1,44 @@
-$(function () {
-    $(document).scroll(function () {
-        var $nav = $(".navbar-scrolled");
-        $nav.toggleClass('scrolled', $(this).scrollTop() > $(".header-logo").offset().top);
-    });
+// GSAP Configuration
+gsap.registerPlugin(ScrollTrigger);
+
+// Desktop Navigation Function
+const navigation = document.getElementById("desktop-nav");
+const user = document.getElementById("desktop-user");
+
+// Header Function
+gsap.to(navigation, {
+    scrollTrigger: {
+        trigger: navigation,
+        start: "active-nav",
+        endTrigger: ".footer",
+        pin: true,
+        pinSpacing: false,
+        onEnter: () => {
+            gsap.to('.active-nav', {
+                backdropFilter: "blur(10px)",
+                duration: 0.5,
+                ease: "power1.inOut",
+            });
+        },
+        onLeaveBack: () => {
+            gsap.to('.active-nav', {
+                duration: 0.5,
+                clearProps: "all",
+                ease: "power1.inOut",
+            });
+        },
+    },
+});
+
+// User Profile Function
+gsap.to(user, {
+    scrollTrigger: {
+        trigger: user,
+        start: "active-user",
+        endTrigger: ".footer",
+        pin: true,
+        pinSpacing: false,
+    },
 });
 
 document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
@@ -20,14 +56,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     openModal.addEventListener("click", function () {
         userModal.classList.remove("hidden");
+        userModal.classList.add("flex");
     });
-
+    
     closeModal.addEventListener("click", function () {
         userModal.classList.add("hidden");
+        userModal.classList.remove("flex");
     });
-
+    
     userModal.addEventListener("click", function (event) {
         if (event.target === userModal) {
+            userModal.classList.remove("flex");
             userModal.classList.add("hidden");
         }
     });
