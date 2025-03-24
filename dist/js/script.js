@@ -56,14 +56,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     openModal.addEventListener("click", function () {
         userModal.classList.remove("hidden");
+        userModal.classList.add("flex");
     });
-
+    
     closeModal.addEventListener("click", function () {
         userModal.classList.add("hidden");
+        userModal.classList.remove("flex");
     });
-
+    
     userModal.addEventListener("click", function (event) {
         if (event.target === userModal) {
+            userModal.classList.remove("flex");
             userModal.classList.add("hidden");
         }
     });
