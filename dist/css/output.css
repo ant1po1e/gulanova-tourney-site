@@ -1354,6 +1354,10 @@ input:checked + .toggle-bg {
   display: none;
 }
 
+.aspect-\[16\/9\] {
+  aspect-ratio: 16/9;
+}
+
 .h-0 {
   height: 0px;
 }
@@ -3216,8 +3220,12 @@ input:checked + .toggle-bg {
     display: none;
   }
 
-  .lg\:h-\[40rem\] {
-    height: 40rem;
+  .lg\:aspect-\[21\/9\] {
+    aspect-ratio: 21/9;
+  }
+
+  .lg\:h-\[36rem\] {
+    height: 36rem;
   }
 
   .lg\:gap-8 {
