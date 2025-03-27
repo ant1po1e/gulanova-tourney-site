@@ -38,72 +38,95 @@
     <div class="relative overflow-hidden">
         <div id="particles-js" class="absolute inset-0 pointer-events-none"></div>
         <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6">
-            <!-- Header -->
-            <header class="flex flex-row justify-between items-center mb-5 md:mb-0">
-                <div class="flex-1">
-                    <!-- Mobile login -->
-                    <div class="block md:hidden">
-                        <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
-                            id="open-modal">
-                            <span class="sr-only">Open user menu</span>
-                            <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
-                                id="avatar_mobile" alt="user photo">
-                        </button>
-                    </div>
+            <header class="flex flex-row md:hidden justify-center items-center mb-5 md:mb-0">
+                <!-- Mobile login -->
+                <div id="mobile-header"
+                    class="fixed flex flex-row justify-between items-center bg-black bg-opacity-20 backdrop-blur-xl shadow-lg top-0 p-4 w-full duration-300">
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                        id="open-modal">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
+                            id="avatar_mobile" alt="user photo">
+                    </button>
 
-                    <!-- Modal -->
-                    <div id="user-modal"
-                        class="fixed inset-0 bg-black bg-opacity-75 hidden md:hidden flex-col text-center items-center justify-center z-[1000]">
-                        <!-- Modal content -->
-                        <div
-                            class="relative my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova w-72">
-                            <div class="px-4 py-3">
-                                <span class="block text-sm text-white font-bold text-center"
-                                    id="username-mobile">Guest</span>
-                            </div>
-                            <li>
-                                <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-mobile">You are:
-                                    VISITOR</div>
-                            </li>
-                            <ul class="py-2">
-                                <li>
-                                    <button type="button" onclick="window.location.href='/auth/logout'"
-                                        id="logout-mobile"
-                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
-                                        Log out
-                                    </button>
-                                    <button type="button" onclick="window.location.href='/auth/login'" id="login-mobile"
-                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300">
-                                        Log in
-                                    </button>
-                                </li>
-                            </ul>
+                    <!-- Mobile hamburger menu - positioned to be in-between with logo -->
+                    <button id="mobile-menu-toggle" type="button"
+                        class="items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Modal -->
+                <div id="user-modal"
+                    class="fixed inset-0 bg-black bg-opacity-75 md:hidden flex flex-col text-center items-center justify-center z-[1000]">
+                    <!-- Modal content -->
+                    <div
+                        class="relative my-4 text-base list-none divide-y rounded-lg shadow bg-gradient-to-r from-[#729dd8] to-[#3166a7] divide-gulanova w-72">
+                        <div class="px-4 py-3">
+                            <span class="block text-sm text-white font-bold text-center"
+                                id="username-mobile">Guest</span>
                         </div>
-                        <button id="close-modal" class="mt-2 p-2 rounded-full text-2xl text-white shadow-lg">
-                            <i class="bi bi-x-circle-fill"></i>
-                        </button>
+                        <li>
+                            <div class="block px-4 py-2 text-sm text-gray-200" id="user-role-mobile">You are:
+                                VISITOR</div>
+                        </li>
+                        <ul class="py-2">
+                            <li>
+                                <button type="button" onclick="window.location.href='/auth/logout'" id="logout-mobile"
+                                    class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
+                                    Log out
+                                </button>
+                                <button type="button" onclick="window.location.href='/auth/login'" id="login-mobile"
+                                    class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300">
+                                    Log in
+                                </button>
+                            </li>
+                        </ul>
                     </div>
+                    <button id="close-modal" class="mt-2 p-2 rounded-full text-2xl text-white shadow-lg">
+                        <i class="bi bi-x-circle-fill"></i>
+                    </button>
                 </div>
+            </header>
 
-                <div class="flex-1 flex justify-center">
-                    <a href="/" class="header-logo flex items-center">
-                        <img src="../dist/img/gulanova.webp" alt="Gulanova Logo"
-                            class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
-                        <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
-                    </a>
-                </div>
+            <div class="flex justify-center w-full mx-auto mt-20 mb-10">
+                <a href="/" class="header-logo flex items-center">
+                    <img src="../dist/img/gulanova.webp" alt="Gulanova Logo"
+                        class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
+                    <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
+                </a>
+            </div>
 
-                <div class="user-container flex-1 flex justify-end mt-4 md:mt-0 z-[100]">
-                    <!-- Profile button only visible on tablet and desktop -->
-                    <div id="desktop-user" class="desktop-active hidden md:flex">
+            <!-- Navigation - Desktop -->
+            <nav id="desktop-header"
+                class="hidden md:flex fixed w-full top-0 left-0 shadow-lg bg-black bg-opacity-20 duration-300 backdrop-blur-xl">
+                <div class="flex w-full items-center justify-between max-w-6xl mx-auto py-4">
+                    <!-- Navigation Links -->
+                    <div class="flex justify-center items-center flex-1">
+                        <a href="/" class="nav-link text-white font-medium mx-4">HOME</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/about" class="nav-link text-white font-medium mx-4">ABOUT</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/tournaments" class="nav-link text-white font-medium mx-4 glow-text">TOURNAMENTS</a>
+                        <span class="text-white mx-1">•</span>
+                        <a href="/khodam" class="nav-link text-white font-medium mx-4">KHODAM</a>
+                    </div>
+
+                    <div class="flex justify-end">
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                            class="flex text-sm rounded-full hover:ring-4 ring-[#9BC4FF] transition duration-300"
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                             data-dropdown-placement="bottom">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
-                                id="avatar_desktop" alt="user photo">
+                            <img class="w-10 md:h-10 rounded-full" src="https://a.ppy.sh/guest" id="avatar_desktop"
+                                alt="user photo">
                         </button>
 
                         <!-- Dropdown menu -->
@@ -131,33 +154,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Mobile hamburger menu - positioned to be in-between with logo -->
-                <button id="mobile-menu-toggle" type="button"
-                    class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
-                    aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M1 1h15M1 7h15M1 13h15" />
-                    </svg>
-                </button>
-            </header>
-
-            <!-- Navigation - Desktop -->
-            <nav class="dekstop-menu flex w-full justify-center items-center top-0 left-0 h-fit">
-                <div id="desktop-nav" class="active-nav">
-                    <div class="hidden md:flex justify-center items-center p-5">
-                        <a href="/" class="nav-link text-white font-medium mx-4">HOME</a>
-                        <span class="text-white mx-1">•</span>
-                        <a href="/about/" class="nav-link text-white font-medium mx-4">ABOUT</a>
-                        <span class="text-white mx-1">•</span>
-                        <a href="#" class="text-white font-medium mx-4 glow-text">TOURNAMENTS</a>
-                        <span class="text-white mx-1">•</span>
-                        <a href="/khodam/" class="nav-link text-white font-medium mx-4">KHODAM</a>
-                    </div>
-                </div>
             </nav>
 
             <!-- Mobile Menu -->
@@ -171,11 +167,10 @@
                     </svg>
                 </button>
                 <a href="/" class="nav-link text-white font-medium text-xl my-4">HOME</a>
-                <a href="/about/" class="nav-link text-white font-medium text-xl my-4">ABOUT</a>
-                <a href="#" class="nav-link text-white font-medium text-xl my-4">TOURNAMENTS</a>
-                <a href="/khodam/" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
+                <a href="/about" class="nav-link text-white font-medium text-xl my-4">ABOUT</a>
+                <a href="/tournaments" class="nav-link text-white font-medium text-xl my-4">TOURNAMENTS</a>
+                <a href="/khodam" class="nav-link text-white font-medium text-xl my-4">KHODAM</a>
             </div>
-
 
             <div id="main-content"
                 class="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] overflow-hidden fade-out-bg mb-28">
@@ -189,8 +184,7 @@
                         </div>
                     </div>
 
-                    <div
-                        class="px-5 md:px-24 py-16 md:py-24 ml-0 md:ml-20 lg:ml-52 text-white text-justify text-lg font-medium">
+                    <div class="p-16 ml-0 md:ml-20 lg:ml-52 text-white text-justify text-lg font-medium">
                         <!-- List -->
                         <ul class="space-y-6">
                             <li class="pt-6">
@@ -200,7 +194,7 @@
                                     class="relative px-2 text-white font-bold before:absolute before:left-0 before:top-1/2 before:h-1/2 before:w-full before:bg-pink-500 before:-z-10">osu!</span>
                                 <span class="mx-2">|</span>
                                 <span class="text-white font-bold">New!</span>
-                                <a href="/tournaments/gulanocup-lima/"
+                                <a href="/tournaments/gulanocup-lima"
                                     class="relative flex items-center justify-start mt-2 py-2 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 group">Gulano
                                     Cup #5
                                     <span
@@ -209,19 +203,16 @@
                                     </span>
                                 </a>
                                 <div class="mt-2">
-                                    <a href="/tournaments/gulanocup-lima/forum/"
+                                    <a href="/tournaments/gulanocup-lima/forum"
                                         class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Forum</a>
                                     <span class="text-white mx-1">•</span>
-                                    <a href="/tournaments/gulanocup-lima/bracket/"
+                                    <a href="/tournaments/gulanocup-lima/bracket"
                                         class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Bracket</a>
                                     <span class="text-white mx-1">•</span>
-                                    <a href="/tournaments/gulanocup-lima/sheet/"
+                                    <a href="/tournaments/gulanocup-lima/sheet"
                                         class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Mastersheet</a>
                                     <span class="text-white mx-1">•</span>
-                                    <a href="/tournaments/gulanocup-lima/bracket/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Challonge</a>
-                                    <span class="text-white mx-1">•</span>
-                                    <a href="/tournaments/gulanocup-lima/wiki/"
+                                    <a href="/tournaments/gulanocup-lima/wiki"
                                         class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Wiki</a>
                                 </div>
                             </li>
@@ -230,7 +221,7 @@
                                 <span class="mx-2">|</span>
                                 <span
                                     class="relative px-2 text-white font-bold before:absolute before:left-0 before:top-1/2 before:h-1/2 before:w-full before:bg-pink-500 before:-z-10">osu!</span>
-                                <a href="/tournaments/gulanocup-empat/"
+                                <a href="/tournaments/gulanocup-empat"
                                     class="relative flex items-center justify-start mt-2 py-2 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 group">Gulano
                                     Cup #4
                                     <span
@@ -239,19 +230,16 @@
                                     </span>
                                 </a>
                                 <div class="mt-2">
-                                    <a href="/tournaments/gulanocup-empat/forum/"
+                                    <a href="/tournaments/gulanocup-empat/forum"
                                         class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Forum</a>
                                     <span class="text-white mx-1">•</span>
-                                    <a href="/tournaments/gulanocup-empat/bracket/"
+                                    <a href="/tournaments/gulanocup-empat/bracket"
                                         class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Bracket</a>
                                     <span class="text-white mx-1">•</span>
-                                    <a href="/tournaments/gulanocup-empat/sheet/"
+                                    <a href="/tournaments/gulanocup-empat/sheet"
                                         class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Mastersheet</a>
                                     <span class="text-white mx-1">•</span>
-                                    <a href="/tournaments/gulanocup-empat/bracket/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Challonge</a>
-                                    <span class="text-white mx-1">•</span>
-                                    <a href="#"
+                                    <a href="/tournaments/gulanocup-empat/wiki"
                                         class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Wiki</a>
                                 </div>
                             </li>
@@ -270,22 +258,22 @@
                 <div
                     class="bg-black bg-opacity-50 text-white font-bold py-4 md:py-8 px-4 md:px-12 lg:px-20 rounded-md text-lg md:text-xl">
                     <div class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-8">
-                        <a href="/twitch/"
+                        <a href="/twitch"
                             class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-twitch text-2xl"></i>
                             <span class="ml-2 hidden md:block">TWITCH</span>
                         </a>
-                        <a href="/youtube/"
+                        <a href="/youtube"
                             class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-youtube text-2xl"></i>
                             <span class="ml-2 hidden md:block">YOUTUBE</span>
                         </a>
-                        <a href="/instagram/"
+                        <a href="/instagram"
                             class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-instagram text-2xl"></i>
                             <span class="ml-2 hidden md:block">INSTAGRAM</span>
                         </a>
-                        <a href="https://osu.ppy.sh/teams/653"
+                        <a href="#"
                             class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-diagram-3 text-2xl"></i>
                             <span class="ml-2 hidden md:block">OSU! TEAM</span>
@@ -296,7 +284,7 @@
 
             <!-- Footer -->
             <footer class="text-white text-base md:text-lg text-center">
-                <p>© Gulanova 2024, developed by <a href="https://github.com/ant1po1e" class="underline">Antipole</a>
+                <p>© Gulanova 2025, developed by <a href="https://github.com/ant1po1e" class="underline">Antipole</a>
                     and <a href="https://github.com/ZuTuu" class="underline">danar</a>.</p>
             </footer>
         </div>
@@ -311,10 +299,6 @@
         </a>
     </div>
     <!-- Back-to-Top-END -->
-
-    <!-- GSAP CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 
     <!-- Script -->
     <script src="/dist/js/script.js"></script>

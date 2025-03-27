@@ -1,44 +1,27 @@
-// GSAP Configuration
-gsap.registerPlugin(ScrollTrigger);
+let lastScrollTop = 0;
+let isScrolling; // Variabel untuk mendeteksi apakah sedang 
+const navbars = document.querySelectorAll("#desktop-header, #mobile-header");
 
-// Desktop Navigation Function
-const navigation = document.getElementById("desktop-nav");
-const user = document.getElementById("desktop-user");
+window.addEventListener("scroll", () => {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-// Header Function
-gsap.to(navigation, {
-    scrollTrigger: {
-        trigger: navigation,
-        start: "active-nav",
-        endTrigger: ".footer",
-        pin: true,
-        pinSpacing: false,
-        onEnter: () => {
-            gsap.to('.active-nav', {
-                backdropFilter: "blur(10px)",
-                duration: 0.5,
-                ease: "power1.inOut",
-            });
-        },
-        onLeaveBack: () => {
-            gsap.to('.active-nav', {
-                duration: 0.5,
-                clearProps: "all",
-                ease: "power1.inOut",
-            });
-        },
-    },
-});
+    clearTimeout(isScrolling);
 
-// User Profile Function
-gsap.to(user, {
-    scrollTrigger: {
-        trigger: user,
-        start: "active-user",
-        endTrigger: ".footer",
-        pin: true,
-        pinSpacing: false,
-    },
+    navbars.forEach(nav => {
+        if (scrollTop > lastScrollTop) {
+            nav.style.transform = "translateY(-100%)";
+        } else {
+            nav.style.transform = "translateY(0)";
+        }
+    });
+
+    isScrolling = setTimeout(() => {
+        navbars.forEach(nav => {
+            nav.style.transform = "translateY(0)";
+        });
+    }, 300);
+
+    lastScrollTop = scrollTop;
 });
 
 document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
@@ -56,17 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     openModal.addEventListener("click", function () {
         userModal.classList.remove("hidden");
-        userModal.classList.add("flex");
     });
-    
+
     closeModal.addEventListener("click", function () {
         userModal.classList.add("hidden");
-        userModal.classList.remove("flex");
     });
-    
+
     userModal.addEventListener("click", function (event) {
         if (event.target === userModal) {
-            userModal.classList.remove("flex");
             userModal.classList.add("hidden");
         }
     });

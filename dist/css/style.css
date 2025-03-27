@@ -22,34 +22,14 @@ body {
    transform: translateX(-50%);
 }
 
-.ol::before {
-   content: "";
-   background-color: #fff;
-}
-
 .nav-link:hover::after {
    width: 100%;
    left: 50%;
 }
 
-.user-container .pin-spacer,
-.desktop-active {
-   order: 2 !important;
-   margin-top: 2px !important;
-}
-
-.desktop-menu .pin-spacer,
-.active-nav {
-   top: 0 !important;
-   left: 0 !important;
-   width: 100% !important;
-   max-width: none !important;
-   z-index: 50 !important;
-   display: flex !important;
-   justify-content: center !important;
-   align-items: center !important;
-   margin-left: auto !important;
-   margin-right: auto !important;
+.ol::before {
+   content: "";
+   background-color: #fff;
 }
 
 .mobile-menu {
