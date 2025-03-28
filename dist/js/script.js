@@ -9,8 +9,8 @@ const user = document.getElementById("desktop-user");
 gsap.to(desktop_nav, {
     scrollTrigger: {
         trigger: desktop_nav,
-        start: "active-nav",
-        endTrigger: ".footer",
+        start: "top top",
+        endTrigger: "bottom bottom",
         pin: true,
         pinSpacing: false,
         onEnter: () => desktop_nav.classList.add("nav-blur"),
@@ -22,8 +22,8 @@ gsap.to(desktop_nav, {
 gsap.to(user, {
     scrollTrigger: {
         trigger: user,
-        start: "active-user",
-        endTrigger: ".footer",
+        start: "top top",
+        endTrigger: "bottom bottom",
         pin: true,
         pinSpacing: false,
     },
