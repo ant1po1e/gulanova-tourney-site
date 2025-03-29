@@ -93,3 +93,12 @@ body {
    background-color: transparent;
    z-index: -1;
 }
+
+#desktop-nav {
+   transition: backdrop-filter 0.3s ease-in-out;
+}
+
+#desktop-nav.nav-blur {
+   backdrop-filter: blur(50px);
+   box-shadow: 0 0 5cap 2px rgba(0, 0, 0, 0.4);
+}
