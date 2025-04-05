@@ -23,7 +23,7 @@ gsap.to(user, {
     scrollTrigger: {
         trigger: user,
         start: "top top",
-        endTrigger: "bottom bottom",
+        endTrigger: "bottom bottom",    
         pin: true,
         pinSpacing: false,
     },

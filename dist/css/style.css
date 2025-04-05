@@ -102,3 +102,16 @@ body {
    backdrop-filter: blur(50px);
    box-shadow: 0 0 5cap 2px rgba(0, 0, 0, 0.4);
 }
+
+.sticky {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+}
+
+.nav-blur {
+   backdrop-filter: blur(10px);
+   background-color: rgba(15, 23, 42, 0.7);
+   /* dark blur */
+}
