@@ -2,31 +2,19 @@
 gsap.registerPlugin(ScrollTrigger);
 
 // Desktop Navigation Function
-const navigation = document.getElementById("desktop-nav");
+const desktop_nav = document.getElementById("desktop-nav");
 const user = document.getElementById("desktop-user");
 
 // Header Function
-gsap.to(navigation, {
+gsap.to(desktop_nav, {
     scrollTrigger: {
-        trigger: navigation,
-        start: "active-nav",
-        endTrigger: ".footer",
+        trigger: desktop_nav,
+        start: "top top",
+        endTrigger: "bottom bottom",
         pin: true,
         pinSpacing: false,
-        onEnter: () => {
-            gsap.to('.active-nav', {
-                backdropFilter: "blur(10px)",
-                duration: 0.5,
-                ease: "power1.inOut",
-            });
-        },
-        onLeaveBack: () => {
-            gsap.to('.active-nav', {
-                duration: 0.5,
-                clearProps: "all",
-                ease: "power1.inOut",
-            });
-        },
+        onEnter: () => desktop_nav.classList.add("nav-blur"),
+        onLeaveBack: () => desktop_nav.classList.remove("nav-blur")
     },
 });
 
@@ -34,8 +22,8 @@ gsap.to(navigation, {
 gsap.to(user, {
     scrollTrigger: {
         trigger: user,
-        start: "active-user",
-        endTrigger: ".footer",
+        start: "top top",
+        endTrigger: "bottom bottom",    
         pin: true,
         pinSpacing: false,
     },
@@ -58,12 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
         userModal.classList.remove("hidden");
         userModal.classList.add("flex");
     });
-    
+
     closeModal.addEventListener("click", function () {
         userModal.classList.add("hidden");
         userModal.classList.remove("flex");
     });
-    
+
     userModal.addEventListener("click", function (event) {
         if (event.target === userModal) {
             userModal.classList.remove("flex");
