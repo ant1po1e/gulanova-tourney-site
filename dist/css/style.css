@@ -95,12 +95,14 @@ body {
 }
 
 #desktop-nav {
-   transition: backdrop-filter 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   z-index: 50;
 }
 
 #desktop-nav.nav-blur {
-   backdrop-filter: blur(50px);
-   box-shadow: 0 0 5cap 2px rgba(0, 0, 0, 0.4);
+   backdrop-filter: blur(20px);
+   background-color: rgba(15, 23, 42, 0.7);
+   box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.3);
 }
 
 .sticky {
@@ -109,6 +111,7 @@ body {
    left: 0;
    width: 100%;
 }
+
 
 .nav-blur {
    backdrop-filter: blur(10px);
