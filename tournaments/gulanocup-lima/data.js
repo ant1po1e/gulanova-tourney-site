@@ -160,7 +160,7 @@ $(document).ready(function () {
                                     <span class="text-white font-semibold">${scheduleEntry.player_one}</span> vs <span class="text-white font-semibold">${scheduleEntry.player_two}</span>
                                 </td>
                                 <td class="px-4 py-3">
-                                    <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300" href="${scheduleEntry.link}" target="_blank">Link</a>
+                                    <a class="py-1.5 px-3 text-[#61719f] rounded-lg bg-gulanova hover:bg-gulanovaDark hover:text-white transition duration-300" href="${scheduleEntry.link}" target="_blank">Link</a>
                                 </td>
                             </tr>
                         `;
