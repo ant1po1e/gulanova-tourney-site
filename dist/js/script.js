@@ -1,33 +1,55 @@
-// GSAP Configuration
 gsap.registerPlugin(ScrollTrigger);
 
-// Desktop Navigation Function
-const desktop_nav = document.getElementById("desktop-nav");
-const user = document.getElementById("desktop-user");
+const desktopNav = document.getElementById("desktop-nav");
+let isSticky = false;
 
-// Header Function
-gsap.to(desktop_nav, {
-    scrollTrigger: {
-        trigger: desktop_nav,
-        start: "top top",
-        endTrigger: "bottom bottom",
-        pin: true,
-        pinSpacing: false,
-        onEnter: () => desktop_nav.classList.add("nav-blur"),
-        onLeaveBack: () => desktop_nav.classList.remove("nav-blur")
-    },
+function handleStickyNav(scrollY) {
+    if (scrollY > 50 && !isSticky) {
+        isSticky = true;
+        desktopNav.classList.add("sticky", "nav-blur");
+        gsap.fromTo(
+            desktopNav, {
+                y: -50,
+                opacity: 0
+            }, {
+                y: 0,
+                opacity: 1,
+                duration: 0.4,
+                ease: "power2.out"
+            }
+        );
+    } else if (scrollY <= 50 && isSticky) {
+        isSticky = false;
+        gsap.to(desktopNav, {
+            y: -20,
+            opacity: 0,
+            duration: 0.01,
+            ease: "power2.in",
+            onComplete: () => {
+                desktopNav.classList.remove("sticky", "nav-blur");
+                gsap.set(desktopNav, {
+                    y: 0,
+                    opacity: 1
+                });
+            }
+        });
+    }
+}
+
+// Initial check saat halaman di-load
+window.addEventListener("load", () => {
+    handleStickyNav(window.scrollY);
 });
 
-// User Profile Function
-gsap.to(user, {
-    scrollTrigger: {
-        trigger: user,
-        start: "top top",
-        endTrigger: "bottom bottom",    
-        pin: true,
-        pinSpacing: false,
-    },
+// Listen saat scroll
+ScrollTrigger.create({
+    start: 0,
+    end: "bottom bottom",
+    onUpdate: (self) => {
+        handleStickyNav(self.scroll());
+    }
 });
+
 
 document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
     document.getElementById('mobile-menu').classList.add('active');
@@ -60,14 +82,34 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const buttons = [
-    { id: "#staff-btn", section: "#staff" },
-    { id: "#player-btn", section: "#player" },
-    { id: "#mappool-btn", section: "#mappool" },
-    { id: "#match-btn", section: "#match" },
-    { id: "#challonge-btn", section: "#challonge" },
-    { id: "#timeline-btn", section: "#timeline" },
-    { id: "#procedure-btn", section: "#procedure" }
+const buttons = [{
+        id: "#staff-btn",
+        section: "#staff"
+    },
+    {
+        id: "#player-btn",
+        section: "#player"
+    },
+    {
+        id: "#mappool-btn",
+        section: "#mappool"
+    },
+    {
+        id: "#match-btn",
+        section: "#match"
+    },
+    {
+        id: "#challonge-btn",
+        section: "#challonge"
+    },
+    {
+        id: "#timeline-btn",
+        section: "#timeline"
+    },
+    {
+        id: "#procedure-btn",
+        section: "#procedure"
+    }
 ];
 
 buttons.forEach(button => {
@@ -91,6 +133,9 @@ window.addEventListener('scroll', () => {
 
 back2Top.addEventListener('click', (e) => {
     e.preventDefault();
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' });
+    window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
 });
-
