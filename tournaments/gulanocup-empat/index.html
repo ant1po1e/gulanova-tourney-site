@@ -35,8 +35,8 @@
 </head>
 
 <body>
-    <div class="relative overflow-hidden">
-        <div id="particles-js" class="absolute inset-0 pointer-events-none"></div>
+    <div class="relative">
+        <div id="particles-js" class="absolute inset-0 pointer-events-none overflow-hidden w-full -z-10"></div>
         <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6">
             <!-- Header -->
             <header class="flex flex-row justify-between items-center mb-5 md:mb-0">
@@ -146,8 +146,8 @@
             </header>
 
             <!-- Navigation - Desktop -->
-            <nav class="dekstop-menu flex w-full justify-center items-center top-0 left-0 h-fit">
-                <div id="desktop-nav" class="active-nav">
+            <nav class="sticky top-0 z-10 before:absolute before:inset-x-0 before:bottom-0">
+                <div id="desktop-nav" class="backdrop-blur-none transition duration-300 w-full">
                     <div class="hidden md:flex justify-center items-center p-5">
                         <a href="/" class="nav-link text-white font-medium mx-4">HOME</a>
                         <span class="text-white mx-1">•</span>
@@ -781,10 +781,6 @@
         </a>
     </div>
     <!-- Back-to-Top-END -->
-
-    <!-- GSAP CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 
     <script src="data.js"></script>
     <script src="../../dist/js/script.js"></script>
