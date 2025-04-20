@@ -1,55 +1,16 @@
-gsap.registerPlugin(ScrollTrigger);
+const nav = document.getElementById("desktop-nav");
 
-const desktopNav = document.getElementById("desktop-nav");
-let isSticky = false;
+window.addEventListener("scroll", () => {
+    const rect = nav.getBoundingClientRect();
 
-function handleStickyNav(scrollY) {
-    if (scrollY > 50 && !isSticky) {
-        isSticky = true;
-        desktopNav.classList.add("sticky", "nav-blur");
-        gsap.fromTo(
-            desktopNav, {
-                y: -50,
-                opacity: 0
-            }, {
-                y: 0,
-                opacity: 1,
-                duration: 0.4,
-                ease: "power2.out"
-            }
-        );
-    } else if (scrollY <= 50 && isSticky) {
-        isSticky = false;
-        gsap.to(desktopNav, {
-            y: -20,
-            opacity: 0,
-            duration: 0.01,
-            ease: "power2.in",
-            onComplete: () => {
-                desktopNav.classList.remove("sticky", "nav-blur");
-                gsap.set(desktopNav, {
-                    y: 0,
-                    opacity: 1
-                });
-            }
-        });
-    }
-}
-
-// Initial check saat halaman di-load
-window.addEventListener("load", () => {
-    handleStickyNav(window.scrollY);
-});
-
-// Listen saat scroll
-ScrollTrigger.create({
-    start: 0,
-    end: "bottom bottom",
-    onUpdate: (self) => {
-        handleStickyNav(self.scroll());
+    if (rect.top <= 0) {
+        nav.classList.remove("backdrop-blur-none");
+        nav.classList.add("backdrop-blur-md");
+    } else {
+        nav.classList.add("backdrop-blur-none");
+        nav.classList.remove("backdrop-blur-md");
     }
 });
-
 
 document.getElementById('mobile-menu-toggle').addEventListener('click', function () {
     document.getElementById('mobile-menu').classList.add('active');
