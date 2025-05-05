@@ -100,3 +100,7 @@ back2Top.addEventListener('click', (e) => {
         behavior: 'smooth'
     });
 });
+
+particlesJS.load('particles-js', '/dist/js/particle-config.json', function () {
+    console.log('Particles.js config loaded');
+});
