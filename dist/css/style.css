@@ -65,21 +65,3 @@ body {
 .fade-out-bg {
    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
-
-html,
-body {
-   height: 100%;
-   margin: 0;
-   padding: 0;
-   overflow-x: hidden;
-}
-
-#particles-js {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100vh;
-   /* hanya setinggi layar */
-   z-index: -10;
-}
