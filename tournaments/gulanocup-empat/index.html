@@ -44,7 +44,7 @@
                     <!-- Mobile login -->
                     <div class="block md:hidden">
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                            class="flex text-sm bg-gray-800 rounded-full md:me-0 md:hover:ring-4 ring-[#9BC4FF] transition duration-300"
                             id="open-modal">
                             <span class="sr-only">Open user menu</span>
                             <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
@@ -70,11 +70,11 @@
                                 <li>
                                     <button type="button" onclick="window.location.href='/auth/logout'"
                                         id="logout-mobile"
-                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
+                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold md:hover:bg-gulanova md:hover:text-gulanovaDark transition duration-300 hidden">
                                         Log out
                                     </button>
                                     <button type="button" onclick="window.location.href='/auth/login'" id="login-mobile"
-                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300">
+                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold md:hover:bg-gulanova md:hover:text-gulanovaDark transition duration-300">
                                         Log in
                                     </button>
                                 </li>
@@ -89,7 +89,7 @@
                 <div class="flex-1 flex justify-center">
                     <a href="/" class="header-logo flex items-center">
                         <img src="../../dist/img/gulanova.webp" alt="Gulanova Logo"
-                            class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
+                            class="h-16 md:h-20 md:hover:rotate-3 md:hover:scale-125 transition duration-300">
                         <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
                     </a>
                 </div>
@@ -98,7 +98,7 @@
                     <!-- Profile button only visible on tablet and desktop -->
                     <div id="desktop-user" class="desktop-active hidden md:flex">
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                            class="flex text-sm bg-gray-800 rounded-full md:me-0 md:hover:ring-4 ring-[#9BC4FF] transition duration-300"
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                             data-dropdown-placement="bottom">
                             <span class="sr-only">Open user menu</span>
@@ -120,11 +120,11 @@
                                 <li>
                                     <button type="button" onclick="window.location.href='/auth/logout'"
                                         id="logout-desktop"
-                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
+                                        class="w-full px-4 py-2 text-sm md:hover:bg-gulanova text-gray-200 font-bold md:hover:text-gulanovaDark transition duration-300 hidden">Log
                                         out</button>
                                     <button type="button" onclick="window.location.href='/auth/login'"
                                         id="login-desktop"
-                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
+                                        class="w-full px-4 py-2 text-sm md:hover:bg-gulanova text-gray-200 font-bold md:hover:text-gulanovaDark transition duration-300">Log
                                         in</button>
                                 </li>
                             </ul>
@@ -134,7 +134,7 @@
 
                 <!-- Mobile hamburger menu - positioned to be in-between with logo -->
                 <button id="mobile-menu-toggle" type="button"
-                    class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
+                    class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white md:hover:bg-[#9BC4FF]"
                     aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -147,7 +147,7 @@
 
             <!-- Navigation - Desktop -->
             <nav class="sticky top-0 z-10 before:absolute before:inset-x-0 before:bottom-0">
-                <div id="desktop-nav" class="backdrop-blur-none transition duration-300 w-full">
+                <div id="desktop-nav" class="backdrop-blur-none transition w-full rounded-b-2xl">
                     <div class="hidden md:flex justify-center items-center p-5">
                         <a href="/" class="nav-link text-white font-medium mx-4">HOME</a>
                         <span class="text-white mx-1">•</span>
@@ -164,9 +164,9 @@
 
             <!-- Mobile Menu -->
             <div id="mobile-menu"
-                class="mobile-menu fixed top-0 left-0 w-full h-full bg-blue-900/95 flex flex-col justify-center items-center z-[100]">
+                class="mobile-menu fixed top-0 left-0 w-full h-full bg-gulanovaDark/75 backdrop-blur-md flex flex-col justify-center items-center z-[100]">
                 <button id="mobile-menu-close" class="absolute top-8 right-8 text-white p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                         </path>
@@ -204,7 +204,7 @@
                         <button type="button" id="staff-btn"
                             class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-l-md shadow-2xl group">
                             <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 md:group-hover:opacity-100"></span>
                             <!-- Top glass gradient -->
                             <span
                                 class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
@@ -220,13 +220,13 @@
                             <span
                                 class="absolute inset-0 w-full h-full border border-white rounded-l-md opacity-10"></span>
                             <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full md:group-hover:w-56 md:group-hover:h-56 opacity-5"></span>
                             <span class="relative">STAFF</span>
                         </button>
                         <button type="button" id="player-btn"
                             class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
                             <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 md:group-hover:opacity-100"></span>
                             <!-- Top glass gradient -->
                             <span
                                 class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
@@ -241,13 +241,13 @@
                                 class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
                             <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
                             <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full md:group-hover:w-56 md:group-hover:h-56 opacity-5"></span>
                             <span class="relative">PLAYER</span>
                         </button>
                         <button type="button" id="mappool-btn"
                             class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
                             <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 md:group-hover:opacity-100"></span>
                             <!-- Top glass gradient -->
                             <span
                                 class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
@@ -262,13 +262,13 @@
                                 class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
                             <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
                             <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full md:group-hover:w-56 md:group-hover:h-56 opacity-5"></span>
                             <span class="relative">MAPPPOOL</span>
                         </button>
                         <button type="button" id="match-btn"
                             class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
                             <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 md:group-hover:opacity-100"></span>
                             <!-- Top glass gradient -->
                             <span
                                 class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
@@ -283,13 +283,13 @@
                                 class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
                             <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
                             <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full md:group-hover:w-56 md:group-hover:h-56 opacity-5"></span>
                             <span class="relative">MATCH</span>
                         </button>
                         <button type="button" id="challonge-btn"
                             class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white shadow-2xl group">
                             <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 md:group-hover:opacity-100"></span>
                             <!-- Top glass gradient -->
                             <span
                                 class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
@@ -304,14 +304,14 @@
                                 class="absolute bottom-0 right-0 w-4 h-full bg-gradient-to-l from-white to-transparent opacity-5"></span>
                             <span class="absolute inset-0 w-full h-full border border-white opacity-10"></span>
                             <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full md:group-hover:w-56 md:group-hover:h-56 opacity-5"></span>
                             <span class="relative">CHALLONGE</span>
                         </button>
 
                         <button type="button" id="procedure-btn"
                             class="relative inline-flex items-center justify-center px-6 py-3 overflow-hidden font-bold text-white rounded-r-md shadow-2xl group">
                             <span
-                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 group-hover:opacity-100"></span>
+                                class="absolute inset-0 w-full h-full transition duration-300 ease-out opacity-0 bg-gradient-to-br from-[#8ebdff] via-[#236dd4] to-blue-400 md:group-hover:opacity-100"></span>
                             <!-- Top glass gradient -->
                             <span
                                 class="absolute top-0 left-0 w-full bg-gradient-to-b from-white to-transparent opacity-5 h-1/3"></span>
@@ -327,7 +327,7 @@
                             <span
                                 class="absolute inset-0 w-full h-full border border-white rounded-r-md opacity-10"></span>
                             <span
-                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full group-hover:w-56 group-hover:h-56 opacity-5"></span>
+                                class="absolute w-0 h-0 transition-all duration-300 ease-out bg-white rounded-full md:group-hover:w-56 md:group-hover:h-56 opacity-5"></span>
                             <span class="relative">PROCEDURE</span>
                         </button>
                     </div>
@@ -438,7 +438,7 @@
                                     <div class="mb-4">
                                         <label for="stage-map-select" class="mb-4 text-white">Select Stage</label>
                                         <select id="stage-map-select"
-                                            class="w-full bg-gulanova rounded-lg text-[#61719f] hover:bg-gulanovaDark transition duration-300 hover:text-white">
+                                            class="w-full bg-gulanova rounded-lg text-[#61719f] md:hover:bg-gulanovaDark transition duration-300 md:hover:text-white">
                                             <!-- Stages will be dynamically added here -->
                                         </select>
                                     </div>
@@ -464,7 +464,7 @@
                                     <div class="mb-4">
                                         <label for="stage-match-select" class="mb-4 text-white">Select Stage</label>
                                         <select id="stage-match-select"
-                                            class="w-full bg-gulanova rounded-lg text-[#61719f] hover:bg-gulanovaDark transition duration-300 hover:text-white">
+                                            class="w-full bg-gulanova rounded-lg text-[#61719f] md:hover:bg-gulanovaDark transition duration-300 md:hover:text-white">
                                         </select>
                                     </div>
 
@@ -484,7 +484,7 @@
                                             </thead>
                                             <tbody id="schedule-body">
                                                 <tr
-                                                    class="border-b border-white/20 hover:bg-white/20 transition duration-300">
+                                                    class="border-b border-white/20 md:hover:bg-white/20 transition duration-300">
                                                     <td class="px-4 py-3">${scheduleEntry.date}</td>
                                                     <td class="px-4 py-3">${scheduleEntry.time}</td>
                                                     <td class="px-4 py-3">${scheduleEntry.referee}</td>
@@ -496,7 +496,7 @@
                                                             class="text-white font-semibold">${scheduleEntry.player_two}</span>
                                                     </td>
                                                     <td class="px-4 py-3">
-                                                        <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova hover:bg-gulanovaDark transition duration-300"
+                                                        <a class="py-1.5 px-3 text-white rounded-lg bg-gulanova md:hover:bg-gulanovaDark transition duration-300"
                                                             href="${scheduleEntry.link}" target="_blank">Link</a>
                                                     </td>
                                                 </tr>
@@ -572,7 +572,7 @@
                                         <div
                                             class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
                                             <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 md:hover:max-h-[200px]">
                                                 Wasit akan mengingatkan pemain sekitar 15 menit lewat discord sebelum
                                                 lobi
                                                 yang
@@ -590,7 +590,7 @@
                                         <div
                                             class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
                                             <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 md:hover:max-h-[200px]">
                                                 Lobi akan dimulai ketika semua pemain sudah masuk, atau sudah lewat 10
                                                 menit
                                                 dari waktu
@@ -606,7 +606,7 @@
                                         <div
                                             class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
                                             <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 md:hover:max-h-[200px]">
                                                 Pemain akan memainkan pool stage 1-6 secara urut. Setelah semua stage
                                                 sudah
                                                 dimainkan,
@@ -625,7 +625,7 @@
                                         <div
                                             class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
                                             <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 md:hover:max-h-[200px]">
                                                 Skor terbaik dari tiap stage akan diambil sebagai skor qualifier.
                                             </h3>
                                         </div>
@@ -658,7 +658,7 @@
                                         <div
                                             class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
                                             <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 md:hover:max-h-[200px]">
                                                 Wasit akan mengingatkan pemain sekitar 15 menit lewat discord sebelum
                                                 lobi
                                                 yang
@@ -675,7 +675,7 @@
                                         <div
                                             class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
                                             <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 md:hover:max-h-[200px]">
                                                 Pemain berhak untuk bermain satu warm up di lobi (tiap pemain).
                                             </h3>
                                         </div>
@@ -688,7 +688,7 @@
                                         <div
                                             class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
                                             <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 md:hover:max-h-[200px]">
                                                 Setelah warm up berlangsung, kedua pemain akan melakukan !roll. roll
                                                 tertinggi berhak
                                                 memilih untuk melakukan ban atau pick pertama dengan format ABBA.
@@ -711,7 +711,7 @@
                                         <div
                                             class="w-full md:w-1/2 flex flex-col justify-center rounded-lg ml-8 md:ml-0">
                                             <h3
-                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 hover:max-h-[200px]">
+                                                class="relative overflow-hidden text-base font-normal text-white leading-relaxed md:text-lg transition-[max-height] duration-300 ease-in-out max-h-[200px] md:max-h-16 md:hover:max-h-[200px]">
                                                 Pemain akan bergantian memilih map hingga pemenang ditentukan. Jika
                                                 kedua
                                                 pemain hanya
@@ -741,22 +741,22 @@
                     class="bg-black bg-opacity-50 text-white font-bold py-4 md:py-8 px-4 md:px-12 lg:px-20 rounded-md text-lg md:text-xl">
                     <div class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-8">
                         <a href="/twitch/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            class="flex items-center text-white md:hover:scale-110 md:hover:text-[#517fc1] md:hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-twitch text-2xl"></i>
                             <span class="ml-2 hidden md:block">TWITCH</span>
                         </a>
                         <a href="/youtube/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            class="flex items-center text-white md:hover:scale-110 md:hover:text-[#517fc1] md:hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-youtube text-2xl"></i>
                             <span class="ml-2 hidden md:block">YOUTUBE</span>
                         </a>
                         <a href="/instagram/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            class="flex items-center text-white md:hover:scale-110 md:hover:text-[#517fc1] md:hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-instagram text-2xl"></i>
                             <span class="ml-2 hidden md:block">INSTAGRAM</span>
                         </a>
                         <a href="https://osu.ppy.sh/teams/653"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            class="flex items-center text-white md:hover:scale-110 md:hover:text-[#517fc1] md:hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-diagram-3 text-2xl"></i>
                             <span class="ml-2 hidden md:block">OSU! TEAM</span>
                         </a>

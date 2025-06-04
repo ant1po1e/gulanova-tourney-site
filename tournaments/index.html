@@ -36,7 +36,7 @@
 
 <body>
     <div class="relative">
-        <div id="particles-js" class="absolute inset-0 pointer-events-none overflow-hidden w-full -z-10"></div>
+        <div id="particles-js"></div>
         <div class="container mx-auto px-4 md:px-8 lg:px-20 py-6">
             <!-- Header -->
             <header class="flex flex-row justify-between items-center mb-5 md:mb-0">
@@ -44,7 +44,7 @@
                     <!-- Mobile login -->
                     <div class="block md:hidden">
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                            class="flex text-sm bg-gray-800 rounded-full md:me-0 md:hover:ring-4 ring-[#9BC4FF] transition duration-300"
                             id="open-modal">
                             <span class="sr-only">Open user menu</span>
                             <img class="w-12 h-12 md:w-14 md:h-14 rounded-full" src="https://a.ppy.sh/guest"
@@ -70,11 +70,11 @@
                                 <li>
                                     <button type="button" onclick="window.location.href='/auth/logout'"
                                         id="logout-mobile"
-                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300 hidden">
+                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold md:hover:bg-gulanova md:hover:text-gulanovaDark transition duration-300 hidden">
                                         Log out
                                     </button>
                                     <button type="button" onclick="window.location.href='/auth/login'" id="login-mobile"
-                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold hover:bg-gulanova hover:text-gulanovaDark transition duration-300">
+                                        class="w-full px-4 py-2 text-sm text-gray-200 font-bold md:hover:bg-gulanova md:hover:text-gulanovaDark transition duration-300">
                                         Log in
                                     </button>
                                 </li>
@@ -89,7 +89,7 @@
                 <div class="flex-1 flex justify-center">
                     <a href="/" class="header-logo flex items-center">
                         <img src="../dist/img/gulanova.webp" alt="Gulanova Logo"
-                            class="h-16 md:h-20 hover:rotate-3 hover:scale-125 transition duration-300">
+                            class="h-16 md:h-20 md:hover:rotate-3 md:hover:scale-125 transition duration-300">
                         <span class="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">GULANOVA</span>
                     </a>
                 </div>
@@ -98,7 +98,7 @@
                     <!-- Profile button only visible on tablet and desktop -->
                     <div id="desktop-user" class="desktop-active hidden md:flex">
                         <button type="button"
-                            class="flex text-sm bg-gray-800 rounded-full md:me-0 hover:ring-4 ring-[#9BC4FF] transition duration-300"
+                            class="flex text-sm bg-gray-800 rounded-full md:me-0 md:hover:ring-4 ring-[#9BC4FF] transition duration-300"
                             id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
                             data-dropdown-placement="bottom">
                             <span class="sr-only">Open user menu</span>
@@ -120,11 +120,11 @@
                                 <li>
                                     <button type="button" onclick="window.location.href='/auth/logout'"
                                         id="logout-desktop"
-                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300 hidden">Log
+                                        class="w-full px-4 py-2 text-sm md:hover:bg-gulanova text-gray-200 font-bold md:hover:text-gulanovaDark transition duration-300 hidden">Log
                                         out</button>
                                     <button type="button" onclick="window.location.href='/auth/login'"
                                         id="login-desktop"
-                                        class="w-full px-4 py-2 text-sm hover:bg-gulanova text-gray-200 font-bold hover:text-gulanovaDark transition duration-300">Log
+                                        class="w-full px-4 py-2 text-sm md:hover:bg-gulanova text-gray-200 font-bold md:hover:text-gulanovaDark transition duration-300">Log
                                         in</button>
                                 </li>
                             </ul>
@@ -134,7 +134,7 @@
 
                 <!-- Mobile hamburger menu - positioned to be in-between with logo -->
                 <button id="mobile-menu-toggle" type="button"
-                    class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white hover:bg-[#9BC4FF]"
+                    class="md:hidden absolute right-4 top-8 inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg text-white md:hover:bg-[#9BC4FF]"
                     aria-controls="mobile-menu" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -147,7 +147,7 @@
 
             <!-- Navigation - Desktop -->
             <nav class="sticky top-0 z-10 before:absolute before:inset-x-0 before:bottom-0">
-                <div id="desktop-nav" class="backdrop-blur-none transition duration-300 w-full">
+                <div id="desktop-nav" class="backdrop-blur-none transition w-full rounded-b-2xl">
                     <div class="hidden md:flex justify-center items-center p-5">
                         <a href="/" class="nav-link text-white font-medium mx-4">HOME</a>
                         <span class="text-white mx-1">•</span>
@@ -162,9 +162,9 @@
 
             <!-- Mobile Menu -->
             <div id="mobile-menu"
-                class="mobile-menu fixed top-0 left-0 w-full h-full bg-blue-900/95 flex flex-col justify-center items-center z-[100]">
+                class="mobile-menu fixed top-0 left-0 w-full h-full bg-gulanovaDark/75 backdrop-blur-md flex flex-col justify-center items-center z-[100]">
                 <button id="mobile-menu-close" class="absolute top-8 right-8 text-white p-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                         </path>
@@ -201,28 +201,28 @@
                                 <span class="mx-2">|</span>
                                 <span class="text-white font-bold">New!</span>
                                 <a href="/tournaments/gulanocup-lima/"
-                                    class="relative flex items-center justify-start mt-2 py-2 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 group">Gulano
+                                    class="relative flex items-center justify-start mt-2 py-2 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded md:hover:pl-10 md:hover:pr-6 group">Gulano
                                     Cup #5
                                     <span
-                                        class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                                        class="absolute left-0 pl-2.5 -translate-x-12 md:group-hover:translate-x-0 ease-out duration-200">
                                         <i class="bi bi-arrow-right"></i>
                                     </span>
                                 </a>
                                 <div class="mt-2">
                                     <a href="/tournaments/gulanocup-lima/forum/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Forum</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Forum</a>
                                     <span class="text-white mx-1">•</span>
                                     <a href="/tournaments/gulanocup-lima/bracket/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Bracket</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Bracket</a>
                                     <span class="text-white mx-1">•</span>
                                     <a href="/tournaments/gulanocup-lima/sheet/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Mastersheet</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Mastersheet</a>
                                     <span class="text-white mx-1">•</span>
                                     <a href="/tournaments/gulanocup-lima/bracket/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Challonge</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Challonge</a>
                                     <span class="text-white mx-1">•</span>
                                     <a href="/tournaments/gulanocup-lima/wiki/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Wiki</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Wiki</a>
                                 </div>
                             </li>
                             <li class="pt-6">
@@ -231,28 +231,28 @@
                                 <span
                                     class="relative px-2 text-white font-bold before:absolute before:left-0 before:top-1/2 before:h-1/2 before:w-full before:bg-pink-500 before:-z-10">osu!</span>
                                 <a href="/tournaments/gulanocup-empat/"
-                                    class="relative flex items-center justify-start mt-2 py-2 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 group">Gulano
+                                    class="relative flex items-center justify-start mt-2 py-2 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded md:hover:pl-10 md:hover:pr-6 group">Gulano
                                     Cup #4
                                     <span
-                                        class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+                                        class="absolute left-0 pl-2.5 -translate-x-12 md:group-hover:translate-x-0 ease-out duration-200">
                                         <i class="bi bi-arrow-right"></i>
                                     </span>
                                 </a>
                                 <div class="mt-2">
                                     <a href="/tournaments/gulanocup-empat/forum/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Forum</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Forum</a>
                                     <span class="text-white mx-1">•</span>
                                     <a href="/tournaments/gulanocup-empat/bracket/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Bracket</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Bracket</a>
                                     <span class="text-white mx-1">•</span>
                                     <a href="/tournaments/gulanocup-empat/sheet/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Mastersheet</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Mastersheet</a>
                                     <span class="text-white mx-1">•</span>
                                     <a href="/tournaments/gulanocup-empat/bracket/"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Challonge</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Challonge</a>
                                     <span class="text-white mx-1">•</span>
                                     <a href="#"
-                                        class="text-white font-medium hover:text-[#8ebdff] transition duration-300">Wiki</a>
+                                        class="text-white font-medium md:hover:text-[#8ebdff] transition duration-300">Wiki</a>
                                 </div>
                             </li>
                         </ul>
@@ -271,22 +271,22 @@
                     class="bg-black bg-opacity-50 text-white font-bold py-4 md:py-8 px-4 md:px-12 lg:px-20 rounded-md text-lg md:text-xl">
                     <div class="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-8">
                         <a href="/twitch/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            class="flex items-center text-white md:hover:scale-110 md:hover:text-[#517fc1] md:hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-twitch text-2xl"></i>
                             <span class="ml-2 hidden md:block">TWITCH</span>
                         </a>
                         <a href="/youtube/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            class="flex items-center text-white md:hover:scale-110 md:hover:text-[#517fc1] md:hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-youtube text-2xl"></i>
                             <span class="ml-2 hidden md:block">YOUTUBE</span>
                         </a>
                         <a href="/instagram/"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            class="flex items-center text-white md:hover:scale-110 md:hover:text-[#517fc1] md:hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-instagram text-2xl"></i>
                             <span class="ml-2 hidden md:block">INSTAGRAM</span>
                         </a>
                         <a href="https://osu.ppy.sh/teams/653"
-                            class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+                            class="flex items-center text-white md:hover:scale-110 md:hover:text-[#517fc1] md:hover:bg-white p-2 rounded-lg transition duration-300">
                             <i class="bi bi-diagram-3 text-2xl"></i>
                             <span class="ml-2 hidden md:block">OSU! TEAM</span>
                         </a>

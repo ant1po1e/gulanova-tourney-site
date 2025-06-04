@@ -6,9 +6,11 @@ window.addEventListener("scroll", () => {
     if (rect.top <= 0) {
         nav.classList.remove("backdrop-blur-none");
         nav.classList.add("backdrop-blur-md");
+        nav.classList.add("bg-gulanovaDark/25");
     } else {
         nav.classList.add("backdrop-blur-none");
         nav.classList.remove("backdrop-blur-md");
+        nav.classList.remove("bg-gulanovaDark/25");
     }
 });
 
@@ -99,8 +101,4 @@ back2Top.addEventListener('click', (e) => {
         left: 0,
         behavior: 'smooth'
     });
-});
-
-particlesJS.load('particles-js', '/dist/js/particle-config.json', function () {
-    console.log('Particles.js config loaded');
 });
