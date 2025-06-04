@@ -2,7 +2,7 @@ function createProfileCard(userId, displayName) {
     const isCurrentUser = displayName === localStorage.getItem("username");
     const profileCard = `
         <a href="https://osu.ppy.sh/users/${userId}"
-                class="flex flex-col items-center bg-gradient-to-br from-[#4a76b8] to-[#2c4f8a] m-4 p-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border border-[#729dd8]/30 ${isCurrentUser ? 'ring-2 ring-gulanova ring-offset-2 ring-offset-gulanovaDark' : ''}"
+                class="flex flex-col items-center bg-gradient-to-br from-[#4a76b8] to-[#2c4f8a] m-1 md:m-4 p-1 md:p-3 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300 border border-[#729dd8]/30 ${isCurrentUser ? 'ring-2 ring-gulanova ring-offset-2 ring-offset-gulanovaDark' : ''}"
                 target="_blank">
 
                 <!-- User Avatar with Decorative Border -->
