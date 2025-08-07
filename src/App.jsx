@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
-import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Particles from "./../public/Particles/Particles";
+import { Navbar } from "./components/Navbar";
 
 function App() {
 	return (

@@ -4,10 +4,50 @@
 @source "../.flowbite-react/class-list.json";
 
 :root {
-	--gulanova: #c2e1f2;
-	--gulanova-yellow: #e28743;
-	--gulanova-dark: #798da6;
-	--white: #f2f2f2;
+	--color-gulanova: #c2e1f2;
+	--color-gulanova-yellow: #e28743;
+	--color-gulanova-dark: #798da6;
+	--color-white: #f2f2f2;
+}
+
+.bg-gulanova {
+	background-color: var(--color-gulanova);
+}
+.border-gulanova {
+	border: var(--color-gulanova);
+}
+.text-gulanova {
+	color: var(--color-gulanova);
+}
+.bg-gulanovaYellow {
+	background-color: var(--color-gulanova-yellow);
+}
+.text-gulanovaYellow {
+	color: var(--color-gulanova-yellow);
+}
+.bg-gulanovaDark {
+	background-color: var(--color-gulanova-dark);
+}
+.text-gulanovaDark {
+	color: var(--color-gulanova-dark);
+}
+.hover\:bg-gulanova:hover {
+	background-color: var(--color-gulanova);
+}
+.hover\:bg-gulanovaYellow:hover {
+	background-color: var(--color-gulanova-yellow);
+}
+.hover\:bg-gulanovaDark:hover {
+	background-color: var(--color-gulanova-dark);
+}
+.hover\:text-gulanova:hover {
+	color: var(--color-gulanova);
+}
+.hover\:text-gulanovaYellow:hover {
+	color: var(--color-gulanova-yellow);
+}
+.hover\:text-gulanovaDark:hover {
+	color: var(--color-gulanova-dark);
 }
 
 body {
