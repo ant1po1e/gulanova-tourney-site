@@ -13,7 +13,7 @@ function App() {
 					<Particles
 						particleColors={["#ffffff", "#ffffff"]}
 						particleCount={200}
-						particleSpread={10}
+						particleSpread={5}
 						speed={0.1}
 						particleBaseSize={100}
 						moveParticlesOnHover={false}
@@ -22,8 +22,8 @@ function App() {
 					/>
 				</div>
 
-				<Navbar />
 				<main className="relative z-10 container mx-auto px-4 md:px-8 lg:px-20 py-6">
+				<Navbar />
 					<Routes>
 						<Route index element={<Home />} />
 					</Routes>

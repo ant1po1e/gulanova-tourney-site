@@ -89,15 +89,6 @@ body {
 	left: 50%;
 }
 
-.mobile-menu {
-	transform: translateY(-100%);
-	transition: transform 0.3s ease;
-}
-
-.mobile-menu.active {
-	transform: translateY(0);
-}
-
 .glow-text {
 	position: relative;
 	transition: all 0.3s ease-in-out;

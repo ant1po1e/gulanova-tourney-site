@@ -65,8 +65,7 @@ export const Navbar = () => {
 					</button>
 				</div>
 			</header>
-
-			<nav className="sticky hidden top-0 z-10 before:absolute before:inset-x-0 before:bottom-0">
+			<nav className="sticky top-0 z-10 before:absolute before:inset-x-0 before:bottom-0">
 				<div>
 					<div className="hidden md:flex justify-center items-center p-5">
 						<a href="#" className="text-white font-medium mx-4 glow-text">
