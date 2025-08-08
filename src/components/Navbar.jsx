@@ -1,19 +1,19 @@
 import { useState } from "react";
-import {
-	Dropdown,
-	DropdownDivider,
-	DropdownHeader,
-	DropdownItem,
-} from "flowbite-react";
+import { useLocation, Link } from "react-router-dom";
 
 export const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
+	const [dropdownOpen, setDropdownOpen] = useState(false);
+
+	const location = useLocation();
+	const isActive = (path) => location.pathname === path;
+
 	return (
 		<>
 			<header className="flex items-center justify-between mb-5 md:mb-0 my-4 px-12">
 				<div className="hidden md:flex" />
 				<div className="flex items-center">
-					<a href="/" className="flex items-center">
+					<Link to="/" className="flex items-center">
 						<img
 							src="/gulanova.webp"
 							alt="Gulanova Logo"
@@ -22,40 +22,40 @@ export const Navbar = () => {
 						<span className="text-white text-3xl md:text-5xl font-bold ml-3 hidden md:block">
 							GULANOVA
 						</span>
-					</a>
+					</Link>
 				</div>
 
 				{/* Avatar Dropdown */}
-				<div className="flex items-center">
-					<Dropdown
-						label={
-							<img
-								src="https://a.ppy.sh/u/guest"
-								alt="User"
-								className="w-12 h-12 rounded-full hover:ring-4 hover:ring-white transition duration-300"
-							/>
-						}
-						arrowIcon={false}
-						inline
-						className="bg-gradient-to-r from-[#729dd8] to-[#3166a7] border-none absolute z-50"
-						placement="bottom">
-						<DropdownHeader className="text-white">
-							<span className="block truncate text-sm font-medium text-center">
-								Guest
-							</span>
-						</DropdownHeader>
-						<DropdownHeader className="text-white">
-							<span className="block truncate text-sm font-medium text-center">
-								You are: VISITOR
-							</span>
-						</DropdownHeader>
-						<DropdownDivider className="border-gulanova" />
-						<DropdownItem
-							className="hover:bg-gulanova text-white font-bold hover:text-gulanovaDark transition duration-300"
-							onClick={() => (window.location.href = "/auth/logout")}>
-							<span className="w-full">Log In</span>
-						</DropdownItem>
-					</Dropdown>
+				<div className="relative">
+					<button
+						onClick={() => setDropdownOpen(!dropdownOpen)}
+						className="flex items-center">
+						<img
+							src="https://a.ppy.sh/u/guest"
+							alt="User"
+							className="w-12 h-12 rounded-full hover:ring-4 hover:ring-white transition duration-300"
+						/>
+					</button>
+
+					{dropdownOpen && (
+						<div className="absolute left-1/2 -translate-x-1/2 md:right-0 md:left-auto md:-translate-x-0 mt-2 w-36 bg-gradient-to-r from-[#729dd8] text-center to-[#3166a7] rounded-lg shadow-lg z-50">
+							<div className="p-3 text-white border-b border-white/20">
+								<span className="block text-sm font-medium text-center">
+									Guest
+								</span>
+							</div>
+							<div className="p-3 text-white border-b border-white/20">
+								<span className="block text-sm font-medium text-center">
+									You are: VISITOR
+								</span>
+							</div>
+							<button
+								className="w-full p-3 text-white font-bold hover:bg-white/20 transition duration-300 rounded-b-lg"
+								onClick={() => (window.location.href = "/auth/logout")}>
+								Log In
+							</button>
+						</div>
+					)}
 				</div>
 
 				{/* Hamburger Menu */}
@@ -65,28 +65,44 @@ export const Navbar = () => {
 					</button>
 				</div>
 			</header>
-			<nav className="sticky top-0 z-10 before:absolute before:inset-x-0 before:bottom-0">
-				<div>
+
+			{/* Desktop Navigation */}
+			<nav className="sticky top-0 z-50 before:absolute before:inset-x-0 before:bottom-0">
+				<div className="transition duration-300 backdrop-blur-none">
 					<div className="hidden md:flex justify-center items-center p-5">
-						<a href="#" className="text-white font-medium mx-4 glow-text">
+						<Link
+							to="/"
+							className={`text-white font-medium mx-4 ${
+								isActive("/") ? "glow-text" : "nav-link"
+							}`}>
 							HOME
-						</a>
-						<span className="text-white mx-1">•</span>
-						<a href="/about/" className="text-white font-medium mx-4">
+						</Link>
+						<Link
+							to="/about"
+							className={`text-white font-medium mx-4 ${
+								isActive("/about") ? "glow-text" : "nav-link"
+							}`}>
 							ABOUT
-						</a>
-						<span className="text-white mx-1">•</span>
-						<a href="/tournaments/" className="text-white font-medium mx-4">
+						</Link>
+						<Link
+							to="/tournaments"
+							className={`text-white font-medium mx-4 ${
+								isActive("/tournaments") ? "glow-text" : "nav-link"
+							}`}>
 							TOURNAMENTS
-						</a>
-						<span className="text-white mx-1">•</span>
-						<a href="/khodam/" className="text-white font-medium mx-4">
+						</Link>
+						<Link
+							to="/khodam"
+							className={`text-white font-medium mx-4 ${
+								isActive("/khodam") ? "glow-text" : "nav-link"
+							}`}>
 							KHODAM
-						</a>
+						</Link>
 					</div>
 				</div>
 			</nav>
 
+			{/* Mobile Menu */}
 			<div
 				className={`fixed top-0 left-0 w-full h-1/3 bg-blue-900/95 flex flex-col md:hidden justify-center items-center z-[100] transition-all duration-500 ease-in-out transform ${
 					isOpen
@@ -96,26 +112,40 @@ export const Navbar = () => {
 				<button
 					className="absolute top-5 right-12 text-white p-2"
 					onClick={() => setIsOpen(false)}>
-					<i class="bi bi-x-circle-fill text-2xl"></i>
+					<i className="bi bi-x-circle-fill text-2xl"></i>
 				</button>
-				<a href="#" className="nav-link text-white font-medium text-xl my-4">
+				<Link
+					to="/"
+					className={`text-white font-medium text-xl my-4 ${
+						isActive("/") ? "glow-text" : "nav-link"
+					}`}
+					onClick={() => setIsOpen(false)}>
 					HOME
-				</a>
-				<a
-					href="/about/"
-					className="nav-link text-white font-medium text-xl my-4">
+				</Link>
+				<Link
+					to="/about"
+					className={`text-white font-medium text-xl my-4 ${
+						isActive("/about") ? "glow-text" : "nav-link"
+					}`}
+					onClick={() => setIsOpen(false)}>
 					ABOUT
-				</a>
-				<a
-					href="/tournaments/"
-					className="nav-link text-white font-medium text-xl my-4">
+				</Link>
+				<Link
+					to="/tournaments"
+					className={`text-white font-medium text-xl my-4 ${
+						isActive("/tournaments") ? "glow-text" : "nav-link"
+					}`}
+					onClick={() => setIsOpen(false)}>
 					TOURNAMENTS
-				</a>
-				<a
-					href="/khodam/"
-					className="nav-link text-white font-medium text-xl my-4">
+				</Link>
+				<Link
+					to="/khodam"
+					className={`text-white font-medium text-xl my-4 ${
+						isActive("/khodam") ? "glow-text" : "nav-link"
+					}`}
+					onClick={() => setIsOpen(false)}>
 					KHODAM
-				</a>
+				</Link>
 			</div>
 		</>
 	);

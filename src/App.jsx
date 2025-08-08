@@ -8,22 +8,21 @@ import { Navbar } from "./components/Navbar";
 function App() {
 	return (
 		<BrowserRouter>
+			<Navbar />
+			<div className="fixed inset-0 w-full h-full -z-10 pointer-events-none">
+				<Particles
+					particleColors={["#ffffff", "#ffffff"]}
+					particleCount={200}
+					particleSpread={5}
+					speed={0.1}
+					particleBaseSize={50}
+					moveParticlesOnHover={false}
+					alphaParticles={false}
+					disableRotation={true}
+				/>
+			</div>
 			<div className="relative min-h-screen overflow-hidden">
-				<div className="absolute inset-0 -z-10">
-					<Particles
-						particleColors={["#ffffff", "#ffffff"]}
-						particleCount={200}
-						particleSpread={5}
-						speed={0.1}
-						particleBaseSize={100}
-						moveParticlesOnHover={false}
-						alphaParticles={false}
-						disableRotation={true}
-					/>
-				</div>
-
 				<main className="relative z-10 container mx-auto px-4 md:px-8 lg:px-20 py-6">
-				<Navbar />
 					<Routes>
 						<Route index element={<Home />} />
 					</Routes>
