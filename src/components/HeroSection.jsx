@@ -1,3 +1,5 @@
+import { twMerge } from "flowbite-react/helpers/tailwind-merge";
+
 export const HeroSection = () => {
 	return (
 		<>
@@ -27,7 +29,12 @@ export const HeroSection = () => {
 			<div className="flex justify-center mb-52 md:mb-28">
 				<a
 					href="/discord/"
-					className="z-0 relative flex h-[50px] w-40 items-center rounded-lg justify-center overflow-hidden bg-gradient-to-r from-[#729dd8] to-[#3166a7] text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-[#9BC4FF] before:duration-500 before:ease-out hover:shadow-[#9BC4FF] hover:before:h-56 hover:before:w-56">
+					className={twMerge(
+						"z-0 relative flex h-[50px] w-40 items-center rounded-lg justify-center overflow-hidden bg-gradient-to-r",
+						"from-[#729dd8] to-[#3166a7] text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0",
+						"before:rounded-full before:bg-[#9BC4FF] before:duration-500 before:ease-out hover:shadow-[#9BC4FF]",
+						"hover:before:h-56 hover:before:w-56"
+					)}>
 					<span className="relative">DISCORD</span>
 				</a>
 			</div>

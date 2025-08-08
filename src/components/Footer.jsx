@@ -1,3 +1,5 @@
+import { twMerge } from "tailwind-merge";
+
 export const Footer = () => {
 	return (
 		<>
@@ -10,25 +12,37 @@ export const Footer = () => {
 					<div className="flex flex-wrap justify-center gap-2 md:gap-4 lg:gap-8">
 						<a
 							href="/twitch/"
-							class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+							class={twMerge(
+								"flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg",
+								"transition duration-300"
+							)}>
 							<i className="bi bi-twitch text-2xl"></i>
 							<span className="ml-2 hidden md:block">TWITCH</span>
 						</a>
 						<a
 							href="/youtube/"
-							class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+							class={twMerge(
+								"flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg",
+								"transition duration-300"
+							)}>
 							<i className="bi bi-youtube text-2xl"></i>
 							<span className="ml-2 hidden md:block">YOUTUBE</span>
 						</a>
 						<a
 							href="/instagram/"
-							class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+							class={twMerge(
+								"flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg",
+								"transition duration-300"
+							)}>
 							<i className="bi bi-instagram text-2xl"></i>
 							<span className="ml-2 hidden md:block">INSTAGRAM</span>
 						</a>
 						<a
 							href="https://osu.ppy.sh/teams/653"
-							class="flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg transition duration-300">
+							class={twMerge(
+								"flex items-center text-white hover:scale-110 hover:text-[#517fc1] hover:bg-white p-2 rounded-lg",
+								"transition duration-300"
+							)}>
 							<i className="bi bi-diagram-3 text-2xl"></i>
 							<span className="ml-2 hidden md:block">OSU! TEAM</span>
 						</a>
