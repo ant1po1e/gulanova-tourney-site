@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { About } from "./pages/About";
 import { Footer } from "./components/Footer";
-import "bootstrap-icons/font/bootstrap-icons.css";
-import Particles from "./../public/Particles/Particles";
 import { Navbar } from "./components/Navbar";
+import Particles from "./../public/Particles/Particles";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 				<main className="relative z-10 container mx-auto px-4 md:px-8 lg:px-20 py-6">
 					<Routes>
 						<Route index element={<Home />} />
+						<Route path="/about" element={<About />} />
 					</Routes>
 				</main>
 				<Footer />
