@@ -3,7 +3,7 @@ import { HeroSection } from "./../components/HeroSection";
 
 export const Tournaments = () => {
     useEffect(() => {
-        document.title = "Gulanova | Home";
+        document.title = "Gulanova | Tournaments";
     }, []);
 
     return (

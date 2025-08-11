@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Tournaments } from "./pages/Tournaments";
+import { Khodam } from "./pages/Khodam";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
 import Particles from "./../public/Particles/Particles";
@@ -29,6 +30,7 @@ function App() {
 						<Route index element={<Home />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/tournaments" element={<Tournaments />} />
+						<Route path="/khodam" element={<Khodam />} />
 					</Routes>
 				</main>
 				<Footer />

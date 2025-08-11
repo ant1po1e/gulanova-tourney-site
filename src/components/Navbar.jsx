@@ -72,7 +72,7 @@ export const Navbar = () => {
 			</header>
 
 			{/* Desktop Navigation */}
-			<nav className="sticky top-0 z-50 before:absolute before:inset-x-0 before:bottom-0">
+			<nav className="sticky top-0 z-40 before:absolute before:inset-x-0 before:bottom-0">
 				<div className="transition duration-300 backdrop-blur-none">
 					<div className="hidden md:flex justify-center items-center p-5">
 						<Link

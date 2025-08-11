@@ -129,3 +129,13 @@ body {
 	padding: 0;
 	overflow-x: hidden;
 }
+
+@keyframes pop {
+	0% { transform: scale(0.5) rotate(-5deg); opacity: 0; }
+	70% { transform: scale(1.05) rotate(2deg); opacity: 1; }
+	100% { transform: scale(1) rotate(0); }
+}
+.animate-pop {
+	animation: pop 0.4s ease-out forwards;
+}
+
