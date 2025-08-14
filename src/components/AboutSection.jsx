@@ -1,6 +1,6 @@
 export const AboutSection = () => {
 	return (
-		<div className="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] overflow-hidden fade-out-bg mb-28 mt-2">
+		<div className="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] fade-out-bg mb-28 pt-2">
 			<div className="w-full h-auto md:h-[30rem]">
 				<div className="text-center text-white font-bold mt-20">
 					<h2 className="text-4xl">ABOUT</h2>
@@ -11,7 +11,7 @@ export const AboutSection = () => {
 					</div>
 				</div>
 
-				<div className="px-5 md:px-24 py-16 md:py-24 text-white text-center md:text-justify text-base md:text-lg font-medium">
+				<div className="px-5 md:px-24 py-10 md:py-12 text-white text-center md:text-justify text-base md:text-lg font-medium">
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis
 					ducimus tempore dolores aperiam molestias assumenda ipsa? Eligendi
 					itaque alias, dolores assumenda mollitia vel totam libero inventore

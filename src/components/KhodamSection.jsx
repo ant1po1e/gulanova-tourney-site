@@ -20,15 +20,20 @@ export const KhodamSection = () => {
 	const [selectedKhodam, setSelectedKhodam] = useState(null);
 	const speedRef = useRef(0);
 	const animRef = useRef(null);
+	const finalPositionRef = useRef(0);
 
 	const itemWidth = 150;
+	const containerWidth = 450;
+	const centerPosition = containerWidth / 2; // 225px dari kiri
 
 	const animate = () => {
 		setPosition((prev) => {
 			let newPos = prev - speedRef.current;
+			// Reset posisi ketika sudah melewati satu set gambar
 			if (newPos <= -(images.length * itemWidth)) {
-				newPos = 0;
+				newPos = newPos + images.length * itemWidth;
 			}
+			finalPositionRef.current = newPos;
 			return newPos;
 		});
 		animRef.current = requestAnimationFrame(animate);
@@ -49,91 +54,87 @@ export const KhodamSection = () => {
 				cancelAnimationFrame(animRef.current);
 				setIsSpinning(false);
 
-				let middleOffset = Math.abs(position % (images.length * itemWidth));
-				let index =
-					Math.floor((middleOffset + itemWidth / 2) / itemWidth) %
+				// Perhitungan yang lebih akurat
+				const currentPosition = Math.abs(finalPositionRef.current);
+				const normalizedPosition =
+					currentPosition % (images.length * itemWidth);
+
+				// Posisi tengah container adalah 225px
+				// Kita perlu mencari gambar mana yang berada di posisi tengah
+				const imageAtCenter =
+					Math.floor((normalizedPosition + centerPosition) / itemWidth) %
 					images.length;
 
-				setSelectedKhodam(images[index]);
+				setSelectedKhodam(images[imageAtCenter]);
 			}
 		}, 100);
 	};
 
 	useEffect(() => {
-		return () => cancelAnimationFrame(animRef.current);
+		return () => {
+			if (animRef.current) {
+				cancelAnimationFrame(animRef.current);
+			}
+		};
 	}, []);
 
 	return (
-		<div className="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] overflow-hidden fade-out-bg mb-28 mt-2">
-			<div className="w-full h-auto md:h-[30rem] text-center text-white mt-20">
-				<h2 className="text-4xl font-bold">CEK KHODAM</h2>
-				<div className="flex justify-center gap-8 mt-3">
-					<div className="w-3 h-3 bg-white rounded-full"></div>
-					<div className="w-3 h-3 bg-white rounded-full"></div>
-					<div className="w-3 h-3 bg-white rounded-full"></div>
+		<div className="rounded-t-xl md:rounded-t-[5rem] lg:rounded-t-[10rem] fade-out-bg mb-28 pt-2">
+			<div className="w-full h-auto md:h-[30rem]">
+				<div className="text-center text-white font-bold mt-20">
+					<h2 className="text-4xl">KHODAM</h2>
+					<div className="flex justify-center gap-8 mt-3">
+						<div className="w-3 h-3 bg-white rounded-full"></div>
+						<div className="w-3 h-3 bg-white rounded-full"></div>
+						<div className="w-3 h-3 bg-white rounded-full"></div>
+					</div>
 				</div>
 
-				<p className="mt-6 text-base md:text-lg font-medium">
-					Klik tombol di bawah untuk melihat khodam Anda!
-				</p>
-
-				<button
-					onClick={spinKhodam}
-					className="mt-6 px-6 py-2 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition disabled:opacity-50"
-					disabled={isSpinning}>
-					{isSpinning ? "Memutar..." : "Cek Khodam"}
-				</button>
-
-				{/* Conveyor */}
-				<div className="relative mt-10 overflow-hidden w-[450px] mx-auto border-4 border-yellow-400 rounded-xl">
-					<div
-						className="flex"
-						style={{
-							transform: `translateX(${position}px)`,
-							transition: isSpinning ? "none" : "transform 0.3s ease-out",
-						}}>
-						{[...images, ...images].map((img, idx) => (
-							<div
-								key={idx}
-								className="w-[150px] h-[150px] flex-shrink-0 bg-center bg-cover"
-								style={{ backgroundImage: `url(${img})` }}></div>
-						))}
+				<div className="px-5 md:px-24 py-10 md:py-12 text-white text-center md:text-justify text-base md:text-lg font-medium">
+					<div className="relative overflow-x-hidden w-[450px] mx-auto border-4 border-yellow-400 rounded-xl">
+						<div
+							className="flex"
+							style={{
+								transform: `translateX(${position}px)`,
+								transition: isSpinning ? "none" : "transform 0.3s ease-out",
+							}}>
+							{[...images, ...images].map((img, idx) => (
+								<div
+									key={idx}
+									className="w-[150px] h-[150px] flex-shrink-0 bg-center bg-cover"
+									style={{ backgroundImage: `url(${img})` }}></div>
+							))}
+						</div>
+						<div className="absolute top-0 bottom-0 left-1/2 w-[4px] bg-yellow-400 transform -translate-x-1/2"></div>
 					</div>
 
-					{/* Penanda Tengah */}
-					<div className="absolute top-0 bottom-0 left-1/2 w-[4px] bg-yellow-400 transform -translate-x-1/2"></div>
-				</div>
-			</div>
-
-			{selectedKhodam && (
-				<div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-					<div className="bg-gradient-to-b from-yellow-200 to-yellow-400 p-6 rounded-2xl shadow-2xl text-center animate-pop">
-						<img
-							src={selectedKhodam}
-							alt="Khodam"
-							className="w-[220px] h-[220px] object-cover rounded-xl border-4 border-yellow-500 shadow-lg"
-						/>
+					<div className="flex justify-center">
 						<button
-							onClick={() => setSelectedKhodam(null)}
-							className="mt-6 px-6 py-2 bg-red-500 text-white rounded-full hover:bg-red-600 transition font-bold">
-							Tutup
+							onClick={spinKhodam}
+							className="mt-6 px-6 py-2 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 transition duration-300 disabled:opacity-50"
+							disabled={isSpinning}>
+							{isSpinning ? "Spinning..." : "Check Khodam"}
 						</button>
 					</div>
 				</div>
-			)}
 
-			{/* Animasi CSS */}
-			<style>
-				{`
-				@keyframes pop {
-					0% { transform: scale(0.5); opacity: 0; }
-					100% { transform: scale(1); opacity: 1; }
-				}
-				.animate-pop {
-					animation: pop 0.3s ease-out forwards;
-				}
-				`}
-			</style>
+				{selectedKhodam && (
+					<div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
+						<div className="bg-gradient-to-b from-yellow-200 to-yellow-400 p-6 rounded-2xl shadow-2xl text-center animate-pop">
+							<img
+								src={selectedKhodam}
+								alt="Khodam"
+								className="w-[220px] h-[220px] object-cover rounded-xl border-4 border-yellow-500 shadow-lg"
+							/>
+							<button
+								onClick={() => setSelectedKhodam(null)}
+								className="mt-6 px-6 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition font-bold">
+								Close
+							</button>
+						</div>
+					</div>
+				)}
+			</div>
 		</div>
 	);
 };
