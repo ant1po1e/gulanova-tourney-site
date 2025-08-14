@@ -9,6 +9,7 @@ import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import { UnderConstruction } from "./components/UnderConstruction";
 
 function App() {
 	const [init, setInit] = useState(false);
@@ -92,6 +93,7 @@ function App() {
 	);
 	return (
 		<BrowserRouter>
+			<UnderConstruction />
 			<Navbar />
 			<div className="fixed inset-0 w-full h-full -z-1 pointer-events-none">
 				{init && (
