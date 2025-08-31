@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import { useEffect, useRef } from "react";
 
 export const Redirect = ({ videoSrc, redirectUrl }) => {
@@ -20,13 +21,12 @@ export const Redirect = ({ videoSrc, redirectUrl }) => {
 		};
 	}, [redirectUrl]);
 
-	return (
-		<>
-			<div className="bg-[#313338] fixed inset-0 flex items-center justify-center">
-				<video ref={videoRef} autoPlay muted className="max-w-full max-h-full">
-					<source src={videoSrc} type="video/mp4" />
-				</video>
-			</div>
-		</>
+	return createPortal(
+		<div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#313338]">
+			<video ref={videoRef} autoPlay muted className="max-w-full max-h-full">
+				<source src={videoSrc} type="video/mp4" />
+			</video>
+		</div>,
+		document.body
 	);
 };

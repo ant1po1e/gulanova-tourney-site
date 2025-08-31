@@ -38,9 +38,10 @@ function AppContent() {
 		[]
 	);
 
-	const hideNavbar = /^\/(instagram|discord|twitch|youtube)/.test(
-		location.pathname
-	);
+	const hideNavbar =
+		/^\/(instagram|discord|twitch|youtube|gulanocup-empat\/sheet)/.test(
+			location.pathname
+		);
 
 	return (
 		<>
@@ -64,7 +65,7 @@ function AppContent() {
 						<Route path="/about" element={<About />} />
 						<Route path="/tournaments" element={<Tournaments />} />
 						<Route path="/khodam" element={<Khodam />} />
-						<Route path="/:target" element={<RedirectPage />} />
+						<Route path="/*" element={<RedirectPage />} />
 					</Routes>
 				</main>
 				{!hideNavbar && <Footer />}
