@@ -1,0 +1,62 @@
+[
+    {
+        "link": "",
+        "date": "?",
+        "title": "Fin's Multimode Event",
+        "roles": ["Advisor", "Mappooler"]
+    },
+    {
+        "link": "",
+        "date": "?",
+        "title": "osu!mania 4K Indonesia Cup 2026",
+        "roles": ["Mapper"]
+    },
+    {
+        "link": "https://osu.ppy.sh/wiki/en/Tournaments/GNV/5",
+        "date": "2025",
+        "title": "Gulano Cup #5",
+        "roles": ["Organizer", "Mapper", "Commentator", "Programmer"]
+    },
+    {
+        "link": "https://osu.ppy.sh/community/forums/topics/1861503?n=1",
+        "date": "2024",
+        "title": "Gulano Cup #4",
+        "roles": ["Mappooler", "Mapper", "Commentator", "Programmer"]
+    },
+    {
+        "link": "https://tournaments.quavergame.com/tournaments/quaver-official-4k-tournament-2024",
+        "date": "2024",
+        "title": "Quaver Official 4K Tournament 2024",
+        "roles": ["Mapper"]
+    },
+    {
+        "link": "https://tournaments.quavergame.com/tournaments/quaver-official-4k-tournament-2023",
+        "date": "2023",
+        "title": "Quaver Official 4K Tournament 2023",
+        "roles": ["Mapper"]
+    },
+    {
+        "link": "https://akatsuki.gg/u/63795?mode=3&rx=0",
+        "date": "2023",
+        "title": "Akatsuki.gg",
+        "roles": ["Beatmap Nominator"]
+    },
+    {
+        "link": "https://osu.ppy.sh/wiki/en/Tournaments/OMIC/2022_4K",
+        "date": "2022",
+        "title": "osu!mania 4K Indonesia Cup 2022",
+        "roles": ["Organizer", "Mappooler", "Mapper", "Commentator"]
+    },
+    {
+        "link": "https://osu.ppy.sh/community/forums/topics/1645546?n=1",
+        "date": "2022",
+        "title": "Combro Cup",
+        "roles": ["Mapper"]
+    },
+    {
+        "link": "https://www.datenshi.pw/",
+        "date": "2021-2022",
+        "title": "Datenshi.pw",
+        "roles": ["Beatmap Nominator"]
+    }
+]

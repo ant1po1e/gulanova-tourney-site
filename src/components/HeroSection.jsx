@@ -1,41 +1,86 @@
-import { twMerge } from "flowbite-react/helpers/tailwind-merge";
+import { Typewriter } from "react-simple-typewriter";
 
 export const HeroSection = () => {
-	return (
-		<>
-			<div className="rounded-3xl overflow-hidden shadow-xl bg-gradient-to-br from-gray-900 to-blue-900 mb-8 mt-2">
-				<div className="relative w-full overflow-hidden aspect-[16/9] lg:aspect-[21/9]">
-					<img
-						src="/bg-masthead.webp"
-						alt="Guramee"
-						className="w-full h-full object-cover lg:hidden"
-					/>
+    return (
+        <section
+            className="w-full px-4 md:px-24"
+            aria-label="Hero Section with introduction and social links"
+        >
+            {/* Title */}
+            <div className="mx-auto text-center z-1 lg:hidden">
+                <h1 className="font-bold text-white text-5xl md:text-[100px] mb-5 neon font-merienda relative inline-block cursor-pointer group">
+                    Gulanova
+                </h1>
+            </div>
 
-					<video
-						className="absolute top-0 left-0 w-full h-full object-cover hidden lg:flex"
-						disablePictureInPicture
-						controlsList="nodownload"
-						autoPlay
-						muted
-						loop>
-						<source src="/vid/vid.mp4" type="video/mp4" />
-						Your browser does not support the video tag.
-					</video>
-				</div>
-			</div>
+            {/* Typewriter */}
+            {/* <div className="flex flex-wrap justify-center mx-auto mt-1 md:mt-3 text-xl md:text-3xl neon">
+                <div className="font-mono font-bold" aria-label="Roles I do">
+                    <Typewriter
+                        words={[
+                            "Game Developer",
+                            "Desktop Developer",
+                            "Photographer",
+                            "Rhythm Gamer",
+                        ]}
+                        cursor
+                        delaySpeed={2000}
+                        loop
+                    />
+                </div>
+            </div> */}
 
-			<div className="flex justify-center mb-52 md:mb-28">
-				<a
-					href="/discord/"
-					className={twMerge(
-						"z-0 relative flex h-[50px] w-40 rounded-lg justify-center items-center overflow-hidden bg-gradient-to-r",
-						"from-[#729dd8] to-[#3166a7] text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0",
-						"before:rounded-full before:bg-[#9BC4FF] before:duration-500 before:ease-out hover:shadow-[#9BC4FF]",
-						"hover:before:h-56 hover:before:w-56"
-					)}>
-					<span className="relative">DISCORD</span>
-				</a>
-			</div>
-		</>
-	);
+            {/* Mobile social links */}
+            <div className="flex flex-wrap md:hidden justify-center gap-2 mt-4">
+                {/* GitHub dengan teks di kiri dalam kotak */}
+                <a
+                    href="https://github.com/ant1po1e"
+                    aria-label="GitHub"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 h-10 rounded-lg bg-white flex flex-row items-center gap-2 shadow-md md:hover:bg-blue-400 focus:ring-2 focus:ring-blue-400 transition duration-300 group"
+                >
+                    <span className="text-sm font-medium text-black md:group-hover:text-white transition-colors duration-300">
+                        GitHub
+                    </span>
+                    <i
+                        className="bi bi-github text-lg md:group-hover:text-2xl md:group-hover:text-white transition-all duration-300"
+                        aria-hidden="true"
+                    />
+                </a>
+
+                {/* YouTube dengan teks di kanan dalam kotak */}
+                <a
+                    href="https://www.youtube.com/@ant1po1e"
+                    aria-label="YouTube"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3 h-10 rounded-lg bg-white flex flex-row-reverse items-center gap-2 shadow-md md:hover:bg-blue-400 focus:ring-2 focus:ring-blue-400 transition duration-300 group"
+                >
+                    <span className="text-sm font-medium text-black md:group-hover:text-white transition-colors duration-300">
+                        YouTube
+                    </span>
+                    <i
+                        className="bi bi-youtube text-lg md:group-hover:text-2xl md:group-hover:text-white transition-all duration-300"
+                        aria-hidden="true"
+                    />
+                </a>
+            </div>
+
+            {/* Background artwork */}
+            <div className="relative w-full">
+                <video
+                    className="object-cover hidden rounded-3xl lg:flex"
+                    disablePictureInPicture
+                    controlsList="nodownload"
+                    autoPlay
+                    muted
+                    loop
+                >
+                    <source src="/vid/vid.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    );
 };
