@@ -2,7 +2,7 @@ export const Sidebar = () => {
   return (
     <nav className="flex-col space-y-4 fixed top-28 left-6 z-30 hidden md:flex">
       {/* GitHub */}
-      <div className="relative group font-medium rounded-lg fade-out-bg md:hover:scale-110 transition duration-300>
+      <div className="relative group font-medium rounded-lg fade-out-bg  md:hover:scale-110 transition duration-300">
         <a
           href="https://github.com/ant1po1e"
           aria-label="GitHub"
