@@ -11,7 +11,7 @@ export const Footer = () => {
     const links = [
         { to: "/", label: "HOME" },
         { to: "/tournaments", label: "TOURNAMENTS" },
-        { to: "/khodam", label: "KHODAM" }
+        { to: "/khodam", label: "KHODAM" },
     ];
 
     const iMap = {
@@ -81,7 +81,7 @@ export const Footer = () => {
                             {/* Tooltip */}
                             <span
                                 role="tooltip"
-                                className="absolute -top-20 left-1/2 -translate-x-1/2 bg-blue-800/50 shadow-lg text-white text-sm px-5 py-2 rounded-md opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap pointer-events-none"
+                                className="absolute -top-16 left-1/2 -translate-x-1/2 bg-blue-800/50 shadow-lg text-white text-sm px-5 py-2 rounded-md opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap pointer-events-none"
                             >
                                 {link.label}
                             </span>

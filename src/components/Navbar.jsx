@@ -19,21 +19,21 @@ export const Navbar = () => {
             <Link
                 to={isOnRoot ? "/" : backUrl}
                 aria-label={isOnRoot ? "Go to homepage" : "Go back"}
-                className="text-white font-bold text-lg md:text-2xl p-2 rounded-r-lg fade-out-bg shadow-lg md:hover:text-blue-400 md:hover:pl-12 focus:ring-2 focus:ring-blue-400 transition-all duration-300"
+                className="text-white font-bold text-lg md:text-2xl p-2 py-4 rounded-r-lg fade-out-bg shadow-lg md:hover:text-blue-400 md:hover:pl-12 focus:ring-2 focus:ring-blue-400 transition-all duration-300"
             >
                 {isOnRoot ? (
                     <span className="flex items-center pr-3">
                         <img
                             src="gulanova.webp"
                             alt=""
-                            className="w-15 h-15 mx-3"
+                            className="w-8 h-8 mx-3"
                         />
                         Gulanova
                     </span>
                 ) : (
-                    <span className="flex items-center pr-3 w-15 h-15 mx-3">
-                        <i className="bi bi-arrow-left" aria-hidden="true" />{" "}
-                        Back
+                    <span className="flex items-center gap-2 pr-3 pl-3">
+                        <i className="bi bi-arrow-left" aria-hidden="true" />
+                        <span>Back</span>
                     </span>
                 )}
             </Link>

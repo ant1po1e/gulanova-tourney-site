@@ -8,9 +8,7 @@ export const HeroSection = () => {
         >
             {/* Title */}
             <div className="mx-auto text-center z-1 lg:hidden">
-                <h1 className="font-bold text-white text-5xl md:text-[100px] mb-5 neon font-merienda relative inline-block cursor-pointer group">
-                    Gulanova
-                </h1>
+                <img src="/bg.webp" className="rounded-lg" alt="" />
             </div>
 
             {/* Typewriter */}
