@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Gulano Cup #5",
+        "date": "2025",
+        "game": "osu!",
+        "links": [
+            {
+                "label": "Forum Post",
+                "url": "https://osu.ppy.sh/community/forums/..."
+            },
+            {
+                "label": "Challonge",
+                "url": "https://challonge.com/..."
+            }
+        ]
+    },
+    {
+        "title": "Gulano Cup #4",
+        "date": "2024",
+        "game": "osu!",
+        "links": [
+            {
+                "label": "Forum Post",
+                "url": "https://osu.ppy.sh/community/forums/..."
+            },
+            {
+                "label": "Challonge",
+                "url": "https://challonge.com/..."
+            }
+        ]
+    }
+]

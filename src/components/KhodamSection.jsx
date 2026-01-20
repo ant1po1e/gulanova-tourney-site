@@ -48,6 +48,7 @@ export const KhodamSection = () => {
 
         const slowdown = setInterval(() => {
             speedRef.current *= 0.95;
+
             if (speedRef.current < 0.5) {
                 clearInterval(slowdown);
                 cancelAnimationFrame(animRef.current);
@@ -55,6 +56,7 @@ export const KhodamSection = () => {
 
                 const current = Math.abs(finalPositionRef.current);
                 const normalized = current % (images.length * itemWidth);
+
                 const index =
                     Math.floor((normalized + centerPosition) / itemWidth) %
                     images.length;
@@ -65,23 +67,37 @@ export const KhodamSection = () => {
     };
 
     useEffect(() => {
-        return () => animRef.current && cancelAnimationFrame(animRef.current);
+        return () => {
+            if (animRef.current) cancelAnimationFrame(animRef.current);
+        };
     }, []);
 
     return (
-        <section className="w-full px-4 md:px-24 flex justify-center items-center min-h-[70vh]">
-            <div className="w-full md:w-1/2 px-6 py-8 bg-black/50 backdrop-blur-md rounded-lg shadow-lg text-center">
-                {/* Title */}
-                <h1 className="font-bold text-white text-2xl md:text-4xl mb-3">
-                    Khodam Checker
-                </h1>
-                <p className="text-gray-300 text-sm md:text-base mb-8">
-                    Spin the wheel and reveal your hidden guardian.
-                </p>
+        <section className="w-full flex justify-center">
+            <div
+                className="
+                    w-full md:w-1/2
+                    px-5 py-6
+                    bg-black/50 backdrop-blur-md
+                    rounded-lg shadow-lg
+                    border border-white/20
+                ">
+                {/* Header */}
+                <div className="text-center space-y-2">
+                    <h1 className="font-bold text-white text-2xl md:text-3xl">
+                        Khodam Checker
+                    </h1>
+                    <p className="text-gray-300 text-sm md:text-base">
+                        Spin the wheel and reveal your hidden guardian
+                    </p>
+                </div>
 
-                {/* SLOT + BUTTON */}
-                <div className="flex flex-col items-center">
-                    <div className="relative overflow-hidden w-[450px] max-w-full border border-white/20 rounded-lg">
+                {/* Divider */}
+                <div className="mt-5 border-t border-white/20" />
+
+                {/* Spinner */}
+                <div className="mt-6 flex flex-col items-center gap-6">
+                    <div className="relative overflow-hidden w-[450px] max-w-full border border-blue-400/40 rounded-xl">
                         <div
                             className="flex"
                             style={{
@@ -89,19 +105,20 @@ export const KhodamSection = () => {
                                 transition: isSpinning
                                     ? "none"
                                     : "transform 0.3s ease-out",
-                            }}
-                        >
-                            {[...images, ...images].map((img, i) => (
+                            }}>
+                            {[...images, ...images].map((img, idx) => (
                                 <div
-                                    key={i}
+                                    key={idx}
                                     className="w-[150px] h-[150px] flex-shrink-0 bg-center bg-cover"
-                                    style={{ backgroundImage: `url(${img})` }}
+                                    style={{
+                                        backgroundImage: `url(${img})`,
+                                    }}
                                 />
                             ))}
                         </div>
 
-                        {/* Center Indicator */}
-                        <div className="absolute top-0 bottom-0 left-1/2 w-px bg-blue-400 -translate-x-1/2" />
+                        {/* Center indicator */}
+                        <div className="absolute top-0 bottom-0 left-1/2 w-[3px] bg-blue-400 -translate-x-1/2" />
                     </div>
 
                     {/* Button */}
@@ -109,45 +126,54 @@ export const KhodamSection = () => {
                         onClick={spinKhodam}
                         disabled={isSpinning}
                         className="
-      mt-6
-      px-6 py-2
-      bg-blue-800 text-white font-semibold
-      rounded-lg shadow-md
-      md:hover:bg-blue-800/60
-      md:hover:scale-105
-      transition duration-300
-      disabled:opacity-50
-    "
-                    >
+                            px-8 py-2
+                            bg-blue-800 text-white font-semibold
+                            rounded-lg shadow-md
+                            hover:bg-blue-800/70
+                            hover:scale-105
+                            transition duration-300
+                            disabled:opacity-50
+                        ">
                         {isSpinning ? "Spinning..." : "Check Khodam"}
                     </button>
                 </div>
-            </div>
 
-            {/* RESULT MODAL */}
-            {selectedKhodam && (
-                <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-                    <div className="bg-black/80 backdrop-blur-md p-6 rounded-xl shadow-2xl text-center animate-pop">
-                        <img
-                            src={selectedKhodam}
-                            alt="Khodam"
-                            className="w-56 h-56 object-cover rounded-lg border border-white/20 shadow-lg"
-                        />
-                        <button
-                            onClick={() => setSelectedKhodam(null)}
+                {/* Result Modal */}
+                {selectedKhodam && (
+                    <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center rounded-lg">
+                        <div
                             className="
-                mt-6 px-6 py-2
-                bg-blue-800 text-white font-semibold
-                rounded-lg
-                md:hover:bg-blue-800/60
-                transition
-              "
-                        >
-                            Close
-                        </button>
+                            fade-out-bg backdrop-blur-md
+                            border border-white/20
+                            p-6 rounded-2xl
+                            shadow-2xl
+                            text-center
+                            animate-pop
+                        ">
+                            <img
+                                src={selectedKhodam}
+                                alt="Khodam"
+                                className="
+                                    w-[220px] h-[220px]
+                                    object-cover rounded-xl
+                                    border border-blue-400/40
+                                "
+                            />
+                            <button
+                                onClick={() => setSelectedKhodam(null)}
+                                className="
+                                    mt-6 px-6 py-2
+                                    bg-red-600 text-white
+                                    rounded-lg
+                                    hover:bg-red-700
+                                    transition font-bold
+                                ">
+                                Close
+                            </button>
+                        </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
         </section>
     );
 };

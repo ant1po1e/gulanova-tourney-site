@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { Tournaments } from "./pages/Tournaments";
 import { Khodam } from "./pages/Khodam";
 import { NotFound } from "./pages/NotFound";
 import { Navbar } from "./components/Navbar";
@@ -12,6 +13,7 @@ function App() {
             <Navbar />
             <Routes>
                 <Route index element={<Home />} />
+                <Route path="/tournaments" element={<Tournaments />} />
                 <Route path="/khodam" element={<Khodam />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>

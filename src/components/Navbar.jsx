@@ -45,7 +45,7 @@ export const Navbar = () => {
                     aria-label="Visit Antipole's osu! profile"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center bg-white bg-opacity-60 backdrop-blur-md md:hover:bg-blue-400 rounded-full px-1 py-1 focus:ring-2 focus:ring-blue-400 transition duration-300"
+                    className="flex items-center bg-white bg-opacity-60 backdrop-blur-md md:hover:bg-blue-400 rounded-full px-0.5 py-0.5 focus:ring-1 focus:ring-blue-400 transition duration-300"
                 >
                     <img
                         src="https://a.ppy.sh/siapaya"
