@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { Tournaments } from "./pages/Tournaments";
 import { Khodam } from "./pages/Khodam";
 import { NotFound } from "./pages/NotFound";
+import { RedirectPage } from "./pages/RedirectPage";
 import { Navbar } from "./components/Navbar";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -15,6 +16,7 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="/tournaments" element={<Tournaments />} />
                 <Route path="/khodam" element={<Khodam />} />
+                <Route path="/*" element={<RedirectPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
         </BrowserRouter>
