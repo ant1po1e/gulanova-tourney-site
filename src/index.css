@@ -3,139 +3,79 @@
 @plugin "tailwind-scrollbar";
 @source "../.flowbite-react/class-list.json";
 
-:root {
-	--color-gulanova: #c2e1f2;
-	--color-gulanova-yellow: #e28743;
-	--color-gulanova-dark: #798da6;
-	--color-white: #f2f2f2;
-}
-
-.bg-gulanova {
-	background-color: var(--color-gulanova);
-}
-.border-gulanova {
-	border: var(--color-gulanova);
-}
-.text-gulanova {
-	color: var(--color-gulanova);
-}
-.bg-gulanovaYellow {
-	background-color: var(--color-gulanova-yellow);
-}
-.text-gulanovaYellow {
-	color: var(--color-gulanova-yellow);
-}
-.bg-gulanovaDark {
-	background-color: var(--color-gulanova-dark);
-}
-.text-gulanovaDark {
-	color: var(--color-gulanova-dark);
-}
-.hover\:bg-gulanova:hover {
-	background-color: var(--color-gulanova);
-}
-.hover\:bg-gulanovaYellow:hover {
-	background-color: var(--color-gulanova-yellow);
-}
-.hover\:bg-gulanovaDark:hover {
-	background-color: var(--color-gulanova-dark);
-}
-.hover\:text-gulanova:hover {
-	color: var(--color-gulanova);
-}
-.hover\:text-gulanovaYellow:hover {
-	color: var(--color-gulanova-yellow);
-}
-.hover\:text-gulanovaDark:hover {
-	color: var(--color-gulanova-dark);
-}
-
 body {
-	font-family: "Quicksand", sans-serif;
-	background: linear-gradient(
-		135deg,
-		#021c41 0%,
-		#00102e 25%,
-		#000513 50%,
-		#001443 75%,
-		#000515 100%
-	);
-	min-height: 100vh;
+	background: url(/bg.webp);
+	-webkit-background-size: cover;
+	background-size: 150%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	font-family: "Inter", sans-serif;
 }
 
-.nav-link {
-	position: relative;
-}
-
-.nav-link::after {
-	content: "";
-	position: absolute;
-	width: 0;
-	height: 2px;
-	bottom: -5px;
-	left: 50%;
-	background-color: white;
-	transition: width 0.3s ease, left 0.3s ease;
-	transform: translateX(-50%);
-}
-
-.ol::before {
-	content: "";
-	background-color: #fff;
-}
-
-.nav-link:hover::after {
-	width: 100%;
-	left: 50%;
-}
-
-.glow-text {
-	position: relative;
-	transition: all 0.3s ease-in-out;
-}
-
-.glow-text::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 15px;
-	height: 15px;
-	background: #fff;
-	border-radius: 50%;
-	transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
-	transform: translate(-50%, -50%) scale(1);
-	opacity: 1;
-	box-shadow: 0 0 30px 20px rgba(173, 216, 230, 0.4);
-	filter: blur(15px);
+@media (max-width: 768px) {
+	body {
+		background-size: 400%;
+		background-position: center;
+	}
 }
 
 .fade-out-bg {
 	background: linear-gradient(
-		to bottom,
-		rgba(0, 0, 0, 0.9),
-		rgba(0, 0, 0, 0.7),
-		rgba(0, 0, 0, 0.7),
-		rgba(0, 0, 0, 0.5),
-		rgba(0, 0, 0, 0.4),
-		rgba(0, 0, 0, 0)
+		135deg,
+		#000513 0%,
+		#00102e 25%,
+		#021c41 50%
 	);
 }
 
-html,
-body {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
+.font-merienda {
+	font-family: "Merienda", cursive;
 }
 
-@keyframes pop {
-	0% { transform: scale(0.5) rotate(-5deg); opacity: 0; }
-	70% { transform: scale(1.05) rotate(2deg); opacity: 1; }
-	100% { transform: scale(1) rotate(0); }
-}
-.animate-pop {
-	animation: pop 0.4s ease-out forwards;
+.font-quicksand {
+	font-family: "Quicksand", sans-serif;
 }
 
+.neon {
+	color: #fff;
+	filter: drop-shadow(0 0 3px #fff) drop-shadow(0 0 8px rgb(147 197 253));
+}
+
+.neon-underline {
+	color: #fff;
+	box-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 50px rgb(147 197 253),
+		0 0 50px rgb(147 197 253);
+}
+
+.modal-backdrop {
+	pointer-events: none;
+}
+
+/* tambahkan di index.css / global.css */
+@keyframes shimmer {
+	0% {
+		background-position: -500px 0;
+	}
+	100% {
+		background-position: 500px 0;
+	}
+}
+
+@keyframes shimmer {
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.markdown ul {
+	list-style-type: disc;
+	padding-left: 1.25rem; /* sama kayak Tailwind pl-5 */
+}
+.markdown ol {
+	list-style-type: decimal;
+	padding-left: 1.25rem;
+}
+.markdown li {
+	margin: 0.25rem 0;
+}

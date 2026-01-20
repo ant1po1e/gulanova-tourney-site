@@ -1,5 +1,5 @@
 {
-  "name": "gulanova-site",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,19 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
     "@tailwindcss/vite": "^4.1.11",
-    "@tsparticles/react": "^3.0.0",
-    "@tsparticles/slim": "^3.9.1",
     "bootstrap-icons": "^1.13.1",
     "clsx": "^2.1.1",
     "flowbite-react": "^0.12.5",
     "formidable": "^3.5.4",
-    "ogl": "^1.0.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.7.1",
     "react-simple-typewriter": "^5.0.1",
+    "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.3.1",
+    "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.1.11"
   },
   "devDependencies": {
@@ -34,7 +35,6 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
-    "tailwind-scrollbar": "^4.0.2",
     "vite": "^7.0.6"
   }
 }
