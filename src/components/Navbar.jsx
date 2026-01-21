@@ -42,7 +42,7 @@ export const Navbar = () => {
             <div className="flex items-center space-x-4 text-black neon text-sm font-normal px-6">
                 <a
                     href="https://osu.ppy.sh/users/Antipole"
-                    aria-label="Visit Antipole's osu! profile"
+                    aria-label="osu! profile"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center bg-white bg-opacity-60 backdrop-blur-md md:hover:bg-blue-400 rounded-full px-0.5 py-0.5 focus:ring-1 focus:ring-blue-400 transition duration-300"
@@ -54,6 +54,7 @@ export const Navbar = () => {
                         width="40"
                         height="40"
                         loading="lazy"
+                        fetchPriority="high"
                     />
                 </a>
             </div>
