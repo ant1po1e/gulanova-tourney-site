@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { Redirect } from "../fragments/Redirect";
+import { NotFound } from "../pages/NotFound";
 
 const redirectMap = {
     "/instagram": { url: "https://www.instagram.com/gulanova.gg/" },
@@ -7,7 +8,7 @@ const redirectMap = {
     "/twitch": { url: "http://twitch.tv/gulanova" },
     "/youtube": { url: "https://www.youtube.com/@Gulanova" },
     "/tournaments/gulanocup-empat/bracket": {
-        url: "https://docs.google.com/spreadsheets/d/1BSg5RLLt603AZZ0oWYxenJUuhoIGzTlJPkWl5Xd_rwE/edit?usp=sharing",
+        url: "https://challonge.com/id/gulanocup4",
     },
     "/tournaments/gulanocup-empat/forum": {
         url: "https://osu.ppy.sh/community/forums/topics/1861503",
@@ -43,14 +44,11 @@ export const RedirectPage = () => {
     const data = redirectMap[location.pathname];
 
     if (!data) {
-        return (
-            <h1 className="text-white text-center mt-10">
-                Halaman tidak ditemukan
-            </h1>
-        );
+        return <NotFound/>;
     }
 
     return (
         <Redirect videoSrc="/vid/gulanovamenyapa.mp4" redirectUrl={data.url} />
     );
 };
+

@@ -3,9 +3,8 @@ export const Sidebar = () => {
         <nav className="flex-col space-y-4 fixed top-28 left-6 z-30 hidden md:flex">
             <div className="relative group font-medium rounded-lg fade-out-bg  md:hover:scale-110 transition duration-300">
                 <a
-                    href="https://www.gulanova.top/twitch/"
+                    href="https://www.gulanova.top/twitch"
                     aria-label="Twitch"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl shadow-lg text-white md:hover:bg-blue-800/50 group"
                 >
@@ -18,9 +17,8 @@ export const Sidebar = () => {
 
             <div className="relative group font-medium rounded-lg fade-out-bg  md:hover:scale-110 transition duration-300">
                 <a
-                    href="https://www.gulanova.top/youtube/"
+                    href="https://www.gulanova.top/youtube"
                     aria-label="YouTube"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl shadow-lg text-white md:hover:bg-blue-800/50 group"
                 >
@@ -33,9 +31,8 @@ export const Sidebar = () => {
 
             <div className="relative group font-medium rounded-lg fade-out-bg  md:hover:scale-110 transition duration-300">
                 <a
-                    href="https://www.gulanova.top/instagram/"
+                    href="https://www.gulanova.top/instagram"
                     aria-label="Instagram"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl shadow-lg text-white md:hover:bg-blue-800/50 group"
                 >
@@ -48,9 +45,8 @@ export const Sidebar = () => {
 
             <div className="relative group font-medium rounded-lg fade-out-bg  md:hover:scale-110 transition duration-300">
                 <a
-                    href="https://www.gulanova.top/discord/"
+                    href="https://www.gulanova.top/discord"
                     aria-label="Discord"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl shadow-lg text-white md:hover:bg-blue-800/50 group"
                 >

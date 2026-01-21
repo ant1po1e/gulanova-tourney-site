@@ -11,23 +11,6 @@ export const HeroSection = () => {
                 <img src="/bg.webp" className="rounded-lg" alt="" />
             </div>
 
-            {/* Typewriter */}
-            {/* <div className="flex flex-wrap justify-center mx-auto mt-1 md:mt-3 text-xl md:text-3xl neon">
-                <div className="font-mono font-bold" aria-label="Roles I do">
-                    <Typewriter
-                        words={[
-                            "Game Developer",
-                            "Desktop Developer",
-                            "Photographer",
-                            "Rhythm Gamer",
-                        ]}
-                        cursor
-                        delaySpeed={2000}
-                        loop
-                    />
-                </div>
-            </div> */}
-
             {/* Mobile social links */}
             <div className="flex flex-wrap md:hidden justify-center gap-2 mt-4">
                 {/* GitHub dengan teks di kiri dalam kotak */}
