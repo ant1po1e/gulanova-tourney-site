@@ -2,15 +2,17 @@ import { useState, useRef, useEffect } from "react";
 
 export const KhodamSection = () => {
     const images = [
-        "/khodam-img/1.png",
-        "/khodam-img/2.png",
-        "/khodam-img/3.png",
-        "/khodam-img/4.png",
-        "/khodam-img/5.png",
-        "/khodam-img/6.png",
-        "/khodam-img/7.png",
-        "/khodam-img/8.png",
-        "/khodam-img/9.png",
+        "/khodam-img/1.webp",
+        "/khodam-img/2.webp",
+        "/khodam-img/3.webp",
+        "/khodam-img/4.webp",
+        "/khodam-img/5.webp",
+        "/khodam-img/6.webp",
+        "/khodam-img/7.webp",
+        "/khodam-img/8.webp",
+        "/khodam-img/9.webp",
+        "/khodam-img/10.webp",
+        "/khodam-img/11.webp",
     ];
 
     const [isSpinning, setIsSpinning] = useState(false);

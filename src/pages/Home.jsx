@@ -5,7 +5,7 @@ import { useEffect } from "react";
 
 export const Home = () => {
     useEffect(() => {
-        document.title = "Antipole | Home";
+        document.title = "Gulanova | Home";
     }, []);
 
     return (

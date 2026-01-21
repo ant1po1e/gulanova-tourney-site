@@ -1,31 +1,45 @@
 [
     {
         "title": "Gulano Cup #5",
+        "redirect": "/tournaments/gulanocup-lima/",
         "date": "2025",
         "game": "osu!",
         "links": [
             {
                 "label": "Forum Post",
-                "url": "https://osu.ppy.sh/community/forums/..."
+                "url": "/tournaments/gulanocup-lima/forum"
             },
             {
-                "label": "Challonge",
-                "url": "https://challonge.com/..."
+                "label": "Bracket",
+                "url": "/tournaments/gulanocup-lima/bracket"
+            },
+            {
+                "label": "Sheet",
+                "url": "/tournaments/gulanocup-lima/sheet"
+            },
+            {
+                "label": "Wiki",
+                "url": "/tournaments/gulanocup-lima/wiki"
             }
         ]
     },
     {
         "title": "Gulano Cup #4",
+        "redirect": "/tournaments/gulanocup-empat/",
         "date": "2024",
         "game": "osu!",
         "links": [
             {
                 "label": "Forum Post",
-                "url": "https://osu.ppy.sh/community/forums/..."
+                "url": "/tournaments/gulanocup-empat/forum"
             },
             {
-                "label": "Challonge",
-                "url": "https://challonge.com/..."
+                "label": "Bracket",
+                "url": "/tournaments/gulanocup-empat/bracket"
+            },
+            {
+                "label": "Sheet",
+                "url": "/tournaments/gulanocup-empat/sheet"
             }
         ]
     }

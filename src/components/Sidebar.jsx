@@ -5,7 +5,6 @@ export const Sidebar = () => {
                 <a
                     href="https://www.gulanova.top/twitch"
                     aria-label="Twitch"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl shadow-lg text-white md:hover:bg-blue-800/50 group"
                 >
@@ -20,7 +19,6 @@ export const Sidebar = () => {
                 <a
                     href="https://www.gulanova.top/youtube"
                     aria-label="YouTube"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl shadow-lg text-white md:hover:bg-blue-800/50 group"
                 >
@@ -35,7 +33,6 @@ export const Sidebar = () => {
                 <a
                     href="https://www.gulanova.top/instagram"
                     aria-label="Instagram"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl shadow-lg text-white md:hover:bg-blue-800/50 group"
                 >
@@ -50,7 +47,6 @@ export const Sidebar = () => {
                 <a
                     href="https://www.gulanova.top/discord"
                     aria-label="Discord"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="w-16 h-16 rounded-lg flex items-center justify-center text-3xl shadow-lg text-white md:hover:bg-blue-800/50 group"
                 >

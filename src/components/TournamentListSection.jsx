@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import tournaments from "../data/tournaments.json";
 
-const TournamentItem = ({ title, date, game, links }) => {
+const TournamentItem = ({ title, redirect, date, game, links }) => {
     return (
         <div className="py-4">
             {/* Mobile date */}
@@ -10,7 +11,8 @@ const TournamentItem = ({ title, date, game, links }) => {
 
             {/* Title + Date */}
             <div className="flex items-baseline gap-3 flex-wrap">
-                <h3
+                <Link
+                    to={redirect}
                     className="
                     mt-1 text-lg md:text-2xl font-bold text-white
                     rounded-lg transition-all duration-300
@@ -20,7 +22,7 @@ const TournamentItem = ({ title, date, game, links }) => {
                     md:hover:shadow-md
                 ">
                     {title}
-                </h3>
+                </Link>
 
                 <span className="hidden md:block text-xs md:text-sm tracking-widest uppercase text-gray-300">
                     {date} • {game}
@@ -33,7 +35,6 @@ const TournamentItem = ({ title, date, game, links }) => {
                     <a
                         key={idx}
                         href={link.url}
-                        target="_blank"
                         rel="noopener noreferrer"
                         className="
                             text-xs md:text-sm
@@ -90,6 +91,7 @@ export const TournamentSection = () => {
                             <TournamentItem
                                 key={idx}
                                 title={item.title}
+                                redirect={item.redirect}
                                 date={item.date}
                                 game={item.game}
                                 links={item.links}
