@@ -13,6 +13,7 @@ export const KhodamSection = () => {
         "/khodam-img/9.webp",
         "/khodam-img/10.webp",
         "/khodam-img/11.webp",
+        "/khodam-img/12.webp",
     ];
 
     const [isSpinning, setIsSpinning] = useState(false);

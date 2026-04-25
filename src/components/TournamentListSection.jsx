@@ -4,12 +4,10 @@ import tournaments from "../data/tournaments.json";
 const TournamentItem = ({ title, redirect, date, game, links }) => {
     return (
         <div className="py-4">
-            {/* Mobile date */}
             <span className="md:hidden text-xs tracking-widest uppercase text-gray-400">
                 {date} • {game}
             </span>
 
-            {/* Title + Date */}
             <div className="flex items-baseline gap-3 flex-wrap">
                 <Link
                     to={redirect}
@@ -29,7 +27,6 @@ const TournamentItem = ({ title, redirect, date, game, links }) => {
                 </span>
             </div>
 
-            {/* Links */}
             <div className="mt-3 flex flex-wrap gap-2">
                 {links.map((link, idx) => (
                     <a
@@ -55,7 +52,7 @@ const TournamentItem = ({ title, redirect, date, game, links }) => {
     );
 };
 
-export const TournamentSection = () => {
+export const TournamentListSection = () => {
     return (
         <section className="w-full px-4 md:px-24 flex justify-center items-center">
             <div
@@ -76,7 +73,6 @@ export const TournamentSection = () => {
                     </p>
                 </div>
 
-                {/* List */}
                 <div
                     className="
                     mt-6 px-2 md:px-4 py-2

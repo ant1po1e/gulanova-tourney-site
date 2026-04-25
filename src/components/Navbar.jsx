@@ -5,17 +5,17 @@ export const Navbar = () => {
     const path = location.pathname;
     const isOnRoot = path === "/";
 
-    const isInToolsSubpage =
-        path === "/tools/bbcode-generator" || path === "/tools/snap-calculator";
+    const isInTournamentsSubpage =
+        path === "/tournaments/gulanocup-lima/" ||
+        path === "/tournaments/gulanocup-empat/";
 
-    const backUrl = isInToolsSubpage ? "/tools" : "/";
+    const backUrl = isInTournamentsSubpage ? "/tournaments" : "/";
 
     return (
         <header
             className="flex justify-between items-center pt-4 relative z-10"
             aria-label="Main navigation bar"
         >
-            {/* Logo / Back button */}
             <Link
                 to={isOnRoot ? "/" : backUrl}
                 aria-label={isOnRoot ? "Go to homepage" : "Go back"}

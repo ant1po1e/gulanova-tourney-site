@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Tournaments } from "./pages/Tournaments";
+import { TournamentPage } from "./pages/TournamentPage";
 import { Khodam } from "./pages/Khodam";
 import { RedirectPage } from "./pages/RedirectPage";
 import { Navbar } from "./components/Navbar";
@@ -16,8 +17,10 @@ function App() {
                 <Route index element={<Home />} />
                 <Route path="/tournaments" element={<Tournaments />} />
                 <Route path="/khodam" element={<Khodam />} />
-
-                {/* Wildcard handler */}
+                <Route
+                    path="/tournaments/:tournamentId"
+                    element={<TournamentPage />}
+                />
                 <Route path="/*" element={<RedirectPage />} />
             </Routes>
         </BrowserRouter>

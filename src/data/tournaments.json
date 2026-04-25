@@ -1,9 +1,11 @@
 [
     {
+        "id": "gulanocup-lima",
         "title": "Gulano Cup #5",
         "redirect": "/tournaments/gulanocup-lima/",
         "date": "2025",
         "game": "osu!",
+        "brakcet": "gulanocup5",
         "links": [
             {
                 "label": "Forum Post",
@@ -24,10 +26,12 @@
         ]
     },
     {
+        "id": "gulanocup-empat",
         "title": "Gulano Cup #4",
         "redirect": "/tournaments/gulanocup-empat/",
         "date": "2024",
         "game": "osu!",
+        "brakcet": "gulanocup4",
         "links": [
             {
                 "label": "Forum Post",
