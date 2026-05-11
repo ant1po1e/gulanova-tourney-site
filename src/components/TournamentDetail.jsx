@@ -13,9 +13,9 @@ const mappoolFiles = import.meta.glob("../data/*/mappools.json");
 const staffFiles = import.meta.glob("../data/*/staff.json");
 const playerFiles = import.meta.glob("../data/*/players.json");
 const matchFiles = import.meta.glob("../data/*/matches.json");
-const podiumFiles = import.meta.glob("../data/*/podium.json")
+const podiumFiles = import.meta.glob("../data/*/podium.json");
 
-export const TournamentDetail = ({tournament, bracket}) => {
+export const TournamentDetail = ({ tournament, bracket }) => {
     const [data, setData] = useState({
         about: null,
         mappools: null,
@@ -71,7 +71,7 @@ export const TournamentDetail = ({tournament, bracket}) => {
         mappools: <Mappools data={data.mappools} />,
         matches: <Matches data={data.matches} />,
         bracket: <Bracket link={bracket} />,
-        podium: <Podium data={data.podium}/>,
+        podium: <Podium data={data.podium} />,
     };
 
     return (
@@ -89,9 +89,11 @@ export const TournamentDetail = ({tournament, bracket}) => {
                     className="
                         md:w-1/4
                         border-b md:border-b-0 md:border-r border-white/20
-                        p-3 md:p-4
                         flex md:flex-col gap-2
                         overflow-x-auto md:overflow-visible
+                        p-2 md:p-4
+                        scrollbar-hide
+                        shrink-0
                     ">
                     {tabs.map((tab) => (
                         <button

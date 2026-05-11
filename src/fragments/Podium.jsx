@@ -1,8 +1,8 @@
 const PodiumCard = ({ user, position }) => {
     const styles = {
-        1: "scale-110 z-10",
-        2: "translate-y-4",
-        3: "translate-y-4",
+        1: "md:scale-110 z-10",
+        2: "translate-y-2 md:translate-y-4",
+        3: "translate-y-2 md:translate-y-4",
     };
 
     const medalStyles = {
@@ -31,9 +31,11 @@ const PodiumCard = ({ user, position }) => {
             target="_blank"
             rel="noopener noreferrer"
             className={`
+                shrink-0
                 flex flex-col items-center
                 transition-all duration-300
-                hover:scale-[115%]
+                md:hover:scale-[115%]
+                hover:scale-105
                 group
                 ${styles[position]}
             `}>
@@ -49,16 +51,22 @@ const PodiumCard = ({ user, position }) => {
                     src={`https://a.ppy.sh/${user.userId}`}
                     alt={user.username}
                     className={`
-                        w-20 h-20 md:w-24 md:h-24
+                        w-16 h-16
+                        sm:w-20 sm:h-20
+                        md:w-24 md:h-24
                         rounded-full object-cover border-2 border-white
                         relative ${medal.ring}
                     `}
                 />
             </div>
 
-            <div className="bg-[#153561] group-hover:bg-[#9BC4FF] transition duration-300 backdrop-blur-md px-3 py-2 rounded-lg text-center">
+            <div
+                className="bg-[#153561] group-hover:bg-[#9BC4FF] transition duration-300 backdrop-blur-md px-2 sm:px-3
+                    py-1.5 sm:py-2 rounded-lg text-center">
                 <p
-                    className="text-white group-hover:font-bold group-hover:text-[#153561] text-sm font-semibold truncate max-w-[100px]"
+                    className="text-white group-hover:font-bold group-hover:text-[#153561] text-xs sm:text-sm font-semibold truncate max-w-[70px]
+                        sm:max-w-[100px]
+                        md:max-w-[120px]"
                     title={user.username}>
                     {user.username}
                 </p>
@@ -66,7 +74,7 @@ const PodiumCard = ({ user, position }) => {
 
             <div
                 className={`
-                    mt-2 px-3 py-1 rounded-full text-xs font-bold
+                    mt-2 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold
                     shadow-md ${medal.badge}
                 `}>
                 #{position}
@@ -88,7 +96,22 @@ const Podium = ({ data }) => {
                 </h2>
             </div>
 
-            <div className="flex justify-center pt-10 md:pt-20 items-center gap-6">
+            <div
+                className="
+        flex
+        justify-center
+        items-end
+        
+        gap-2 sm:gap-4 md:gap-6
+        
+        pt-6 sm:pt-10 md:pt-20
+        
+        w-full
+        
+        overflow-x-auto
+        
+        pb-4
+    ">
                 <PodiumCard user={data.second} position={2} />
                 <PodiumCard user={data.first} position={1} />
                 <PodiumCard user={data.third} position={3} />

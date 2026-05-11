@@ -10,10 +10,7 @@ const Bracket = ({ link }) => {
             <div
                 className="
                     grid gap-1
-                    max-h-[50vh] overflow-y-auto
-                    scrollbar
-                    scrollbar-thumb-blue-400
-                    scrollbar-track-gray-600
+                    max-h-[50vh]
                     pr-1
                 ">
                     <iframe
