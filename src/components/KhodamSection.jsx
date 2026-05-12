@@ -24,19 +24,23 @@ export const KhodamSection = () => {
     const animRef = useRef(null);
     const finalPositionRef = useRef(0);
 
+    const spinnerRef = useRef(null);
+
     const itemWidth = 150;
-    const containerWidth = 450;
-    const centerPosition = containerWidth / 2;
 
     const animate = () => {
         setPosition((prev) => {
             let next = prev - speedRef.current;
+
             if (next <= -(images.length * itemWidth)) {
                 next += images.length * itemWidth;
             }
+
             finalPositionRef.current = next;
+
             return next;
         });
+
         animRef.current = requestAnimationFrame(animate);
     };
 
@@ -45,6 +49,7 @@ export const KhodamSection = () => {
 
         setSelectedKhodam(null);
         setIsSpinning(true);
+
         speedRef.current = 20;
 
         animRef.current = requestAnimationFrame(animate);
@@ -54,11 +59,18 @@ export const KhodamSection = () => {
 
             if (speedRef.current < 0.5) {
                 clearInterval(slowdown);
+
                 cancelAnimationFrame(animRef.current);
+
                 setIsSpinning(false);
 
                 const current = Math.abs(finalPositionRef.current);
+
                 const normalized = current % (images.length * itemWidth);
+
+                const containerWidth = spinnerRef.current?.offsetWidth || 450;
+
+                const centerPosition = containerWidth / 2;
 
                 const index =
                     Math.floor((normalized + centerPosition) / itemWidth) %
@@ -71,7 +83,9 @@ export const KhodamSection = () => {
 
     useEffect(() => {
         return () => {
-            if (animRef.current) cancelAnimationFrame(animRef.current);
+            if (animRef.current) {
+                cancelAnimationFrame(animRef.current);
+            }
         };
     }, []);
 
@@ -90,6 +104,7 @@ export const KhodamSection = () => {
                     <h1 className="font-bold text-white text-2xl md:text-3xl">
                         Khodam Checker
                     </h1>
+
                     <p className="text-gray-300 text-sm md:text-base">
                         Spin the wheel and reveal your hidden guardian
                     </p>
@@ -100,7 +115,14 @@ export const KhodamSection = () => {
 
                 {/* Spinner */}
                 <div className="mt-6 flex flex-col items-center gap-6">
-                    <div className="relative overflow-hidden w-[450px] max-w-full border border-blue-400/40 rounded-xl">
+                    <div
+                        ref={spinnerRef}
+                        className="
+                            relative overflow-hidden
+                            w-[450px] max-w-full
+                            border border-blue-400/40
+                            rounded-xl
+                        ">
                         <div
                             className="flex"
                             style={{
@@ -112,7 +134,11 @@ export const KhodamSection = () => {
                             {[...images, ...images].map((img, idx) => (
                                 <div
                                     key={idx}
-                                    className="w-[150px] h-[150px] flex-shrink-0 bg-center bg-cover"
+                                    className="
+                                        w-[150px] h-[150px]
+                                        flex-shrink-0
+                                        bg-center bg-cover
+                                    "
                                     style={{
                                         backgroundImage: `url(${img})`,
                                     }}
@@ -120,8 +146,16 @@ export const KhodamSection = () => {
                             ))}
                         </div>
 
-                        {/* Center indicator */}
-                        <div className="absolute top-0 bottom-0 left-1/2 w-[3px] bg-blue-400 -translate-x-1/2" />
+                        {/* Center Indicator */}
+                        <div
+                            className="
+                                absolute top-0 bottom-0
+                                left-1/2
+                                w-[3px]
+                                bg-blue-400
+                                -translate-x-1/2
+                            "
+                        />
                     </div>
 
                     {/* Button */}
@@ -143,16 +177,22 @@ export const KhodamSection = () => {
 
                 {/* Result Modal */}
                 {selectedKhodam && (
-                    <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center rounded-lg">
+                    <div
+                        className="
+                            fixed inset-0 z-50
+                            bg-black/70
+                            flex items-center justify-center
+                            rounded-lg
+                        ">
                         <div
                             className="
-                            fade-out-bg backdrop-blur-md
-                            border border-white/20
-                            p-6 rounded-2xl
-                            shadow-2xl
-                            text-center
-                            animate-pop
-                        ">
+                                fade-out-bg backdrop-blur-md
+                                border border-white/20
+                                p-6 rounded-2xl
+                                shadow-2xl
+                                text-center
+                                animate-pop
+                            ">
                             <img
                                 src={selectedKhodam}
                                 alt="Khodam"
@@ -162,6 +202,7 @@ export const KhodamSection = () => {
                                     border border-blue-400/40
                                 "
                             />
+
                             <button
                                 onClick={() => setSelectedKhodam(null)}
                                 className="

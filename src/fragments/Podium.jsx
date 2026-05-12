@@ -98,23 +98,24 @@ const Podium = ({ data }) => {
 
             <div
                 className="
-        flex
-        justify-center
-        items-end
-        
-        gap-2 sm:gap-4 md:gap-6
-        
-        pt-6 sm:pt-10 md:pt-20
-        
-        w-full
-        
-        overflow-x-auto
-        
-        pb-4
-    ">
-                <PodiumCard user={data.second} position={2} />
-                <PodiumCard user={data.first} position={1} />
-                <PodiumCard user={data.third} position={3} />
+                    flex flex-col
+                    md:flex-row
+                    justify-center items-center md:items-end
+                    gap-4 md:gap-6
+                    pt-4 md:pt-20
+                    w-full overflow-y-auto md:overflow-hidden
+                ">
+                <div className="order-2 md:order-1">
+                    <PodiumCard user={data.second} position={2} />
+                </div>
+
+                <div className="order-1 md:order-2">
+                    <PodiumCard user={data.first} position={1} />
+                </div>
+
+                <div className="order-3">
+                    <PodiumCard user={data.third} position={3} />
+                </div>
             </div>
         </div>
     );
