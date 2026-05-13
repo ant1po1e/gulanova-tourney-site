@@ -1,6 +1,6 @@
 const podiumConfig = {
     1: {
-        height: "h-32 md:h-44",
+        height: "h-16 md:h-44",
         avatar: "w-24 h-24 md:w-32 md:h-32",
         glow: "from-yellow-300 via-yellow-500 to-yellow-700",
         border: "border-yellow-400",
@@ -8,16 +8,16 @@ const podiumConfig = {
         text: "Champion",
     },
     2: {
-        height: "h-24 md:h-36",
-        avatar: "w-20 h-20 md:w-24 md:h-24",
+        height: "h-16 md:h-36",
+        avatar: "w-24 h-24 md:w-24 md:h-24",
         glow: "from-gray-200 via-gray-400 to-gray-500",
         border: "border-gray-300",
         badge: "bg-gray-300 text-black",
         text: "Runner-Up",
     },
     3: {
-        height: "h-20 md:h-28",
-        avatar: "w-18 h-18 md:w-22 md:h-22",
+        height: "h-16 md:h-28",
+        avatar: "w-24 h-24 md:w-22 md:h-22",
         glow: "from-orange-300 via-orange-500 to-orange-700",
         border: "border-orange-400",
         badge: "bg-orange-400 text-black",
@@ -45,7 +45,7 @@ const PodiumCard = ({ user, position }) => {
                 <div
                     className={`
                         absolute inset-0 rounded-full blur-2xl opacity-70
-                        bg-gradient-to-tr ${config.glow}
+                        md:bg-gradient-to-tr ${config.glow}
                         scale-110
                     `}
                 />
@@ -125,7 +125,7 @@ const PodiumCard = ({ user, position }) => {
                         font-black
                         text-white/10
                         leading-none
-                        select-none
+                        select-none md:flex hidden
                     ">
                     {position}
                 </div>
@@ -140,10 +140,9 @@ const Podium = ({ data }) => {
     }
 
     return (
-        <div className="space-y-6">
-            {/* Header */}
-            <div className="flex justify-between items-center">
-                <h2 className="text-xl md:text-2xl font-bold text-white">
+        <div className="space-y-4">
+            <div className="flex justify-between items-center flex-wrap gap-2">
+                <h2 className="text-xl md:text-2xl text-center font-bold text-white">
                     Podium
                 </h2>
             </div>
