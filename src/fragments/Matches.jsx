@@ -84,13 +84,11 @@ const Matches = ({ data }) => {
                     scrollbar
                     scrollbar-thumb-blue-400
                     scrollbar-track-gray-600
-                    pr-1
                 ">
                 <div
                     className="
                         max-h-[50vh] overflow-y-auto
                         scrollbar scrollbar-thumb-blue-400 scrollbar-track-gray-600
-                        pr-1
                     ">
                     <div
                         ref={scrollRef}

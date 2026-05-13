@@ -5,7 +5,7 @@
         "redirect": "/tournaments/gulanocup-lima/",
         "date": "2025",
         "game": "osu!",
-        "brakcet": "gulanocup5",
+        "bracket": "gulanocup5",
         "links": [
             {
                 "label": "Forum Post",
@@ -31,7 +31,7 @@
         "redirect": "/tournaments/gulanocup-empat/",
         "date": "2024",
         "game": "osu!",
-        "brakcet": "gulanocup4",
+        "bracket": "gulanocup4",
         "links": [
             {
                 "label": "Forum Post",
