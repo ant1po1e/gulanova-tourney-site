@@ -1,19 +1,18 @@
 import { useLocation, Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import { loginWithOsu, logout, getStoredUser } from "../utils/osuAuth";
+
+import { loginWithOsu, logout } from "../utils/osuAuth";
 import { callOsuApi } from "../utils/osuApi";
-import {
-    saveUserCache,
-    getUserCache,
-    clearUserCache,
-} from "../utils/userCache";
+
+import { saveUserCache, getUserCache } from "../utils/userCache";
 
 export const Navbar = () => {
     const location = useLocation();
     const path = location.pathname;
 
     const [openDropdown, setOpenDropdown] = useState(false);
-    const [user, setUser] = useState(getStoredUser());
+    const [user, setUser] = useState(getUserCache());
+
     const dropdownRef = useRef(null);
 
     const isOnRoot = path === "/";
@@ -24,6 +23,9 @@ export const Navbar = () => {
 
     const backUrl = isInTournamentsSubpage ? "/tournaments" : "/";
 
+    // =========================
+    // Close dropdown on outside click
+    // =========================
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
@@ -41,14 +43,18 @@ export const Navbar = () => {
         };
     }, []);
 
+    // =========================
+    // Authentication
+    // =========================
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
+
         const code = urlParams.get("code");
 
         const authenticate = async () => {
             try {
                 // =========================
-                // OAuth callback
+                // OAuth Callback
                 // =========================
                 if (code) {
                     const response = await fetch(
@@ -59,7 +65,7 @@ export const Navbar = () => {
 
                     localStorage.setItem("access_token", data.access_token);
 
-                    // bersihkan ?code=
+                    // remove ?code=
                     window.history.replaceState(
                         {},
                         document.title,
@@ -72,12 +78,12 @@ export const Navbar = () => {
                 if (!accessToken) return;
 
                 // =========================
-                // Cek cache user
+                // Use cache first
                 // =========================
-                const cachedUser = localStorage.getItem("user");
+                const cachedUser = getUserCache();
 
                 if (cachedUser) {
-                    setUser(JSON.parse(cachedUser));
+                    setUser(cachedUser);
                     return;
                 }
 
@@ -92,8 +98,7 @@ export const Navbar = () => {
                     avatar: userData.avatar_url,
                 };
 
-                // simpan cache
-                localStorage.setItem("user", JSON.stringify(formattedUser));
+                saveUserCache(formattedUser);
 
                 setUser(formattedUser);
             } catch (err) {
@@ -137,6 +142,7 @@ export const Navbar = () => {
                 ) : (
                     <span className="flex items-center gap-2 pr-3 pl-3">
                         <i className="bi bi-arrow-left" />
+
                         <span>Back</span>
                     </span>
                 )}
@@ -164,7 +170,8 @@ export const Navbar = () => {
                         className="
                             w-10 h-10 rounded-full object-cover
                             border border-white/20
-                        "/>
+                        "
+                    />
 
                     <div className="hidden sm:flex flex-col text-left">
                         <span className="text-white text-sm font-semibold leading-none">
@@ -178,10 +185,11 @@ export const Navbar = () => {
 
                     <i
                         className={`
-                bi bi-chevron-down text-white text-xs
-                transition-transform duration-300
-                ${openDropdown ? "rotate-180" : ""}
-            `}
+                            bi bi-chevron-down
+                            text-white text-xs
+                            transition-transform duration-300
+                            ${openDropdown ? "rotate-180" : ""}
+                        `}
                     />
                 </button>
 
