@@ -24,28 +24,65 @@ export const Footer = () => {
         <footer
             className="fixed bottom-0 left-0 w-full z-50"
             role="contentinfo"
-            aria-label="Website Footer"
-        >
+            aria-label="Website Footer">
             {/* Mobile Footer */}
             <div className="md:hidden flex flex-col items-center justify-end">
                 {/* Hamburger button */}
                 <button
                     onClick={toggleFooter}
-                    className="fade-out-bg backdrop-blur-md text-white shadow-lg p-3 w-1/2 rounded-lg mb-2"
+                    className="fade-out-bg backdrop-blur-md text-white shadow-lg w-1/2 h-14 rounded-xl mb-2 flex items-center justify-center"
                     aria-expanded={isOpen}
                     aria-controls="mobile-footer-menu"
-                    aria-label="Toggle footer menu"
-                >
-                    <i className="bi bi-list text-2xl" aria-hidden="true" />
+                    aria-label="Toggle footer menu">
+                    <div className="relative w-6 h-6">
+                        {/* Top line */}
+                        <span
+                            className={`
+                    absolute left-0 top-1/2
+                    w-6 h-[2px]
+                    bg-white rounded-full
+                    transition-all duration-300 ease-in-out
+                    ${isOpen ? "rotate-45 translate-y-0" : "-translate-y-2"}
+                `}
+                        />
+
+                        {/* Middle line */}
+                        <span
+                            className={`
+                    absolute left-0 top-1/2
+                    w-6 h-[2px]
+                    bg-white rounded-full
+                    transition-all duration-300 ease-in-out
+                    ${isOpen ? "opacity-0" : "opacity-100"}
+                `}
+                        />
+
+                        {/* Bottom line */}
+                        <span
+                            className={`
+                    absolute left-0 top-1/2
+                    w-6 h-[2px]
+                    bg-white rounded-full
+                    transition-all duration-300 ease-in-out
+                    ${isOpen ? "-rotate-45 translate-y-0" : "translate-y-2"}
+                `}
+                        />
+                    </div>
                 </button>
 
                 {/* Expandable menu */}
                 <div
                     id="mobile-footer-menu"
-                    className={`transition-all duration-300 w-full bg-blue-800/50 backdrop-blur-md rounded-t-xl overflow-hidden shadow-lg ${
-                        isOpen ? "max-h-[300px] py-4" : "max-h-0 py-0"
-                    }`}
-                >
+                    className={`
+            transition-all duration-300
+            w-full
+            bg-blue-800/50
+            backdrop-blur-md
+            rounded-t-xl
+            overflow-hidden
+            shadow-lg
+            ${isOpen ? "max-h-[300px] py-4" : "max-h-0 py-0"}
+        `}>
                     <ul className="flex flex-col items-center text-white font-medium divide-y divide-gray-300 px-10">
                         {links.map((link) => (
                             <li key={link.label} className="w-full">
@@ -53,8 +90,7 @@ export const Footer = () => {
                                     to={link.to}
                                     onClick={() => setIsOpen(false)}
                                     className="block w-full py-2 text-center text-base font-medium md:hover:bg-black/10 transition"
-                                    aria-label={`Navigate to ${link.label}`}
-                                >
+                                    aria-label={`Navigate to ${link.label}`}>
                                     {link.label}
                                 </Link>
                             </li>
@@ -69,20 +105,17 @@ export const Footer = () => {
                     {links.map((link) => (
                         <div
                             key={link.label}
-                            className="relative group font-medium"
-                        >
+                            className="relative group font-medium">
                             <Link
                                 to={link.to}
                                 className="text-white text-2xl relative rounded-md p-2 transition-all duration-300 md:hover:text-white md:hover:bg-blue-800/50 md:hover:px-6 md:hover:shadow-md"
-                                aria-label={`Navigate to ${link.label}`}
-                            >
+                                aria-label={`Navigate to ${link.label}`}>
                                 {iMap[link.label]}
                             </Link>
                             {/* Tooltip */}
                             <span
                                 role="tooltip"
-                                className="absolute -top-16 left-1/2 -translate-x-1/2 bg-blue-800/50 shadow-lg text-white text-sm px-5 py-2 rounded-md opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap pointer-events-none"
-                            >
+                                className="absolute -top-16 left-1/2 -translate-x-1/2 bg-blue-800/50 shadow-lg text-white text-sm px-5 py-2 rounded-md opacity-0 md:group-hover:opacity-100 md:group-hover:-translate-y-1 transition-all duration-300 whitespace-nowrap pointer-events-none">
                                 {link.label}
                             </span>
                         </div>
