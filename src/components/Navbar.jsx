@@ -2,6 +2,11 @@ import { useLocation, Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import { loginWithOsu, logout, getStoredUser } from "../utils/osuAuth";
 import { callOsuApi } from "../utils/osuApi";
+import {
+    saveUserCache,
+    getUserCache,
+    clearUserCache,
+} from "../utils/userCache";
 
 export const Navbar = () => {
     const location = useLocation();
@@ -42,6 +47,9 @@ export const Navbar = () => {
 
         const authenticate = async () => {
             try {
+                // =========================
+                // OAuth callback
+                // =========================
                 if (code) {
                     const response = await fetch(
                         `https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`,
@@ -51,6 +59,7 @@ export const Navbar = () => {
 
                     localStorage.setItem("access_token", data.access_token);
 
+                    // bersihkan ?code=
                     window.history.replaceState(
                         {},
                         document.title,
@@ -60,19 +69,33 @@ export const Navbar = () => {
 
                 const accessToken = localStorage.getItem("access_token");
 
-                if (accessToken) {
-                    const userData = await callOsuApi("/me/osu");
+                if (!accessToken) return;
 
-                    const formattedUser = {
-                        userId: userData.id,
-                        username: userData.username,
-                        avatar: userData.avatar_url,
-                    };
+                // =========================
+                // Cek cache user
+                // =========================
+                const cachedUser = localStorage.getItem("user");
 
-                    localStorage.setItem("user", JSON.stringify(formattedUser));
-
-                    setUser(formattedUser);
+                if (cachedUser) {
+                    setUser(JSON.parse(cachedUser));
+                    return;
                 }
+
+                // =========================
+                // Fetch osu API
+                // =========================
+                const userData = await callOsuApi("/me/osu");
+
+                const formattedUser = {
+                    userId: userData.id,
+                    username: userData.username,
+                    avatar: userData.avatar_url,
+                };
+
+                // simpan cache
+                localStorage.setItem("user", JSON.stringify(formattedUser));
+
+                setUser(formattedUser);
             } catch (err) {
                 console.error(err);
 
