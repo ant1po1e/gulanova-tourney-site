@@ -166,8 +166,8 @@ export const KhodamSection = () => {
                             px-8 py-2
                             bg-blue-800 text-white font-semibold
                             rounded-lg shadow-md
-                            hover:bg-blue-800/70
-                            hover:scale-105
+                            md:hover:bg-blue-800/70
+                            md:hover:scale-105
                             transition duration-300
                             disabled:opacity-50
                         ">
@@ -209,7 +209,7 @@ export const KhodamSection = () => {
                                     mt-6 px-6 py-2
                                     bg-red-600 text-white
                                     rounded-lg
-                                    hover:bg-red-700
+                                    md:hover:bg-red-700
                                     transition font-bold
                                 ">
                                 Close

@@ -11,7 +11,10 @@ export const Navbar = () => {
     const path = location.pathname;
 
     const [openDropdown, setOpenDropdown] = useState(false);
+
     const [user, setUser] = useState(getUserCache());
+
+    const [role, setRole] = useState("VISITOR");
 
     const dropdownRef = useRef(null);
 
@@ -23,6 +26,9 @@ export const Navbar = () => {
 
     const backUrl = isInTournamentsSubpage ? "/tournaments" : "/";
 
+    // =========================
+    // Close dropdown outside click
+    // =========================
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
@@ -40,6 +46,9 @@ export const Navbar = () => {
         };
     }, []);
 
+    // =========================
+    // Authentication
+    // =========================
     useEffect(() => {
         const authenticate = async () => {
             try {
@@ -48,7 +57,10 @@ export const Navbar = () => {
                 const code = urlParams.get("code");
 
                 const accessToken = localStorage.getItem("access_token");
-                
+
+                // =========================
+                // OAuth callback
+                // =========================
                 if (code && !accessToken) {
                     const response = await fetch(
                         `https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`,
@@ -67,7 +79,7 @@ export const Navbar = () => {
                 }
 
                 // =========================
-                // Pakai cache dulu
+                // Use cache first
                 // =========================
                 const cachedUser = getUserCache();
 
@@ -101,6 +113,76 @@ export const Navbar = () => {
 
         authenticate();
     }, []);
+
+    // =========================
+    // Fetch role from tournament json
+    // =========================
+    useEffect(() => {
+        const fetchRole = async () => {
+            if (!user) {
+                setRole("VISITOR");
+                return;
+            }
+
+            try {
+                // ambil tournament id dari URL
+                const splitPath = path.split("/");
+
+                const tournamentId = splitPath[2];
+
+                // bukan halaman tournament
+                if (!tournamentId) {
+                    setRole("VISITOR");
+                    return;
+                }
+
+                // load json
+                const playersModule = await import(
+                    `../data/${tournamentId}/players.json`
+                );
+
+                const staffModule = await import(
+                    `../data/${tournamentId}/staff.json`
+                );
+
+                const players = playersModule.default;
+
+                const staff = staffModule.default;
+
+                // =========================
+                // STAFF
+                // =========================
+                const isStaff = staff.some(
+                    (member) => String(member.userId) === String(user.userId),
+                );
+
+                if (isStaff) {
+                    setRole("STAFF");
+                    return;
+                }
+
+                // =========================
+                // PLAYER
+                // =========================
+                const isPlayer = players.some(
+                    (player) => String(player.userId) === String(user.userId),
+                );
+
+                if (isPlayer) {
+                    setRole("PLAYER");
+                    return;
+                }
+
+                setRole("VISITOR");
+            } catch (err) {
+                console.error(err);
+
+                setRole("VISITOR");
+            }
+        };
+
+        fetchRole();
+    }, [user, path]);
 
     const isLoggedIn = !!user;
 
@@ -149,8 +231,8 @@ export const Navbar = () => {
                         bg-white/10 backdrop-blur-md
                         border border-white/10
                         rounded-full
-                        px-2 py-2 pr-4
-                        hover:bg-white/20
+                        p-1
+                        md:hover:bg-white/20
                         transition-all duration-300
                     ">
                     <img
@@ -159,28 +241,9 @@ export const Navbar = () => {
                         }
                         alt={isLoggedIn ? user.username : "Guest"}
                         className="
-                            w-10 h-10 rounded-full object-cover
+                            w-12 h-12 rounded-full object-cover
                             border border-white/20
                         "
-                    />
-
-                    <div className="hidden sm:flex flex-col text-left">
-                        <span className="text-white text-sm font-semibold leading-none">
-                            {isLoggedIn ? user.username : "Guest"}
-                        </span>
-
-                        <span className="text-xs text-gray-300">
-                            {isLoggedIn ? "Online" : "Not logged in"}
-                        </span>
-                    </div>
-
-                    <i
-                        className={`
-                            bi bi-chevron-down
-                            text-white text-xs
-                            transition-transform duration-300
-                            ${openDropdown ? "rotate-180" : ""}
-                        `}
                     />
                 </button>
 
@@ -220,10 +283,18 @@ export const Navbar = () => {
                                     {isLoggedIn ? user.username : "Guest"}
                                 </p>
 
-                                <p className="text-xs text-gray-400">
-                                    {isLoggedIn
-                                        ? "osu! player"
-                                        : "Login required"}
+                                <p
+                                    className={`
+                                        text-xs font-semibold tracking-wide
+                                        ${
+                                            role === "STAFF"
+                                                ? "text-yellow-300"
+                                                : role === "PLAYER"
+                                                  ? "text-blue-300"
+                                                  : "text-gray-400"
+                                        }
+                                    `}>
+                                    {isLoggedIn ? role : "Login required"}
                                 </p>
                             </div>
                         </div>
@@ -241,7 +312,7 @@ export const Navbar = () => {
                                         flex items-center gap-3
                                         px-3 py-2 rounded-xl
                                         text-sm text-gray-200
-                                        hover:bg-white/10
+                                        md:hover:bg-white/10
                                         transition
                                     ">
                                     <i className="bi bi-person" />
@@ -255,7 +326,7 @@ export const Navbar = () => {
                                         flex items-center gap-3
                                         px-3 py-2 rounded-xl
                                         text-sm text-red-300
-                                        hover:bg-red-500/10
+                                        md:hover:bg-red-500/10
                                         transition
                                     ">
                                     <i className="bi bi-box-arrow-right" />
@@ -270,7 +341,7 @@ export const Navbar = () => {
                                     flex items-center gap-3
                                     px-3 py-2 rounded-xl
                                     text-sm text-blue-300
-                                    hover:bg-blue-500/10
+                                    md:hover:bg-blue-500/10
                                     transition
                                 ">
                                 <i className="bi bi-box-arrow-in-right" />

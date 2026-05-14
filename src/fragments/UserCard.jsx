@@ -30,11 +30,11 @@ const UserCard = ({ user }) => {
 
             <div
                 className="
-                bg-[#153561] group-hover:bg-[#9BC4FF] 
+                bg-[#153561] md:group-hover:bg-[#9BC4FF] 
                 transtion duration-300 backdrop-blur-sm
                 rounded-lg px-3 py-2 w-full text-center
             ">
-                <p className="text-white font-medium text-sm truncate group-hover:scale-110 group-hover:text-[#153561] group-hover:font-bold transition duration-300">
+                <p className="text-white font-medium text-sm truncate md:group-hover:scale-110 md:group-hover:text-[#153561] md:group-hover:font-bold transition duration-300">
                     {user.username}
                 </p>
             </div>

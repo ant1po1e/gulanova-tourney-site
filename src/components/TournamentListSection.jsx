@@ -39,9 +39,9 @@ const TournamentItem = ({ title, redirect, date, game, links }) => {
                             rounded-md
                             border border-blue-400/40
                             text-blue-300
-                            hover:text-white
-                            hover:bg-blue-600/40
-                            hover:border-blue-400
+                            md:hover:text-white
+                            md:hover:bg-blue-600/40
+                            md:hover:border-blue-400
                             transition-all duration-300
                         ">
                         {link.label}

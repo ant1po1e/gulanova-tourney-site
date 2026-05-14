@@ -137,7 +137,7 @@ const Matches = ({ data }) => {
                                             key={idx}
                                             className="
                                                 border-t border-white/10
-                                                hover:bg-white/5
+                                                md:hover:bg-white/5
                                                 transition
                                             ">
                                             <td className="px-4 py-2 whitespace-nowrap">
@@ -169,7 +169,7 @@ const Matches = ({ data }) => {
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="
-                                                            text-blue-300 hover:text-blue-400
+                                                            text-blue-300 md:hover:text-blue-400
                                                             underline
                                                         ">
                                                         MP Link

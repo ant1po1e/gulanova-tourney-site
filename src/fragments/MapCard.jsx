@@ -28,11 +28,11 @@ const MapCard = ({ map }) => {
                 className="
                 rounded-xl overflow-hidden
                 backdrop-blur-md border border-white/20
-                shadow-lg hover:shadow-xl
+                shadow-lg md:hover:shadow-xl
             ">
                 <div className="relative h-40 w-full">
                     <img
-                        className="h-full w-full object-cover hover:scale-105"
+                        className="h-full w-full object-cover md:hover:scale-105"
                         src={map.cover}
                         alt={map.map}
                         loading="lazy"
@@ -44,7 +44,7 @@ const MapCard = ({ map }) => {
                         bg-gradient-to-b from-black/60 via-black/40 to-[#3166a7]/80
                         backdrop-blur-sm
                         transition-all duration-300
-                        group-hover:backdrop-blur-none
+                        md:group-hover:backdrop-blur-none
                     ">
                         <div className="flex items-center h-full p-4 gap-3">
                             <span
@@ -96,7 +96,7 @@ const MapCard = ({ map }) => {
                         className="
                         absolute inset-x-0 bottom-0 h-1
                         bg-gradient-to-r from-[#517fc1] via-[#9BC4FF] to-[#517fc1]
-                        group-hover:opacity-100 opacity-70
+                        md:group-hover:opacity-100 opacity-70
                         transition-opacity duration-300
                     "
                     />

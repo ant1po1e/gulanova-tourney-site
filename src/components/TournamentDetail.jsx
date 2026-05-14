@@ -108,7 +108,7 @@ export const TournamentDetail = ({ tournament, bracket }) => {
                                 ${
                                     activeTab === tab.key
                                         ? "text-white bg-white/10"
-                                        : "text-gray-300 hover:text-white hover:bg-white/5"
+                                        : "text-gray-300 md:hover:text-white md:hover:bg-white/5"
                                 }
                             `}>
                             {tab.label}

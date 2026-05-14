@@ -37,7 +37,7 @@ const PodiumCard = ({ user, position }) => {
                 group relative
                 flex flex-col items-center
                 transition-all duration-300
-                hover:-translate-y-2
+                md:hover:-translate-y-2
             ">
             {/* Avatar */}
             <div className="relative z-10">
@@ -73,7 +73,7 @@ const PodiumCard = ({ user, position }) => {
                         relative
                         shadow-2xl
                         transition-all duration-300
-                        group-hover:scale-105
+                        md:group-hover:scale-105
                     `}
                 />
             </div>
