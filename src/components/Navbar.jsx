@@ -23,9 +23,6 @@ export const Navbar = () => {
 
     const backUrl = isInTournamentsSubpage ? "/tournaments" : "/";
 
-    // =========================
-    // Close dropdown on outside click
-    // =========================
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (
@@ -43,42 +40,34 @@ export const Navbar = () => {
         };
     }, []);
 
-    // =========================
-    // Authentication
-    // =========================
     useEffect(() => {
-        const urlParams = new URLSearchParams(window.location.search);
-
-        const code = urlParams.get("code");
-
         const authenticate = async () => {
             try {
-                // =========================
-                // OAuth Callback
-                // =========================
-                if (code) {
+                const urlParams = new URLSearchParams(window.location.search);
+
+                const code = urlParams.get("code");
+
+                const accessToken = localStorage.getItem("access_token");
+                
+                if (code && !accessToken) {
                     const response = await fetch(
                         `https://gulanova-auth.vercel.app/api/osuAuth?code=${code}`,
                     );
 
                     const data = await response.json();
 
-                    localStorage.setItem("access_token", data.access_token);
+                    if (data.access_token) {
+                        localStorage.setItem("access_token", data.access_token);
 
-                    // remove ?code=
-                    window.history.replaceState(
-                        {},
-                        document.title,
-                        window.location.pathname,
-                    );
+                        // reload tanpa ?code=
+                        window.location.href = window.location.pathname;
+
+                        return;
+                    }
                 }
 
-                const accessToken = localStorage.getItem("access_token");
-
-                if (!accessToken) return;
-
                 // =========================
-                // Use cache first
+                // Pakai cache dulu
                 // =========================
                 const cachedUser = getUserCache();
 
@@ -88,19 +77,21 @@ export const Navbar = () => {
                 }
 
                 // =========================
-                // Fetch osu API
+                // Fetch osu profile
                 // =========================
-                const userData = await callOsuApi("/me/osu");
+                if (accessToken) {
+                    const userData = await callOsuApi("/me/osu");
 
-                const formattedUser = {
-                    userId: userData.id,
-                    username: userData.username,
-                    avatar: userData.avatar_url,
-                };
+                    const formattedUser = {
+                        userId: userData.id,
+                        username: userData.username,
+                        avatar: userData.avatar_url,
+                    };
 
-                saveUserCache(formattedUser);
+                    saveUserCache(formattedUser);
 
-                setUser(formattedUser);
+                    setUser(formattedUser);
+                }
             } catch (err) {
                 console.error(err);
 

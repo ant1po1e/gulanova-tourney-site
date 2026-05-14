@@ -1,4 +1,4 @@
-export const callOsuApi = async (endpoint) => {
+export const callOsuApi = async (endpoint, options = {}) => {
     const accessToken = localStorage.getItem("access_token");
 
     const response = await fetch(
@@ -6,6 +6,7 @@ export const callOsuApi = async (endpoint) => {
             endpoint,
         )}`,
         {
+            method: options.method || "GET",
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },
@@ -13,7 +14,7 @@ export const callOsuApi = async (endpoint) => {
     );
 
     if (!response.ok) {
-        throw new Error("Failed fetching osu! API");
+        throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     return response.json();

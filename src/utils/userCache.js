@@ -3,11 +3,11 @@ export const saveUserCache = (user) => {
 };
 
 export const getUserCache = () => {
-    const data = localStorage.getItem("user");
+    const user = localStorage.getItem("user");
 
-    if (!data) return null;
+    if (!user) return null;
 
-    return JSON.parse(data);
+    return JSON.parse(user);
 };
 
 export const clearUserCache = () => {
