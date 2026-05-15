@@ -15,34 +15,37 @@ const UserCard = ({ user }) => {
                 relative
                 flex flex-col items-center
                 p-2 rounded-2xl
-                shadow-lg transform
+                shadow-lg
                 transition-all duration-300
                 overflow-hidden
+                group
 
                 ${
                     isCurrentUser
                         ? `
-                            bg-gradient-to-br from-pink-500/40 via-purple-500/30 to-blue-500/40
+                            bg-gradient-to-br
+                            from-pink-500/40
+                            via-purple-500/30
+                            to-blue-500/40
                             border border-pink-300/60
-                            md:hover:scale-110
-                            scale-105
                             shadow-pink-500/30
                         `
                         : `
-                            bg-gradient-to-br from-[#4a76b8] to-[#2c4f8a]
+                            bg-gradient-to-br
+                            from-[#4a76b8]
+                            to-[#2c4f8a]
                             border border-[#729dd8]/30
-                            md:hover:scale-105
                         `
                 }
             `}>
             {/* Background Glow */}
             <div
                 className={`
-                    absolute inset-0 opacity-0 transition duration-500
+                    absolute inset-0 transition duration-500
                     ${
                         isCurrentUser
                             ? "bg-white/10 opacity-100"
-                            : "group-hover:opacity-100"
+                            : "opacity-0 md:group-hover:opacity-100 bg-white/5"
                     }
                 `}
             />
@@ -52,12 +55,10 @@ const UserCard = ({ user }) => {
                 <div
                     className="
                         absolute top-2 right-2
-                        px-2 py-1
-                        rounded-full
+                        px-2 py-1 rounded-full
                         text-[10px] font-black tracking-wider
                         bg-pink-400 text-black
-                        shadow-lg
-                        z-20
+                        shadow-lg z-20
                     ">
                     YOU
                 </div>
@@ -69,6 +70,8 @@ const UserCard = ({ user }) => {
                 <div
                     className={`
                         absolute inset-0 rounded-full blur-md -z-10
+                        transition-all duration-300
+
                         ${
                             isCurrentUser
                                 ? `
@@ -76,7 +79,6 @@ const UserCard = ({ user }) => {
                                     from-pink-400
                                     via-purple-400
                                     to-cyan-400
-                                    animate-pulse
                                 `
                                 : `
                                     bg-gradient-to-tr
@@ -84,6 +86,9 @@ const UserCard = ({ user }) => {
                                     to-[#517fc1]
                                 `
                         }
+
+                        md:group-hover:scale-125
+                        md:group-hover:blur-xl
                     `}
                 />
 
@@ -91,6 +96,8 @@ const UserCard = ({ user }) => {
                 <div
                     className={`
                         p-[3px] rounded-full
+                        transition-all duration-300
+
                         ${
                             isCurrentUser
                                 ? `
@@ -103,12 +110,16 @@ const UserCard = ({ user }) => {
                                     bg-[#9BC4FF]
                                 `
                         }
+
+                        md:group-hover:scale-90
                     `}>
                     <img
                         className="
                             w-24 h-24 md:w-28 md:h-28
                             rounded-full object-cover
                             bg-black
+                            transition-all duration-300
+                            md:group-hover:scale-105
                         "
                         src={`https://a.ppy.sh/${user.userId}`}
                         alt={user.username}

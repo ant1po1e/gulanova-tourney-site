@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { getUserCache } from "../utils/userCache";
 
 const parseDateTime = (date, time) => {
     const cleanTime = time.replace(".", ":").replace(" WIB", "");
@@ -30,7 +31,7 @@ const Matches = ({ data }) => {
         e.preventDefault();
 
         const x = e.pageX - scrollRef.current.offsetLeft;
-        const walk = (x - startX.current) * 1.5; 
+        const walk = (x - startX.current) * 1.5;
         scrollRef.current.scrollLeft = scrollLeft.current - walk;
     };
 
@@ -40,6 +41,14 @@ const Matches = ({ data }) => {
     if (!data) {
         return <div className="text-white">Loading...</div>;
     }
+
+    const loggedUser = getUserCache();
+
+    const isCurrentUser = (name) => {
+        if (!loggedUser) return false;
+
+        return loggedUser.username.toLowerCase() === name?.toLowerCase();
+    };
 
     return (
         <div className="space-y-4">
@@ -149,17 +158,60 @@ const Matches = ({ data }) => {
                                             </td>
 
                                             <td className="px-4 py-2 whitespace-nowrap">
-                                                <span className="font-semibold">
+                                                <span
+                                                    className={`
+                                                        font-semibold transition-all duration-300
+                                                        ${
+                                                            isCurrentUser(match.player_one)
+                                                                ? `
+                                                                    text-pink-300
+                                                                    font-bold
+                                                                    drop-shadow-[0_0_8px_rgba(244,114,182,0.8)]
+                                                                `
+                                                                : "text-white"
+                                                        }
+                                                    `}>
                                                     {match.player_one}
                                                 </span>
-                                                {" vs "}
-                                                <span className="font-semibold">
+
+                                                <span className="text-gray-400">
+                                                    {" "}
+                                                    {" vs "}{" "}
+                                                </span>
+
+                                                <span
+                                                    className={`
+                                                        font-semibold transition-all duration-300
+                                                        ${
+                                                            isCurrentUser(match.player_two)
+                                                                ? `
+                                                                    text-pink-300
+                                                                    font-bold
+                                                                    drop-shadow-[0_0_8px_rgba(244,114,182,0.8)]
+                                                                `
+                                                                : "text-white"
+                                                        }
+                                                    `}>
                                                     {match.player_two}
                                                 </span>
                                             </td>
 
                                             <td className="px-4 py-2 whitespace-nowrap">
-                                                {match.referee}
+                                                <span
+                                                    className={`
+                                                        transition-all duration-300
+                                                        ${
+                                                            isCurrentUser(match.referee)
+                                                                ? `
+                                                                    text-cyan-300
+                                                                    font-bold
+                                                                    drop-shadow-[0_0_8px_rgba(103,232,249,0.8)]
+                                                                `
+                                                                : "text-white"
+                                                        }
+                                                    `}>
+                                                    {match.referee}
+                                                </span>
                                             </td>
 
                                             <td className="px-4 py-2 whitespace-nowrap">
