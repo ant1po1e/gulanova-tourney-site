@@ -15,6 +15,11 @@
         "role": "player"
     },
     {
+        "userId": "31102647",
+        "username": "-AkariWatanabe-",
+        "role": "player"
+    },
+    {
         "userId": "31299157",
         "username": "-Nandakai-",
         "role": "player"
@@ -45,11 +50,6 @@
         "role": "player"
     },
     {
-        "userId": "8810018",
-        "username": "[ID]Catalyst-",
-        "role": "player"
-    },
-    {
         "userId": "20040064",
         "username": "[LS] akarii",
         "role": "player"
@@ -62,6 +62,11 @@
     {
         "userId": "21129437",
         "username": "[Shiroko]",
+        "role": "player"
+    },
+    {
+        "userId": "17731576",
+        "username": "[TCD] TbnrK",
         "role": "player"
     },
     {
@@ -85,6 +90,11 @@
         "role": "player"
     },
     {
+        "userId": "15302695",
+        "username": "Anby Yamada",
+        "role": "player"
+    },
+    {
         "userId": "6667024",
         "username": "Animerge",
         "role": "player"
@@ -95,18 +105,8 @@
         "role": "player"
     },
     {
-        "userId": "29169697",
-        "username": "ARDHANA",
-        "role": "player"
-    },
-    {
         "userId": "8911771",
         "username": "Ascelice",
-        "role": "player"
-    },
-    {
-        "userId": "30640092",
-        "username": "askL330",
         "role": "player"
     },
     {
@@ -117,11 +117,6 @@
     {
         "userId": "9821346",
         "username": "AzusaNakano2",
-        "role": "player"
-    },
-    {
-        "userId": "18560270",
-        "username": "beethiven",
         "role": "player"
     },
     {
@@ -142,6 +137,11 @@
     {
         "userId": "3565870",
         "username": "ChocoCoki-",
+        "role": "player"
+    },
+    {
+        "userId": "18560270",
+        "username": "Cyaoczxin",
         "role": "player"
     },
     {
@@ -191,12 +191,22 @@
     },
     {
         "userId": "13660273",
-        "username": "FinHazel",
+        "username": "fhz",
+        "role": "player"
+    },
+    {
+        "userId": "17400577",
+        "username": "girlpop",
         "role": "player"
     },
     {
         "userId": "8071728",
         "username": "hafishoka",
+        "role": "player"
+    },
+    {
+        "userId": "30640092",
+        "username": "Hyacinthia",
         "role": "player"
     },
     {
@@ -210,23 +220,18 @@
         "role": "player"
     },
     {
-        "userId": "31102647",
-        "username": "KafuuChlno",
+        "userId": "23212300",
+        "username": "Jualanganjar",
         "role": "player"
     },
     {
         "userId": "13451556",
-        "username": "Kimotaki16",
+        "username": "KimoTaki",
         "role": "player"
     },
     {
         "userId": "15798093",
-        "username": "KinoJourney",
-        "role": "player"
-    },
-    {
-        "userId": "13403380",
-        "username": "KyoukaRy",
+        "username": "KinderJoy-",
         "role": "player"
     },
     {
@@ -240,6 +245,11 @@
         "role": "player"
     },
     {
+        "userId": "8810018",
+        "username": "lovefrom",
+        "role": "player"
+    },
+    {
         "userId": "19724595",
         "username": "lucknut",
         "role": "player"
@@ -247,11 +257,6 @@
     {
         "userId": "6807769",
         "username": "LuxSenaa",
-        "role": "player"
-    },
-    {
-        "userId": "23212300",
-        "username": "lyoneljose",
         "role": "player"
     },
     {
@@ -321,7 +326,7 @@
     },
     {
         "userId": "23115247",
-        "username": "NizT",
+        "username": "Nyct",
         "role": "player"
     },
     {
@@ -355,13 +360,18 @@
         "role": "player"
     },
     {
-        "userId": "17731576",
-        "username": "RealTBNRKenny",
+        "userId": "14732769",
+        "username": "Reitomized",
         "role": "player"
     },
     {
         "userId": "18777094",
         "username": "Remuu",
+        "role": "player"
+    },
+    {
+        "userId": "29169697",
+        "username": "RobiFanBoy",
         "role": "player"
     },
     {
@@ -385,11 +395,6 @@
         "role": "player"
     },
     {
-        "userId": "17400577",
-        "username": "spectator_boi",
-        "role": "player"
-    },
-    {
         "userId": "23484954",
         "username": "syamisu-",
         "role": "player"
@@ -397,11 +402,6 @@
     {
         "userId": "8346342",
         "username": "tentrempm",
-        "role": "player"
-    },
-    {
-        "userId": "14732769",
-        "username": "TheLegend3RD",
         "role": "player"
     },
     {
@@ -425,13 +425,13 @@
         "role": "player"
     },
     {
-        "userId": "31408326",
-        "username": "vivol",
+        "userId": "13403380",
+        "username": "Vissyu",
         "role": "player"
     },
     {
-        "userId": "15302695",
-        "username": "XZeuzCR",
+        "userId": "31408326",
+        "username": "vivol",
         "role": "player"
     },
     {

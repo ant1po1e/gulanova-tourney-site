@@ -2,7 +2,7 @@
     {
         "userId": "17851478",
         "username": "-Yubi-",
-        "role": "mappooler, mapper, streamer, commentator, playtester"
+        "role": "mappooler, mapper, commentator, playtester, streamer"
     },
     {
         "userId": "9382787",
@@ -21,13 +21,8 @@
     },
     {
         "userId": "13865224",
-        "username": "[ID]Xenotia-",
+        "username": "[GB]Xenotia-",
         "role": "commentator, playtester"
-    },
-    {
-        "userId": "16768803",
-        "username": "[ReyZ]",
-        "role": "playtester"
     },
     {
         "userId": "7621604",
@@ -45,14 +40,14 @@
         "role": "mappooler, mapper, organizer"
     },
     {
-        "userId": "9038483",
-        "username": "Angki",
-        "role": "mapper, referee"
-    },
-    {
         "userId": "17258072",
         "username": "Alicia",
         "role": "mappooler, mapper, programmer, commentator, organizer"
+    },
+    {
+        "userId": "9038483",
+        "username": "Angki",
+        "role": "referee"
     },
     {
         "userId": "17223636",
@@ -70,14 +65,9 @@
         "role": "host, sheeter, mapper, streamer, commentator, programmer, organizer"
     },
     {
-        "userId": "10262909",
-        "username": "Daput",
-        "role": "gfx"
-    },
-    {
         "userId": "5198950",
         "username": "Elin-",
-        "role": "organizer, referee"
+        "role": "organizer, referee, commentator"
     },
     {
         "userId": "15822192",
@@ -92,9 +82,8 @@
     {
         "userId": "2651304",
         "username": "FelixSpade",
-        "role": "mappooler, mapper, streamer, commentator, programmer, organizer"
+        "role": "mappooler, mapper, programmer, organizer, streamer, commentator"
     },
-
     {
         "userId": "20788796",
         "username": "FerryAnanda",
@@ -103,7 +92,7 @@
     {
         "userId": "10069307",
         "username": "Fyl",
-        "role": "streamer, commentator, referee, playtester"
+        "role": "referee, playtester, streamer, commentator"
     },
     {
         "userId": "8243526",
@@ -113,7 +102,7 @@
     {
         "userId": "19030920",
         "username": "Hookseye",
-        "role": "streamer, playtester"
+        "role": "streamer"
     },
     {
         "userId": "3057154",
@@ -126,14 +115,14 @@
         "role": "gfx, playtester, commentator"
     },
     {
-        "userId": "8867495",
-        "username": "Kurami_San",
-        "role": "referee"
+        "userId": "12143152",
+        "username": "Kaizel",
+        "role": "commentator, playtester, referee"
     },
     {
-        "userId": "15522414",
-        "username": "My Angel Satori",
-        "role": "referee"
+        "userId": "8867495",
+        "username": "Kurami_San",
+        "role": "referee, commentator"
     },
     {
         "userId": "12561379",
@@ -143,7 +132,7 @@
     {
         "userId": "11312272",
         "username": "Nqinn",
-        "role": "gfx"
+        "role": "programmer"
     },
     {
         "userId": "8677684",
@@ -158,27 +147,32 @@
     {
         "userId": "10478980",
         "username": "Rakanovan",
-        "role": "sheeter, mappooler, commentator"
+        "role": "commentator, playtester"
     },
     {
         "userId": "16630515",
         "username": "Reihynn",
-        "role": "organizer, mapper, referee, sheeter"
+        "role": "mapper, referee, sheeter, organizer, gfx"
     },
     {
         "userId": "12424909",
         "username": "Revv-",
-        "role": "host, mappooler, mapper, sheeter, gfx, playtester, commentator, organizer"
+        "role": "host, mappooler, mapper, sheeter, gfx, playtester, commentator, organizer, referee"
     },
     {
         "userId": "13385865",
         "username": "Reyi",
-        "role": "mapper, gfx, streamer, commentator"
+        "role": "streamer, commentator, mapper, gfx, mappooler"
     },
     {
         "userId": "5246861",
         "username": "Sarahkuai",
         "role": "mapper"
+    },
+    {
+        "userId": "15522414",
+        "username": "SatoriMaiden",
+        "role": "referee"
     },
     {
         "userId": "3484485",
@@ -204,10 +198,5 @@
         "userId": "24787752",
         "username": "Who_is_Marpang",
         "role": "mapper"
-    },
-    {
-        "userId": "12143152",
-        "username": "Yangga",
-        "role": "commentator, playtester, referee"
     }
 ]

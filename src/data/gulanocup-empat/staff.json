@@ -10,19 +10,9 @@
         "role": "mapper"
     },
     {
-        "userId": "16768803",
-        "username": "[ReyZ]",
-        "role": "playtester"
-    },
-    {
         "userId": "7621604",
-        "username": "2ndlengend",
+        "username": "2ndlegend",
         "role": "commentator"
-    },
-    {
-        "userId": "18309106",
-        "username": "Adihza",
-        "role": "playtester"
     },
     {
         "userId": "5179764",
@@ -36,12 +26,12 @@
     },
     {
         "userId": "17258072",
-        "username": "Antipole",
-        "role": "mappooler, mapper, playtester, commentator"
+        "username": "Alicia",
+        "role": "mappooler, mapper, commentator"
     },
     {
         "userId": "24490429",
-        "username": "AquaTC",
+        "username": "aqueous",
         "role": "mapper"
     },
     {
@@ -60,6 +50,11 @@
         "role": "gfx"
     },
     {
+        "userId": "15801261",
+        "username": "Az-u",
+        "role": "playtester"
+    },
+    {
         "userId": "11184912",
         "username": "danar",
         "role": "host, sheeter, mappooler, mapper, streamer, commentator"
@@ -72,22 +67,32 @@
     {
         "userId": "31335682",
         "username": "darkplayzosu",
-        "role": "playtester, referee, commentator"
+        "role": "playtester, referee"
     },
     {
         "userId": "5198950",
-        "username": "ElinLYPK",
+        "username": "Elin-",
         "role": "referee"
+    },
+    {
+        "userId": "16768803",
+        "username": "Error",
+        "role": "playtester"
+    },
+    {
+        "userId": "18309106",
+        "username": "Error",
+        "role": "playtester"
+    },
+    {
+        "userId": "6866937",
+        "username": "Error",
+        "role": "sheeter"
     },
     {
         "userId": "17237364",
         "username": "EstaticStatisIO",
         "role": "commentator"
-    },
-    {
-        "userId": "8647138",
-        "username": "eZmmR",
-        "role": "gfx"
     },
     {
         "userId": "12170494",
@@ -108,21 +113,6 @@
         "userId": "3057154",
         "username": "Ilham",
         "role": "mapper"
-    },
-    {
-        "userId": "15801261",
-        "username": "iSxga",
-        "role": "playtester"
-    },
-    {
-        "userId": "16176978",
-        "username": "Kada-",
-        "role": "gfx"
-    },
-    {
-        "userId": "6866937",
-        "username": "KotoriPana",
-        "role": "sheeter"
     },
     {
         "userId": "8867495",
@@ -157,7 +147,7 @@
     {
         "userId": "13385865",
         "username": "Reyi",
-        "role": "referee"
+        "role": "playtester"
     },
     {
         "userId": "15380643",
